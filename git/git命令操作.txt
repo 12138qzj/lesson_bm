@@ -1,0 +1,39 @@
+
+安装Git并初始化本地仓库；
+将本地计算机与GitHub账户连接；
+上传代码至GitHub仓库；
+
+
+git clone https://github.com/Mr-memorandum/Data-structure.git
+
+cd YourRepositoryName
+git add .
+git commit  -m  "commit code"
+git push -u origin master
+
+Brush
+github RPC failed; curl 56 OpenSSL SSL_read: SSL_ERROR_SYSCALL, errno 10054
+出现此问题有可能是上传大小限制： 
+执行如下命令
+
+  git config http.postBuffer 524288000
+
+     524288000算法：
+
+  1024*1024*500
+
+出现如下错误：curl 56 OpenSSL SSL_read:SSL_ERROR_sysCALL
+
+ 执行：  git config http.sslVerify "false"
+
+
+github基本命令
+ 1. git diff 查看修改内容
+git init  初始化本地库
+ git add . 添加本地库
+git fetch 抓取到本地，没有合并
+git merge 抓取并合并
+2. git remote add origin https://github.com/Mr-memorandum/Data-structure.git 
+3. git push -u origin mater -f  第一个词推送 （-f 强制推送）
+4. git push origin master 推送
+5. git remote -v 查看远程库的连接
