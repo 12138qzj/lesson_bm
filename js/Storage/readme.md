@@ -1,0 +1,1 @@
+sessionStorage:存储时间短，比如页面跳转

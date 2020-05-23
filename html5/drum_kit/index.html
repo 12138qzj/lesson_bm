@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Wesbos</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        /*keys的样式*/
+        
+        .keys {
+            display: flex;
+            /*弹性布局*/
+            min-height: 100vh;
+            /*高度*/
+            align-items: center;
+            /*位置高度居中*/
+            justify-content: center;
+            /*位置水平居中*/
+            flex: 1;
+        }
+        /*根元素  可以让css 可以被inherit "继承"*/
+        
+        body,
+        html {
+            font-family: sans-serif;
+            /**/
+        }
+        
+        .key {
+            transition: all 0.1s ease;
+            /*过度样式*/
+            border: .4rem solid #000;
+            /**/
+            border-radius: 0.5rem;
+            margin: 1rem;
+            font-size: 1.5rem;
+            padding: 1rem 0.5rem;
+            width: 10rem;
+            text-align: center;
+            color: white;
+            background: rgba(0, 0, 0, 0.4);
+            text-shadow: 0 0 .5rem black;
+            /*文字的阴影*/
+        }
+        /*.key 的转态类*/
+        
+        .playing {
+            transform: scale(1.1);
+            /*变形属性  变大1.1倍*/
+            border-color: #ffc600;
+            box-shadow: 0 0 1rem #ffc600;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="key">
+        <div>A</div>
+        <span class="sound">clap</span>
+
+        
+    </div> -->
+    <!-- <div class="keys"></div> -->
+    <div class="keys">
+        <div class="key">
+            <!--类名的叠加 -->
+            <div class="div">A</div>
+            <span class="sound">clap</span>
+        </div>
+        <div class="key">
+            <div class="div">S</div>
+            <span class="sound">hihat</span>
+        </div>
+        <div class="key">
+            <div class="div">D</div>
+            <span class="sound">kick</span>
+        </div>
+        <div class="key">
+            <div class="div">F</div>
+            <span class="sound">openhat</span>
+        </div>
+        <div class="key">
+            <div class="div">G</div>
+            <span class="sound">boom</span>
+        </div>
+        <div class="key">
+            <div class="div">H</div>
+            <span class="sound">ride</span>
+        </div>
+        <div class="key">
+            <div class="div">J</div>
+            <span class="sound">snare</span>
+        </div>
+        <div class="key">
+            <div class="div">K</div>
+            <span class="sound">tom</span>
+        </div>
+        <div class="key">
+            <div class="div">L</div>
+            <span class="sound">tink</span>
+        </div>
+    </div>
+    <audio src="sounds/sounds/clap.wav" autoplay>
+    <script>
+    const key=document.querySelector('.key');   /*选择一个.key的元素*/
+    const audio=document.querySelector('audio');
+    
+    /*定时器的设置*/
+    // setTimeout(()=>{  /*3秒后执行内部*/
+    //     key.classList.add('playing');
+    // },3000)
+    console.log(key);
+    // key.classList.add('playing');  /*在key中 添加一个类名*/
+    // setTimeout(,)            /*添加一个人定时器*/
+    function playSound(){
+        if(keydown==A){
+            audio.play();
+        }
+        
+    }
+    window.addEventListener('keydown',playSound);
+
+
+    </script>
+</body>
+</html>

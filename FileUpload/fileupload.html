@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="file" id="file" /> <button>上传</button>
+    </br>
+
+    <div class="pictrue"></div>
+
+    <script>
+        //请求封装
+        //1.http 并发 blod 上传
+        //    2. 当blod Promise.All 在发送一个merge的请求 
+        const pic = document.querySelector('.pictrue');
+        var requestListout;
+        var FlieChunkList = [];
+
+        function request({
+            url,
+            method = 'POST',
+            data,
+            headers = {},
+            requestList
+        }) {
+            return new Promise(resolve => { //  在Premise中 花时间的东西（请求）异步操作成功  则运行这一步
+                const xhr = new XMLHttpRequest(); //新建一个XMLHttpRequest的实例
+                xhr.open(method, url); //请求  向远程主机发出一个HTTP请求。
+                Object.keys(headers).forEach(key =>
+                    xhr.setRequestHeader(key, headers[key]) //加请求头
+                );
+                xhr.send(data); //将数据带过去
+                xhr.onload = event => { //传输完成时候 加入一个监听
+                    alert(event.target.response);
+                    // console.log("event.target.response", event.target.response)
+                    // resolve({
+                    //     data: event.target.response //将返回信息放入在data中
+                    // });
+                };
+            });
+        }
+        document
+            .getElementById('file').addEventListener("change", event => {
+                const file = event.target.files[0];
+                const file_name = file.name.split(".")[0]; //获取文件的名字
+                FlieChunkList.push(event.target.files[0]);
+                pic.innerHTML += `
+                <img src="${window.URL.createObjectURL(file)}" id='pic' width="500" />`
+
+            });
+        document
+            .querySelector('button').addEventListener('click', event => {
+                requestListout = FlieChunkList.map((file) => { //将数组变换形式
+                    console.log('file', file)
+                    const formData = new FormData(); //http传输时的数据类型
+                    formData.append("chunk", file);
+                    formData.append("filename", `${file.name.split('.')[0]}`);
+                    console.log(file);
+                    //console.log(`${file_name}`);
+                    return {
+                        formData
+                    }
+                }).map(({
+                    formData
+                }) => request({
+                    url: 'http://localhost:3030/', //参数放入
+                    data: formData
+                }));
+                //requestList 是一个Promise 对象
+                //开始把数据向服务端发送
+                // console.log(requestList);
+                // await Promise.all(requestList);
+                //     await Promise.all(requestListout).then(result => {
+                //             // alert("上传成功")
+                //         })
+                //         .catch((error) => {
+                //             console.log(error)
+                //         });
+            })
+    </script>
+</body>
+
+</html>

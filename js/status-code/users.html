@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户请求页</title>
+</head>
+
+<body>
+
+    <ul id="users"></ul>
+    <script>
+        window.onload = function() {
+
+            const users = JSON.parse(localStorage.getItem('usersdata'));
+            console.log("users", users)
+            const uluser = document.querySelector('#users');
+            if (users) {
+                uluser.innerHTML = users.map(user =>
+                        `
+                    <li>
+                        ${user.username}-${user.place}
+                    </li>
+                    `
+                    )
+                    // localStorage.clear();
+
+            }
+            fetch('/users')
+                .then(data => data.json())
+                .then(data => {
+                    localStorage.setItem('usersdata', JSON.stringify(data)) //需要存储字符串
+                    console.log("users请求")
+                    uluser.innerHTML = data.map(user =>
+                        `
+                        <li>
+                            ${user.username}-${user.place}
+                        </li>
+                        `
+                    )
+                })
+
+
+
+        }
+    </script>
+</body>
+
+</html>

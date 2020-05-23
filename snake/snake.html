@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>贪吃蛇</title>
+</head>
+<style>
+    button {
+        width: 50px;
+        height: 50px;
+        font-size: 1rem;
+    }
+    
+    #up {
+        display: block;
+        transform: translate(250%, 0);
+    }
+    
+    .center {
+        display: inline-block;
+        transform: translate(50%, 0);
+    }
+    
+    #buttom {
+        display: block;
+        transform: translate(250%, 0);
+    }
+    /* #buttom {
+        transform: translate(100%, 0);
+    } */
+</style>
+
+<body>
+    <div>Welcome to Snake</div>
+
+    <div><span>分数:</span><span id="score"></span><span id="fail" style="color: red; margin-left: 2rem;"></span></div>
+    <canvas id="gameCanvas" width="250" height="250" style="background-color: pink;"></canvas>
+    <div style="margin-top: 150px;  font-size: 0;">
+        <button id="up">上</button>
+
+        <div class="center">
+            <button id="left">左</button>
+            <button id="stop">停</button>
+            <button id="right">右</button>
+        </div>
+        <button id="buttom">下</button>
+        <button id="start">开始</button>
+
+        <script src="./snake.js"></script>
+    </div>
+</body>
+
+</html>

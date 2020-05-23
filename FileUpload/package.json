@@ -1,0 +1,16 @@
+{
+  "name": "FileUpload",
+  "version": "1.0.0",
+  "description": "大文件      上传        8M\r 切片\r 1. js 在es6 文件对象file node file stream 有所增强。\r     任何文件都是二进制 分割bolb\r     strat size offset\r     http请求可并发 n个切片并发上传 速度更快，改善了体验。",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "fs-extra": "^9.0.0",
+    "multiparty": "^4.2.1"
+  }
+}

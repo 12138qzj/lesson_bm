@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户页</title>
+</head>
+
+<body>
+
+    <input type="text" />
+    <button id='storagedata'>localStorage存储数据</button>
+    <button id='deletedata'>localStorage存储删除</button>
+
+    <script>
+        const text = document.querySelector('input');
+        console.log("获取到localStorage数据", localStorage.getItem('content'))
+        const storagedata = document.querySelector('#storagedata');
+        const deletedata = document.querySelector("#deletedata");
+        text.value = localStorage.getItem('content');
+
+
+        storagedata.addEventListener("click", (event) => {
+            console.log('text.innerText', text.value);
+            localStorage.setItem('content', text.value); //需要存储字符串
+
+        })
+
+        deletedata.addEventListener('click', (event) => {
+
+            localStorage.removeItem('content');
+        })
+    </script>
+</body>
+
+</html>
