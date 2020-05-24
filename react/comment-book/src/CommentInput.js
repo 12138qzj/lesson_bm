@@ -10,6 +10,7 @@ class CommentInput extends Component {
   
   constructor () {
     super()
+    this.textarea=React.createRef();
     this.state = {
       username: '',
       content: ''
@@ -23,6 +24,9 @@ class CommentInput extends Component {
 
   componentDidMount () { // mount 挂载
     this.textarea.focus()  // ?
+    //this.textarea.current.style.color="red";
+   // this.textarea
+    console.log(this.textarea)
   }
 
 
