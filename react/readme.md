@@ -23,4 +23,8 @@
     3. componentWillUpdate:数据在改变之前执行(数据包括：state,props)
     4. componentDidUpdate:数据修改完成执行(数据包括：state,props),
     5. componentWillReveceProps:props数据发生改变执行
-    6. com[onentWillUnmount:组件卸载的时候执行。
+    6. commonentWillUnmount:组件卸载的时候执行。
+### 受控组件/非受控组件
+
+#### 非受控组件 
+    ref={}
