@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        debugger;
+
+        let b;
+        console.log(b)
+
+        /*通过var声明的有初始化值undefined 的变量不同，
+          通过let声明的变量直到它们的定义
+          被执行时才初始化。在变量初始化前访问该变量会导致ReferenceError.
+          该变处在一个自块顶部到初始化处理的“暂存死区”中。*/
+        //  var b;
+        var a = 1;
+    </script>
+</body>
+
+</html>

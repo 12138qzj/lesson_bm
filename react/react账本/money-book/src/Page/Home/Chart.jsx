@@ -4,7 +4,8 @@ class Chart extends React.Component{
     render(){
         return(
             <div>
-                Chart
+                Chart 页面
+                {/* {this.props.children} */}
             </div>
         )
     }

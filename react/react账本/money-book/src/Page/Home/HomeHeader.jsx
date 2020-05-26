@@ -10,7 +10,7 @@ class HomeHeader extends React.Component {
     return (
       <React.Fragment>
         <div className="row justify-content-center">
-          <img src={logo} alt=""/>
+          <img src={logo} alt="" width="100px"/>
         </div>
         <div className="row">
           <div className="col col-3 offset-3">

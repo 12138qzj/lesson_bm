@@ -5,10 +5,14 @@ http.createServer((req, res) => {
     //  'Access-Control-Allow-Headers': 'content-type'
     //当前端需要发数据过来的时候就要设置这个头部
     res.writeHead(200, {
+            'Content-Type': 'application/json',
+            //'Access-Control-Expose-Headers': 'Access-Control-Allow-Origin',
             'Access-Control-Allow-Origin': 'http://localhost:8080',
             'Access-Control-Allow-Methods': 'GET,POST',
+            // 'Access-Control-Allow-Methods': '*', //允许所有访问
             'Access-Control-Max-Age': -1, //预检请求结果缓存时间，默认是为5s
             'Access-Control-Allow-Headers': 'content-type,X-Requested-With',
+            //'Access-Control-Allow-Methods': '*', //允许所有访问
             'Access-Control-Allow-Credentials': true //凭证 cookie ,允许前端请求携带 cookie
 
 

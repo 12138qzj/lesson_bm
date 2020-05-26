@@ -4,8 +4,10 @@ http.createServer((req, res) => {
         // /api?callback=onResponse
         if (req.url.includes('/api')) {
             let myurl = url.parse(req.url);
-            // console.log(myurl);
+            console.log(myurl);
             let params = new URLSearchParams(myurl.query)
+            console.log(params);
+
             let posts = ['js', 'php'];
             // console.log(req);
             let mathodName = params.get('callback');

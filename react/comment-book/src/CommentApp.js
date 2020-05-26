@@ -18,7 +18,7 @@ class CommentApp extends Component {
   }
 
 
-  _loadComments () {
+  _loadComments () {//数据初始化函数
     let comments = localStorage.getItem('comments')
     if (comments) {
       comments = JSON.parse(comments)
@@ -27,7 +27,7 @@ class CommentApp extends Component {
   }
 
 
-  _saveComments (comments) {
+  _saveComments (comments) {//数据存储函数
     localStorage.setItem('comments', JSON.stringify(comments))
   }
 
