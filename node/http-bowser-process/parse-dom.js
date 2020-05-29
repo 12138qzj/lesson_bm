@@ -62,7 +62,7 @@ function tagName(c) {
     } else if (c === '>') {
         // tag 拼接结束
         emit(currentToken); //提交保存好的标签
-        return start
+        return start //返回到最初，重新检测下一个标签
     }
 }
 
