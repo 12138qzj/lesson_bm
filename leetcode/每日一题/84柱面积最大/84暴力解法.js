@@ -18,9 +18,10 @@ var largestRectangleArea = function(heights) {
             right++;
             count++;
         }
-        if (max < heights[i] * count) {
-            max = heights[i] * count;
-        }
+        // if (max < heights[i] * count) {
+        //     max = heights[i] * count;
+        // }
+        max = Math.max(max, heights[i] * count)
     }
     return max;
 };
