@@ -42,7 +42,7 @@ function CreateNotification(){
     //ref.current=new Notification();
     //
 
-    ReactDOM.render(<Notification ref={ref}/>,div)
+    ReactDOM.render(<Notification ref={ref}/>,div)//将该组件<Notification ref={ref}/>挂载在div上
  
     document.body.appendChild(div);
     //ref.current=new Notification();

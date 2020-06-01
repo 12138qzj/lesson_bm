@@ -27,7 +27,9 @@ class CommentApp extends Component{
     render(){
         return (
             <div className="wrapper">
-                {/* 使用props将组件里面传出来的值获取 */}
+                {/* 使用props将组件里面传出来的值获取
+                bind() 不调用方法 改变this指向问题 
+                */}
                 <CommentInput onSubmit={this.handleSubmitComment.bind(this)}/>
                 <CommentList comments={this.state.comments}/>
             </div>

@@ -10,6 +10,7 @@ function App() {
       {/* <App2>
 
       </App2> */}
+      {/* onClick也是一个函数 给他赋值（函数） */}
       <button onClick={()=>{
         notification.open(
           {
