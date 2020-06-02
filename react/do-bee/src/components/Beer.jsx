@@ -1,8 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
-
+//每一个啤酒的的框（组件）
 class Beer extends React.Component {
+  static propTypes = {
+    details: PropTypes.object.isRequired
+  }
+
   render() {
     const { name, labels, id } = this.props.details;
     

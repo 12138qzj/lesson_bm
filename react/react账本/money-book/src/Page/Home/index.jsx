@@ -19,6 +19,7 @@ class index extends React.Component{
            
             <Link to='/List'>列表模式</Link>
             <Link to='/Chart'>图表模式</Link>
+            <Link to='/Chart/User'>图表到列表模式</Link>
             
             {this.props.children}
             {/* <BrowserRouter> */}

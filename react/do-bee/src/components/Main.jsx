@@ -1,53 +1,165 @@
-import React from "react";
-import Results from './Results';
-// StatefullComponent  StatelessComponent
+// import React from "react";
+// import Results from './Results';
+// import Search from './Search';
+// // StatefullComponent  StatelessComponent
 
+
+// class Main extends React.Component {
+//   constructor(){
+//     super();
+//     this.state={
+//       beers:[],
+//       loading:true
+//     }
+//   }
+//   componentWillMount(){//在组件渲染之后执行
+
+//     //params路由中参数的部分
+//     console.log(this.props.match.params)
+//     //获取到路径中的搜索值
+//     let params=this.props.match.params || {};
+//     const searchTerm=params.searchTerm
+//     this.loadBeers(searchTerm);
+//   }
+
+//   componentDidUpdate(prevProps) {
+//     // console.log('did update')
+//      console.log("prevProps",prevProps);
+//     //this.props 父级组件过来的参数
+//     const currentSearchTerm = this.props.match.params.searchTerm; // 新的参数
+//     const oldSearchTerm = prevProps.match.params.searchTerm;
+//      console.log(oldSearchTerm, currentSearchTerm);
+//     if (currentSearchTerm !== oldSearchTerm) {
+//       this.loadBeers(currentSearchTerm)
+//     }
+//   }
+//   loadBeers(searchTerm="hops"){
+//     //数据请求
+//     const localStorageBeers=localStorage.getItem("beers");
+//     // console.log("localStorageBeers",localStorageBeers)
+//     if(localStorageBeers){
+//     // console.log("localStorageBeers",localStorageBeers)
+
+//       this.setState({
+//         beers:JSON.parse(localStorageBeers),
+//         loading:false
+//       })
+//     }else{
+
+//       fetch(`http://api.react.beer/v2/search?q=${searchTerm}&type=beer`)
+//       .then(data=>data.json())
+//       .then(data=>{
+//         // if(data){
+//           this.setState({
+//             beers:data.data,
+//             loading:false
+//           })
+//          localStorage.setItem("beers",JSON.stringify(data.data));
+//           console.log(data.data);
+//         // }
+//         // this.setState()=   
+        
+        
+      
+//       })
+//     }
+
+//   }
+//   render() {
+    
+//     return (
+//       <div>
+//         <Search/>
+//       <Results beers={this.state.beers} loading={this.state.loading} />
+//       </div>
+//     )
+//   }
+// }
+
+
+// export default Main
+import React from "react";
+// StatefullComponent  StatelessComponent
+import Search from "./Search";
+import Header from './Header';
+// import Header from "./Header";
+import Results from "./Results";
 
 class Main extends React.Component {
-  constructor(){
+  // 集列表， 搜索于一体 怎么做？ 
+  constructor() {
     super();
-    this.state={
-      beers:[],
-      loading:true
+    this.state = {
+      beers: [],
+      loading: true // 正在加载中  体验
     }
   }
-  componentWillMount(){//在组件渲染之后执行
-
-    //params路由中参数的部分
-    console.log(this.props.match.params)
-    let params=this.props.match.params || {};
-    const searchTerm=params.searchTerm
-    this.loadBeers(searchTerm);
+  
+  // URL不一样？ 分析URL不一样
+  componentDidMount() {
+    // /  把所有啤酒都查出来， 
+    // /search/:searchTerm   就查searchTerm
+    // const \
+    console.log(this.props.match.params);
+    const params = this.props.match.params || {} // 
+    const searchTerm = params.searchTerm || undefined;
+    this.loadBeers(searchTerm); // 
   }
-  loadBeers(searchTerm="hops"){
-    //数据请求
-    fetch(`http://api.react.beer/v2/search?q=${searchTerm}&type=beer`)
-    .then(data=>data.json())
-    .then(data=>{
-      if(data){
 
+  componentDidUpdate(prevProps) {
+    // console.log('did update')
+    // console.log(prevProps);
+    const currentSearchTerm = this.props.match.params.searchTerm; // 新的参数
+    const oldSearchTerm = prevProps.match.params.searchTerm;
+    // console.log(oldSearchTerm, currentSearchTerm);
+    if (currentSearchTerm !== oldSearchTerm) {
+      this.loadBeers(currentSearchTerm)
+    }
+  }
+
+  // = hops 在业务上有什么用？
+  // es6 概念 默认赋值
+  loadBeers(searchTerm = "hops") {
+    //通过searchTerm查询的值设置web缓存机制
+    const localStorageBeers = localStorage.getItem(`search-${searchTerm}`) 
+    if (localStorageBeers) {
+      const localBeers = JSON.parse(localStorageBeers);
+      this.setState({
+        beers: localBeers,
+        loading: false
+      })
+      return ;
+    }
+    fetch(`http://api.react.beer/v2/search?q=${searchTerm}&type=beer`) // api 地址
+      .then(data => data.json())
+      .then(data => {
+        //判断数据是否请求到，给默认初始值  
+        const beers = data.data || [];    
         this.setState({
-          beers:data.data,
-          loading:false
-        })
-        console.log(data.data);
-      }
-      // this.setState()=   
-      
-      
-     
-    })
+          loading: false,
+          beers
+        });
+        // 业务
+        // 列表记录相关 searchTerm 变化
+        localStorage.setItem(
+          `search-${searchTerm}`,
+          JSON.stringify(this.state.beers)
+        )
+        console.log(data)
+      })
   }
+
   render() {
-    
     return (
       <div>
-        
-      <Results beers={this.state.beers} loading={this.state.loading} />
+        <Header siteName="Beer me!" />        
+        <Search /> 
+        {/* 搜索组件 */}
+        <Results beers={this.state.beers}
+         loading={this.state.loading} />
       </div>
     )
   }
 }
-
 
 export default Main
