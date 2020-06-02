@@ -1,0 +1,359 @@
+[{
+        "type": "rule",
+        "selectors": [
+            ".parent .cls"
+        ],
+        "declarations": [{
+            "type": "declaration",
+            "property": "font-size",
+            "value": "16px",
+            "position": {
+                "start": {
+                    "line": 3,
+                    "column": 3
+                },
+                "end": {
+                    "line": 4,
+                    "column": 1
+                }
+            }
+        }],
+        "position": {
+            "start": {
+                "line": 2,
+                "column": 1
+            },
+            "end": {
+                "line": 4,
+                "column": 2
+            }
+        }
+    },
+    {
+        "type": "rule",
+        "selectors": [
+            "#myid"
+        ],
+        "declarations": [{
+            "type": "declaration",
+            "property": "background-color",
+            "value": "red",
+            "position": {
+                "start": {
+                    "line": 6,
+                    "column": 3
+                },
+                "end": {
+                    "line": 6,
+                    "column": 24
+                }
+            }
+        }],
+        "position": {
+            "start": {
+                "line": 5,
+                "column": 1
+            },
+            "end": {
+                "line": 7,
+                "column": 2
+            }
+        }
+    }
+] {
+    "type": "document",
+    "children": [{
+        "type": "element",
+        "children": [{
+                "type": "element",
+                "children": [{
+                    "type": "element",
+                    "children": [],
+                    "tagName": "style",
+                    "computerStyle": {}
+                }],
+                "tagName": "head",
+                "computerStyle": {}
+            },
+            {
+                "type": "element",
+                "children": [{
+                        "type": "element",
+                        "children": [],
+                        "attributes": [{
+                                "name": "a",
+                                "value": "a"
+                            },
+                            {
+                                "name": "b",
+                                "value": "b"
+                            }
+                        ],
+                        "tagName": "img"
+                    },
+                    {
+                        "type": "element",
+                        "children": [{
+                                "type": "element",
+                                "children": [{
+                                    "type": "element",
+                                    "children": [{
+                                        "type": "element",
+                                        "children": [],
+                                        "tagName": "p",
+                                        "computerStyle": {}
+                                    }],
+                                    "tagName": "div",
+                                    "computerStyle": {}
+                                }],
+                                "tagName": "div",
+                                "computerStyle": {}
+                            },
+                            {
+                                "type": "element",
+                                "children": [],
+                                "tagName": "div",
+                                "computerStyle": {}
+                            }
+                        ],
+                        "tagName": "span",
+                        "computerStyle": {}
+                    },
+                    {
+                        "type": "element",
+                        "children": [],
+                        "attributes": [{
+                                "name": "class",
+                                "value": "cls"
+                            },
+                            {
+                                "name": "id",
+                                "value": "myid"
+                            }
+                        ],
+                        "tagName": "div",
+                        "computerStyle": {
+                            "background-color": "red"
+                        }
+                    }
+                ],
+                "tagName": "body",
+                "computerStyle": {}
+            }
+        ],
+        "tagName": "html",
+        "computerStyle": {}
+    }]
+}
+[{
+        "type": "document",
+        "children": [{
+            "type": "element",
+            "children": [{
+                    "type": "element",
+                    "children": [{
+                        "type": "element",
+                        "children": [],
+                        "tagName": "style"
+                    }],
+                    "tagName": "head"
+                },
+                {
+                    "type": "element",
+                    "children": [{
+                            "type": "element",
+                            "children": [],
+                            "attributes": [{
+                                    "name": "a",
+                                    "value": "a"
+                                },
+                                {
+                                    "name": "b",
+                                    "value": "b"
+                                }
+                            ],
+                            "tagName": "img"
+                        },
+                        {
+                            "type": "element",
+                            "children": [{
+                                    "type": "element",
+                                    "children": [{
+                                        "type": "element",
+                                        "children": [{
+                                            "type": "element",
+                                            "children": [],
+                                            "tagName": "p"
+                                        }],
+                                        "tagName": "div"
+                                    }],
+                                    "tagName": "div"
+                                },
+                                {
+                                    "type": "element",
+                                    "children": [],
+                                    "tagName": "div"
+                                }
+                            ],
+                            "tagName": "span"
+                        }
+                    ],
+                    "tagName": "body"
+                }
+            ],
+            "tagName": "html"
+        }]
+    },
+    {
+        "type": "element",
+        "children": [{
+                "type": "element",
+                "children": [{
+                    "type": "element",
+                    "children": [],
+                    "tagName": "style"
+                }],
+                "tagName": "head"
+            },
+            {
+                "type": "element",
+                "children": [{
+                        "type": "element",
+                        "children": [],
+                        "attributes": [{
+                                "name": "a",
+                                "value": "a"
+                            },
+                            {
+                                "name": "b",
+                                "value": "b"
+                            }
+                        ],
+                        "tagName": "img"
+                    },
+                    {
+                        "type": "element",
+                        "children": [{
+                                "type": "element",
+                                "children": [{
+                                    "type": "element",
+                                    "children": [{
+                                        "type": "element",
+                                        "children": [],
+                                        "tagName": "p"
+                                    }],
+                                    "tagName": "div"
+                                }],
+                                "tagName": "div"
+                            },
+                            {
+                                "type": "element",
+                                "children": [],
+                                "tagName": "div"
+                            }
+                        ],
+                        "tagName": "span"
+                    }
+                ],
+                "tagName": "body"
+            }
+        ],
+        "tagName": "html"
+    },
+    {
+        "type": "element",
+        "children": [{
+                "type": "element",
+                "children": [],
+                "attributes": [{
+                        "name": "a",
+                        "value": "a"
+                    },
+                    {
+                        "name": "b",
+                        "value": "b"
+                    }
+                ],
+                "tagName": "img"
+            },
+            {
+                "type": "element",
+                "children": [{
+                        "type": "element",
+                        "children": [{
+                            "type": "element",
+                            "children": [{
+                                "type": "element",
+                                "children": [],
+                                "tagName": "p"
+                            }],
+                            "tagName": "div"
+                        }],
+                        "tagName": "div"
+                    },
+                    {
+                        "type": "element",
+                        "children": [],
+                        "tagName": "div"
+                    }
+                ],
+                "tagName": "span"
+            }
+        ],
+        "tagName": "body"
+    },
+    {
+        "type": "element",
+        "children": [],
+        "attributes": [{
+                "name": "class",
+                "value": "cls"
+            },
+            {
+                "name": "id",
+                "value": "myid"
+            }
+        ],
+        "tagName": "div"
+    }
+]
+
+{
+    "type": "document",
+    "children": [{
+        "type": "element",
+        "children": [{
+                "type": "element",
+                "children": [],
+                "attributes": [],
+                "tagName": "head"
+            },
+            {
+                "type": "element",
+                "children": [{
+                        "type": "element",
+                        "children": [],
+                        "attributes": [],
+                        "tagName": "img"
+                    },
+                    {
+                        "type": "element",
+                        "children": [],
+                        "attributes": [],
+                        "tagName": "span"
+                    },
+                    {
+                        "type": "element",
+                        "children": [],
+                        "attributes": [],
+                        "tagName": "div"
+                    }
+                ],
+                "attributes": [],
+                "tagName": "body"
+            }
+        ],
+        "attributes": [],
+        "tagName": "html"
+    }]
+}
