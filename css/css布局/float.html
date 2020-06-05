@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .wrap {
+        border: 1px solid black;
+        /* position: absolute; */
+        /* display: inline-block; */
+        /* 清除浮动的原理  就是在大盒子里面加了BFC(隔离板)*/
+        overflow: hidden;
+        margin: 30px;
+    }
+    
+    .main {
+        width: 40px;
+        height: 200px;
+        background-color: pink;
+        /* float 属性会脱离文档标准流 
+        在最近包含块中浮动*/
+        float: left;
+        /* left: 100px; */
+    }
+    
+    .aside {
+        /* 在这个盒子加一个BFC */
+        overflow: hidden;
+    }
+</style>
+
+<body>
+    <div class="wrap">
+
+        <div class="main">
+            mian
+        </div>
+        <div class="aside">
+            aside fdsafdf
+            <br/> aside fdsafdf
+            <br/> aside fdsafdf
+            <br/> aside fdsafdf
+            <br/> aside fdsafdf
+            <br/> aside fdsafdf
+            <br/> aside fdsafdf
+            <br/> aside fdsafdf
+            <br/>
+            <br/> aside fdsafdf
+            <br/>
+            <br/> aside fdsafdf
+            <br/> aside fdsafdf <br/> aside fdsafdf
+
+
+            <br/> aside fdsafdf
+
+
+            <br/> aside fdsafdf
+            <br/> aside fdsafdf
+
+
+        </div>
+
+        <!-- <div style="clear: both;"></div> -->
+    </div>
+
+</body>
+
+</html>
