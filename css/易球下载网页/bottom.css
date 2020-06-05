@@ -1,0 +1,23 @@
+.footer.fixed {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}
+
+.footer {
+    padding-top: 54px;
+    background-color: #ebebeb;
+    height: 124px;
+    border-top: 1px solid #dbdbdb;
+    color: #777777;
+    font-size: 14px;
+    text-align: center;
+}
+
+
+/* @media screen and (max-width: 1366px)
+.footer {
+    height: 80px;
+    padding-top: 34px;
+} */
