@@ -35,7 +35,7 @@ class App extends Component{
                         <Route exact path="/Search" component={ Search}/>
 
                         {/* 默认显示界面 */}
-                        <Redirect from="/Ranking" to="/recommend"/>
+                        {/* <Redirect from="/Ranking" to="/recommend"/> */}
                         {/* <Route exact path="/" component={ Recommend}/> */}
                     </Switch>   
 
