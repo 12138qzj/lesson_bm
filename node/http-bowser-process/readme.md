@@ -1,3 +1,5 @@
+### 库的加载
+cnpm i images -S
 ### 代码解析
     浏览器拿到代码字符串，
     解析报文:body(html),headers , 响应行

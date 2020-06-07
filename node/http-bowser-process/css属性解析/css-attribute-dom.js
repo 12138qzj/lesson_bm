@@ -1,29 +1,38 @@
 const css = require('css');
+const layout = require('./layout')
+    //导入画图片的第三方库
+const images = require('images')
 let htmlStr = `<html>
   <head>
    <style>
    </style>
   </head>
   <body>
-    <img a="a" b="b"/>
-    <span>
-      <div>
-        <div>
-          <p></p>
-        </div>
-      </div>
-      <div></div>
-    </span>
-    <div class="cls" id="myid"></div>
+    <div class="wrap">
+        <div class="main"></div>
+        <div class="aside"></div>
+    </div>
   </body>
 </html>`
     //css的解析成JSON
 let cssStr = `
-.parent .cls {
-  font-size: 16px 
+.wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 500px;
+    background-color: rgb(255,0,0);
 }
-#myid {
-  background-color: red;
+.main {
+    width: 200px;
+    height: 200px;
+    background-color: rgb(0,255,0);
+}
+.aside{
+    width: 300px;
+    height: 300px;
+    background-color: rgb(0,0,255);
 }
 `
 let rules = css.parse(cssStr).stylesheet.rules
@@ -34,6 +43,39 @@ let stack = [{ type: 'document', children: [] }];
 parse(htmlStr);
 console.log(JSON.stringify(rules))
 console.log(JSON.stringify(stack[0], null, 2))
+    //拿到整颗树 
+    //遍历树 渲染每个element（节点）
+let tree = stack[0];
+let viewImage = images(800, 600);
+
+function render(view, element) {
+    if (element.style) {
+        let img = images(element.style.width, element.style.height);
+        //获取颜色
+        if (element.style['background-color']) {
+            let color = element.style['background-color'];
+            let start = color.indexOf('('),
+                end = color.lastIndexOf(')')
+                //获取rgb中的三个数值
+            let rgb = color.substring(start + 1, end).split(', ').map(e => parseInt(e));
+            img.fill(rgb[0], rgb[1], rgb[2]);
+        }
+        view.draw(img, element.style.x, element.style.y);
+    }
+    if (element.children) {
+        for (let child of element.children) {
+            render(view, child);
+        }
+    }
+}
+render(viewImage, tree)
+    //定义一个画布
+
+
+
+
+//将绘制好的画布保存
+viewImage.save('render.jpg')
 
 // function match(selector, ele) {
 //     if (selector || ele.attributes) {
@@ -108,6 +150,7 @@ function computerCss(ele) {
 //     let elements = stack.slice(0).reverse();
 
 
+
 //     for (let rule of rules) {
 //         let selector = rule.selectors[0].split(' ').reverse();
 //         if (!match(selector[0], ele)) {
@@ -124,7 +167,7 @@ function computerCss(ele) {
 // }
 
 function emit(token) {
-    console.log(token);
+    // console.log(token);
     //取出栈中的栈顶元素（开始的父级标签）
     let top = stack[stack.length - 1];
     if (token.type === 'startTag') {
@@ -148,6 +191,14 @@ function emit(token) {
         if (token.tagName !== top.tagName) {
             throw new Error('tagname match error')
         } else {
+            //遇到结束标签标签出栈
+            // flex 布局 放到结束标签位置
+            // 因为像 alignItems justifyContent 需要知道子元素的宽高的
+            // 先保证 子元素宽高 已经解析出来了
+            // 在这里计算 （x,y）
+            // 栈顶元素就是 要布局的 容器
+            //将节点的子元素去格式化css样式
+            layout(top)
             stack.pop();
         }
     } else if (token.type === 'selfCloseToken') {
