@@ -4,9 +4,59 @@
     background-image: url("./images/bg.jpg");
     background-size: 100% 100% ;
     .login-header{
+        display: flex;
+        align-items: center;
+        //水平居中
+        // justify-content: center;
+        background-color: #335064;
+        height: 80px;
 
+        img{
+            height: 40px;
+            width: 40px;
+            margin-left: 2rem;
+        }
+        h1{
+            font-size: 1rem;
+            margin-left: 1rem;
+            color: white;
+        }
+        
     }
     .login-content{
+        // display: flex;
+        // justify-content: center;
+        padding: 1rem 2rem;
+        margin: 10rem auto;
+        width: 400px;
+        height: 300px;
+        background-color:white ;
+        h2{
+            display: flex;
+            justify-content: center;
+            margin: 0 auto;
+            font-weight: 800;
+            font-size: 1.5rem;
+        }
+        // .form{
 
+            
+        // }
     }
+}
+
+.login-content{
+
+     .login-form {
+        max-width: 300px;
+      }
+       .login-form-forgot {
+        float: right;
+      }
+       .ant-col-rtl .login-form-forgot {
+        float: left;
+      }
+       .login-form-button {
+        width: 100%;
+      }
 }
