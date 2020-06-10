@@ -15,8 +15,9 @@ class App extends Component{
                 <div className="app">
                     <header className="app-header">
                         <img src={logo} alt="logo" className="app-logo"/>
+                        <h1 className="app-title">Mango Music</h1>
                     </header>
-                    <h1 className="app-title">Mango Music</h1>
+                    
                     <div className="music-tab">
                         <div className="tab-item">
                             <NavLink className="nav-link" to="/"><span>推荐</span></NavLink>
