@@ -1,7 +1,8 @@
 import React,{ Component} from 'react';
 import { Form, Input, Button,Checkbox } from 'antd';
     import { UserOutlined, LockOutlined } from '@ant-design/icons';
-import logo from './images/logo.png';
+import {reqlogin} from '../..//api/index';
+    import logo from './images/logo.png';
 import './login.less'
 // import './login.styl'
 // import './login.css'
@@ -9,6 +10,20 @@ import './login.less'
  * 登陆的路由组件
  */
 export default class Login extends Component {
+    onFinish=(e,err)=>{
+        if(!err){
+            console.log(e,"提交了")
+        }
+        console.log(e,"提交了")
+        reqlogin(e.username,e.password).then(
+            (err,data)=>{
+                //Promise 返回reject失败 则不会运行.then函数
+                console.log("数据请求失败",err,data)
+                if(err){
+                    console.log("数据请求失败")
+                }
+        })
+    }
     render(){
         return(
             <div className="login">
@@ -22,20 +37,45 @@ export default class Login extends Component {
                         <Form
                             name="normal_login"
                             className="login-form"
+                            //初始值
                             initialValues={{ remember: true }}
-                            onFinish="">
+                            onFinish={this.onFinish}
+                            >
                             <Form.Item
+                            
                                 name="username"
-                                rules={[{ required: true, message: 'Please input your Username!' }]}>
-                                <Input prefix={<UserOutlined className="site-form-item-icon" />} placeholder="Username" />
+                                //赋默认值
+                                initialValue="Username"
+
+                                rules={[{ required: true, message: 'Please input your Username!' },
+                                {min:4,message:"用户名至少输入4位"},
+                                {max:12,message:"用户名不能大于12位"},
+                                //正则表达式验证
+                                 {pattern:/^[a-zA-Z0-9_]+$/,message:"用户名不和规则"}]}>
+                                <Input prefix={<UserOutlined className="site-form-item-icon" />} placeholder="用户名" />
                             </Form.Item>
                             <Form.Item
                                 name="password"
-                                rules={[{ required: true, message: 'Please input your Password!' }]}>
+                                rules={[{ required: true, message: 'Please input your Password!' },
+                                () => ({
+                                    validator(rule, value) {
+                                    console.log("object",rule,value);
+                                    //!value || getFieldValue('password') === value
+                                   
+                                      if (value.length<4) {
+                                        return Promise.reject('密码长度不能小于4位');
+                                      }else if(value.length>12){
+                                        return Promise.reject('密码长度不能大于12位');
+                                      }else{
+                                        return Promise.resolve();
+                                      }
+                                     
+                                    },
+                                  }),]}>
                                 <Input
                                 prefix={<LockOutlined className="site-form-item-icon" />}
                                 type="password"
-                                placeholder="Password"
+                                placeholder="密码"
                                 />
                             </Form.Item>
                             <Form.Item>
