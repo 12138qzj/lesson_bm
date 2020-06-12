@@ -15,9 +15,9 @@
     <div class="header scrollTop">
         <div class="weight">
             <div class="h-inner">
-                <h1 class="logo">
+                <!-- <h1 class="logo">
                     <a href="./index.html"></a>
-                </h1>
+                </h1> -->
                 <div class="nav">
                     <ul class="nav-ul">
                         <li class="nav-item"><a href="./index.html">首页</a></li>
@@ -36,13 +36,19 @@
 
             <div class="down-ietm windows">
                 <div class="down-ietm-inner">
-                    <div class="logo-area">
+                    <!-- <div class="logo-area">
                         <div class=" winicon"></div>
+                    </div> -->
+                    <div class="logo-area">
+                        <div class="winicon" id="andQRcode"></div>
+                        <div id="qrhide" style="display: none;" title="" style="display: block;"></div>
                     </div>
                     <div class="info-area">
                         <div class="d-item-title">Windows版</div>
-                        <div class="d-item-desc"> 版本<span id="versionWin">3.0.0</span> <span class="update-time" id="timeWin">2020-3-31</span></div>
-                        <div class="down-btn"><a href="http://dldir1.qq.com/qqfile/qq/TIM3.0.0/TIM3.0.0.21315.exe" onclick="tcssReport('tim.downloads.windows');" id="downloadWin">下载</a></div>
+                        <div class="d-item-desc"> 版本<span id="versionWin">1.0.0</span> <span class="update-time" id="timeWin">2020-3-31</span></div>
+                        <div class="down-btn">
+                            <a href="" onclick="tcssReport('tim.downloads.windows');" id="downloadWin">未更新</a>
+                        </div>
                         <div class="d-item-log"><a href="./support.html">更新日志</a></div>
                     </div>
                 </div>
@@ -50,14 +56,19 @@
 
             <div class="down-ietm iphone">
                 <div class="down-ietm-inner">
+                    <!-- <div class="logo-area">
+                        <div class="iphicon"></div>
+                    </div> -->
                     <div class="logo-area">
-                        <div class=" iphicon"></div>
+                        <div class="iphicon" id="andQRcode"></div>
+                        <div id="qrhide" style="display: none;" title="http://down.qq.com/qqweb/TIM/android_apk/tim.apk"><canvas width="128" height="128" style="display: none;"></canvas><img src="data:image/png;base64,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"
+                                style="display: block;"></div>
                     </div>
                     <div class="info-area">
                         <div class="d-item-title">iPhone版</div>
-                        <div class="d-item-desc">版本<span id="versionIPhone">3.0.0</span> <span class="update-time" id="timeIPhone">2020-4-1</span></div>
-                        <div class="down-btn"><a>下载</a></div>
-                        <div class="scan">请用手机扫码下载</div>
+                        <div class="d-item-desc">版本V<span id="versionIPhone">1.0.0</span> <span class="update-time" id="timeIPhone">2020-4-1</span></div>
+                        <div class="down-btn"><a>未更新</a></div>
+                        <!-- <div class="scan">请用手机扫码下载</div> -->
                         <div class="d-item-log"><a href="./support.html">更新日志</a></div>
                     </div>
 
@@ -70,18 +81,17 @@
                         <div class="itemlogo" id="andQRcode"></div>
                         <div id="qrhide" style="display: none;" title="http://down.qq.com/qqweb/TIM/android_apk/tim.apk"><canvas width="128" height="128" style="display: none;"></canvas><img src="data:image/png;base64,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"
                                 style="display: block;"></div>
-
                     </div>
                     <div class="info-area">
                         <div class="d-item-title">Android版</div>
-                        <div class="d-item-desc">版本
-                            <span id="versionAnd">3.0.0</span>
+                        <div class="d-item-desc">版本V
+                            <span id="versionAnd">1.0.0</span>
                             <span class="update-time" id="timeAnd">2020-4-9</span>
                         </div>
                         <div class="down-btn">
                             <a href="#" id="downloadAnd">下载</a>
                         </div>
-                        <div class="scan">请用手机扫码下载</div>
+                        <!-- <div class="scan">请用手机扫码下载</div> -->
                         <div class="d-item-log">
                             <a href="./support.html">更新日志</a>
                         </div>
@@ -90,8 +100,8 @@
             </div>
         </div>
         <div class="macqq">
-            Mac QQ 现在已支持在线文档和日程功能，
-            <a href="//im.qq.com/macqq/">立即下载</a>。
+            易球馆 现在已支持在线文档和日程功能，
+            <a href="//im.qq.com/macqq/"> </a>
         </div>
     </div>
 
@@ -113,18 +123,18 @@
                 <span class="useradjest">
                 <a href="http://play.mobile.qq.com/yy/eim/help/serverinfo.html">用户协议</a>
             </span>
-                <span>TIM意见反馈：</span> 274281820（QQ群）
+                <span>意见反馈：</span> 892011585（QQ群）
                 <span style="margin-left:30px;position:relative;">
                 <i style="margin-top:-8px;width:1px;height:16px;background-color:#777;position:absolute;top:50%;left: -15px;">
                 </i>
-                TIM在线文档反馈：
-            </span>303702904（QQ群）
+                在线文档反馈：
+            </span>892011585（QQ群）
             </p>
-            <p class="copy-right">Copyright © 1998-
+            <p class="copy-right">Copyright © 2019-
                 <script>
                     document.write(new Date().getFullYear())
                 </script>
-                2020 Tencent. All Rights Reserved. 腾讯公司 版权所有
+                2020 ByteSoft studio. All Rights Reserved. ByteSoft工作室 版权所有
             </p>
         </div>
     </div>
