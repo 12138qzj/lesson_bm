@@ -19,7 +19,8 @@ class Ranking extends Component{
     super();
         this.state={
             loading:true,
-            rankingList: []       
+            rankingList: [],
+            refreshScroll:false       
         }
     }
     componentDidMount(){
@@ -30,6 +31,10 @@ class Ranking extends Component{
                 rankingList:res.data.topList,
                 loading: false
                 // rankingList: res.data.topList
+            },()=>{
+              this.setState({
+                refreshScroll:true
+              })
             })
         })
     }
@@ -39,6 +44,7 @@ class Ranking extends Component{
     //   }
     // }
     render(){
+      const {match}=this.props;
         return  (
             <div className="music-ranking"> 
             <Scroll
@@ -52,6 +58,7 @@ class Ranking extends Component{
               <div className="ranking-list">
                 {
                   this.state.rankingList.map(ranking => {
+                    console.log(ranking);
                     return (
                       <div className="ranking-wrapper" key={ranking.id}>
                         <div className="left">

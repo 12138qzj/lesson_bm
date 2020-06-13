@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route,Switch,NavLink,Redirect} from 'react-rou
 import Recommend from '../recommend/Recommend';
 import Ranking from '../ranking/Ranking';
 import Search from '../search/Search';
+import Album from '../album/Album';
 import logo from '../assets/imgs/logo.png';
 import './App.styl'; //webpack 在工作解析
 class App extends Component{
@@ -34,7 +35,7 @@ class App extends Component{
                         <Route exact path="/" component={ Recommend}/>
                         <Route exact path="/Ranking" component={ Ranking}/>
                         <Route exact path="/Search" component={ Search}/>
-
+                        <Route path="/:id" component={Album}/>
                         {/* 默认显示界面 */}
                         {/* <Redirect from="/Ranking" to="/recommend"/> */}
                         {/* <Route exact path="/" component={ Recommend}/> */}

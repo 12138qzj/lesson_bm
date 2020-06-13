@@ -1,13 +1,19 @@
 import React ,{ Component }from 'react';
 import Lazyload , { forceCheck }from 'react-lazyload';//延迟加载
 // import {BrowserRouter, Route,Link} from 'react-router-dom';
-import {getNewAlbum }from '../api/recommend.js';
+import { Route } from 'react-router-dom';
 import Swiper from 'swiper';
 import "swiper/css/swiper.min.css";
-import './Recommend.styl'; //webpack 在工作解析
-import Loading from '../common/loading/Loading';
 
+
+import {getNewAlbum }from '../api/recommend.js';
+import Loading from '../common/loading/Loading';
+import * as AblumModel from '../model/Ablum';
 import Scroll from '@/common/scroll/Scroll';
+import Album from '../album/Album';
+
+
+import './Recommend.styl'; //webpack 在工作解析
 class Recommend extends Component{
     constructor(){
         super();
@@ -76,35 +82,46 @@ class Recommend extends Component{
         this.bScroll.refresh();
       }
     }
+    toAlbumDetail(url){
+      console.log("this.props",this.props);
+      this.props.history.push({
+        pathname:url
+      })
+      console.log(url);
+
+    }
     render(){
-      let albums = this.state.newAlbums.map(item => (
-        <div className="album-wrapper" key={item.album_id}>
+      const {match}=this.props;
+      let albums = this.state.newAlbums.map(item => {
+        let ablum=AblumModel.createAlbumByList(item);
+       // console.log(ablum);
+        return(
+        <div className="album-wrapper" key={ablum.id}
+        onClick={this.toAlbumDetail.bind(this,(`${match.url}${ablum.mId}`))}>
           <div className="left">
             <Lazyload height={60}>
-
-          
-              <img src={item.img} alt={item.name} width="100%" height="100%"/>
+              {/* height={60} 为占位大小 单位为px */}
+              <img src={ablum.img} alt={ablum.name} width="100%" height="100%"/>
             </Lazyload>
+            <p>111111</p>
           </div>
           <div className="right">
             <div className="album-name">
-              {item.album_name}
+              {ablum.name}
             </div>
             <div className="singer-name">
-              {item.singers[0].singer_name}
+              {ablum.singer}
             </div>
             <div className="public-time">
-              {item.public_time}
+              {ablum.publicTime}
             </div>
           </div>
         </div>
-      ));
+      )});
 
         return (
             <div className="music-recommend">
-              
-
-                <div className="slider-container">
+               <div className="slider-container">
                   <div className="swiper-wrapper">
                     {
                       this.state.sliderList.map(slider => {
@@ -124,6 +141,7 @@ class Recommend extends Component{
                 <Scroll refresh={this.state.refreshScroll}
                   onScroll={(e) => {
                     console.log("滚动事件",e);
+                    //监听滚动师否在此区域  在的话就异步加载
                     forceCheck();
                   }}>
                 <div className="album-container">
@@ -134,6 +152,10 @@ class Recommend extends Component{
                 </div>
               </Scroll>
               <Loading show={this.state.Loading} title="正在加载..."/>
+              {
+                console.log("--------------------",`${match.url}:id`)
+              }
+           
             </div>
           )
         }

@@ -47,7 +47,7 @@ class Scroll extends Component{
 Scroll.defaultProps = {
     click: true,
     onScroll: null,
-    refresh: false
+    refresh: true
   }
   Scroll.propTypes = {
     click: PropTypes.bool,
