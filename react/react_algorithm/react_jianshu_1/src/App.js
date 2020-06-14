@@ -36,6 +36,8 @@ class App extends ImmutableComponent {
   //   );
   // }
   render(){
+    console.log("store",store)
+    console.log("store.dispatch",store.dispatch)
     return(
       <Provider store={store}>
         <BrowserRouter>

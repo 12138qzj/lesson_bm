@@ -6,8 +6,10 @@ class Home extends Component {
     
     componentDidMount() {
         console.log("this.propsdddddddddd",this.props)
+        // console.log("dddddddddd3333333",this.props.fetchHomeList())
+
         // this.props.dispatch(getHomeList)
-       this.props.fetchHomeList();
+      this.props.fetchHomeList();
     }
     render() { 
         console.log("this.props",this.props)
@@ -28,10 +30,12 @@ const  mapStateToProps=(state)=>{
     }
 }
 const mapDispatchToProps =(dispatch)=>{
-    console.log("dispatch",dispatch)
+    console.log("dispatch",dispatch);
+    console.log("getHomeList",getHomeList)
     return{
         fetchHomeList(){
-            dispatch(getHomeList)
+            // dispatch(getHomeList)没有拿到action,才会报错
+            dispatch(getHomeList())
         }
     }
 }
