@@ -1,5 +1,5 @@
 import React,{ Component} from 'react';
-import { Form, Input, Button,Checkbox } from 'antd';
+import { Form, Input, Button,Checkbox,message } from 'antd';
     import { UserOutlined, LockOutlined } from '@ant-design/icons';
 import {reqlogin} from '../..//api/index';
     import logo from './images/logo.png';
@@ -15,14 +15,32 @@ export default class Login extends Component {
             console.log(e,"提交了")
         }
         console.log(e,"提交了")
-        reqlogin(e.username,e.password).then(
-            (err,data)=>{
-                //Promise 返回reject失败 则不会运行.then函数
-                console.log("数据请求失败",err,data)
-                if(err){
-                    console.log("数据请求失败")
+       // try{
+            reqlogin(e.username,e.password).then(
+                (data)=>{
+                    //Promise 返回reject失败 则不会运行.then函数
+                    //if(err){
+                  //      console.log("数据请求失败err,data",err,data.data)
+                   //      return;
+                    //}else{
+                        if(data){
+                            console.log("数据请求成功err,data",err,data.data);
+                            message.success('登陆成功')
+                            //replace:替换栈中的网页
+                            //不能回退到这个界面
+                            this.props.history.replace('/Admin')
+                        }else{
+                            console.log("数据请求返回无数据")
+
+                        }
+                   // }
                 }
-        })
+            )
+        // }catch(error){
+        //     alert("数据请求失败error")
+        //     console.log("数据请求失败error",error)
+        // }
+       
     }
     render(){
         return(
