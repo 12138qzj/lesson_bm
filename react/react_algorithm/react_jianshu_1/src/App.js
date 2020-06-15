@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {BrowserRouter,Route} from 'react-router-dom';
+import {BrowserRouter,Route, Switch} from 'react-router-dom';
 import ImmutableComponent from './common/immutableComponent';
 import store from './store/index';
 import { fromJS } from 'immutable';
@@ -42,9 +42,11 @@ class App extends ImmutableComponent {
       <Provider store={store}>
         <BrowserRouter>
           <Header/>
-          <Route path="/home" component={Home} exact/>
-          <Route path="/detail" component={Detail} />
+          <Switch>
+            <Route path="/home" component={Home} exact/>
+            <Route path="/detail" component={Detail} />
           {/* </Header> */}
+          </Switch>
       
         </BrowserRouter>
       </Provider>
