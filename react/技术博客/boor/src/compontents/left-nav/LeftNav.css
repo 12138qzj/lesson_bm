@@ -1,0 +1,15 @@
+.left-top {
+  display: flex;
+  color: white;
+  align-items: center;
+  height: 4.5rem;
+  background-color: pink;
+}
+.left-top img {
+  height: 40px;
+  width: 40px;
+  margin-left: 2rem;
+}
+.left-top h1 {
+  color: white;
+}

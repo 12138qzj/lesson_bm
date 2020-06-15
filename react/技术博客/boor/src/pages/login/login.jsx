@@ -2,8 +2,12 @@ import React,{ Component} from 'react';
 import { Form, Input, Button,Checkbox,message } from 'antd';
     import { UserOutlined, LockOutlined } from '@ant-design/icons';
 import {reqlogin} from '../..//api/index';
-    import logo from './images/logo.png';
+import StorageUtils from '../../utils/storageUtis/StorageUtils';
+import MemoryUtils from '../../utils/memoryUtils/MemoryUtils';
+
+import logo from '../../common/images/logo.png';
 import './login.less'
+import { Redirect } from 'react-router-dom';
 // import './login.styl'
 // import './login.css'
 /**
@@ -25,10 +29,18 @@ export default class Login extends Component {
                     //}else{
                         if(data){
                             console.log("数据请求成功err,data",err,data.data);
-                            message.success('登陆成功')
-                            //replace:替换栈中的网页
-                            //不能回退到这个界面
-                            this.props.history.replace('/Admin')
+                            if(data.data.state==1){
+                                StorageUtils.saveUser(data.data.username)
+                                message.success('登陆成功')
+                                //replace:替换栈中的网页
+                                //不能回退到这个界面
+                               // MemoryUtils.user = data.data.username;
+                                
+                                this.props.history.replace('/Admin')
+                            }else{
+                                message.error('登陆失败，账号密码错误！')
+                            }
+                           
                         }else{
                             console.log("数据请求返回无数据")
 
@@ -43,6 +55,10 @@ export default class Login extends Component {
        
     }
     render(){
+        const user=StorageUtils.getUser();
+        if(user){
+            return <Redirect to="/Admin"/>
+        }
         return(
             <div className="login">
                 <header className="login-header">
