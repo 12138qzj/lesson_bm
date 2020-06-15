@@ -1,4 +1,39 @@
 .header{
     color:gray;
     background-color: white;
+    .header-top{
+        text-align: end;
+        padding: 0 1rem ;
+        height: 2rem;
+        line-height: 2rem;
+        border-bottom: #b3cec6 solid 2px;
+    }
+    .header-bottom{
+        // position: relative;
+        // text-align: end;
+        display: flex;
+        padding: 0 1rem ;
+        height: 2rem;
+        line-height: 2rem;
+        .header-bottom-left{
+            width: 25%;
+            margin-left: 3rem;
+            font-weight: 500;
+            font-size: 1.3rem;
+            &::after{
+                content: " ";
+                position: absolute;
+                border-bottom: 1.5rem solid transparent;
+                border-top:1.5rem  solid white;
+                border-left:1rem  solid transparent;
+                border-right:1rem  solid transparent;
+                transform: translateY(60%) translateX(-113%);
+
+            }
+        }
+        .header-bottom-right{
+            text-align: end;
+            width: 75%;
+        }
+    }
 }

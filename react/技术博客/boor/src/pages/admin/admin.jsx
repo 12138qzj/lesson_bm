@@ -20,6 +20,7 @@ const { Header, Footer, Sider, Content } = Layout;
  */
 export default class Admin extends Component {
     render() {
+        let tiem=new Date().getFullYear();
         const user = StorageUtils.getUser();
         if (!user) {
             return <Redirect to="/login" />
@@ -31,10 +32,10 @@ export default class Admin extends Component {
                     <PageLeftNac/>
                 </Sider>
                 <Layout>
-                    <Header style={{background:"white"}}>
-                        <PageHeader/>
+                    <Header className="adminheader" >
+                        <PageHeader username={user}/>
                     </Header>
-                    <Content >
+                    <Content className="content" >
                         <Switch>
                             <Route exact path='/Admin/adminhome' component={AdminHome}/>
                             <Route path='/Admin/adminuser' component={AdminUser}/>
@@ -44,9 +45,9 @@ export default class Admin extends Component {
 
                     </Content>
                     <Footer>
-                        <p style={{textAlign:"center"}}>Copyright © 2019-
+                        <p style={{textAlign:"center"}}>Copyright © 2019-{tiem}
                             {/* <span >{document.write(new Date().getFullYear())}</span> */}
-                            2020 ByteSoft studio. All Rights Reserved. 小杰工作室 版权所有
+                             ByteSoft studio. All Rights Reserved. 小杰工作室 版权所有
                         </p>
                     </Footer>
                 </Layout>
