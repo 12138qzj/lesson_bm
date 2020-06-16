@@ -1,38 +1,35 @@
-.login {
-  width: 100%;
-  height: 100%;
-  background-image: url("../../common/images/bg.jpg");
-  background-size: 100% 100% ;
-}
-.login .login-header {
-  display: flex;
-  align-items: center;
-  background-color: #335064;
-  height: 80px;
-}
-.login .login-header img {
-  height: 40px;
-  width: 40px;
-  margin-left: 2rem;
-}
-.login .login-header h1 {
-  font-size: 1rem;
-  margin-left: 1rem;
-  color: white;
-}
-.login .login-content {
+.login-content {
   padding: 1rem 2rem;
   margin: 10rem auto;
   width: 400px;
   height: 300px;
   background-color: white ;
 }
-.login .login-content h2 {
-  display: flex;
-  justify-content: center;
+.login-content h3 {
   margin: 0 auto;
-  font-weight: 800;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
+}
+.login-content .title {
+  display: flex;
+  margin-bottom: 1rem;
+}
+.login-content .title span {
+  width: 30%;
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+.login-content .title div {
+  width: 70%;
+  text-align: end;
+  line-height: 2rem;
+  font-size: 0.7rem;
+}
+.login-content .title div span {
+  display: inline-block;
+  margin: 0 0.3rem;
+  width: 1px;
+  height: 10px;
+  background-color: #20a77c;
 }
 .login-content .login-form {
   max-width: 300px;

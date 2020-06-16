@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
 import { Modal, Button } from 'antd';
 import './Header.less';
 import StorageUtils from '../../utils/storageUtis/StorageUtils';
+import formateDate from '../../utils/timeUtils/TimeUtils';
+import { changeConfirmLocale } from 'antd/lib/modal/locale';
 
 class Header extends Component {
     state = {
-        time: '',
+        time: formateDate(),
         ModalText: 'Content of the modal',
         visible: false,
         confirmLoading: false,
@@ -25,12 +28,18 @@ class Header extends Component {
             confirmLoading: true,
         });
         StorageUtils.removeUser();
+        console.log("StorageUtils.removeUser();",this.props);
+        // .history.replace 
         if(!StorageUtils.getUser()){
+           
             this.setState({
                 visible: false,
                 confirmLoading: false,
             });
         }
+        this.props.history.replace('/login')
+        // return;
+      
         // setTimeout(() => {
            
         // }, 2000);
@@ -43,15 +52,18 @@ class Header extends Component {
         });
     };
 
+    componentDidMount(){
+        this.gettime();
+    }
 
     gettime() {
-        // let time1 = new Date();
-        // console.log(time1);
-        // setTimeout(() => {
-        //     this.setState({
-        //         time: new Date().getFullYear()
-        //     })
-        // }, 1000)
+        let time1 = new Date();
+        console.log(time1);
+        setInterval(() => {
+            this.setState({
+                time: formateDate()
+            })
+        }, 1000)
     }
     render() {
         const { visible, confirmLoading, ModalText } = this.state;
@@ -66,7 +78,7 @@ class Header extends Component {
                         首页
                     </div>
                     <div className="header-bottom-right">
-                        <span>2020-11</span>
+                        <span>{ this.state.time }</span>
                         <img src="" alt=""/>
                         <span>天气</span>
                     </div>
@@ -79,7 +91,7 @@ class Header extends Component {
                     <Modal
                         title="Title"
                         visible={visible}
-                        onOk={this.handleOk}
+                        onOk={this.handleOk.bind(this)}
                         confirmLoading={confirmLoading}
                         onCancel={this.handleCancel}>
                         <p>{ModalText}</p>
@@ -90,4 +102,4 @@ class Header extends Component {
     }
 }
 
-export default Header;
+export default withRouter(Header);

@@ -20,7 +20,7 @@ const { Header, Footer, Sider, Content } = Layout;
  */
 export default class Admin extends Component {
     render() {
-        let tiem=new Date().getFullYear();
+        let time=new Date().getFullYear();
         const user = StorageUtils.getUser();
         if (!user) {
             return <Redirect to="/login" />
@@ -45,7 +45,7 @@ export default class Admin extends Component {
 
                     </Content>
                     <Footer>
-                        <p style={{textAlign:"center"}}>Copyright © 2019-{tiem}
+                        <p style={{textAlign:"center"}}>Copyright © 2019-{time}
                             {/* <span >{document.write(new Date().getFullYear())}</span> */}
                              ByteSoft studio. All Rights Reserved. 小杰工作室 版权所有
                         </p>
