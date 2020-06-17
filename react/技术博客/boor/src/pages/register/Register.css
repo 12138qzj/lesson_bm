@@ -1,0 +1,10 @@
+.register-content {
+  margin: 10rem auto;
+  padding: 5rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 600px;
+}
+.register-content .btn-rehister {
+  width: 8rem;
+  margin-right: 6.5rem;
+}

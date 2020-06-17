@@ -6,3 +6,6 @@ export const reqlogin = (username, password, type) => {
 export const reqregister = (username, password) => {
     return Ajax("/Register_design", { username, password }, "POST");
 }
+export const reqgetuser = () => {
+    return Ajax("/GetUser", {}, "POST");
+}

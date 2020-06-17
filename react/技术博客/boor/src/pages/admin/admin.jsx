@@ -19,6 +19,14 @@ const { Header, Footer, Sider, Content } = Layout;
  * 后台管理的路由组件
  */
 export default class Admin extends Component {
+    state={
+        headertitle:'首页'
+    }
+    change(title){
+        this.setState({
+            headertitle:title
+        })
+    }
     render() {
         let time=new Date().getFullYear();
         const user = StorageUtils.getUser();
@@ -31,9 +39,9 @@ export default class Admin extends Component {
                 <Sider >
                     <PageLeftNac/>
                 </Sider>
-                <Layout>
+                <Layout className="weight">
                     <Header className="adminheader" >
-                        <PageHeader username={user}/>
+                        <PageHeader username={user} headertitle={this.state.headertitle}/>
                     </Header>
                     <Content className="content" >
                         <Switch>

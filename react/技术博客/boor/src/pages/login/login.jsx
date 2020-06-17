@@ -94,7 +94,6 @@ export default class Login extends Component {
                             initialValue="Username"
 
                             rules={[{ required: true, message: 'Please input your Username!' },
-                            { min: 4, message: "用户名至少输入4位" },
                             { max: 12, message: "用户名不能大于12位" },
                             //正则表达式验证
                             { pattern: /^[a-zA-Z0-9_]+$/, message: "用户名不和规则" }]}>
@@ -104,6 +103,7 @@ export default class Login extends Component {
                         </Form.Item>
                         <Form.Item
                             name="password"
+                            hasFeedback
                             rules={[{ required: true, message: 'Please input your Password!' },
                             () => ({
                                 validator(rule, value) {
@@ -119,8 +119,8 @@ export default class Login extends Component {
                                     }
 
                                 },
-                            }),]}>
-                            <Input
+                            })]}>
+                            <Input.Password
                                 prefix={<LockOutlined className="site-form-item-icon" />}
                                 type="password"
                                 placeholder="密码"

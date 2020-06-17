@@ -75,7 +75,7 @@ class Header extends Component {
                 </div>
                 <div className="header-bottom">
                     <div className="header-bottom-left">
-                        首页
+                        {this.props.headertitle}
                     </div>
                     <div className="header-bottom-right">
                         <span>{ this.state.time }</span>
