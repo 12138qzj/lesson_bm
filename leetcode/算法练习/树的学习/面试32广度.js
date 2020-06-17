@@ -35,3 +35,22 @@ var levelOrder = function(root) {
     }
     return res;
 };
+
+var levelOrder = function(root) {
+    if (root === null) return [];
+    let qure = [root];
+    let res = [];
+    while (qure.length) {
+        let temp = qure.splice(0);
+        for (let node of temp) {
+            res.push(node.val)
+            if (node.children) {
+                for (let childrennode of node.children) {
+                    qure.push(childrennode)
+                }
+            }
+        }
+
+    }
+    return res;
+};
