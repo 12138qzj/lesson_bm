@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { Link ,withRouter} from 'react-router-dom';
 
-import { Layout, Menu, Breadcrumb } from 'antd';
+import {  Menu } from 'antd';
 import {
-    DesktopOutlined,
+    // DesktopOutlined,
     PieChartOutlined,
-    FileOutlined,
+    // FileOutlined,
     TeamOutlined,
     UserOutlined,
     SolutionOutlined,
@@ -13,7 +13,7 @@ import {
   
 import logo from '../../common/images/logo.png';
 import './LeftNav.less';
-const { Header, Content, Footer, Sider } = Layout;
+// const { Header, Content, Footer, Sider } = Layout;
 const { SubMenu } = Menu;
 /**
  * 知识点：

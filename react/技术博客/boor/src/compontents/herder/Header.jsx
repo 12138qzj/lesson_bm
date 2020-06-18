@@ -5,6 +5,7 @@ import './Header.less';
 import StorageUtils from '../../utils/storageUtis/StorageUtils';
 import formateDate from '../../utils/timeUtils/TimeUtils';
 import { changeConfirmLocale } from 'antd/lib/modal/locale';
+import LinkBUttom from '../linkbuttom/LinkButtom';
 
 class Header extends Component {
     state = {
@@ -55,15 +56,23 @@ class Header extends Component {
     componentDidMount(){
         this.gettime();
     }
+    componentWillUnmount(){
+        //组件卸载的时候执行的函数
+        //清除定时器
+        clearInterval(this.intercalId)
+    }
 
     gettime() {
         let time1 = new Date();
         console.log(time1);
-        setInterval(() => {
+        this.intercalId=setInterval(() => {
             this.setState({
                 time: formateDate()
             })
         }, 1000)
+    }
+    output(){
+
     }
     render() {
         const { visible, confirmLoading, ModalText } = this.state;
@@ -71,7 +80,8 @@ class Header extends Component {
             <div className="header">
                 <div className="header-top">
                     <span>欢迎 {this.props.username}  </span>
-                    <a href="#"onClick={this.showModal}>退出</a>
+                    {/* <a href="#"onClick={this.showModal}>退出</a> */}
+                    <LinkBUttom onClick={this.showModal}>退出</LinkBUttom>
                 </div>
                 <div className="header-bottom">
                     <div className="header-bottom-left">
