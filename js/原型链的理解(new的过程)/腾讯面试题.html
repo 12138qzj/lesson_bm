@@ -1,0 +1,81 @@
+<script>
+    function Page() {
+        return this.hosts;
+    }
+    class Preson {
+
+    }
+    let a = {
+        value: 1
+
+    }
+
+    let page = new Page()
+    Function.prototype.p = ["qzj"]
+
+    console.log(page.prototype);
+
+    Page.prototype.cd = 9
+    Page.prototype.__proto__.cd = 5
+    Page.hosts = 'h11111';
+    // Page.prototype.hosts = ['h22222'];
+    console.log(Page);
+    console.log(Page.__proto__.cd);
+    console.log(Page.prototype == page.__proto__);
+    console.log(Page.prototype);
+
+
+    console.log("cds", page.cd);
+    console.log("cds", page);
+    console.log(page.hosts);
+
+    a.__proto__ = Page.prototype;
+    console.log(a.__proto__);
+    console.log(a.prototype);
+    console.log(a.hosts);
+    console.log(Preson.prototype.__proto__);
+
+
+
+    var p1 = new Page();
+    var p2 = Page();
+
+    console.log(p1);
+    console.log(p2);
+
+    function Mynew(Constructor) {
+
+        let obj = {}
+        console.log(obj);
+
+        //   obj.__proto__ = Constructor.prototype
+        console.log(obj.hosts);
+    }
+    let my = Mynew(Page)
+
+
+    console.log("----------------");
+
+    function Animal() {
+        this.b = 2
+        return {
+            a: 1
+        }
+    }
+
+    let cat = new Animal()
+    console.log(cat.b);
+    // console.log(Animal.b);
+
+    class Shape {
+        constructor() {
+            return {
+                shape: 123
+            }
+        }
+    }
+    console.log(typeof Shape); //function
+    const s = new Shape();
+    console.log(typeof a); //object
+    console.log(s);
+</script>

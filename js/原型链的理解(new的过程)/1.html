@@ -1,0 +1,43 @@
+<script>
+    // 腾讯
+    function Page() {
+        return this.hosts;
+    }
+    Page.hosts = ['h11111'];
+    Page.prototype.hosts = ['h22222'];
+
+    var p1 = new Page();
+    var p2 = Page();
+
+
+    console.log(p1); // ？？
+    console.log(p2); // ？？
+
+
+    class Preson {
+
+    }
+
+    function Animal() {
+        this.name = 'cat'
+        return {
+            a: 1,
+            b: 2
+        }
+    }
+    console.log("news", new Preson());
+    console.log("news", Preson.prototype)
+
+    let ani = new Animal();
+    console.log(ani)
+    class Shape {
+        constructor() {
+            return {
+                shape: 123
+            }
+        }
+    }
+    console.log(typeof Shape);
+    const s = new Shape();
+    console.log(s);
+</script>

@@ -27,7 +27,7 @@
                     // localStorage.clear();
 
             }
-            fetch('/users')
+            fetch('http://39.101.193.149:8080/ByteSoftYQ/GetAllVLocation')
                 .then(data => data.json())
                 .then(data => {
                     localStorage.setItem('usersdata', JSON.stringify(data)) //需要存储字符串

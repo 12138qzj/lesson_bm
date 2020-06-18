@@ -1,0 +1,15 @@
+<script>
+    class Preson {
+
+    }
+    let temp = {}
+    Object.defineProperty(Preson, "name", {
+        writable: false,
+        value: 1
+    });
+    console.log(temp);
+    temp.name = 5
+    console.log(temp.name);
+    console.log(new Preson());
+    console.log(Preson.name);
+</script>
