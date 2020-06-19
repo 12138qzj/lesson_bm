@@ -6,11 +6,11 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import StorageUtils from './utils/storageUtis/StorageUtils';
-import { MemoryRouter } from 'react-router-dom';
+// import { MemoryRouter } from 'react-router-dom';
 import MemoryUtils from './utils/memoryUtils/MemoryUtils';
 
 const user = StorageUtils.getUser();
-if(!user){
+if (!user) {
     MemoryUtils.user = user;
 
 }
@@ -18,7 +18,8 @@ if(!user){
 
 ReactDOM.render(
 
-    <App/> ,
+    <
+    App / > ,
     document.getElementById('root')
 );
 

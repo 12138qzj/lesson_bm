@@ -1,4 +1,5 @@
 const USER_KEY = 'user_key'
+const ADMIN_KEY = 'admin_key'
 
 export default {
     saveUser(user) {
@@ -9,5 +10,14 @@ export default {
     },
     removeUser() {
         localStorage.removeItem(USER_KEY);
+    },
+    saveAdmin(admin) {
+        localStorage.setItem(ADMIN_KEY, JSON.stringify(admin));
+    },
+    getAdmin() {
+        return JSON.parse(localStorage.getItem(ADMIN_KEY) || null)
+    },
+    removeAdmin() {
+        localStorage.removeItem(ADMIN_KEY);
     }
 }

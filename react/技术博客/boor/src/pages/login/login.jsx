@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import { Form, Input, Button, Checkbox, message } from 'antd';
+import { Form, Input, Button,  message } from 'antd';
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
 import { reqlogin } from '../..//api/index';
 import StorageUtils from '../../utils/storageUtis/StorageUtils';
-import MemoryUtils from '../../utils/memoryUtils/MemoryUtils';
+// import MemoryUtils from '../../utils/memoryUtils/MemoryUtils';
 import Mianbg from '../../compontents/mianbg/Mianbg';
 
-import logo from '../../common/images/logo.png';
+// import logo from '../../common/images/logo.png';
 import './login.less'
 import { Redirect, Link } from 'react-router-dom';
 // import './login.styl'
@@ -28,15 +28,23 @@ export default class Login extends Component {
             (data) => {
                 if (data) {
                     console.log("数据请求成功err,data", err, data.data);
-                    if (data.data.state == 1) {
-                        StorageUtils.saveUser(data.data.username)
+                    if (data.data.state === 2) {
+                        StorageUtils.saveAdmin(data.data.username)
                         message.success('登陆成功')
                         //replace:替换栈中的网页
                         //不能回退到这个界面
                         // MemoryUtils.user = data.data.username;
 
                         this.props.history.replace('/Admin')
-                    } else {
+                    } else if(data.data.state === 1) {
+                        StorageUtils.saveUser(data.data.username)
+                        message.success('登陆成功')
+                        //replace:替换栈中的网页
+                        //不能回退到这个界面
+                        // MemoryUtils.user = data.data.username;
+
+                        this.props.history.replace('/User')
+                    }else{
                         message.error('登陆失败，账号密码错误！')
                     }
 
@@ -72,7 +80,7 @@ export default class Login extends Component {
                 <section className="login-content">
                     <div className="title">
                         <span>
-                            {this.state.title == 0 ? '用户登陆' : '管理员登陆'} 
+                            {this.state.title === 0 ? '用户登陆' : '管理员登陆'} 
                         </span>
                         <div>
                             <a href="#" onClick={this.ChangeTitle.bind(this,1)} >管理员登陆</a>
@@ -98,7 +106,7 @@ export default class Login extends Component {
                             //正则表达式验证
                             { pattern: /^[a-zA-Z0-9_]+$/, message: "用户名不和规则" }]}>
                             <Input prefix={<UserOutlined className="site-form-item-icon" />} placeholder={
-                                this.state.title == 0 ? '请输入用户名' : '管理员账号'
+                                this.state.title === 0 ? '请输入用户名' : '管理员账号'
                             } />
                         </Form.Item>
                         <Form.Item
@@ -133,7 +141,7 @@ export default class Login extends Component {
                         </Form.Item>
                         
                     </Form>
-                    <div style={this.state.title == 0 ? {display:"inline-block"} : {display:"none"}}>
+                    <div style={this.state.title === 0 ? {display:"inline-block"} : {display:"none"}}>
                         <Link to="/Register">
                             没有账号？去注册
                         </Link>

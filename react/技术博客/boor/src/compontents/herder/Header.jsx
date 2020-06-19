@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
-import { Modal, Button } from 'antd';
+import { Modal } from 'antd';
 import './Header.less';
 import StorageUtils from '../../utils/storageUtis/StorageUtils';
 import formateDate from '../../utils/timeUtils/TimeUtils';
-import { changeConfirmLocale } from 'antd/lib/modal/locale';
+// import { changeConfirmLocale } from 'antd/lib/modal/locale';
 import LinkBUttom from '../linkbuttom/LinkButtom';
 
 class Header extends Component {

@@ -6,21 +6,21 @@ import { Layout } from 'antd';
 import StorageUtils from '../../utils/storageUtis/StorageUtils';
 import PageHeader from '../../compontents/herder/Header';
 import PageLeftNac from '../../compontents/left-nav/LeftNav';
-import AdminHome from './adminHome/AdminHome';
-import AdminUser from './adminUser/AdminUser';
-import AdminCar from './adminCar/AdminCar';
+// import AdminHome from './adminHome/AdminHome';
+// import AdminUser from './adminUser/AdminUser';
+// import AdminCar from './adminCar/AdminCar';
 
 
 // import memoryUtils from '../../utils/memoryUtils/MemoryUtils';
-import "./admin.less"
+// import "./admin.less"
 const { Header, Footer, Sider, Content } = Layout;
 
 /**
  * 后台管理的路由组件
  */
-export default class Admin extends Component {
+export default class User extends Component {
     state={
-        headertitle:'首页'
+        headertitle:'用户首页'
     }
     change(title){
         this.setState({
@@ -29,27 +29,27 @@ export default class Admin extends Component {
     }
     render() {
         let time=new Date().getFullYear();
-        const admin = StorageUtils.getAdmin();
-        if (!admin) {
+        const user = StorageUtils.getUser();
+        if (!user) {
             return <Redirect to="/login" />
         }
         return (
 
-            <Layout className="admin">
+            <Layout className="User">
                 <Sider >
                     <PageLeftNac/>
                 </Sider>
                 <Layout className="weight">
-                    <Header className="adminheader" >
-                        <PageHeader username={admin} headertitle={this.state.headertitle}/>
+                    <Header className="userheader" >
+                        <PageHeader username={user} headertitle={this.state.headertitle}/>
                     </Header>
                     <Content className="content" >
-                        <Switch>
+                        {/* <Switch>
                             <Route exact path='/Admin/adminhome' component={AdminHome}/>
                             <Route path='/Admin/adminuser' component={AdminUser}/>
                             <Route path='/Admin/admincar'  component={AdminCar}/>
                             <Redirect to='/Admin/adminhome'/>
-                        </Switch>
+                        </Switch> */}
 
                     </Content>
                     <Footer>

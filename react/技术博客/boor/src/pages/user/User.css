@@ -1,0 +1,16 @@
+.User {
+  height: 100vh;
+  color: black;
+}
+.User .weight {
+  min-width: 500px;
+}
+.User .weight .userheader {
+  padding: 0;
+  height: 4rem;
+  line-height: 4rem;
+}
+.User .weight .content {
+  margin: 1.5rem;
+  background-color: white;
+}
