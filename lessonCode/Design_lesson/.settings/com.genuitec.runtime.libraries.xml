@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project>
+  <add-on id="hibernate.extra"/>
+  <add-on id="spring.web"/>
+  <add-on id="hibernate.osgi"/>
+  <add-on id="hibernate.search"/>
+  <add-on id="hibernate.java8"/>
+</project>
