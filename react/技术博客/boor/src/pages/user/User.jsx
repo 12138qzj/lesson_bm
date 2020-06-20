@@ -6,13 +6,16 @@ import { Layout } from 'antd';
 import StorageUtils from '../../utils/storageUtis/StorageUtils';
 import PageHeader from '../../compontents/herder/Header';
 import PageLeftNac from '../../compontents/left-nav/LeftNav';
+import Userhome from './userhome/Userhome';
+import Userorder from './userorder/UserOrder';
+import Userinfo from './userinfo/Userinfo';
 // import AdminHome from './adminHome/AdminHome';
 // import AdminUser from './adminUser/AdminUser';
 // import AdminCar from './adminCar/AdminCar';
 
 
 // import memoryUtils from '../../utils/memoryUtils/MemoryUtils';
-// import "./admin.less"
+import "./User.less"
 const { Header, Footer, Sider, Content } = Layout;
 
 /**
@@ -37,19 +40,19 @@ export default class User extends Component {
 
             <Layout className="User">
                 <Sider >
-                    <PageLeftNac/>
+                    <PageLeftNac type="user"/>
                 </Sider>
                 <Layout className="weight">
                     <Header className="userheader" >
                         <PageHeader username={user} headertitle={this.state.headertitle}/>
                     </Header>
                     <Content className="content" >
-                        {/* <Switch>
-                            <Route exact path='/Admin/adminhome' component={AdminHome}/>
-                            <Route path='/Admin/adminuser' component={AdminUser}/>
-                            <Route path='/Admin/admincar'  component={AdminCar}/>
-                            <Redirect to='/Admin/adminhome'/>
-                        </Switch> */}
+                        <Switch>    
+                            <Route path='/user/userhome'  component={Userhome}/>
+                            <Route path='/user/ordeing'  component={Userorder}/>
+                            <Route path='/user/userinfo'  component={Userinfo}/>
+                            <Redirect to='/user/userhome'/>
+                        </Switch>
 
                     </Content>
                     <Footer>

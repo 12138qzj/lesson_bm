@@ -10,6 +10,7 @@ import {
     UserOutlined,
     SolutionOutlined,
   } from '@ant-design/icons';
+  import { menuList,usermenuList } from './config/admin';
   
 import logo from '../../common/images/logo.png';
 import './LeftNav.less';
@@ -24,10 +25,92 @@ class LeftNav extends Component {
         collapsed: false,
       };
     
+      componentWillMount () {
+        //   console.log(menuList);
+        this.menuNodes = this.props.type==="admin"?this.getMenuNodes_map(menuList):
+        this.getMenuNodes_map(usermenuList);
+      }
       onCollapse = collapsed => {
         console.log(collapsed);
         this.setState({ collapsed });
       };
+      getMenuNodes_map = (menuList) => {
+        return menuList.map(item => {
+          if(!item.children) {
+              console.log(item.icon);
+            return (
+              <Menu.Item key={item.key}  
+              icon={item.icon==="0"?<PieChartOutlined />:""}
+              >
+                <Link to={item.key}>
+                  
+                  <span>{item.title}</span>
+                </Link>
+              </Menu.Item>
+            )
+          } else {
+            return (
+              <SubMenu
+                key={item.key}
+                icon={<UserOutlined />}
+                title={  
+                  <span>{item.title}</span>    
+                }
+              >
+                {this.getMenuNodes_map(item.children)}
+              </SubMenu>
+            )
+          }
+    
+        })
+      }
+    //   getMenuNodes = (menuList) => {
+    //     // 得到当前请求的路由路径
+    //     const path = this.props.location.pathname
+    
+    //     return menuList.reduce((pre, item) => {
+    //         console.log(item );
+    //       // 如果当前用户有item对应的权限, 才需要显示对应的菜单项
+    //       if (this.hasAuth(item)) {
+    //         // 向pre添加<Menu.Item>
+    //         if(!item.children) {
+    //           pre.push((
+    //             <Menu.Item key={item.key}>
+    //               <Link to={item.key}>
+    //                 {/* <Icon type={item.icon}/> */}
+    //                 <span>{item.title}</span>
+    //               </Link>
+    //             </Menu.Item>
+    //           ))
+    //         } else {
+    
+    //           // 查找一个与当前请求路径匹配的子Item
+    //           const cItem = item.children.find(cItem => path.indexOf(cItem.key)===0)
+    //           // 如果存在, 说明当前item的子列表需要打开
+    //           if (cItem) {
+    //             this.openKey = item.key
+    //           }
+    
+    //           // 向pre添加<SubMenu>
+    //           pre.push((
+    //             <SubMenu
+    //               key={item.key}
+    //               title={
+    //                 <span>
+    //               {/* <Icon type={item.icon}/> */}
+    //               <span>{item.title}</span>
+    //             </span>
+    //               }
+    //             >
+    //               {this.getMenuNodes(item.children)}
+    //             </SubMenu>
+    //           ))
+    //         }
+    //       }
+    
+    //       return pre
+    //     }, [])
+    //   }
     render() {
 
         const path=this.props.location.pathname;
@@ -37,37 +120,16 @@ class LeftNav extends Component {
             <div>
                 <Link to="/Admin/adminhome">
                     <div className="left-top">
+                        {/* 头像 */}
                         <img src={logo} alt="" />
-                        <h1>系统管理员</h1>
+                        <h1>用户</h1>
                     </div>
                 </Link>
                 {/* //defaultSelectedKeys默认选中item */}
                     <Menu theme="dark" defaultSelectedKeys={[path]} mode="inline">
-                        <Menu.Item key="/Admin/adminhome" icon={<PieChartOutlined />}>
-                            <Link to="/Admin/adminhome">
-                                首页
-                            </Link>
-                        </Menu.Item>
-                        {/* <Menu.Item key="2" icon={<DesktopOutlined />}>
-                            Option 2
-                        </Menu.Item> */}
-                        <SubMenu key="sub1" icon={<UserOutlined />} title="用户管理">
-                            <Menu.Item key="/Admin/adminuser"  icon={<UserOutlined /> }>
-                            <Link to="/Admin/adminuser">
-                                用户信息
-                            </Link>
-                            </Menu.Item>
-                            <Menu.Item key="4"  icon={<PieChartOutlined />}>Bill</Menu.Item>
-                            <Menu.Item key="5">Alex</Menu.Item>
-                        </SubMenu>
-                        <SubMenu key="sub2" icon={<TeamOutlined />} title="车票信息">
-                            <Menu.Item key="/Admin/admincar" icon={<SolutionOutlined />} >
-                            <Link to="/Admin/admincar">
-                                车票查询
-                            </Link>
-                            </Menu.Item>
-                            <Menu.Item key="8">退票详情</Menu.Item>
-                        </SubMenu>
+                        {
+                            this.menuNodes
+                        }
                     </Menu>
   
             </div>

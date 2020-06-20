@@ -70,8 +70,13 @@ export default class Login extends Component {
     }
     render() {
         const user = StorageUtils.getUser();
-        if (user) {
+        const admin = StorageUtils.getAdmin();
+        if (user && !admin) {
+            return <Redirect to="/User" />
+        }else if(!user && admin){
             return <Redirect to="/Admin" />
+        }else if(user && admin) {
+            return <Redirect to="/User" />
         }
         return (
 
