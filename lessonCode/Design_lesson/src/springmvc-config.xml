@@ -11,6 +11,11 @@
 	<bean class="org.getdata.getUser" name="/GetUser"/>
 	<bean class="org.getdata.GetCarInfo" name="/GetCarInfo"/>
 	<bean class="org.getdata.GetExitTicket" name="/GetExitTicket"/>
+	<bean class="org.alterTable.AlterUserticket" name="/AlterUserticket"/>
 	
-
+	<bean class="org.AddTable.AddUserTicket" name="/AddUserTicket"/>
+	
+	<bean class="org.alterTable.DeleteCarinfo" name="/DeleteCarinfo"/>
+	<bean class="org.alterTable.DeleteUser" name="/DeleteUser"/>
+	<bean class="org.alterTable.DeleteUserTicket" name="/DeleteUserTicket"/>
 </beans>
