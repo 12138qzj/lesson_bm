@@ -1,0 +1,34 @@
+<script>
+    //
+    function Animal() {
+        this.name = "11"
+
+        function say() { //这个函数不能被继承，没有挂载在对象上
+            console.log("shuohua");
+        }
+    }
+    let cat = new Animal();
+    console.log(cat);
+    //对象字面量 {}
+    //  构建对象方式：
+    let obj = {};
+    let obj2 = new Object();
+    let arr = [1, 2, 3]
+    let arr2 = new Array();
+    console.log(typeof(arr2), arr2); //Object
+    //Object 是语言内置的一个类（构造函数）则都会有prototype 
+    //都会被实例对象中__proto__继承
+    function foo(x, y) {
+        return x + y;
+    }
+    let fool = new Function("x", "y", "return x+y");
+    //Function 是语言内置的一个类（构造函数）则都会有prototype 
+
+    console.log(Function.prototype.__proto__ === Object.prototype); //ture
+    console.log(Function.__proto__ === Function.prototype); //ture
+    console.log(fool(1, 2));
+    //instanceof 谁是谁的实例 ，谁继承谁
+    //instanceof 原理：//判断 左边对象 它在原型链上面 有没有出现过Constructor.prototype这个对象
+    //查找
+    console.log();
+</script>
