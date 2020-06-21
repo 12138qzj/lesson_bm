@@ -23,12 +23,20 @@ public class GetExitTicket implements Controller{
 		System.out.println("登入的web服务,更换信息");
 		request.setCharacterEncoding("utf-8");
 		response.setContentType("text/html;charset=utf-8");
+		
+		JSONObject jsonObj = new JSONObject();
 		String read=Json.SetJson(request.getReader());
+		jsonObj= JSONObject.fromObject(read);
+		
 		System.out.println("read,数据出赎回"+read);
-		String result []=read.split("=");
-		System.out.println("read.strng "+result[0]+result[1]);
-		JSONObject jsonObj = new JSONObject();	
-		JSONArray jsonarr=GetTable.GetExitTicket(result[1]);
+		
+//		JSONObject jsonObj = new JSONObject();
+//		System.out.println("read,数据出赎回"+read);
+//		String result []=read.split("=");
+//		System.out.println("read.strng "+result[0]+result[1]);
+//		JSONObject jsonObj = new JSONObject();
+		
+		JSONArray jsonarr=GetTable.GetExitTicket(jsonObj.getString("params"));
 		if(jsonarr!=null) {
 			jsonObj.put("state", 1);
 			jsonObj.put("data",jsonarr.toString());

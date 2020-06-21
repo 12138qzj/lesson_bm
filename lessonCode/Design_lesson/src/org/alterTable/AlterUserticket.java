@@ -22,21 +22,31 @@ public class AlterUserticket implements Controller{
 		request.setCharacterEncoding("utf-8");
 		response.setContentType("text/html;charset=utf-8");
 		
-//		String read=Json.SetJson(request.getReader());
-//		System.out.println("read,数据出赎回"+read);
-//		JSONObject jsonObj = new JSONObject();
-//		//获取JSON数据
-//		jsonObj= JSONObject.fromObject(read);
+		String read=Json.SetJson(request.getReader());
+		System.out.println("read,数据出赎回"+read);
+				
 		
-//		Boolean res=AlterTable.AlterUserTicket(
-//				jsonObj.getString("username"),
-//				jsonObj.getString("carno"),
-//				jsonObj.getString("state"));
+		JSONObject json=new JSONObject();
+		JSONObject jsonObj=new JSONObject();
+		
+		
+		json= JSONObject.fromObject(read);
+	    String params=json.getString("params");
+	    System.out.println("params"+params);
+	    jsonObj=JSONObject.fromObject(params);
+	    System.out.println("jsonObj"+jsonObj);
+//		 jsonObj = new JSONObject();
+		//获取JSON数据
+		System.out.println("read"+jsonObj);
 		Boolean res=AlterTable.AlterUserTicket(
-				"12138",
-				"K8788",
-				"3");
-		JSONObject jsonObj = new JSONObject();
+				jsonObj.getString("username"),
+				jsonObj.getString("carno"),
+				jsonObj.getString("state"));
+//		Boolean res=AlterTable.AlterUserTicket(
+//				"12138",
+//				"K8788",
+//				"3");
+//		JSONObject jsonObj = new JSONObject();
 		if(res) {
 			jsonObj.put("state", 1);
 			jsonObj.put("message","修改成功");

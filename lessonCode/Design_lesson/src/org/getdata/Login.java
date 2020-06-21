@@ -29,6 +29,7 @@ public class Login  implements Controller{
 		request.setCharacterEncoding("utf-8");
 		response.setContentType("text/html;charset=utf-8");
 		System.out.println("登入的web服务,数据出赎回"+request.getReader());
+		
 		String read=Json.SetJson(request.getReader());
 		System.out.println("read,数据出赎回"+read);
 		JSONObject jsonObj = new JSONObject();

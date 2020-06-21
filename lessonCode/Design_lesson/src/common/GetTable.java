@@ -132,7 +132,7 @@ public static JSONArray GetExitTicket(String username) {
 				jsonObj.put("splace", userticket.getSplace());
 			    jsonObj.put("eplace", userticket.getEplace());
 			    jsonObj.put("stime", userticket.getStime()); 
-			    
+			    jsonObj.put("etime", userticket.getEtime()); 
 			    jsonObj.put("seat", userticket.getSeat());
 			    jsonObj.put("line", userticket.getLine());
 			    jsonObj.put("ticmon", userticket.getTicMon()); 

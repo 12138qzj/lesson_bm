@@ -22,12 +22,14 @@ public class AlterTable {
 		Userticket userticket;		
 		Session session;
 		session=HibernateSessionFactory.getSession();
-		System.out.println("在这修改(减票数)userticket");
+		System.out.println("在这修改票状态userticket"+username+carno+state);
 		try {			
 			session.clear();
 			Transaction tran;
 			tran=session.beginTransaction();
 			Query query=session.createQuery("from Userticket where username='"+username+"'and "+"carno='"+carno+"'");//where ouserId='"+userid+"'"ouserId
+//			Query query=session.createQuery("from Userticket where no='"+username+"'");//where ouserId='"+userid+"'"ouserId
+			
 			List list = (List)query.list();
 			
 //			tran.commit();
