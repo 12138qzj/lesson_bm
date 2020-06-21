@@ -56,7 +56,7 @@ export const usermenuList = [{
             },
             {
                 title: '全部订单',
-                key: '/user/order',
+                key: '/user/Allorder',
                 icon: '<UserOutlined />'
             },
         ]

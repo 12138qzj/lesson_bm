@@ -1,15 +1,15 @@
 
 import React, { Component } from 'react';
-import { Table,  Popconfirm, Tag} from 'antd';
+import { Table, Popconfirm, Tag} from 'antd';
+//默认导出  才用花括号
+import { reqgetExitTicket } from '../../../api/index';
 import  StorageUtils  from '../../../utils/storageUtis/StorageUtils';
-import {reqgetExitTicket,reqalterUserticket} from '../../../api/index';
 
-import  './UserOrder.less';
-class Userorder extends Component {
+// import  './UserOrder.less';
+class Allorder extends Component {
     constructor(props) {
         super(props);
         console.log("props",props)
-
         this.columns = [
             {
                 title: '车次',
@@ -63,60 +63,92 @@ class Userorder extends Component {
             },
             {
                 title: '金额',
-                dataIndex: 'money',
+                dataIndex: 'ticmon',
             },
             {
                 title: 'operation',
                 dataIndex: 'operation',
-                render: (text, record ) =>{
+                render: (text, record,state) =>{
+                    let Deletecard="";
+                    switch(state){
+                      case "0":
+                        //预定中
+                        Deletecard="取消预订"
+                        break;
+                      case "1":
+                        Deletecard=""
+                        break;
+                      case "2":
+                        Deletecard="删除订单"
+                        break;
+                      default: 
 
-                   return this.state.dataSource.length >= 1 ? (
-                        <Popconfirm title="确定退票?" onConfirm={() => this.handleDelete(record.key,record.carno)}>
-                            <a className={record.state!=0?"NoclickA":''}>
-                                退票
-                            </a>
+                        Deletecard="删除订单"
+                        break;
+                    }
+                    return (
+                        <Popconfirm title={Deletecard} onConfirm={() => this.handleDelete(record.key)}>
+                            <a>{Deletecard}</a>
                         </Popconfirm>
-                    ) : null;
+                    );
                 }
-
+                    // this.state.dataSource.length >= 1 ? (
+                    //     <Popconfirm title="确定删除?" onConfirm={() => this.handleDelete(record.key)}>
+                    //         <a>删除订单</a>
+                    //     </Popconfirm>
+                    // ) : null,
             },
         ];
         this.state = {
             dataSource: [
-              
+              {
+                key: '1',
+                carno: 'K8788',
+                line: "07:00 南昌 - 10:00 萍乡",
+                seat: '7车厢5F号',
+                state: "2",
+                ticmon:"43.5",
+              },
+              {
+                key: '2',
+                carno: 'K8788',
+                line: "07:00 南昌 - 10:00 萍乡",
+                seat: '7车厢5F号',
+                state: "2",
+                ticmon:"43.5",
+              },
                  
             ],
-            count:0,
+            count:2,
         };
     }
 
 
     componentDidMount(){
+        //if(getUser()){
+         //   console.log("getUser()");
+           // console.log("getUser()",getUser());
+        //}
         reqgetExitTicket(StorageUtils.getUser()).then(res=>{
             console.log("data",res);
             if(res.data.state==1){
-              let temp= res.data.data.filter(item=>{
-                  return item.state==="0"||item.state==="1"
-              })
-                console.log("temp",temp,temp.length);
-                if(temp.length>0){
-                    this.setState({
-                        dataSource:
-                        temp.map(item=>{
-                            return {
-                                key: item.No,
-                                carno: item.carno,
-                                line:  item.stime+" "+ item.splace+ " - "+item.etime+" "+item.eplace ,
-                                seat:  item.seat,
-                                state:  item.state,
-                                money: item.ticmon,
+                console.log("data",res.data.data);
+                console.log("data",res.data.data.length);
 
-                            }
-                        }),
-                        count:temp.length,
-                    })
-                }
-               
+                this.setState({
+                    dataSource:res.data.data.map(item=>{
+                        return {
+                            key:item.No,
+                            carno: item.carno,
+                            line:  item.stime+" "+ item.splace+ " - "+item.etime+" "+item.eplace ,
+                            seat:  item.seat,
+                            state:  item.state,
+                            ticmon: item.ticmon,
+
+                        }
+                    }),
+                    count:res.data.data.length
+                })
             }else if(res.state==0){
                 this.setState({
                     dataSource:[],
@@ -125,35 +157,25 @@ class Userorder extends Component {
             }
         })
     }
-    handleDelete = (key,carno) => {
-        const dataSource = [...this.state.dataSource];
-        reqalterUserticket(key,StorageUtils.getUser(),carno,1).then(res=>{
-            console.log("key,carno",key,carno,res.data.state);
-            if(res.data.state===1){
-                this.setState({
-                    dataSource: dataSource.map(item => {
-                            return item.key===key? {
-                                key: item.key,
-                                carno: item.carno,
-                                line:  item.line ,
-                                seat:  item.seat,
-                                state:  "1",
-                                money: item.money,
-        
-                            }:item;
-                        }
-                    ),
-                });
-            }
-        })
 
+    handleDelete = key => {
+        const dataSource = [...this.state.dataSource];
+        this.setState({
+            dataSource: dataSource.filter(item => item.key !== key),
+        });
     };
 
     render() {
 
 
-
+        console.log("getUser()",StorageUtils.getUser());
         const { dataSource } = this.state;
+        // const components = {
+        //     body: {
+        //         row: EditableRow,
+        //         cell: EditableCell,
+        //     },
+        // };
         const columns = this.columns.map(col => {
             if (!col.editable) {
                 return col;
@@ -212,4 +234,4 @@ class Userorder extends Component {
 //     }
 // }
  
-export default Userorder;
+export default Allorder;

@@ -1,3 +1,7 @@
 .user-order {
   min-width: 700px;
 }
+.user-order .NoclickA {
+  pointer-events: none;
+  color: gray;
+}

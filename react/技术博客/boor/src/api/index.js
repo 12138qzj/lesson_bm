@@ -9,3 +9,13 @@ export const reqregister = (username, password) => {
 export const reqgetuser = () => {
     return Ajax("/GetUser", {}, "POST");
 }
+
+
+export const reqgetExitTicket = (username) => {
+    return Ajax("/GetExitTicket", username, "Get");
+}
+
+export const reqalterUserticket = (no, username, carno, state) => {
+    console.log("信息", no, username, carno, state);
+    return Ajax("/AlterUserticket", { no, username, carno, state }, "POST");
+}
