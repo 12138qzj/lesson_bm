@@ -51,13 +51,4 @@
     foo.apply
 
 
-    let arr = [0, 1, 2]
-    arr.push
-    arr.shift
-
-    // call apply 来自于哪里 ??
-    // 函数上面的 api 定义 Function.prototype
-    console.log(foo.__proto__ === Function.prototype); //ture
-    // 数组上面的 api 定义 Array.prototype
-    arr.__proto__ === Array.prototype
-</script>
+    let arr = [0, 1, 2];

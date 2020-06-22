@@ -1,0 +1,12 @@
+<script>
+    //严格模式
+
+    'use strict'
+    //则该作用域为严格模式
+    function foo() {
+        //使用'use strict' 严格模式为undefined
+        //否则为Window
+        console.log(this);
+    }
+    foo();
+</script>
