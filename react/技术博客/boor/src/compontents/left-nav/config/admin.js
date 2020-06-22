@@ -68,7 +68,7 @@ export const usermenuList = [{
         children: [ // 子菜单列表 
             {
                 title: '车票信息',
-                key: '/user/carinfo',
+                key: '/user/searchinfo',
                 icon: '<UserOutlined />'
             },
             {

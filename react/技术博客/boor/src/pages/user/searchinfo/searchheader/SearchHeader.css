@@ -1,0 +1,28 @@
+.SearchHeader {
+  display: flex;
+  margin: 2px 1rem ;
+  align-items: center;
+  background-color: #eef1f8;
+  overflow: hidden;
+}
+.SearchHeader .warp {
+  min-width: 900px;
+  padding: 1rem 0;
+}
+.SearchHeader .warp .span-style {
+  margin: 0 0.5rem 0 1rem;
+  line-height: 2rem;
+  color: #1890ff;
+}
+.SearchHeader .warp .input-style {
+  display: inline-block;
+  width: 20%;
+}
+.SearchHeader .warp .btn {
+  margin-left: 2rem;
+  background-color: #94f1d1;
+  color: white;
+}
+.SearchHeader .warp .btn:hover {
+  background-color: #29ad7f;
+}

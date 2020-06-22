@@ -89,8 +89,6 @@ class Userorder extends Component {
             count:0,
         };
     }
-
-
     componentDidMount(){
         reqgetExitTicket(StorageUtils.getUser()).then(res=>{
             console.log("data",res);

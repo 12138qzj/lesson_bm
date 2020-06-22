@@ -13,4 +13,5 @@
 .User .weight .content {
   margin: 1.5rem;
   background-color: white;
+  overflow: hidden;
 }

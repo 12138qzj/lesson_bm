@@ -10,6 +10,8 @@ import Userhome from './userhome/Userhome';
 import Userorder from './userorder/UserOrder';
 import Userinfo from './userinfo/Userinfo';
 import Allorder from './allorder/Allorder';
+import SearchInfo from './searchinfo/SearchInfo';
+
 // import AdminHome from './adminHome/AdminHome';
 // import AdminUser from './adminUser/AdminUser';
 // import AdminCar from './adminCar/AdminCar';
@@ -53,6 +55,7 @@ export default class User extends Component {
                             <Route path='/user/ordeing'  component={Userorder}/>
                             <Route path='/user/allorder'  component={Allorder}/>
                             <Route path='/user/userinfo'  component={Userinfo}/>
+                            <Route path='/user/searchinfo'  component={SearchInfo}/>
                             <Redirect to='/user/userhome'/>
                         </Switch>
 
