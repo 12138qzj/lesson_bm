@@ -19,6 +19,13 @@ class Userorder extends Component {
                 
             },
             {
+                title: '日期',
+                dataIndex: 'date',
+                width: '10%',
+               
+                
+            },
+            {
                 title: '路线',
                 dataIndex: 'line',
                 width: '30%',
@@ -82,11 +89,10 @@ class Userorder extends Component {
             },
         ];
         this.state = {
-            dataSource: [
-              
-                 
+            dataSource: [   
             ],
             count:0,
+            loading:true,
         };
     }
     componentDidMount(){
@@ -104,6 +110,7 @@ class Userorder extends Component {
                             return {
                                 key: item.No,
                                 carno: item.carno,
+                                date: item.date,
                                 line:  item.stime+" "+ item.splace+ " - "+item.etime+" "+item.eplace ,
                                 seat:  item.seat,
                                 state:  item.state,
@@ -112,13 +119,15 @@ class Userorder extends Component {
                             }
                         }),
                         count:temp.length,
+                        loading:false,
                     })
                 }
                
             }else if(res.state==0){
                 this.setState({
                     dataSource:[],
-                    count:0
+                    count:0,
+                    loading:false,
                 })
             }
         })
@@ -133,6 +142,7 @@ class Userorder extends Component {
                             return item.key===key? {
                                 key: item.key,
                                 carno: item.carno,
+                                date:item.date,
                                 line:  item.line ,
                                 seat:  item.seat,
                                 state:  "1",
@@ -179,6 +189,7 @@ class Userorder extends Component {
                     bordered
                     dataSource={dataSource}
                     columns={columns}
+                    loading={this.state.loading}
                 />
             </div>
         );

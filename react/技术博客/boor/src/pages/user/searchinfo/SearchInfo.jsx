@@ -13,13 +13,18 @@ class SearchInfo extends Component {
                 endplace,
             ]
         })
+    // setTimeout(()=>{
         console.log("this.state.Search",this.state.Search);
+    // },3000)
+      
+       
     }
     render() { 
         return ( 
            
             <div> 
-                <SearchHeader Change={this.Change.bind(this)}/>
+                {/* <SearchHeader Change={this.Change.bind(this)}/> */}
+                <SearchHeader Change={this.Change.bind(this)}/> 
                 <SearchResult searchdata={this.state.Search}/>
             </div>
          );

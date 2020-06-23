@@ -18,6 +18,15 @@ class Allorder extends Component {
                 render: (text) => <a>{text}</a>,
                 
             },
+
+            {
+                title: '日期',
+                dataIndex: 'date',
+                width: '10%',
+               
+                
+            },
+
             {
                 title: '路线',
                 dataIndex: 'line',
@@ -104,6 +113,7 @@ class Allorder extends Component {
               {
                 key: '1',
                 carno: 'K8788',
+                date:"6-8",
                 line: "07:00 南昌 - 10:00 萍乡",
                 seat: '7车厢5F号',
                 state: "2",
@@ -111,6 +121,7 @@ class Allorder extends Component {
               },
               {
                 key: '2',
+                date:"6-10",
                 carno: 'K8788',
                 line: "07:00 南昌 - 10:00 萍乡",
                 seat: '7车厢5F号',
@@ -120,6 +131,7 @@ class Allorder extends Component {
                  
             ],
             count:2,
+            tableLoading:true,
         };
     }
 
@@ -140,6 +152,7 @@ class Allorder extends Component {
                         return {
                             key:item.No,
                             carno: item.carno,
+                            date:item.date,
                             line:  item.stime+" "+ item.splace+ " - "+item.etime+" "+item.eplace ,
                             seat:  item.seat,
                             state:  item.state,
@@ -147,12 +160,14 @@ class Allorder extends Component {
 
                         }
                     }),
-                    count:res.data.data.length
+                    count:res.data.data.length,
+                    tableLoading:false,
                 })
             }else if(res.state==0){
                 this.setState({
                     dataSource:[],
-                    count:0
+                    count:0,
+                    tableLoading:false,
                 })
             }
         })
@@ -203,6 +218,7 @@ class Allorder extends Component {
                     bordered
                     dataSource={dataSource}
                     columns={columns}
+                    loading={this.state.tableLoading}
                 />
             </div>
         );
