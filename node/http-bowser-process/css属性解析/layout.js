@@ -1,7 +1,11 @@
 // 样式 格式化的处理
 // font-size: bold -> 800
-// with: 200px -> 逻+-  数字：200
+// width: 200px -> 逻+-  数字：200
 // backgroundColor: red;  -> rgb()
+/**
+ * 功能：将样式加工
+ * 去除width/height/...: 200px之中的px留下数值（浏览器处理方法）
+ */
 function getStyle(element) {
     if (!element.style) {
         element.style = {};

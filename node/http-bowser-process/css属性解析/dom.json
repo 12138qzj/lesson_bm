@@ -68,3 +68,44 @@
         "computerStyle": {}
     }]
 }
+
+[{
+        "type": "element",
+        "children": [{
+            "type": "element",
+            "children": [{
+                "type": "element",
+                "children": [],
+                "tagName": "style",
+                "computerStyle": {},
+                "style": {}
+            }],
+            "tagName": "head",
+            "computerStyle": {},
+            "style": {}
+        }],
+        "tagName": "html",
+        "computerStyle": {}
+    },
+    {
+        "type": "document",
+        "children": [{
+            "type": "element",
+            "children": [{
+                "type": "element",
+                "children": [{
+                    "type": "element",
+                    "children": [],
+                    "tagName": "style",
+                    "computerStyle": {},
+                    "style": {}
+                }],
+                "tagName": "head",
+                "computerStyle": {},
+                "style": {}
+            }],
+            "tagName": "html",
+            "computerStyle": {}
+        }]
+    }
+]

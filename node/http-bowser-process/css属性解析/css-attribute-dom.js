@@ -24,7 +24,8 @@ let cssStr = `
     height: 500px;
     background-color: rgb(255,0,0);
 }
-.main {
+
+.wrap .main {
     width: 200px;
     height: 200px;
     background-color: rgb(0,255,0);
@@ -41,6 +42,7 @@ let currentToken = null;
 let currentAttribute = null;
 let stack = [{ type: 'document', children: [] }];
 parse(htmlStr);
+console.log(rules)
 console.log(JSON.stringify(rules))
 console.log(JSON.stringify(stack[0], null, 2))
     //拿到整颗树 
@@ -89,6 +91,16 @@ viewImage.save('render.jpg')
 //     }
 // }
 
+
+
+/**
+ * 
+ * @param {String} selector 
+ * @param {JSON} ele 
+ * @function 判断样式的类型，若匹配成功则返回true,匹配不成功则返回false
+ * 
+ * 
+ */
 function match(selector, ele) {
     if (!selector || !ele.attributes) {
         return false;
@@ -115,14 +127,22 @@ function computerCss(ele) {
     // tagName #id  .className
     // .parent .cls
     // div  || div .cls  || span #parentID .parent #id
+
+    //stack.slice(0) 存在子元素和父元素 翻转则先从子元素中查找样式
+    console.log("elements----------JSON", JSON.stringify(stack.slice(0).reverse()))
     let elements = stack.slice(0).reverse();
+    console.log("elements----------", elements)
+        //若没有computerStyle属性，则初始化css属性
     if (!ele.computerStyle) ele.computerStyle = {};
     // 所有 css 规则
     for (let rule of rules) {
+        //selector [ '.main', '.wrap' ] 将样式名翻转从子样式中开始到父级结束找（从内到外查找样式）
+        //console.log(" rule.selectors[0]", rule.selectors[0]);//.wrap .main
         let selector = rule.selectors[0].split(' ').reverse();
+        // console.log("selector", selector);
         // 最后一项匹配上了
         if (!match(selector[0], ele)) {
-            // 跳过本轮循环，往后的步骤
+            // 匹配没有成功跳过本轮循环，往后的步骤
             continue;
         }
         // 看父级满不满足  
@@ -130,11 +150,13 @@ function computerCss(ele) {
         // [#id .parent  #parentID  span]
         let j = 1;
         for (let i = 0; i < elements.length; i++) {
+            //当css样式匹配上则j++
             if (match(selector[j], elements[i])) j++
         }
-        // 匹配
+        // 匹配 判断j的大小 判断将当前选择器的样全部匹配完
         if (j >= selector.length) {
             // rule rule css 规则添加到 ele
+            //当全部匹配成功则将样式添加到element.computerStyle属性中
             for (let delecare of rule.declarations) {
                 const { property, value } = delecare;
                 ele.computerStyle[property] = value
@@ -181,11 +203,19 @@ function emit(token) {
 
         // 知道 attributes , 知道 stack 里面元素 是 element 父节点
         //遇到一个开始标签则匹配一下css样式
+        /**
+         * 每一次提交标签 都会将没有添加css样式的元素去找css匹配一下
+         * element是引用类型 则不要定义全局变量
+         * 形参修改则实参也会修改：赋予地址给形参
+         * */
+        console.log("element前", element)
         computerCss(element);
+        console.log("element后", element)
+
         stack.push(element);
-        console.log("stack", JSON.stringify(stack))
-            // 作为栈顶的元素子节点，为了生成树
-            // if (!top.children) top.children = [];
+        //console.log("stack", JSON.stringify(stack))
+        // 作为栈顶的元素子节点，为了生成树
+        // if (!top.children) top.children = [];
         top.children.push(element);
     } else if (token.type === 'endTag') {
         if (token.tagName !== top.tagName) {
@@ -260,10 +290,17 @@ function tagName(c) { //记录标签的类型和字符
         return start
     }
 }
-
+/**
+ * 入口：attributeValue，tagName在这两个函数过来
+ * 功能：1. 遇见‘/’则是单标签--判断是否为单标签 
+ *      2. 遇见空格 则自我消化--消除空格
+ *      3. 遇见字母则是为样式名--拼接样式名字
+ *      4. 遇见 '>' 则是结束了该标签的拼接工作交给tagName函数去提交
+ */
 function beforeAttaibuteName(c) {
     //attributeValue在这个函数过来的要是‘/’则是单标签
     if (c === '/') { //遇见‘/’则是结束
+        //修改标签类型
         currentToken.type = 'selfCloseToken';
         return tagName;
     } else if (c.match(/[a-zA-Z]/)) { //遇见字符则是css样式名
@@ -300,8 +337,9 @@ function attributeValue(c) {
         currentAttribute.value += c;
         return attributeValue;
     } else {
-        // 空格 >
+        // 若“”之后是空格 则执行这一步
         // 消耗了
+        //若该子节点没有attributes则初始化
         if (!currentToken.attributes) currentToken.attributes = [];
         //在JSON中的attributes属性加css的类型很名字
         currentToken.attributes.push(currentAttribute);
