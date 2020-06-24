@@ -5,9 +5,13 @@ class ArticleStore {
     // observable state 用 observable 修饰过的变量 变量被修改了 页面就会就会重新渲染
     // es @ 装饰器
     LIMIT = LIMIT
+        // observable 可观测的
     @observable articles = {
-        all: []
+        all: [],
+        tab1: [],
+        tab2: []
     }
+    @observable tags = []
     @observable total = 0;
     // 繁杂的逻辑 尽量 写到 store
     @action
@@ -26,6 +30,19 @@ class ArticleStore {
             })
     }
 
+    handleTabChange = (key) => {
+        console.log(key);
+        this.getArticle(key)
+    }
+    @action
+    getTags() {
+        axios.get('/tags').then(res => {
+            this.tags = res.tags;
+            console.log(this.tags);
+        })
+    }
+
 }
 
+//抛出组合成的store
 export default new ArticleStore();
