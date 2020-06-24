@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // class Animal {
+        //     constructor() {
+        //         this.live = 'land'
+        //         this.eat = []
+        //     }
+        //     run() {
+        //         console.log(0)
+        //     }
+        // }
+
+        // class Cat {
+
+        // }
+
+
+        // class Cat extends Animal {
+        //     constructor() {
+        //         super();
+        //         this.sound = '喵喵喵'
+        //     }
+        //     jump() {
+        //         console.log(40)
+        //     }
+        // }
+
+        function Animal() {
+            this.live = 'land'
+            this.eat = []
+
+            // function jump() {
+            //     console.log("我会跳起");
+
+            // }
+            this.jump = () => {
+                console.log("我会跳起");
+
+            }
+        }
+        Animal.prototype.run = () => {
+            console.log("我会跑步");
+        }
+
+        function Cat() {
+            Animal.call(this);
+        }
+
+        //继承
+        //实例的时候 会将class 类中prototype 的指针给 对象实例的__proto__
+
+        let c1 = new Cat();
+        /**
+         * 第一种赋值
+         */
+        // c1.__proto__ = Animal.prototype
+
+        /**
+         * 第一种继承
+         * 将被继承的实例对象赋值给子类对象的__proto__
+         */
+        // c1.__proto__ = new Animal();
+        // let ani = new Animal();
+        // Cat.prototype = ani;
+
+        // Object.setPrototypeOf(Cat.prototype, Animal.prototype)
+        // Cat.prototype.__proto__ = Animal.prototype;
+
+
+        // 继承：我没有，但是我可以从父类取到
+        // let a = {};
+        console.log(c1, c1.live);
+        // console.log(a);
+
+        /**
+         * 原型链继承
+         */
+        // let c1 = new Cat();
+        let c2 = new Cat();
+    </script>
+</body>
+
+</html>

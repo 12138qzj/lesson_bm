@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        class Animal {
+            constructor() {
+                this.live = 'land'
+            }
+            run() {
+                console.log(0)
+            }
+        }
+        Animal.prototype.spack = () => {
+            console.log("我会说话");
+        }
+        class Cat extends Animal {
+            constructor() {
+                super();
+                this.sound = '喵喵喵'
+            }
+            jump() {
+                console.log(40)
+            }
+        }
+        let c1 = new Cat();
+        // 继承：我没有，但是我可以从父类取到
+        console.log(c1, c1.live);
+    </script>
+</body>
+
+</html>
