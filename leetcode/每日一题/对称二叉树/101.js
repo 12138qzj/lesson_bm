@@ -10,7 +10,7 @@
  * @return {boolean}
  * @author qzj
  */
-//第一版
+//第一版  广度优=优先遍历
 var isSymmetric = function(root) {
     // !root || check(root.left, root.right)
     return !root || back(root.left, root.right);
