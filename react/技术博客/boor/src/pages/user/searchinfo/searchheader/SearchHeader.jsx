@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import { DatePicker,Input,Button } from 'antd';
+import { DatePicker, Input, Button, Form } from 'antd';
 import moment from 'moment';
+import { formateDateSearch } from '../../../../utils/timeUtils/TimeUtils'
+
 import './SearchHeader.less';
 
 const dateFormat = 'YYYY/MM/DD';
@@ -10,7 +12,7 @@ const dateFormatList = ['DD/MM/YYYY', 'DD/MM/YY'];
 
 
 class SearchHeader extends Component {
-    constructor(porps){
+    constructor(porps) {
         super(porps);
         //非绑定组件
         this.starttime = React.createRef();
@@ -21,41 +23,98 @@ class SearchHeader extends Component {
 
 
     }
-    state = { 
-      data:""  
+    state = {
+        date: formateDateSearch()
     };
-    
-    Search(){
-        let endpalce=this.endpalce.current.state.value;
-        let starttime=this.starttime.current.props.defaultValue._i;
-        let startpalce=this.startpalce.current.state.value;
+
+    componentDidMount() {
+        console.log("formateDateSearch()", formateDateSearch());
+        let endpalce = this.endpalce.current.state.value;
+        let starttime = this.starttime.current.props.defaultValue._i;
+        let startpalce = this.startpalce.current.state.value;
         // console.log("object",);
-        this.props.Change(startpalce,endpalce);
-        console.log(endpalce,startpalce,starttime);
-        // console.log("点击",this.myRef.current.value);
+        this.props.Change(starttime, startpalce, endpalce);
     }
-    inputChange(e){
-        console.log("value",e);
+    Search() {
+        let endpalce = this.endpalce.current.state.value;
+        let starttime = this.starttime.current.props.defaultValue._i;
+        let startpalce = this.startpalce.current.state.value;
+        // console.log("object",);
+        this.props.Change(starttime, startpalce, endpalce);
+        console.log("点击", endpalce, startpalce, starttime);
+        console.log("点击this", this.starttime.current);
     }
-    render() { 
-        return ( 
+    DateChange = (value, mode) => {
+        console.log("value", value, mode);
+        this.setState({
+            date: mode,
+        })
+    }
+    render() {
+        return (
             <div className="SearchHeader">
                 <div className="warp">
 
 
-                    <span className="span-style">出发日期：</span>
-                    <DatePicker className="datainput-style" defaultValue={moment('2020/01/01', dateFormat)} format={dateFormat} 
-                    ref={this.starttime} />
-                    <span className="span-style">出发地：</span>
-                    <Input placeholder="Basic usage" className="input-style"
-                    ref={this.startpalce} />
-                    <span className="span-style">目的地：</span>
-                    <Input placeholder="Basic usage" className="input-style" 
-                    ref={this.endpalce} />
+                    <Form name="horizontal_login" layout="inline" >
+                        <span className="span-style">出发日期：</span>
+                        <Form.Item>
+                            <DatePicker className="datainput-style" defaultValue={moment(this.state.date, dateFormat)} format={dateFormat}
+                            ref={this.starttime} onChange={this.DateChange} />
+                        </Form.Item>
+                        
+                        <span className="span-style">出发地：</span>
+                        <Form.Item
+                            name="spalce"
+                            rules={[{ required: true, message: '请输入起点！' }]}
+                        >
+                            <Input placeholder="Basic usage" className="input-style"
+                                ref={this.startpalce} />
+                            {/* <Input  placeholder="Username" /> */}
+                        </Form.Item>
+                        <span className="span-style">目的地：</span>
+                        <Form.Item
+                            name="epalce"
+                            rules={[{ required: true, message: '请输入终点!'}]}
+                        >
+                            {/* <Input
+                               
+                                type="password"
+                                placeholder="Password"
+                            /> */}
+                            
+                            <Input placeholder="Basic usage" className="input-style"
+                                ref={this.endpalce} />
 
-                    <Button type="primary" onClick={this.Search.bind(this)} className="btn">
-                        Search
-                    </Button>
+                        </Form.Item>
+                        <Form.Item shouldUpdate={true}>
+                            {() => (
+                                // <Button
+                                //     type="primary"
+                                //     htmlType="submit"
+                                // // disabled={
+                                // //     !form.isFieldsTouched(true) ||
+                                // //     form.getFieldsError().filter(({ errors }) => errors.length).length
+                                // // }
+                                // >
+                                //     Log in
+                                // </Button>
+                                <Button type="primary"
+                                htmlType="submit"
+                                 onClick={this.Search.bind(this)} className="btn">
+                                    Search
+                                </Button>
+                            )}                           
+                        </Form.Item>
+                    </Form>
+
+
+
+                    {/* formateDateSearch() */}
+
+
+
+
                 </div>
 
             </div>
@@ -63,5 +122,5 @@ class SearchHeader extends Component {
         );
     }
 }
- 
+
 export default SearchHeader;

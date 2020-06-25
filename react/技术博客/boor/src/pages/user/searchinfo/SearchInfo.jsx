@@ -5,16 +5,17 @@ class SearchInfo extends Component {
     state = { 
         Search:[],
      }
-    Change(startpalce,endplace){
+    Change(starttime,startpalce,endplace){
         console.log(startpalce,endplace,this,this.state.Search);
         this.setState({
             Search:[
+                starttime,
                 startpalce,
                 endplace,
             ]
         })
     // setTimeout(()=>{
-        console.log("this.state.Search",this.state.Search);
+        console.log("this.state.Search111111",this.state.Search);
     // },3000)
       
        

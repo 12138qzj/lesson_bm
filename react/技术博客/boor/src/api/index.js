@@ -13,8 +13,8 @@ export const reqgetuser = () => {
 export const reqgetCarInfo = () => {
     return Ajax("/GetCarInfo", {}, "GET");
 }
-export const regaltercarinfo = (username, carno) => {
-    return Ajax("/AlterCarInfo", { username, carno }, "POST");
+export const regaltercarinfo = (username, carno, date) => {
+    return Ajax("/AlterCarInfo", { username, carno, date }, "POST");
 }
 
 export const reqgetExitTicket = (username) => {

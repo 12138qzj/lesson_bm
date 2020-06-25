@@ -37,7 +37,7 @@ export default class Admin extends Component {
 
             <Layout className="admin">
                 <Sider >
-                    <PageLeftNac type="admin"/>
+                    <PageLeftNac type="admin" />
                 </Sider>
                 <Layout className="weight">
                     <Header className="adminheader" >

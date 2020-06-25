@@ -123,16 +123,8 @@ class AdminUser extends Component {
             },
         ];
         this.state = {
-            dataSource: [
-                {
-                    key: '0',
-                    name: 'Edward King 0',
-                    pwd: '32',
-                    date: 'London, Park Lane no. 0',
-                },
-               
-            ],
-            count: 1,
+            dataSource: [],
+            count: 0,
         };
     }
 

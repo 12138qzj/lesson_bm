@@ -3,7 +3,7 @@ import { withRouter } from 'react-router-dom';
 import { Modal } from 'antd';
 import './Header.less';
 import StorageUtils from '../../utils/storageUtis/StorageUtils';
-import formateDate from '../../utils/timeUtils/TimeUtils';
+import {formateDate} from '../../utils/timeUtils/TimeUtils';
 // import { changeConfirmLocale } from 'antd/lib/modal/locale';
 import LinkBUttom from '../linkbuttom/LinkButtom';
 
@@ -13,6 +13,7 @@ class Header extends Component {
         ModalText: 'Content of the modal',
         visible: false,
         confirmLoading: false,
+        type:"",
     };
 
 
@@ -28,7 +29,12 @@ class Header extends Component {
             ModalText: 'The modal will be closed after two seconds',
             confirmLoading: true,
         });
-        StorageUtils.removeUser();
+        let type=this.props.type;
+        if(type==="admin"){
+            StorageUtils.removeAdmin();
+        }else{
+            StorageUtils.removeUser();      
+        }
         console.log("StorageUtils.removeUser();",this.props);
         // .history.replace 
         if(!StorageUtils.getUser()){
@@ -63,8 +69,8 @@ class Header extends Component {
     }
 
     gettime() {
-        let time1 = new Date();
-        console.log(time1);
+        // let time1 = new Date();
+        // console.log(time1);
         this.intercalId=setInterval(() => {
             this.setState({
                 time: formateDate()
