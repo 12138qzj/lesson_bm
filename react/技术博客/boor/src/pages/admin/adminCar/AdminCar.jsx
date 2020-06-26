@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { Table, Input, Button, Popconfirm, Form } from 'antd';
-import {reqgetCarInfo,regaltercarinfo} from '../../../api/index';
+import { Table, Input, Button, Popconfirm, Form, Modal, message } from 'antd';
+import { reqgetCarInfo, reqAddCarInfo } from '../../../api/index';
+import CarInfoForm from './addcarinfoform/AddCarInfoForm';
 
 
 class AdminCar extends Component {
@@ -10,19 +11,66 @@ class AdminCar extends Component {
             {
                 title: '车次',
                 dataIndex: 'carno',
-                width: '30%',
+                width: '10%',
                 // editable: true,
             },
             {
-                title: '出发地',
-                dataIndex: 'age',
+                title: '出发地/时间',
+                dataIndex: 'splace_time',
+                width: "13%",
+                render: (text, record, index) => {
+                    return (
+                        <div className="swarp">
+                            <div className="stime">
+                                {record.stime}
+                            </div>
+                            <div className="splace">
+                                <i className="shi_icon">始</i>
+
+                                {record.splace}
+                            </div>
+                        </div>
+                    );
+                }
             },
             {
-                title: 'address',
-                dataIndex: 'address',
+                title: '车型',
+                dataIndex: 'cartype',
+                render: (text, record, index) => {
+                    return (
+                        <div>
+                            {record.cartype}
+                        </div>
+                    );
+                }
             },
             {
-                title: 'operation',
+                title: '目的地/时间',
+                dataIndex: 'eplace_time',
+                width: "13%",
+                key: 'eplace_time',
+                render: (text, record, index) => {
+                    return (
+                        <div>
+                            <div className="etime">
+                                {record.etime}
+                            </div>
+                            <div className="eplace">
+                                <i className="zhong_icon">终</i>
+
+                                {record.eplace}
+                            </div>
+                        </div>
+                    );
+                }
+            },
+            {
+                title: '剩余票量',
+                dataIndex: 'ticnum',
+                key: 'ticnum',
+            },
+            {
+                title: '操作',
                 dataIndex: 'operation',
                 render: (text, record) =>
                     this.state.dataSource.length >= 1 ? (
@@ -33,10 +81,10 @@ class AdminCar extends Component {
             },
         ];
         this.state = {
-            dataSource: [
-                
-            ],
+            dataSource: [],
             count: 0,
+            visibleComfrim: false,
+            loading:false,
         };
     }
 
@@ -127,6 +175,7 @@ class AdminCar extends Component {
         ];
     }
 
+
     //请求数据
     GetCarInfo = () => {
 
@@ -135,8 +184,10 @@ class AdminCar extends Component {
                 console.log("dfdsf", res.data.state);
                 if (res.data.state === 1) {
                     console.log("dfdsfggg", res.data.data);
+                    let count=0;
                     this.setState({
                         dataSource: res.data.data.map(item => {
+                            count++;
                             return {
                                 key: item.CarNo,
                                 carno: item.CarNo,
@@ -149,6 +200,7 @@ class AdminCar extends Component {
                                 paymon: item.PayMon,
                             }
                         }),
+                        count: count,
                         loading: false,
                     })
                 } else {
@@ -157,7 +209,7 @@ class AdminCar extends Component {
                         loading: false,
                     })
                 }
-
+                console.log("Count",this.state.count);
             }
         )
     }
@@ -170,27 +222,68 @@ class AdminCar extends Component {
     };
 
     handleAdd = () => {
-        const { count, dataSource } = this.state;
-        const newData = {
-            key: count,
-            name: `Edward King ${count}`,
-            age: 32,
-            address: `London, Park Lane no. ${count}`,
-        };
+        // const { count, dataSource } = this.state;
+        // const newData = {
+        //     key: count,
+        //     name: `Edward King ${count}`,
+        //     age: 32,
+        //     address: `London, Park Lane no. ${count}`,
+        // };
         this.setState({
-            dataSource: [...dataSource, newData],
-            count: count + 1,
+            // dataSource: [...dataSource, newData],
+            // count: count + 1,
+            visibleComfrim: true,
         });
     };
+    handleAddCarInfo=(event)=>{
+        console.log("添加值为：",event);
+        let e=event.car;
 
-    handleSave = row => {
-        const newData = [...this.state.dataSource];
-        const index = newData.findIndex(item => row.key === item.key);
-        const item = newData[index];
-        newData.splice(index, 1, { ...item, ...row });
+        let data={};
+        data.key=e.carno;
+        data.carno=e.carno;
+        data.splace=e.splace;
+        data.eplace=e.eplace;
+        data.cartype=e.cartype;
+        data.stime=e.stime[0]._d.toTimeString().substring(0,5);
+        data.etime=e.stime[1]._d.toTimeString().substring(0,5);
+        data.ticnum=e.ticnum;
+        data.paymon=e.paymon;
+        this.handleSave(data);
+
         this.setState({
-            dataSource: newData,
+            // dataSource: [...dataSource, newData],
+            // count: count + 1,
+            
         });
+    }
+    componentDidMount(){
+        this.GetCarInfo()
+    }
+    handleCancel=()=> {
+        this.setState({
+            visibleComfrim: false,
+        })
+    }
+    handleSave = (event) => {
+        reqAddCarInfo(event).then(res=>{
+            if (res.data.state === 1) {
+                console.log("dfdsfggg", res.data.data);
+                message.success("添加成功!")
+                this.setState({
+                    dataSource: [...this.state.dataSource,event],
+                    count:this.state.count+1,
+                    visibleComfrim: false,
+                })
+            } else {
+                message.error("添加失败!")
+
+                this.setState({
+                    dataSource: [...this.state.dataSource],
+                    visibleComfrim: false,
+                })
+            }
+        })
     };
 
     render() {
@@ -207,12 +300,34 @@ class AdminCar extends Component {
                 </Button>
                 <Table
                     // components={components}
+                    loading={this.state.loading}
+
                     rowClassName={() => 'editable-row'}
                     bordered
                     dataSource={this.state.dataSource}
                     columns={this.columns}
                 />
+                <Modal
+                    visible={this.state.visibleComfrim}
+                    title="车次信息添加"
+                    onOk={this.handleOk}
+                    onCancel={this.handleCancel}
+                    footer={[
+                        <Button key="back" onClick={this.handleCancel}>
+                            返回
+                        </Button>,
+                    ]}
+                >
+                    <CarInfoForm AddCarInfo={this.handleAddCarInfo}>
+
+                    </CarInfoForm>
+
+                </Modal>
             </div>
+
+
+
+
         );
     }
 }

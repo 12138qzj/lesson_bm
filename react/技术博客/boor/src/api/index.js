@@ -25,3 +25,7 @@ export const reqalterUserticket = (no, username, carno, state) => {
     console.log("信息", no, username, carno, state);
     return Ajax("/AlterUserticket", { no, username, carno, state }, "POST");
 }
+export const reqAddCarInfo = (data) => {
+    console.log("信息", data);
+    return Ajax("/AddCarInfo", data, "POST");
+}

@@ -112,7 +112,7 @@ class AdminUser extends Component {
                 dataIndex: 'date',
             },
             {
-                title: 'operation',
+                title: '操作',
                 dataIndex: 'operation',
                 render: (text, record) =>
                     this.state.dataSource.length >= 1 ? (
