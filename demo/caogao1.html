@@ -1,0 +1,14 @@
+<script>
+    let func = function() {
+        console.log("this", this);
+    }
+
+    let a = {
+
+    };
+    func.call(a);
+
+    a.func = func;
+    a.func();
+    console.log(a);
+</script>

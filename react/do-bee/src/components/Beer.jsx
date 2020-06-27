@@ -14,7 +14,7 @@ class Beer extends React.Component {
     return (
       <div className="beer">
         <Link to={`/beer/${id}/${name}`}>
-          <h2>{name}</h2>
+           <h2>{name}</h2>
            <img src={labels?labels.medium:'null.jpg'} alt=""/> 
         </Link>
       </div>

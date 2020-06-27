@@ -18,6 +18,6 @@ import products from './products'
 
 
 export default combineReducers({
-  cart,
+  
   products
 })

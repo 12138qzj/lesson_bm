@@ -4,7 +4,7 @@ import { createStore } from 'redux';
 import Counter from './components/Counter';
 import counter from './reducer';
 
-import {Provider} from 'react-redux';
+// import {Provider} from 'react-redux';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Pagination ,Tabs,Row,Col,Tag} from 'antd';
+import { Pagination ,Tabs,Row,Col,Tag,Spin} from 'antd';
 import { inject, observer} from 'mobx-react';
 
 const { TabPane } = Tabs;
@@ -22,31 +22,33 @@ class Home extends Component {
         this.props.articleStore.getArticle('all', page - 1);
       }
   render() { 
-    const { total, LIMIT, articles ,handleTabChange,tags} = this.props.articleStore
+    const { total, LIMIT, articles ,handleTabChange,tags,isloading,handleAddTab,activtyKey} = this.props.articleStore
     console.log(total, LIMIT)
     return (
       <div>
 
       <Row>
         <Col span={18}>
-          <Tabs defaultActiveKey={'all'} onChange={handleTabChange}>
+          <Tabs defaultActiveKey={'all'} onChange={handleTabChange} activeKey={activtyKey}>
             {Object.keys(articles).map((tag, i) => {
               return (
                 <TabPane key={tag} tab={tag} >
-                  {
-                    articles[tag].map((article, i) => {
-                      return (
-                        <div>
-                          <h3>
-                            {article.title}
-                          </h3>
-                          <p>
-                            {article.body}
-                          </p>
-                        </div>
-                      )
-                    })
-                  }
+                  <Spin spinning={isloading}>
+                    {
+                      articles[tag].map((article, i) => {
+                        return (
+                          <div>
+                            <h3>
+                              {article.title}
+                            </h3>
+                            <p>
+                              {article.body}
+                            </p>
+                          </div>
+                        )
+                      })
+                    }
+                  </Spin>
                 </TabPane>
               )
             })}
@@ -55,7 +57,9 @@ class Home extends Component {
         </Col>
         <Col span={6}>
           {tags.map((tag,i)=>{
-            return <Tag key={i}>{tag}</Tag>
+            return <Tag key={i} onClick={()=>{
+              handleAddTab(tag);
+            }}>{tag}</Tag>
           })}
         </Col>
       </Row>

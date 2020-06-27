@@ -7,6 +7,14 @@ class Single extends React.Component {
   static propTypes = {
     params: PropTypes.object
   }
+  //defaultProps 
+  // static defaultProps={
+  //   params: {
+      
+  //   }
+
+  // }
+  
   constructor() {
     super();
     this.state = {
@@ -14,10 +22,13 @@ class Single extends React.Component {
       loading: true // 2 react 业务经验
     }
   }
+  
+  
   componentDidMount() {//组件渲染之后执行
     // console.log(this.props.match.params)
     // console.log(`searching for ${this.props.match.params.beerId}`);
     this.loadBeer(this.props.match.params.beerId)
+    console.log(this.props.match.params);
   }
   loadBeer = (beerId) => {
     this.setState({ loading: true})
@@ -54,4 +65,5 @@ class Single extends React.Component {
   }
 }
 
+// Single.s
 export default Single;

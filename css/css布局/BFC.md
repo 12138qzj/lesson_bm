@@ -11,6 +11,7 @@ foo()
 ```
 
 ## BFC
+- 介绍：块格式化上下文（Block Formatting Context，BFC） 是Web页面的可视CSS渲染的一部分，是块盒子的布局过程发生的区域，也是浮动元素与其他元素交互的区域。
 block-formating-context
 隔离的容器
 
@@ -19,7 +20,7 @@ block-formating-context
  - float 
  - absolute
  - display: inline-blocks || table-cell || table-caption || flex || grid
- - overflow 不为 visiable（这个带来的副作用比较小）
+ - overflow 不为 visiable属性（这个带来的副作用比较小）
  - 根元素默认新建 BFC
 
 ## BFC规则

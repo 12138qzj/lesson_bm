@@ -22,6 +22,11 @@ function SQL(table) {
 
 
 }
+SQL.prototype.getResult = () => {
+    console.log("this", this);
+
+    return this._result;
+}
 
 SQL.prototype.where = function(predicate) {
     let rows = this._getRows()
@@ -70,10 +75,14 @@ SQL.prototype.gruopBy = function(key) {
 var sql = new SQL(users)
 
 let predicate = function(row) {
-    return row.age < 30;
-}
-sql.gruopBy("sex").where(predicate)
+        return row.age < 30;
+    }
+    // console.log(sql.gruopBy("sex").where(predicate).getResult());
+console.log(sql);
+sql.getResult()
 
+
+console.log(SQL);
 // let user = [1, 2, 3, 4, 5]
 
 // user.reduce(function(prev, cur, index, arr) {

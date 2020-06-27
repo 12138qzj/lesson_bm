@@ -13,13 +13,16 @@ class ArticleStore {
     }
     @observable tags = []
     @observable total = 0;
+    @observable isloading = true;
+    @observable activtyKey = 'all';
     // 繁杂的逻辑 尽量 写到 store
     @action
     getArticle(tag, offset = 0) {
+        this.isloading = true;
         axios.get('/articles', {
                 params: {
-                    tag: tag === 'all' ? null : tag,
-                    offset,
+                    tag: this.activtyKey === 'all' ? null : this.activtyKey,
+                    offset: offset * LIMIT,
                     limit: LIMIT
                 }
             })
@@ -27,12 +30,20 @@ class ArticleStore {
                 // 修改 store
                 this.articles[tag] = res.articles
                 this.total = res.articlesCount
+                this.isloading = false
             })
     }
 
     handleTabChange = (key) => {
         console.log(key);
         this.getArticle(key)
+        this.activtyKey = key;
+    }
+    handleAddTab = (tab) => {
+        // this.tags.push(tab);
+        this.getArticle(tab)
+        this.activtyKey = tab;
+
     }
     @action
     getTags() {

@@ -10,6 +10,7 @@ class Header extends React.Component {
   render() {
     return (
       <h1>
+        {/* 页面叠加的效果 */}
         <Link to="/">{this.props.siteName}</Link>
       </h1>
     );

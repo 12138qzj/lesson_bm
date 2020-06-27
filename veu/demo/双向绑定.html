@@ -10,7 +10,7 @@
 
 <body>
     <div class="app">
-        <input v-model="message" placeholder="输出的信息" />
+        <input v-="message" placeholder="输出的信息" />
         <!-- 大括号表达式语法：将Veu里面的信息实时提取显示 -->
         <p> {{message}}</p>
         <!-- 相当于 v-text v-html -->
@@ -32,20 +32,23 @@
         <input type="checkbox" id="one" value="frist" v-model="checkb" />
         <label for="one"> 第一个</label>
         <p> {{checkb}}</p>
+        <p> {{count}}</p>
 
 
     </div>
     <script>
         var vm = new Vue({
-            el: ".app", //绑定标签  
+            el: ".app", //绑定标签 挂载元素 
             data: {
                 message: "",
                 checkb: [],
-                imgSrc: '../image/代码图.png'
+                imgSrc: '../image/代码图.png',
+                count: 0
             },
             methods: {
                 test() {
                     alert('hhhhhh')
+                    this.count++;
                 }
 
             }

@@ -119,64 +119,100 @@
 // }
 // myFunction();
 
-class Car {
-    constructor() {
-        this.id = 8;
-    }
-}
 
-var obj = {
-    id: 1,
-    name: 'qzj',
-    age: 15
-}
-obj.num = 45;
-//Object.defineProperty(obj, prop,descriptor)
-Object.defineProperty(obj, 'id', {
-    //有这个变量则修改  没有这个则添加
-    value: '修改的值',
-    //默认值为 false
-    writable: false, //设置id不能被修改  固定唯一   writable: true则为可修改
-    //enumerable 为false 则不允许遍历 默认为false
-    enumerable: true,
-    //configurable 为false 则不允许删除这个属性 默认为false
-    configurable: true
-})
-obj.id = 9;
-console.log(obj);
 
-// var car = new Car();
-// Object.defineProperty(car, car.id, {
-//     writable: false
+
+
+
+
+
+
+
+
+// class Car {
+//     constructor() {
+//         this.id = 8;
+//     }
+// }
+
+// var obj = {
+//     id: 1,
+//     name: 'qzj',
+//     age: 15
+// }
+// obj.num = 45;
+// //Object.defineProperty(obj, prop,descriptor)
+// Object.defineProperty(obj, 'id', {
+//     //有这个变量则修改  没有这个则添加
+//     value: '修改的值',
+//     //默认值为 false
+//     writable: false, //设置id不能被修改  固定唯一   writable: true则为可修改
+//     //enumerable 为false 则不允许遍历 默认为false
+//     enumerable: true,
+//     //configurable 为false 则不允许删除这个属性 默认为false
+//     configurable: true
 // })
-// car.id = 966;
-// console.log(car)
+// obj.id = 9;
+// console.log(obj);
 
-console.log('------------------427')
-const ary = [200, 300];
-ary[0] = 100; //地址未被修改 
-console.log(ary);
-//ary = [80];//地址被修改  这报错 Assignment to constant variable.
-//console.log(ary)
-console.log(num);
-var num = 9;
-console.log('------------------this')
-var obj = {
-        age: 20,
-        say: () => {
-            console.log(this.age);
-        }
-    }
-    //var a = new obj();
-    //obj 没有独立的作用域   所有没有this
-obj.say();
-console.log('------------------arguments')
-var sum = function() {
-    console.log(arguments); //对象存放的地方
+// // var car = new Car();
+// // Object.defineProperty(car, car.id, {
+// //     writable: false
+// // })
+// // car.id = 966;
+// // console.log(car)
+
+// console.log('------------------427')
+// const ary = [200, 300];
+// ary[0] = 100; //地址未被修改 
+// console.log(ary);
+// //ary = [80];//地址被修改  这报错 Assignment to constant variable.
+// //console.log(ary)
+// console.log(num);
+// var num = 9;
+// console.log('------------------this')
+// var obj = {
+//         age: 20,
+//         say: () => {
+//             console.log(this.age);
+//         }
+//     }
+//     //var a = new obj();
+//     //obj 没有独立的作用域   所有没有this
+// obj.say();
+// console.log('------------------arguments')
+// var sum = function() {
+//     console.log(arguments); //对象存放的地方
+// }
+// var sum1 = (...args) => {
+//     console.log(arguments); //这个不输出对象
+//     console.log(args); //这个输出参数数组
+// }
+// sum(1, 2, 3); //[Arguments] { '0': 1, '1': 2, '2': 3 }
+// sum1(1, 2, 3); //[ 1, 2, 3 ]
+
+
+// let data = [
+//     { a: 'ssd' },
+//     { a: "q123" }
+// ];
+// var arr = Object.keys(data);
+// console.log(arr.length == 0, arr, data["a"]); //true 为空， false 不为空
+
+// let filter = data.filter(item => {
+//     if (item.a == "q123")
+//         return item
+// })
+
+// console.log("data", filter);
+// arr.map(item => {
+//         console.log(item);
+
+//         console.log(data[item]);
+// })
+// let a = [];
+// console.log(a.length);
+
+let func = () => {
+    console.log("this", this);
 }
-var sum1 = (...args) => {
-    console.log(arguments); //这个不输出对象
-    console.log(args); //这个输出参数数组
-}
-sum(1, 2, 3); //[Arguments] { '0': 1, '1': 2, '2': 3 }
-sum1(1, 2, 3); //[ 1, 2, 3 ]

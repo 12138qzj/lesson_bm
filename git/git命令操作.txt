@@ -8,6 +8,7 @@ git clone https://github.com/Mr-memorandum/Data-structure.git
 
 cd YourRepositoryName
 git add .
+git reset HEAD <file> //撤销暂存区的文件
 git commit  -m  "commit code"
 git push -u origin master
 

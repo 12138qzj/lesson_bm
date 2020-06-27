@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图片展示</title>
+</head>
+<style>
+    .warp {
+        display: inline-block;
+        height: 30rem;
+        width: 20rem;
+        margin-bottom: 2rem;
+    }
+</style>
+
+<body>
+    <div class="content">
+
+    </div>
+
+</body>
+
+<script>
+    const content = document.querySelector('.content')
+    for (let i = 1; i < 38; i++) {
+        content.innerHTML += `
+        <div class="warp">
+            <a href="./image/${i}.jpg">
+                <img src="./image/${i}.jpg" alt="" height="100%">
+            </a>
+        </div>
+        `
+    }
+</script>
+
+</html>
