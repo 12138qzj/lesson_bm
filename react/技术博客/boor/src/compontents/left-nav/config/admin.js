@@ -13,11 +13,6 @@ export const menuList = [{
                 key: '/Admin/adminuser',
                 icon: "<UserOutlined />"
             },
-            {
-                title: '商品管理',
-                key: '/Admin/product',
-                icon: '<UserOutlined />'
-            },
         ]
     },
     {
@@ -32,7 +27,7 @@ export const menuList = [{
             },
             {
                 title: '退票详情',
-                key: '/Admin/role',
+                key: '/Admin/exitcarinfo',
                 icon: '<UserOutlined />',
             },
         ]
@@ -71,11 +66,7 @@ export const usermenuList = [{
                 key: '/user/searchinfo',
                 icon: '<UserOutlined />'
             },
-            {
-                title: '退票详情',
-                key: '/user/exitinfo',
-                icon: '<UserOutlined />',
-            },
+
         ]
     },
 

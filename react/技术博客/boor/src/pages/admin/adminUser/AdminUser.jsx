@@ -1,6 +1,6 @@
 import React, { Component, useContext, useState, useEffect, useRef } from 'react';
-import { Table, Input, Button, Popconfirm, Form } from 'antd';
-import {reqgetuser} from '../../../api/index';
+import { Table, Input, Button, Popconfirm, Form, message } from 'antd';
+import {reqgetuser,reqDeleteUser} from '../../../api/index';
 
 import  './adminUser.less';
 
@@ -116,7 +116,7 @@ class AdminUser extends Component {
                 dataIndex: 'operation',
                 render: (text, record) =>
                     this.state.dataSource.length >= 1 ? (
-                        <Popconfirm title="确定删除?" onConfirm={() => this.handleDelete(record.key)}>
+                        <Popconfirm title="确定删除?" onConfirm={() => this.handleDelete(record.key,record.name)}>
                             <a>删除用户</a>
                         </Popconfirm>
                     ) : null,
@@ -149,11 +149,20 @@ class AdminUser extends Component {
         })
     }
 
-    handleDelete = key => {
-        const dataSource = [...this.state.dataSource];
-        this.setState({
-            dataSource: dataSource.filter(item => item.key !== key),
-        });
+    handleDelete = (key,name) => {
+        reqDeleteUser(name).then(res=>{
+            console.log(res);
+            if(res.data.state===1){
+                message.success("删除成功！");
+                const dataSource = [...this.state.dataSource];
+                this.setState({
+                    dataSource: dataSource.filter(item => item.key !== key),
+                });
+            }else{
+                message.error("删除失败！")
+            }
+        })
+       
     };
 
     handleAdd = () => {

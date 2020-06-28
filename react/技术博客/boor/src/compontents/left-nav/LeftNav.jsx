@@ -122,7 +122,7 @@ class LeftNav extends Component {
                     <div className="left-top">
                         {/* 头像 */}
                         <img src={logo} alt="" />
-                        <h1>用户</h1>
+                        <h1>{this.props.type==="admin"?"管理员":"用户"}</h1>
                     </div>
                 </Link>
                 {/* //defaultSelectedKeys默认选中item */}

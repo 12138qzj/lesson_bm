@@ -22,7 +22,7 @@ class Register extends Component {
             data=>{
                 console.log("registerdata",data)
                 if(data.data.state==1){
-                    message.error('注册成功');
+                    message.success('注册成功');
                     this.props.history.replace('/login')
                 }else{
                     message.error('注册失败！')

@@ -91,12 +91,12 @@ class Header extends Component {
                 </div>
                 <div className="header-bottom">
                     <div className="header-bottom-left">
-                        {this.props.headertitle}
+                        {/* {this.props.headertitle} */}
                     </div>
                     <div className="header-bottom-right">
                         <span>{ this.state.time }</span>
                         <img src="" alt=""/>
-                        <span>天气</span>
+                        {/* <span>天气</span> */}
                     </div>
                 </div>
 

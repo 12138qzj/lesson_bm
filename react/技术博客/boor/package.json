@@ -21,7 +21,8 @@
         "react-scripts": "3.4.1",
         "redux": "^4.0.5",
         "stylus": "^0.54.7",
-        "stylus-loader": "^3.0.2"
+        "stylus-loader": "^3.0.2",
+        "swiper": "^5.4.5"
     },
     "scripts": {
         "start": "react-app-rewired start",

@@ -29,3 +29,17 @@ export const reqAddCarInfo = (data) => {
     console.log("信息", data);
     return Ajax("/AddCarInfo", data, "POST");
 }
+export const reqDeleteUser = (username) => {
+    console.log("信息", username);
+    return Ajax("/DeleteUser", username, "POST");
+}
+
+export const reqDeleteUserTicket = (no, user, carno) => {
+    console.log("信息", user, carno, no);
+    return Ajax("/DeleteUserTicket", { user, carno, no }, "POST");
+}
+
+export const reqDeleteCarinfo = (carno) => {
+    console.log("信息", carno);
+    return Ajax("/DeleteCarinfo", carno, "POST");
+}

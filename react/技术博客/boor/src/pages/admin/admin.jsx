@@ -9,6 +9,8 @@ import PageLeftNac from '../../compontents/left-nav/LeftNav';
 import AdminHome from './adminHome/AdminHome';
 import AdminUser from './adminUser/AdminUser';
 import AdminCar from './adminCar/AdminCar';
+import ExitCarInfo from './adminCar/exitcarinfo/ExitCarInfo';
+
 
 
 // import memoryUtils from '../../utils/memoryUtils/MemoryUtils';
@@ -48,6 +50,8 @@ export default class Admin extends Component {
                             <Route exact path='/Admin/adminhome' component={AdminHome}/>
                             <Route path='/Admin/adminuser' component={AdminUser}/>
                             <Route path='/Admin/admincar'  component={AdminCar}/>
+                            <Route path='/Admin/exitcarinfo'  component={ExitCarInfo}/>
+
                             <Redirect to='/Admin/adminhome'/>
                         </Switch>
 

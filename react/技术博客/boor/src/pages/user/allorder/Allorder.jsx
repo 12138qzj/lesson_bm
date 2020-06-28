@@ -1,8 +1,8 @@
 
 import React, { Component } from 'react';
-import { Table, Popconfirm, Tag} from 'antd';
+import { Table, Popconfirm, Tag,message} from 'antd';
 //默认导出  才用花括号
-import { reqgetExitTicket } from '../../../api/index';
+import { reqgetExitTicket,reqDeleteUserTicket } from '../../../api/index';
 import  StorageUtils  from '../../../utils/storageUtis/StorageUtils';
 
 // import  './UserOrder.less';
@@ -77,12 +77,13 @@ class Allorder extends Component {
             {
                 title: 'operation',
                 dataIndex: 'operation',
-                render: (text, record,state) =>{
+                render: (text, record) =>{
+                    console.log("state",record.state);
                     let Deletecard="";
-                    switch(state){
+                    switch(record.state){
                       case "0":
                         //预定中
-                        Deletecard="取消预订"
+                        Deletecard=""
                         break;
                       case "1":
                         Deletecard=""
@@ -90,13 +91,14 @@ class Allorder extends Component {
                       case "2":
                         Deletecard="删除订单"
                         break;
-                      default: 
-
+                    case "3":
                         Deletecard="删除订单"
+                        break;
+                    default: 
                         break;
                     }
                     return (
-                        <Popconfirm title={Deletecard} onConfirm={() => this.handleDelete(record.key)}>
+                        <Popconfirm title={Deletecard} onConfirm={() => this.handleDelete(record.key,StorageUtils.getUser(),record.carno)}>
                             <a>{Deletecard}</a>
                         </Popconfirm>
                     );
@@ -109,28 +111,8 @@ class Allorder extends Component {
             },
         ];
         this.state = {
-            dataSource: [
-              {
-                key: '1',
-                carno: 'K8788',
-                date:"6-8",
-                line: "07:00 南昌 - 10:00 萍乡",
-                seat: '7车厢5F号',
-                state: "2",
-                ticmon:"43.5",
-              },
-              {
-                key: '2',
-                date:"6-10",
-                carno: 'K8788',
-                line: "07:00 南昌 - 10:00 萍乡",
-                seat: '7车厢5F号',
-                state: "2",
-                ticmon:"43.5",
-              },
-                 
-            ],
-            count:2,
+            dataSource: [],
+            count:0,
             tableLoading:true,
         };
     }
@@ -173,11 +155,21 @@ class Allorder extends Component {
         })
     }
 
-    handleDelete = key => {
-        const dataSource = [...this.state.dataSource];
-        this.setState({
-            dataSource: dataSource.filter(item => item.key !== key),
-        });
+    handleDelete = (key,user,carno) => {
+
+        reqDeleteUserTicket(key,user,carno).then(res=>{
+            if(res.data.state===1){
+                message.success('删除成功');
+                const dataSource = [...this.state.dataSource];
+                this.setState({
+                    dataSource: dataSource.filter(item => item.key !== key),
+                });
+            }else{
+                message.error('删除失败！')
+               // this.props.history.replace('/login')
+            }
+        })
+        
     };
 
     render() {

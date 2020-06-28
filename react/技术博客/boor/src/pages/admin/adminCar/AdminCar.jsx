@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Table, Input, Button, Popconfirm, Form, Modal, message } from 'antd';
-import { reqgetCarInfo, reqAddCarInfo } from '../../../api/index';
+import { reqgetCarInfo, reqAddCarInfo,reqDeleteCarinfo } from '../../../api/index';
 import CarInfoForm from './addcarinfoform/AddCarInfoForm';
 
 
@@ -215,10 +215,18 @@ class AdminCar extends Component {
     }
 
     handleDelete = key => {
-        const dataSource = [...this.state.dataSource];
-        this.setState({
-            dataSource: dataSource.filter(item => item.key !== key),
-        });
+
+        reqDeleteCarinfo(key).then(res=>{
+            if(res.data.state===1){
+                message.success('删除成功');
+                const dataSource = [...this.state.dataSource];
+                this.setState({
+                    dataSource: dataSource.filter(item => item.key !== key),
+                });
+            }else{
+                message.error('删除失败！')
+            }
+        })
     };
 
     handleAdd = () => {
