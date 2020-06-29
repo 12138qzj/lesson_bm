@@ -29,13 +29,13 @@ class Header extends Component {
             ModalText: 'The modal will be closed after two seconds',
             confirmLoading: true,
         });
-        let type=this.props.type;
-        if(type==="admin"){
+        let type=this.props.username;
+        if(type==="username"){
             StorageUtils.removeAdmin();
         }else{
             StorageUtils.removeUser();      
         }
-        console.log("StorageUtils.removeUser();",this.props);
+        console.log("StorageUtils.removeUser();",this.props,type);
         // .history.replace 
         if(!StorageUtils.getUser()){
            
