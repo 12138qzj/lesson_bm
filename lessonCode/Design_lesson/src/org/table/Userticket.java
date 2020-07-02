@@ -13,6 +13,7 @@ public class Userticket implements java.io.Serializable {
 	private String carno;
 	private String splace;
 	private String eplace;
+	private String data;
 	private String stime;
 	private String etime;
 	private String seat;
@@ -28,12 +29,13 @@ public class Userticket implements java.io.Serializable {
 	}
 
 	/** full constructor */
-	public Userticket(String username, String carno, String splace, String eplace, String stime, String etime,
-			String seat, String line, String ticMon, String percent, String state) {
+	public Userticket(String username, String carno, String splace, String eplace, String data, String stime,
+			String etime, String seat, String line, String ticMon, String percent, String state) {
 		this.username = username;
 		this.carno = carno;
 		this.splace = splace;
 		this.eplace = eplace;
+		this.data = data;
 		this.stime = stime;
 		this.etime = etime;
 		this.seat = seat;
@@ -83,6 +85,14 @@ public class Userticket implements java.io.Serializable {
 
 	public void setEplace(String eplace) {
 		this.eplace = eplace;
+	}
+
+	public String getData() {
+		return this.data;
+	}
+
+	public void setData(String data) {
+		this.data = data;
 	}
 
 	public String getStime() {

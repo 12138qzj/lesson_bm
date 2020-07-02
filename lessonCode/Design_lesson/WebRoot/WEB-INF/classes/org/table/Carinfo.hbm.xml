@@ -16,6 +16,9 @@
         <property name="eplace" type="java.lang.String">
             <column name="EPlace" length="20" not-null="true" />
         </property>
+        <property name="carType" type="java.lang.String">
+            <column name="CarType" length="20" not-null="true" />
+        </property>
         <property name="stime" type="java.lang.String">
             <column name="STime" length="50" not-null="true" />
         </property>

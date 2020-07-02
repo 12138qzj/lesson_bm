@@ -30,7 +30,7 @@ public class DeleteUser implements Controller{
 //				jsonObj.getString("username"),
 //				jsonObj.getString("carno"),
 //				jsonObj.getString("state"));
-		Boolean res=DeleteTable.DeleteUser (jsonObj.getString("username"));
+		Boolean res=DeleteTable.DeleteUser (jsonObj.getString("params"));
 		if(res) {
 			jsonObj.put("state", 1);
 			jsonObj.put("message","É¾³ý³É¹¦");

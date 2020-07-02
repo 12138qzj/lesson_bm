@@ -22,6 +22,9 @@
         <property name="eplace" type="java.lang.String">
             <column name="EPlace" length="20" not-null="true" />
         </property>
+        <property name="data" type="java.lang.String">
+            <column name="Data" length="20" not-null="true" />
+        </property>
         <property name="stime" type="java.lang.String">
             <column name="STime" length="50" not-null="true" />
         </property>

@@ -80,9 +80,12 @@ public static JSONArray GetCarInfo() {
 				System.out.println("È¡³ö:"+carinfo.getCarNo());
 				jsonObj.put("CarNo", carinfo.getCarNo());
 			    jsonObj.put("SPlace", carinfo.getSplace());
-			    jsonObj.put("EPlace", carinfo.getStime());      
+			    jsonObj.put("EPlace", carinfo.getEplace());      
 			    
-				jsonObj.put("STime", carinfo.getEtime());
+			    jsonObj.put("CarType",carinfo.getCarType());
+			    
+				jsonObj.put("STime", carinfo.getStime());
+				jsonObj.put("ETime", carinfo.getEtime());
 			    jsonObj.put("TicNum", carinfo.getTicNum());
 			    jsonObj.put("PayMon", carinfo.getPayMon());   
 		        
@@ -131,6 +134,9 @@ public static JSONArray GetExitTicket(String username) {
 			    
 				jsonObj.put("splace", userticket.getSplace());
 			    jsonObj.put("eplace", userticket.getEplace());
+			    
+			    jsonObj.put("date", userticket.getData());
+			    
 			    jsonObj.put("stime", userticket.getStime()); 
 			    jsonObj.put("etime", userticket.getEtime()); 
 			    jsonObj.put("seat", userticket.getSeat());

@@ -5,6 +5,7 @@ import java.util.List;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.table.Carinfo;
 import org.table.User;
 import org.table.Userticket;
 import org.util.HibernateSessionFactory;
@@ -88,4 +89,58 @@ public class AlterTable {
 		return true;
 	}
 	
+	
+	public static Boolean AlterCarInfo(String username , String carno,String date) {
+		
+		JSONArray jsonArr=new JSONArray();
+		Carinfo carinfo;		
+		Session session;
+		session=HibernateSessionFactory.getSession();
+		System.out.println("在这修改票状态carinfo"+username+carno);
+		try {			
+			session.clear();
+			Transaction tran;
+			tran=session.beginTransaction();
+			Query query=session.createQuery("from Carinfo where carno='"+carno+"'");//where ouserId='"+userid+"'"ouserId
+//			Query query=session.createQuery("from Userticket where no='"+username+"'");//where ouserId='"+userid+"'"ouserId
+			
+			List list = (List)query.list();
+			
+//			tran.commit();
+//			session.close();
+			int num=0;
+			if(list.size()>0) {
+				carinfo=(Carinfo)list.get(0);
+				num=carinfo.getTicNum();
+			}else {
+				return false;
+			}
+			if(num<=0) {
+				return false;
+			}
+			num--;
+			String hql=null;
+			hql= "update Carinfo set ticnum='"+num+"'where carno='"+carno+"'";
+			session.clear();
+			Query qurey;
+			System.out.println("hql:"+hql);
+			int i = session.createSQLQuery(hql).executeUpdate();
+			System.out.println("在这Userticket,queryI"+i);
+			//query.setCacheable(false);
+			tran.commit();
+			session.close();			
+//		        jsonObj=null;
+					
+			System.out.println("获取表carno："+carno);
+		}
+		catch(Exception e){
+			System.out.println(e);
+			return false;
+		}
+		
+		if(!AddTable.AddUserticketList(carinfo,username,date)) {
+			return false;
+		}
+		return true;
+	}
 }

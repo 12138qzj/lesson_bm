@@ -11,6 +11,7 @@ public class Carinfo implements java.io.Serializable {
 	private String carNo;
 	private String splace;
 	private String eplace;
+	private String carType;
 	private String stime;
 	private String etime;
 	private Integer ticNum;
@@ -23,11 +24,12 @@ public class Carinfo implements java.io.Serializable {
 	}
 
 	/** full constructor */
-	public Carinfo(String carNo, String splace, String eplace, String stime, String etime, Integer ticNum,
-			String payMon) {
+	public Carinfo(String carNo, String splace, String eplace, String carType, String stime, String etime,
+			Integer ticNum, String payMon) {
 		this.carNo = carNo;
 		this.splace = splace;
 		this.eplace = eplace;
+		this.carType = carType;
 		this.stime = stime;
 		this.etime = etime;
 		this.ticNum = ticNum;
@@ -58,6 +60,14 @@ public class Carinfo implements java.io.Serializable {
 
 	public void setEplace(String eplace) {
 		this.eplace = eplace;
+	}
+
+	public String getCarType() {
+		return this.carType;
+	}
+
+	public void setCarType(String carType) {
+		this.carType = carType;
 	}
 
 	public String getStime() {

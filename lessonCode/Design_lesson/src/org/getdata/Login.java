@@ -54,7 +54,7 @@ public class Login  implements Controller{
 			e.printStackTrace();
 		}	
 		if(a) {
-			if(username.equals("Username")) {
+			if(username.equals("username")) {
 				jsonObj.put("state", 2);
 				jsonObj.put("username",username);
 				response.getWriter().append(jsonObj.toString());

@@ -26,7 +26,7 @@ public class DeleteCarinfo implements Controller{
 //		//获取JSON数据
 		jsonObj= JSONObject.fromObject(read);
 		
-		Boolean res=DeleteTable.DeleteCarInfo (jsonObj.getString("carno"));
+		Boolean res=DeleteTable.DeleteCarInfo (jsonObj.getString("params"));
 		if(res) {
 			jsonObj.put("state", 1);
 			jsonObj.put("message","删除成功");
