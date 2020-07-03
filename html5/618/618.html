@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- 在viewport中指定一个宽度 content="width=750   高度自适应-->
+    <!-- user-scalable=no???????? 防止拉伸的时候出现缓冲底色 -->
+    <!-- initial-scale=1.0, -->
+    <meta name="viewport" content="width=750, user-scalable=no">
+    <title>618视频界面设计</title>
+    <link rel="stylesheet" type="text/css" href="./common.css" />
+</head>
+
+<style>
+    /* * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    body {
+        background-color: blue;
+        color: pink;
+    }
+    
+    .qiu {
+        color: red;
+    } */
+    
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    html,
+    body {
+        height: 100%;
+        background-color: green;
+    }
+    /*     
+    #app {
+        overflow: hidden;
+    } */
+    
+    #app {
+        font-family: Avenir, Helvetica, Arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-align: center;
+        top: 50%;
+    }
+    
+    #app,
+    .win {
+        position: absolute;
+        width: 750px;
+        height: 100%;
+        left: 50%;
+        overflow: hidden;
+        margin-left: -375px;
+    }
+    
+    #playVideo {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+    
+    .innerwin,
+    .vvw {
+        position: absolute;
+        width: 750px;
+        margin-left: -375px;
+        left: 50%;
+    }
+    
+    .innerwin {
+        top: 50%;
+    }
+    
+    .wt {
+        -webkit-perspective: 300px;
+        perspective: 300px;
+        -webkit-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+    }
+    
+    .change {
+        position: absolute;
+        width: 302px;
+        height: 200px;
+        bottom: 30px;
+        left: 224px;
+    }
+    
+    .xlz1 {
+        background-image: url(http://tmall.lpiii.cn/618/static/videobtn/btn_0.png);
+        position: absolute;
+        width: 477px;
+        height: 300px;
+        top: 50%;
+        left: 50%;
+        margin-top: -152px;
+        margin-left: -238px;
+        animation-name: xl1;
+        animation-duration: 4.5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: step-start;
+        animation-play-state: running;
+    }
+    
+    .xlz2 {
+        background-image: url(http://tmall.lpiii.cn/618/static/videobtn/btn_1.png);
+        position: absolute;
+        width: 477px;
+        height: 300px;
+        top: 50%;
+        left: 50%;
+        margin-top: -150px;
+        margin-left: -238px;
+        animation-name: xl2;
+        animation-duration: 1.5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: step-start;
+        animation-play-state: running;
+    }
+    
+    @keyframes xl2 {
+        0%,
+        100% {
+            background-position-x: -0px;
+            background-position-y: -0px
+        }
+        5% {
+            background-position-x: -477px;
+            background-position-y: -0px
+        }
+        10% {
+            background-position-x: -954px;
+            background-position-y: -0px
+        }
+        15% {
+            background-position-x: -1431px;
+            background-position-y: -0px
+        }
+        20% {
+            background-position-x: -0px;
+            background-position-y: -300px
+        }
+        25% {
+            background-position-x: -477px;
+            background-position-y: -300px
+        }
+        30% {
+            background-position-x: -954px;
+            background-position-y: -300px
+        }
+        35% {
+            background-position-x: -1431px;
+            background-position-y: -300px
+        }
+        40% {
+            background-position-x: -0px;
+            background-position-y: -600px
+        }
+        45% {
+            background-position-x: -477px;
+            background-position-y: -600px
+        }
+        50% {
+            background-position-x: -954px;
+            background-position-y: -600px
+        }
+        55% {
+            background-position-x: -1431px;
+            background-position-y: -600px
+        }
+        60% {
+            background-position-x: -0px;
+            background-position-y: -900px
+        }
+        65% {
+            background-position-x: -477px;
+            background-position-y: -900px
+        }
+        70% {
+            background-position-x: -954px;
+            background-position-y: -900px
+        }
+        75% {
+            background-position-x: -1431px;
+            background-position-y: -900px
+        }
+        80% {
+            background-position-x: -0px;
+            background-position-y: -1200px
+        }
+        85% {
+            background-position-x: -477px;
+            background-position-y: -1200px
+        }
+        90% {
+            background-position-x: -954px;
+            background-position-y: -1200px
+        }
+        95% {
+            background-position-x: -1431px;
+            background-position-y: -1200px
+        }
+    }
+    
+    @keyframes xl1 {
+        0%,
+        26%,
+        89%,
+        100% {
+            background-position-x: -0px;
+            background-position-y: -0px
+        }
+        27% {
+            background-position-x: -477px;
+            background-position-y: -0px
+        }
+        28% {
+            background-position-x: -954px;
+            background-position-y: -0px
+        }
+        29% {
+            background-position-x: -1431px;
+            background-position-y: -0px
+        }
+        30% {
+            background-position-x: -1908px;
+            background-position-y: -0px
+        }
+        31% {
+            background-position-x: -2385px;
+            background-position-y: -0px
+        }
+        32% {
+            background-position-x: -0px;
+            background-position-y: -300px
+        }
+        33% {
+            background-position-x: -477px;
+            background-position-y: -300px
+        }
+        34% {
+            background-position-x: -954px;
+            background-position-y: -300px
+        }
+        35% {
+            background-position-x: -1431px;
+            background-position-y: -300px
+        }
+        36% {
+            background-position-x: -1908px;
+            background-position-y: -300px
+        }
+        37% {
+            background-position-x: -2385px;
+            background-position-y: -300px
+        }
+        38% {
+            background-position-x: -0px;
+            background-position-y: -600px
+        }
+        39%,
+        78% {
+            background-position-x: -477px;
+            background-position-y: -600px
+        }
+        79% {
+            background-position-x: -954px;
+            background-position-y: -600px
+        }
+        80% {
+            background-position-x: -1431px;
+            background-position-y: -600px
+        }
+        81% {
+            background-position-x: -1908px;
+            background-position-y: -600px
+        }
+        82% {
+            background-position-x: -2385px;
+            background-position-y: -600px
+        }
+        83% {
+            background-position-x: -0px;
+            background-position-y: -900px
+        }
+        84% {
+            background-position-x: -477px;
+            background-position-y: -900px
+        }
+        85% {
+            background-position-x: -954px;
+            background-position-y: -900px
+        }
+        86% {
+            background-position-x: -1431px;
+            background-position-y: -900px
+        }
+        87% {
+            background-position-x: -1908px;
+            background-position-y: -900px
+        }
+        88% {
+            background-position-x: -2385px;
+            background-position-y: -900px
+        }
+    }
+</style>
+
+<body>
+
+    <div id="app" class="win">
+        <div class="videowin1">
+            <video src="http://tmall.lpiii.cn/618/static/video/big3.mp4" class="video-box video1" style="transform:translateX(0px);"></video>
+            <div id="playVideoCon">
+                <div class="innerwin wt">
+                    <div class="helptit"></div>
+                </div>
+            </div>
+
+            <div data-v-317b8af1="" class="innerwin v-enter-to" style="height: 1206px; margin-top: -603px; opacity: 1;">
+                <div data-v-317b8af1="" class="innerwin wt" style="height: 1334px; margin-top: -667px;">
+                    <div data-v-317b8af1="" class="vh" style="background: url(&quot;static/videobtn/1.png&quot;);"></div>
+                </div>
+                <div data-v-317b8af1="" class="innerwin wt" style="height: 1206px; margin-top: -603px;">
+                    <div data-v-317b8af1="" class="change" style="background: url(&quot;http://tmall.lpiii.cn/618/static/videobtn/zbtn.png&quot;) center center no-repeat;">
+                        <div data-v-317b8af1="" class="change1" style="background: url(&quot;http://tmall.lpiii.cn/618/static/videobtn/zbtn.png&quot;) center center no-repeat; display: none;"></div>
+                        <div data-v-317b8af1="" class="xlz2"></div>
+                        <div data-v-317b8af1="" class="xlz1"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        //把app的高度定下，完成这个项目的适配
+        //当页面加载完成则会执行此函数。
+        window.onload = function() {
+
+            const appEle = document.querySelector('#app');
+            init();
+
+            function init() {
+                //动态获取高度
+                const winHeight = window.innerHeight;
+                //4 次渲染style DOM树 CSSOM树
+                //重绘
+                // appEle.style.background = 'rgb(0,0,0)';
+                // appEle.style.height = winHeight + 'px';
+                // appEle.style.marginTop = (winHeight / 2) + "px";
+                // appEle.style.transform = 'scale(1,1)'
+
+                //一次性写完 style
+                appEle.style.cssText = `
+                    height:${winHeight}
+                    background:rgb(0,0,0)
+                    margin-top:${-winHeight/2}px
+                    transform:scale(1,1);
+                
+                `
+            }
+
+        }
+    </script>
+</body>
+
+</html>
