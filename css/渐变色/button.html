@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>按钮渐变</title>
+</head>
+
+<style>
+    .btn1 {
+        display: inline-block;
+        /* 按钮的按下的轮廓*/
+        outline: none;
+        /*光标  手的形状*/
+        cursor: pointer;
+        font: 14px/100% Arial;
+        padding: 0.5rem 1rem;
+        background-color: green;
+        background-color: #00FF00;
+        background-color: rgb(0, 255, 0);
+        background-color: rgba(0, 255, 0, .3);
+        /***
+           HSL（色调Hue，饱和度Saturation，明度Lightness）。
+            色相是在色轮上的程度（从0到360）-0（或360）是红色的，120是绿色的，240是蓝色的。
+            饱和度是一个百分比值;0％意味着灰色和100％的阴影，是全彩。
+            亮度也是一个百分点;0％是黑色的，100％是白色的。
+            HSL更符合人类的直观感觉，比如人一般表达一个颜色会这样说：有点浓的暗红色。而不会说红色占多少，绿色占多少，蓝色占多少。
+            而RAG适合机器识别颜色。
+
+    
+        **/
+        background-color: hsl(150, 100%, 60%);
+        font-size: 3rem;
+        text-shadow: 0.1rem 0.1rem 0.5rem gray;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, .3);
+        border-radius: 0.8rem;
+        border: solid 1px;
+        background: linear-gradient(to bottom, hsl(150, 95%, 54.1%), hsl(150, 95%, 84.1%));
+    }
+</style>
+
+<body>
+    <button id="btn">123</button>
+
+    <div class="btn1">123456</div>
+    <script>
+        const btn = document.querySelector(".btn1");
+        let h = 25; //设置变量
+        console.log("object");
+
+        setInterval(() => {
+            h++;
+            if (h > 255) {
+                h = 0;
+            }
+            btn.style.background = `linear-gradient(to bottom,
+            hsl(${h},95%,54.1%),
+            hsl(${h},95%,84.1%))`;
+            btn.style.borderColor = `hsl(${h},95%,45%)`;
+        }, 200)
+    </script>
+</body>
+
+</html>

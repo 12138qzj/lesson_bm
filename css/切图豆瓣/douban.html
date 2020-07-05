@@ -1,0 +1,225 @@
+<!-- <!DOCTYPE html> -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>豆瓣</title>
+
+
+    <link rel="stylesheet" href="commons.css">
+    <link rel="stylesheet" href="init.css">
+    <link rel="stylesheet" href="center.css">
+
+</head>
+
+<body class="gray-mode">
+    <div id="anony-nav">
+        <div class="anony-nav-links">
+            <ul>
+                <li><a href="#" class="link-book">豆瓣读书</a></li>
+                <li><a href="#" class="link-movie">豆瓣电影</a></li>
+                <li><a href="#" class="link-music">豆瓣音乐</a></li>
+                <li><a href="#" class="link-events">豆瓣同城</a></li>
+                <li><a href="#" class="link-group">豆瓣小组</a></li>
+                <li><a href="#" class="link-read">豆瓣阅读</a></li>
+                <li><a href="#" class="link-fm">豆瓣FM</a></li>
+                <li><a href="#" class="link-shijian">豆瓣时间</a></li>
+                <li><a href="#" class="link-market">豆瓣豆品</a></li>
+            </ul>
+        </div>
+        <h1>
+            <a href="https://www.douban.com">豆瓣</a>
+        </h1>
+        <div class="anony-srh">
+            <form action="https://www.douban.com/search" method="get">
+                <span class="inp"><input type="text" maxlength="60" size="12" placeholder="书籍、电影、音乐、小组、小站、成员" name="q" autocomplete="off"></span>
+                <span class="bn"><input type="submit" value="搜索"></span>
+            </form>
+        </div>
+    </div>
+    <div id="anony-reg-new" style="background-image: url(https://img9.doubanio.com/view/puppy_image/raw/public/16ad990ec23uwn790d4.jpg)">
+        <div class="wrapper">
+            <div class="login">
+                <iframe style="height: 300px; width: 300px;" frameborder="0" src="//accounts.douban.com/passport/login_popup?login_source=anony"></iframe>
+            </div>
+            <div class="app">
+                <p class="app-title">豆瓣<span>6.0</span></p>
+                <p class="app-slogan"></p>
+                <a href="https://www.douban.com/doubanapp/app?channel=nimingye" class="lnk-app">下载豆瓣 App</a>
+                <div class="app-qr">
+                    <a href="javascript: void 0;" class="lnk-qr" id="expand-qr"><img src="https://img3.doubanio.com/f/sns/0c708de69ce692883c1310053c5748c538938cb0/pics/sns/anony_home/icon_qrcode_green.png" width="28" height="28"></a>
+                    <div class="app-qr-expand">
+                        <img src="https://img3.doubanio.com/f/sns/1cad523e614ec4ecb6bf91b054436bb79098a958/pics/sns/anony_home/doubanapp_qrcode.png" width="160" height="160">
+                        <p>iOS / Android 扫码直接下载</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            Do(function() {
+                var app_qr = $('.app-qr');
+                app_qr.hover(function() {
+                    app_qr.addClass('open');
+                }, function() {
+                    app_qr.removeClass('open');
+                });
+            });
+        </script>
+    </div>
+    <div id="anony-sns" class="section">
+        <div class="wrapper">
+
+            <!-- douban ad begin -->
+            <div id="dale_anonymous_homepage_top_for_crazy_ad" ad-status="loaded"></div>
+            <!-- douban ad end -->
+
+
+            <div class="side">
+                <div style="margin:10px 0px;">
+                    <div id="dale_anonymous_homepage_right_top" ad-status="appended" data-sell-type="COMPLEMENT" data-type="DoubanRender" data-version="3.2.21"><iframe src="https://ad.doubanio.com" sandbox="allow-forms allow-scripts allow-same-origin allow-popups allow-top-navigation" safe-mode="custom" width="250" height="125" frameborder="0" scrolling="no" name="dale_anonymous_homepage_right_top_frame"
+                            id="dale_anonymous_homepage_right_top_frame" style="position: relative; margin: 0px 0px 20px; display: block; width: 250px; height: 125px; overflow: hidden;"></iframe></div>
+                </div>
+                <div class="online">
+                    <ul>
+
+
+
+
+
+
+
+                        <div class="mod">
+
+                            <h2>
+                                热门话题 &nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·
+                                <span class="pl">&nbsp;(
+                      
+                          <a href="/gallery/" target="_self">去话题广场</a>
+                      ) </span>
+                            </h2>
+
+
+                            <ul>
+
+                                <li class="rec_topics">
+                                    <a href="https://www.douban.com/gallery/topic/37297/?from=hot_topic_anony_sns" class="rec_topics_name">你所在城市的雨天</a>
+
+                                    <span class="rec_topics_subtitle">386.7万次浏览</span>
+                                </li>
+                                <li class="rec_topics">
+                                    <a href="https://www.douban.com/gallery/topic/553/?from=hot_topic_anony_sns" class="rec_topics_name">看展记</a>
+
+                                    <span class="rec_topics_subtitle">2219.9万次浏览</span>
+                                </li>
+                                <li class="rec_topics">
+                                    <a href="https://www.douban.com/gallery/topic/151091/?from=hot_topic_anony_sns" class="rec_topics_name">下午茶时间到</a>
+
+                                    <span class="rec_topics_subtitle">21.6万次浏览</span>
+                                </li>
+                                <li class="rec_topics">
+                                    <a href="https://www.douban.com/gallery/topic/150506/?from=hot_topic_anony_sns" class="rec_topics_name">收集書本中的藏書章</a>
+
+                                    <span class="rec_topics_subtitle">3141次浏览</span>
+                                </li>
+                                <li class="rec_topics">
+                                    <a href="https://www.douban.com/gallery/topic/151081/?from=hot_topic_anony_sns" class="rec_topics_name">科幻作品中堪称经典的桥段</a>
+
+                                    <span class="rec_topics_subtitle">15.3万次浏览</span>
+                                </li>
+                                <li class="rec_topics">
+                                    <a href="https://www.douban.com/gallery/topic/151069/?from=hot_topic_anony_sns" class="rec_topics_name">记录你偶遇的蘑菇　</a>
+
+                                    <span class="rec_topics_subtitle">90.9万次浏览</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- douban ad begin -->
+                        <li>
+                            <div id="dale_homepage_online_activity_promo_1" ad-status="loaded"></div>
+                        </li>
+                        <li>
+                            <div id="dale_anonymous_homepage_doublemint" ad-status="loaded"></div>
+                        </li>
+                        <!-- douban ad end -->
+                    </ul>
+                </div>
+            </div>
+            <div class="main">
+                <div class="mod">
+
+
+                    <h2>
+                        热点内容 ······
+                        <span class="pl">&nbsp;(
+                      
+                          <a href="https://www.douban.com/explore/" target="_self">更多</a>
+                      ) </span>
+                    </h2>
+
+                    <div class="albums">
+                        <ul>
+                            <li>
+                                <div class="pic">
+                                    <a href="https://www.douban.com/photos/album/1873859895/"><img src="https://img9.doubanio.com/view/photo/albumcover/public/p2601063575.webp" data-origin="https://img9.doubanio.com/view/photo/albumcover/public/p2601063575.webp" alt=""></a>
+                                </div>
+                                <a href="https://www.douban.com/photos/album/1873859895/">后疫情时期的武汉</a>
+                                <span class="num">48张照片</span>
+                            </li>
+                            <li>
+                                <div class="pic">
+                                    <a href="https://www.douban.com/photos/album/1678140258/"><img src="https://img1.doubanio.com/view/photo/albumcover/public/p2534644818.webp" data-origin="https://img1.doubanio.com/view/photo/albumcover/public/p2534644818.webp" alt=""></a>
+                                </div>
+                                <a href="https://www.douban.com/photos/album/1678140258/">漂流丘比</a>
+                                <span class="num">19张照片</span>
+                            </li>
+                            <li>
+                                <div class="pic">
+                                    <a href="https://www.douban.com/photos/album/1684258309/"><img src="https://img3.doubanio.com/view/photo/albumcover/public/p2547754902.webp" data-origin="https://img3.doubanio.com/view/photo/albumcover/public/p2547754902.webp" alt=""></a>
+                                </div>
+                                <a href="https://www.douban.com/photos/album/1684258309/">小的人</a>
+                                <span class="num">11张照片</span>
+                            </li>
+                            <li>
+                                <div class="pic">
+                                    <a href="https://www.douban.com/photos/album/1651000904/"><img src="https://img9.doubanio.com/view/photo/albumcover/public/p2566730315.webp" data-origin="https://img9.doubanio.com/view/photo/albumcover/public/p2566730315.webp" alt=""></a>
+                                </div>
+                                <a href="https://www.douban.com/photos/album/1651000904/">彩画集</a>
+                                <span class="num">52张照片</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="notes">
+                        <ul>
+                            <li class="first">
+                                <div class="title">
+                                    <a href="https://www.douban.com/note/768812792/">珞珈开卷第211期
+      《“半是受害者，半是同谋”——谈谈〈第二性〉兼论中国古代性别史研究》</a>
+                                </div>
+                                <div class="author">
+                                    渔樵江渚的日记
+                                </div>
+                                <p>这篇是我上学期在学校图书馆做《第二性》的读书分享会，本着留纪念的意图攒出来的...</p>
+                            </li>
+
+                            <li><a href="https://www.douban.com/note/768469476/">闽侯的木拱廊桥</a></li>
+                            <li><a href="https://www.douban.com/note/768154310/">想起我爸爸，从伟岸到庸俗到难堪</a></li>
+                            <li><a href="https://www.douban.com/note/768306424/">有台冰箱就好了</a></li>
+                            <li><a href="https://www.douban.com/note/769323465/">树屋修建日志</a></li>
+                            <li><a href="https://www.douban.com/note/767498885/">Last summer in France</a></li>
+                            <li><a href="https://www.douban.com/note/766866098/">经历是起跑线，眼界才是远方</a></li>
+                            <li><a href="https://www.douban.com/note/766993794/">一张毕业证引发的流浪人生：大学生不告而别16年，回家时已满头白发</a></li>
+                            <li><a href="https://www.douban.com/note/766640251/">一趟开往芬兰车站的红色列车</a></li>
+                            <li><a href="https://www.douban.com/note/768430009/">长春：搭一辆有轨电车，邂逅持永只仁</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+
+</html>

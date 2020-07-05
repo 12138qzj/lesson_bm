@@ -1,0 +1,128 @@
+#anony-reg-new {
+    margin-bottom: 25px;
+    background-size: contain;
+    background-position: -webkit-calc(50% - 305px) top;
+    background-position: calc(50% - 305px) top;
+    background-repeat: no-repeat;
+    background-color: #edf4ed;
+}
+
+#anony-reg-new .wrapper {
+    position: relative;
+    padding: 0 0 4px;
+    /*	默认值。内容不会被修剪，会呈现在元素框之外。*/
+    overflow: visible;
+    zoom: 1;
+}
+
+.wrapper {
+    width: 950px;
+    margin: 0 auto;
+}
+
+#anony-reg-new .wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 0;
+    background-repeat: no-repeat;
+    background-position: 0 -150px;
+}
+
+#anony-reg-new .wrapper::after {
+    content: "\0020";
+    display: block;
+    clear: both;
+}
+
+#anony-reg-new .wrapper .login {
+    z-index: 2;
+}
+
+#anony-reg-new .login {
+    width: 300px;
+    float: right;
+    font-size: 0;
+    /*设置字母与字母之间的间距*/
+    letter-spacing: -.31em;
+    letter-spacing: normal;
+    word-spacing: -.43em;
+}
+
+#anony-reg-new .app {
+    position: absolute;
+    height: 120px;
+    top: 0;
+    bottom: 0;
+    margin: auto 0 auto 475px;
+    *margin-top: 20px;
+}
+
+#anony-reg-new .app .app-title {
+    margin: 7px 0;
+    font-size: 25px;
+    color: #111;
+    line-height: 24px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+#anony-reg-new .app-title span {
+    color: #111;
+    margin-left: 10px;
+    font-weight: 100;
+}
+
+#anony-reg-new .app-slogan {
+    margin: 0 0 18px;
+    font-size: 0;
+    color: #111;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizelegibility;
+}
+
+#anony-reg-new .app-slogan:after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+}
+
+#anony-reg-new .lnk-app {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    padding: 9px 21px;
+    margin-right: 2px;
+    vertical-align: top;
+    border-radius: 2px;
+    font-size: 12px;
+    background: #00B51D;
+    color: #FFF;
+    line-height: 1;
+}
+
+#anony-reg-new .app-qr {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    position: relative;
+}
+
+#anony-reg-new .lnk-qr:link,
+#anony-reg-new .lnk-qr:visited,
+#anony-reg-new .lnk-qr:hover,
+#anony-reg-new .lnk-qr:active {
+    background: transparent;
+}
+
+#anony-reg-new .lnk-qr {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+    border: 1px solid #48aa0d;
+    border-radius: 2px;
+}

@@ -1,0 +1,44 @@
+h1 {
+    /*word-wrap 属性允许长单词或 URL 地址换行到下一行。*/
+    word-wrap: break-word;
+    display: block;
+    font-size: 25px;
+    font-weight: bold;
+    color: #494949;
+    margin: 0;
+    padding: 0 0 15px 0;
+    line-height: 1.1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+
+form {
+    margin: 0;
+    padding: 0;
+    border: 0px;
+}
+
+input {
+    margin-right: 3px;
+    vertical-align: middle;
+}
+
+input,
+button,
+textarea,
+select,
+optgroup,
+option {
+    font-family: inherit;
+    font-size: inherit;
+    font-style: inherit;
+    font-weight: inherit;
+}
