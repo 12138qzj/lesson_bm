@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS选择器优先级</title>
+</head>
+
+<body>
+    <style>
+        /*选择器组 两个 li 和 +(通用选择器 0,0,0,0)*/
+        
+        li+li {
+            color: red;
+        }
+        
+        ul li {
+            color: yellow;
+        }
+        /*子类选择器 优先级为ul+li*/
+        
+        ul>li {
+            color: blue;
+        }
+    </style>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <div>
+            <li>4</li>
+        </div>
+
+    </ul>
+
+    <script>
+        console.log(document.querySelectorAll('li+li'));
+
+        let promise1 = Promise.resolve(1);
+        let promise2 = Promise.resolve(2);
+        let promise3 = Promise.resolve(3);
+        let promise4 = Promise.resolve(4);
+
+        let name = "lilei";
+        console.log(promise1);
+        console.log(Promise.all([promise1, promise2, promise3, promise4]));
+
+        function fo() {
+            console.log(name);
+        }
+
+        function changename() {
+            let name = "lihua"
+            fo();
+        }
+        changename();
+
+        // all(){
+        //     return new Promise(()=>{
+        //         if(){
+        //             //
+        //         }
+        //     })
+        //     arg=[...argument];
+
+        //     if(
+
+        //     )
+        // }
+    </script>
+</body>
+
+</html>
