@@ -2,7 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { Table, Tag, Space } from 'antd';
-import 'antd/dist/antd.css'; 
+// import 'antd/dist/antd.css'; 
 import { Button } from 'antd';
 
 
