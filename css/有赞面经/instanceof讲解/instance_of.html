@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let r = 'qq'
+        let obj = {
+
+            //名字动态的写法
+            // 使用中括号 类似于 obj[key]
+            /***
+            for(let key in obj){
+                console.log(obj[keys])
+            }
+            **/
+            [r]: 123,
+            "r": 12138
+        }
+
+        console.log(r, obj);
+
+        class myArr {
+            //静态属性
+            static a = 1;
+            static['k'] = 3;
+
+            //改写 instanceof 的‘方法’（静态方法，可以直接调用）
+            static[Symbol.hasInstance]() {
+                return false;
+            }
+
+        }
+        let arr = new myArr();
+        console.log(arr instanceof myArr);
+        console.log(myArr[Symbol.hasInstance]);
+        console.log(myArr.a);
+        console.log(myArr['k']);
+
+        console.log(arr instanceof myArr);
+
+
+
+        function myInstance(obj, Constructor) {
+            let proto = obj.__proto__;
+            if (proto === Constructor.prototype) {
+                return true;
+            }
+            if (!proto) return false;
+            return muInstance(proto, Constructor)
+        }
+        console.log(myInstance([], Array));
+    </script>
+</body>
+
+</html>

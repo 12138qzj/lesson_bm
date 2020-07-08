@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="wrap1">
+        <p>1</p><span>2</span>
+        <li>3</li>
+    </div>
+
+    <div class="wrap2">
+
+    </div>
+
+    <script>
+        // 'use strict'
+        const div = document.querySelector('.wrap1');
+        const eles = div.childNodes;
+        console.log(div);
+        // div.innerHTML = '';
+        console.log(div.childNodes.length);
+
+
+        /**
+         * 同一个dom结点只能有一个父节点，（同一个dom节点，不能从属于两个父节点）
+         */
+
+        for (let len = eles.length - 1; len >= 0; len--) {
+            div.appendChild(eles[len]);
+        }
+
+        //dom 
+        //若将一个节点添加到 另一个结点中  会将原来的所属位置删除，添加到另一个父节点中
+        const div2 = document.querySelector('.wrap2');
+        div2.appendChild(eles[1])
+    </script>
+</body>
+
+</html>

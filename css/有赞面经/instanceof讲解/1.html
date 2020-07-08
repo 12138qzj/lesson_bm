@@ -1,0 +1,43 @@
+<script>
+    //判断一个对象实例是否属于另一对象的方法
+
+    // instanceof 运算符用来检测 constructor.prototype 是否存在于参数 `object` 的原型链上。
+    // instanceof 原理：
+    // obj instanceof Constuctor
+    // 就是判断 左边这个对象(obj) 它的原型链上面 有没有出现过 Constuctor.prototype 这个对象
+    // 查找左边这个对象的原型链，看原型链有没有出现过 Constuctor.prototype这个对象 ，如果出现了 返回 true
+    // 如果找到原型链的顶端还没找到 返回false
+    function Animal() {
+
+    }
+    let cat = new Animal();
+    //判断实例cat 是否属于Animal.prototype对象的实例对象
+    //判断实例cat 是否属于Animal对象的实例对象
+    console.log(cat instanceof Animal); //ture
+    console.log(cat instanceof Object); //ture
+    console.log(Animal instanceof Object); //ture
+    //Function 和 Object 的问题
+    //先有鸡还是先有蛋 ？？？？
+    console.log(Object instanceof Function); //ture
+    console.log(Function instanceof Object); //ture
+    //是谁创造了我的问题  自己创造自己 Function 
+    console.log(Function instanceof Function); //ture
+
+    //原理解析代码
+
+    function instance_of(obj, Constuctor) {
+        let prototype = Constuctor.prototype;
+        //取出 实例中（__proto__中取）是否存在继承过来的 对象
+        let proto = Object.getPrototypeOf(obj);
+        while (true) {
+            if (proto === null) {
+                return false;
+            } else if (proto === prototype) {
+                return true;
+            }
+            //取到下一个原型链中的下一指向
+            proto = Object.getPrototypeOf(proto)
+        }
+    }
+    console.log(instance_of(Function, Function)); //ture
+</script>

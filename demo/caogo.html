@@ -33,6 +33,13 @@
             console.log(this.innerHTML);
             console.log(e.target);
         })
+        console.log("ul.style", ul.style);
+        console.log("keys", Object.keys(ul.style));
+        console.log("keys", Object.keys(ul.style).filter((item) => {
+            return !item.includes("webkit");
+            // return !item.match(/^webkit/);
+
+        }));
     </script>
 </body>
 

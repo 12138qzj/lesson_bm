@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        ul {
+            background-color: blue;
+        }
+        
+        li {
+            background-color: pink;
+            list-style: none;
+        }
+    </style>
+    <div class="dd">
+        <ul>
+            <li data-uid="1">1
+                <div>
+                    ttt
+                    <span>2233</span>
+                </div>
+            </li>
+            <li data-uid="2">2</li>
+            <li data-uid="3">3</li>
+            <li data-uid="4">4</li>
+            <li data-uid="5">5</li>
+            <li data-uid="6">6</li>
+            <li data-uid="7">7</li>
+            <li data-uid="8">8</li>
+            <li data-uid="9">9</li>
+        </ul>
+    </div>
+
+    <script>
+        var useCapture = false; //false为冒泡获取【目标元素先触发】    true为捕获获取【父级元素先触发】
+        const ul = document.querySelector('ul')
+        const div = document.querySelector('.dd');
+
+
+        ul.addEventListener('click', (e) => {
+            //目标对象  事件绑定对象e.currentTarget
+            console.log("object", e);
+            ///冒泡过元素的数组 e.target.path;
+
+            // if()
+            console.log(e.path);
+
+            const target = e.path.find(x => x.tagName === 'LI');
+            console.log('target', target);
+            // console.log(e.path[0]);
+
+            //可以判断 需要触发的对象元素
+            console.log("object", e.target.textContent);
+
+            console.log("data-uid", e.target.getAttribute("data-uid"));
+
+            console.log("object", e.target, e.currentTarget);
+        }, useCapture)
+
+        // ul.appendChild(`<li>`)
+    </script>
+</body>
+
+</html>
