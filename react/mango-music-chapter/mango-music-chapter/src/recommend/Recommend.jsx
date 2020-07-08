@@ -1,7 +1,6 @@
 import React ,{ Component }from 'react';
 import Lazyload , { forceCheck }from 'react-lazyload';//延迟加载
 // import {BrowserRouter, Route,Link} from 'react-router-dom';
-import { Route } from 'react-router-dom';
 import Swiper from 'swiper';
 import "swiper/css/swiper.min.css";
 

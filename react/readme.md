@@ -43,3 +43,8 @@
  JavaScript +XML
   遇见<>则根据JavaScript语法解析
   遇见{}则根据XML(HTML)语法解析
+### redux-thunk(中间件)
+     #### 安装
+      yarn add redux-thunk
+    #### 使用方法
+        import { } from redux-thunk
