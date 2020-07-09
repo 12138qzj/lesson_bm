@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>防抖</title>
+</head>
+
+<body>
+    <input type="text " id="search">
+    <script src="https://cdn.bootcdn.net/ajax/libs/lodash.js/4.17.15/lodash.min.js"></script>
+    <script>
+        const search = document.getElementById('search');
+        /**\
+         *普通防抖
+         */
+        // let timeout
+
+        // function headlesearch(event) {
+        //     if (timeout) {
+        //         clearTimeout(timeout);
+        //     }
+        //     timeout = setTimeout(() => {
+        //         console.log(this)
+
+        //         console.log(event.target.value)
+        //     }, 500)
+
+        // }
+        // search.addEventListener('input', headlesearch);
+
+
+        /**
+         * 使用lodash第三方库来实现防抖
+         */
+        // function searchdebounce(event) {
+        //     console.log("event.target.value", event.target.value);
+        // }
+        // search.addEventListener('input', _.debounce(searchdebounce, 600))
+
+
+        /**
+         * 来解析第三方库中的防抖函数
+         * 模拟实现
+         */
+
+        function analogsearch(event) {
+            console.log(this)
+            console.log(event.target.value)
+
+        }
+        search.addEventListener('input', debounce(analogsearch, 600))
+
+
+        /*实现函数*/
+        function debounce(func, wait) {
+            let timeout;
+            console.log("this", this) //该函数是被window调用
+                //该函数是返回去 去回调 接收参数，所以是被search调用
+            return function(arg) { //将该函数返回  去接收addEventListener返回event参数
+                if (timeout) {
+                    clearTimeout(timeout);
+                }
+                timeout = setTimeout(() => {
+                    func.call(this, arg); //将该参数返回给analogsearch
+                }, wait)
+            }
+
+        }
+    </script>
+</body>
+
+</html>

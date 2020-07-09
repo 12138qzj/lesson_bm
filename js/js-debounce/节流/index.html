@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        width: 100vw;
+        height: 100vh;
+    }
+</style>
+
+<body>
+    <script>
+        const body = document.body;
+
+        function getUserInfo() {
+            console.log("111")
+        }
+        body.onmousemove = throttled(getUserInfo, 1000);
+
+        function throttled(func, wait) {
+            let previous = 0;
+            let timeout = null;
+            return function() {
+                let now = new Date().getTime();
+                const remian = wait - (now - previous);
+                // console.log(now);
+                // previous = now + wait;
+                if (now - previous > wait) {
+                    func()
+                    previous = now;
+                } else if (!timeout) {
+                    timeout = setTimeout(() => {
+                        func();
+                        // clearTimeout(timeout)
+                        timeout = null
+                    }, remian)
+                }
+            }
+        }
+
+        function throttled1(func, wait) {
+            let timeout = null;
+
+            return function() {
+                if (!timeout) {
+                    timeout = setTimeout(() => {
+                        func();
+                        timeout = null;
+                    }, wait)
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
