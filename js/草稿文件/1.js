@@ -33,13 +33,17 @@
 // f()();
 
 // console.log(x);
-let x = 1;
-
-function func() {
-
-    console.log(x); // ?
-
-    var x = 2;
+// 声明位置
+var me = {
+    name: 'xiuyan',
+    hello: function() {
+        console.log(`你好，我是${this.name}`)
+    }
 }
 
-func();
+var name = 'BigBear'
+var hello = me.hello
+
+// 调用位置
+me.hello() // 你好，我是xiuyan
+hello() // 你好， 我是BigBear

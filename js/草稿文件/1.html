@@ -18,9 +18,22 @@
         }
 
         let funC = funA();
-        debugger;
-        funC();
-        debugger;
+        // debugger;
+        // funC();
+        // debugger;
+        var me = {
+            name: 'xiuyan',
+            hello: function() {
+                console.log(`你好，我是${name}`)
+            }
+        }
+
+        var name = 'BigBear'
+        var hello = me.hello
+
+        // 调用位置
+        me.hello() // 你好，我是xiuyan
+        hello() // 你好， 我是BigBear
     </script>
 </body>
 
