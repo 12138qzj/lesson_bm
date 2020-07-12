@@ -2,6 +2,60 @@
     color: black;
 }
 
+.warp {
+    /* display: flex; */
+    line-height: 1rem;
+    padding: 0px;
+    border-bottom: 1px solid gray;
+}
+
+.warp .tabs {
+    display: inline-block;
+}
+
+.warp .dropdowns {
+    display: inline-block;
+    float: right;
+    margin-top: 0.5rem;
+}
+
+.warp .dropdowns .dropdown:nth-child(2) {
+    margin-left: 2rem;
+}
+
+.warp .dropdowns .ant-dropdown-link {
+    cursor: pointer;
+}
+
 .tabs .tab {
     color: pink !important;
+}
+
+img {
+    border-radius: 10px;
+}
+
+.swarp {
+    height: 6rem;
+}
+
+.swarp .title {
+    margin-top: 0;
+    font-size: 1.1rem;
+    font-weight: 500;
+    overflow: hidden;
+    word-break: keep-all;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.swarp .splace {
+    margin-top: 2rem;
+}
+
+.swarp .splace span:nth-child(n+2) {
+    margin-left: 5px;
+    padding-left: 5px;
+    border-left: 1px solid gray;
+    /* color: pink; */
 }

@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-class Head
- extends Component {
+import './head.css'
+class Head extends Component {
     state = {  }
     render() { 
         return ( 
-            <div>
+            <div className="head">
                 我的课堂
             </div>
          );

@@ -8,7 +8,7 @@ class MainPage extends Component {
     state = {  }
     render() { 
         return ( 
-            <div>
+            <div className="content">
                <div>
                 <Head/>
                </div>

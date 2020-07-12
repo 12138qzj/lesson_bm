@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 
 import axios from 'axios';
-import { Tabs, Table,  Button } from 'antd';
+import { Tabs, Table,  Button, Menu, Dropdown } from 'antd';
+import { DownOutlined } from '@ant-design/icons';
+
 // import {reqall} from '../../../api/index';
 import '../../../api/mock';
+import './Conn.css'
 // import { tuple } from 'antd/lib/_util/type';
 
 
@@ -26,7 +29,7 @@ class Conn extends Component {
                 width: '10%',
                 render:(text, record)=>{
                     return(
-                        <div><img src={record.image} alt=""/></div>
+                        <div className="head-img"><img src={record.image} alt=""/></div>
                     )
                 }
                 // editable: true,
@@ -34,7 +37,7 @@ class Conn extends Component {
             {
                 // title: 'age',
                 dataIndex: 'content',
-                width: '30%',
+                width: '50%',
                 render:  (text, record, index) => {
                         return (
                             <div className="swarp">
@@ -52,9 +55,12 @@ class Conn extends Component {
                 },
             {
                 dataIndex: 'type',
+                width:'15%',
+
             },
             {
                 dataIndex: 'operation',
+                width:"20%",
                 render: (text, record) =>{
                     return (
                         <Button  onConfirm={() => this.handleDelete(record.key)}  style={{backgroundColor:"#ff7f1a", color:"#FFF"}}>
@@ -86,8 +92,7 @@ class Conn extends Component {
                         return false 
 
                     }),
-                    fartherkey:key
-                     
+                    fartherkey:key                    
                 })
             }else if(key==='3'){
                 this.setState({
@@ -118,7 +123,8 @@ class Conn extends Component {
         // })
         
 
-        console.log("第一次进来",this.props.fartherkey);
+
+        console.log("第一次进来",this.props.funcount);
         this.setState({
             fartherkey:this.props.fartherkey
         })
@@ -137,6 +143,7 @@ class Conn extends Component {
                     count: res.data.list.length,
                     // loading: false,
                 })
+                this.props.funcount(res.data.list.length)
             } else {
                 this.setState({
                     dataSource: [],
@@ -173,30 +180,77 @@ class Conn extends Component {
     }
     render() {
         //
+        const menu1=(
+            <Menu>
+                <Menu.Item key="0">
+                <a href="http://www.alipay.com/">只看有效课程</a>
+                </Menu.Item>
+                <Menu.Item key="1">
+                <a href="http://www.taobao.com/">只看过期课程</a>
+                </Menu.Item>
+                {/* <Menu.Divider /> */}
+            </Menu>
+        )
+        const menu2=(
+            <Menu>
+                <Menu.Item key="0">
+                <a href="http://www.alipay.com/">最近学习</a>
+                </Menu.Item>
+                <Menu.Item key="1">
+                <a href="http://www.taobao.com/">最近购买</a>
+                </Menu.Item>
+                {/* <Menu.Divider /> */}
+                <Menu.Item key="3">即将过期</Menu.Item>
+            </Menu>
+        )
         console.log("************render",this.state.fartherkey,this.state.newdataSource,this.state.dataSource);
         return (
             <div>
-                <Tabs onChange={this.callback.bind(this)} type="card" className="tabs">
-                    <TabPane tab="所有形式" key="所有形式" className="tab" style={{Color:"red"}}> 
-                    {/* Content of Tab Pane 11111 */}
+                <div className="warp">
+                    <div className="tabs">
+                        <Tabs onChange={this.callback.bind(this)} type="card" >
+                            <TabPane tab="所有形式" key="所有形式" className="tab" style={{Color:"red"}}> 
+                            {/* Content of Tab Pane 11111 */}
 
-                    </TabPane>
-                    <TabPane tab="专栏" key="专栏">
-                        {/* Content of Tab Pane 2222222 */}
-                    </TabPane>
-                    <TabPane tab="微堂" key="微堂">
-                        {/* Content of Tab Pane 323333 */}
-                    </TabPane>
-                    <TabPane tab="视频课" key="视频课">
-                        {/* Content of Tab Pane 2222222 */}
-                    </TabPane>
-                    <TabPane tab="每日一课" key="每日一课">
-                        {/* Content of Tab Pane 323333 */}
-                    </TabPane>
-                    <TabPane tab="其他" key="其他">
-                        {/* Content of Tab Pane 323333 */}
-                    </TabPane>
-                </Tabs>
+                            </TabPane>
+                            <TabPane tab="专栏" key="专栏">
+                                {/* Content of Tab Pane 2222222 */}
+                            </TabPane>
+                            <TabPane tab="微课" key="微课">
+                                {/* Content of Tab Pane 323333 */}
+                            </TabPane>
+                            <TabPane tab="视频课" key="视频课">
+                                {/* Content of Tab Pane 2222222 */}
+                            </TabPane>
+                            <TabPane tab="每日一课" key="每日一课">
+                                {/* Content of Tab Pane 323333 */}
+                            </TabPane>
+                            <TabPane tab="其他" key="其他">
+                                {/* Content of Tab Pane 323333 */}
+                            </TabPane>
+
+                        
+                            
+                        </Tabs>
+                    </div>
+                    
+                    <div className="dropdowns">
+                        <Dropdown overlay={menu1} trigger={['click']} className="dropdown">
+                                <span className="ant-dropdown-link" onClick={e => e.preventDefault()}>
+                                只看有效课程 <DownOutlined />
+                                </span>
+                              
+                        </Dropdown>
+                        <Dropdown overlay={menu2} trigger={['click']} className="dropdown">
+                            <span className="ant-dropdown-link" onClick={e => e.preventDefault()}>
+                                最近学习<DownOutlined />
+                            </span>
+                        </Dropdown>
+                    </div>
+                    
+                </div>
+                
+               
                 <Table
                     // components={components}
 

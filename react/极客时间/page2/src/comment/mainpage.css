@@ -1,4 +1,4 @@
-.head {
-    background-color: #fff;
-    color: blue !important;
+.content {
+    min-width: 700px;
+    max-width: 1000;
 }
