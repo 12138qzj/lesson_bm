@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Head from './head/Head';
-import { Layout } from 'antd';
+import { Layout,Button } from 'antd';
 import  './mainpage.css';
 
 const { Header, Footer, Content } = Layout;
@@ -16,6 +16,7 @@ class MainPage extends Component {
                     <Content>Content</Content>
                     <Footer>Footer</Footer>
                 </Layout>
+                <Button type="primary">Primary Button</Button>
             </div>
          );
     }
