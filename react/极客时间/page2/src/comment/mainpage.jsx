@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Head from './head/Head';
-import Con from './com/Con';
+import Con from './com/fristtab';
 import { Layout,Button } from 'antd';
 import  './mainpage.css';
 
