@@ -1,0 +1,19 @@
+.head_content {
+  color: #31c0a0;
+  background-color: #fafbfd;
+  height: 3rem;
+  width: 100%;
+  position: fixed;
+  display: block;
+  top: 0px;
+}
+.head_content span {
+  line-height: 3rem;
+}
+.head_content img {
+  width: 1.3rem;
+  float: right;
+  margin-top: 0.8rem;
+  margin-right: 0.8rem;
+  cursor: pointer;
+}
