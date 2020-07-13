@@ -47,3 +47,32 @@ var hello = me.hello
 // 调用位置
 me.hello() // 你好，我是xiuyan
 hello() // 你好， 我是BigBear
+
+
+function fn(a) {
+    console.log(a);
+    var a = 2;
+    var a = 1;
+
+    function a() {
+        // console.log(a);
+    }
+    // a = 2
+    console.log("1111", a);
+}
+
+
+
+
+// fn();
+console.log(fn);
+fn(2);
+
+
+
+// console.log(fn);
+
+
+
+// fn();
+// var fnname = "李四"
