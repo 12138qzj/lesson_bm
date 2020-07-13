@@ -22,13 +22,32 @@
     ​	默认导出：  export default App;
     ​	取名导出:	export const name = 'lilei';
 ### 生命周期    #### 函数列表
+
     1. componentWillMount:在组件渲染之前运行
     2. componentDidMount: 在组件渲染之后执行
-    3. shouldComponentUpdate:返回true 和false ,true代表（组件）允许改变，false代表不允许改变。
+    3. shouldComponentUpdate:返回true 和false ,true代表（组件变量）允许改变，false代表不允许改变。
     3. componentWillUpdate:组件数据在改变之前执行(数据包括：state,props)
     4. componentDidUpdate:组件数据修改完成执行(数据包括：state,props),
     5. componentWillReveceProps:props数据发生改变执行
-    6. commonentWillUnmount:组件卸载的时候执行。
+    6. componentWillUnMount:组件卸载的时候执行。
+
+### react-16中加入的生命周期
+
+    componentWillMount,
+    componentWillUpdate,
+    componentWillReveceProps 这三个周期函数被废弃 （能用 会有警告）
+
+    getDerivedStateFromProps: 会在调用 render 方法之前调用，并且在初始挂载及后续更新时都会被调用。它应返回一个对象来更新 state，如果返回 null 则不更新任何内容。
+
+    getSnapshotBeforeUpdate(prevProps, prevState)： 在最近一次渲染输出（提交到 DOM 节点）之前调用。它使得组件能在发生更改之前从 DOM 中捕获一些信息（例如，滚动位置）。此生命周期的任何返回值将作为参数传递给 componentDidUpdate()。
+####  ####生命周期的三个阶段    
+            1. 初始化渲染阶段
+                render componentDidMount
+            2. 更新阶段
+                shouldComponentUpdate render componentDidUpdate
+            3. 卸载阶段
+                componentWillUnMount
+
 ### 受控组件/非受控组件
 
 #### 非受控组件 
