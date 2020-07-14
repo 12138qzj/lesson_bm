@@ -11,3 +11,7 @@
   padding-left: 1rem;
   box-sizing: border-box;
 }
+.search input::before {
+  content: '\e616';
+  font-family: "iconfont";
+}

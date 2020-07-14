@@ -1,0 +1,25 @@
+.Botton_warper {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: 4rem;
+    bottom: 0px;
+    background-color: #fefefe;
+}
+
+.Botton_warper .icon {
+    flex: 1;
+}
+
+.Botton_warper .planet {
+    background: url('../../image/favicon_32.ico');
+    background-repeat: no-repeat;
+    background-position: 50% 30%;
+}
+
+.Botton_warper span {
+    color: #969494;
+    display: inline-block;
+    margin-top: 2.7rem;
+    font-size: 0.8rem;
+}

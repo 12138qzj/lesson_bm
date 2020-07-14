@@ -1,0 +1,8 @@
+.center_content {
+  padding-top: 3rem ;
+  height: 1000px;
+}
+.center_content .center_warper {
+  display: flex;
+  flex-wrap: wrap;
+}

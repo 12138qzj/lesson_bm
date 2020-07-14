@@ -1,0 +1,38 @@
+.wraper {
+  margin: 1.2rem 0 0 1.8rem;
+}
+.wraper .box {
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.3rem;
+  width: 9rem;
+  height: 13rem;
+  background-color: #fafbfd;
+  overflow: hidden;
+}
+.wraper .box .img {
+  flex: 2;
+  width: 100%;
+}
+.wraper .box .box-content {
+  flex: 1;
+  font-size: 0;
+  padding: 0;
+}
+.wraper .box .box-content p {
+  margin: 0;
+}
+.wraper .box .box-content p:first-child {
+  font-size: 1rem;
+  color: #525050;
+}
+.wraper .box .box-content span {
+  display: inline-block;
+  width: 1.5rem;
+  margin: 0.5rem 0;
+  border: 1px solid #c4bebe;
+}
+.wraper .box .box-content p:last-child {
+  color: gray;
+  font-size: 10px;
+}

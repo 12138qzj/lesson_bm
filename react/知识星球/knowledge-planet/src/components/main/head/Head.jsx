@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import add from '../../image/add.png';
+import add from '../../../image/add.png';
 import './head.css';
 class Head extends Component {
     state = {  }

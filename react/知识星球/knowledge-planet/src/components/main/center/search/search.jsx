@@ -6,6 +6,7 @@ class Search extends Component {
         return (    
             <div className="search">
                 <input type="text" name="" id="" placeholder="搜索用户、星球或内容"/>
+            {/* <span className="icon-jiahao">dasdssf</span> */}
             </div>
          );
     }

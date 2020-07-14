@@ -1,0 +1,18 @@
+.addbox {
+  border-radius: 0.3rem;
+  width: 9rem;
+  height: 13rem;
+  background-color: #f5f7f6;
+  background: url(../../../../../image/add200.png);
+  background-repeat: no-repeat;
+  background-size: 60%;
+  background-position: 50%  40%;
+  overflow: hidden;
+  border: 2px dashed #9e9c9c;
+}
+.addbox span {
+  display: inline-block;
+  margin-top: 8.5rem;
+  font-size: 0.7rem;
+  color: gray;
+}

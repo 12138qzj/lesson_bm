@@ -1,8 +1,17 @@
+@font-face {
+    font-family: 'iconfont';
+    src: url('./font/iconfont.eot');
+    src: url('./font/iconfont.eot?#iefix') format('embedded-opentype'), url('./font/iconfont.woff2') format('woff2'), url('./font/iconfont.woff') format('woff'), url('./font/iconfont.ttf') format('truetype'), url('./font/iconfont.svg#iconfont') format('svg');
+}
+
 body {
     font-size: 37.5px;
+    height: 100vh;
+    width: 100vw;
 }
 
 .App {
+    position: relative;
     text-align: center;
     font-size: 18.75px;
     background-color: #f5f7f6;
