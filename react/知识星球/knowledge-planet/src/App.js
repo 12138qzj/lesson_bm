@@ -18,11 +18,11 @@ class  App extends Component {
       <div className="App">
       {/* <Router> */}
       <BrowserRouter>
-      <Switch>
-        <Route exact path='/' component={Components}/>
-        <Route exact path='/AddPlanet' component={AddPlanet}/>
-        <Route exact path='/tail' component={Tail}/>
-      </Switch>
+        <Switch>
+          <Route exact path='/' component={Components}/>
+          <Route  path='/AddPlanet' component={AddPlanet}/>
+          <Route  path='/tail' component={Tail}/>
+        </Switch>
       </BrowserRouter>
       {/* <Route exact path='/' component={Components}/> */}
         {/* <Switch>

@@ -4,8 +4,9 @@ import { withRouter } from 'react-router';
 class AddBox extends Component {
     state = {  }
     AddPlanet=()=>{
-        console.log(this.props);
+        // console.log(this.props);
         // this.props.history.replace('/tail')
+        // <Link></Link>
         this.props.history.push('/AddPlanet')
 
     }

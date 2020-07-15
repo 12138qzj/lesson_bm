@@ -2,24 +2,35 @@ import React, { Component } from 'react';
 import Search from './search/search';
 import Box from './box/Box';
 import AddBox from './box/addbox/AddBox';
+import StorageUtils from '../../../Utils/Storage';
 import'./center.css';
 class Center extends Component {
     state = { 
-        Boxdata:[{
-            planetname:"视界",
-            author:"七个"
-            
-        },{
-            planetname:"视界1",
-            author:"七个1"
-            
-        },{
-            planetname:"视界2",
-            author:"七个2"
-            
-        }]
+        Boxdata:[
+        ]
+
+     }
+
+     componentWillMount(){
+       this.init();
+     }
+
+     init(){
+        let boxdata=[]; 
+        const data=StorageUtils.getUser().split(';');
+        for (let key in data){
+            var obj=eval("("+data[key]+")");
+            boxdata.push(obj);
+        }
+        if(boxdata.length){
+            this.setState({
+                Boxdata:boxdata,
+            })
+        }
+       
      }
     render() { 
+        console.log("fadsfa",this.state.Boxdata)
         return ( 
             <div className="center_content">
                 <Search/>
@@ -33,7 +44,6 @@ class Center extends Component {
                     <AddBox />
                 </div>
                
-                center
             </div>
          );
     }

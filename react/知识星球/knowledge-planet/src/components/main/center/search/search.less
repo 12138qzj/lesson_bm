@@ -1,19 +1,26 @@
 .search{
-    padding: 0 0.8rem;
-    input{
+    // display: inline-block;
+    padding: 0.3rem 0.8rem 0 0;
+    // width: 100%;
+    // background: pink;
+
+    input{   
         border: 0;
-        width: 100%;
-        height: 1.75rem;
+        width: 95%;
+        height: 2rem;
         border-radius:0.75rem ;
         background-color: #ebeceb;
         outline: none;
-        padding-left: 1rem;
+        padding-left: 2rem;
         //将padding计算为宽度
         box-sizing: border-box
     }
-    input::before{
-         content: '\e616';
-         font-family: "iconfont";
+    
+}
+.search::before{
+    display: inline-block;
+    content: "\e66b";
+    font-family: "iconfont";
+    transform: translateX(140%) translateY(16%);
 
-    }
 }
