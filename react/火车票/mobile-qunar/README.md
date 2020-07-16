@@ -62,3 +62,18 @@ class Component-> function
      })
  2. 创建组件
  3. 状态组件 ， 无状态组件重用的方法。
+
+ - reducer 
+    1. action 标准做法
+        返回{type：,payload:} 更新reducer状态
+        组件里的事件，生命周期等功能 主要是和数据 状态 打交道，
+
+        /*封装action*/
+        - 所有的action（修改，添加，删除） 都以功能函数向外抛出 export function
+        - 在组件中引入需要的action,交给bindActionCreators,将action 功能函数 变为本地调用的函数
+        - 使用useMemo 缓存函数
+        - connect 中第二个参数 返回action
+    2. 
+        - reducers 纯函数 返回状态 及接受状态 的更新 reducers使用switch case来判断状态 来更新状态(state)
+        - actions actionsTypes 
+            是更新reducer的使者 ，dispath action from to 都有独立的reducer函数和action
