@@ -1,0 +1,61 @@
+<script>
+    let reg = /[a-z]/g
+
+    let str = 'abc';
+
+    console.log(reg.test(str)); //a
+    console.log(reg.test(str)); // 然后从第二个开始匹配 b
+    console.log(reg.test(str)); // 然后从第三个开始匹配 c
+    console.log(reg.test(str)); // 然后从第四个开始匹配 '' false
+
+
+    console.log(reg.exec(str));
+    console.log(reg.exec(str));
+    console.log(reg.exec(str));
+    console.log(reg.exec(str));
+    let str1 = 'my name {name} age {age}'
+
+    // console.log(reg1.exec(str1));
+
+
+    let obj = {
+        name: '12138',
+        age: "19"
+    }
+
+    // console.log(reg1.test(str1)); //a
+
+    // console.log(reg1.exec(str1));
+    // console.log(reg1.exec(str1));
+    // console.log(reg1.exec(str1));
+    // console.log(reg1.exec(str1));
+    // console.log(reg1.exec(str1));
+    let k = "name"
+
+
+    // str1 = str1.replace(/{name}/, obj[k]);
+
+    // console.log(str1);
+
+
+    console.log(str1.substring(8 + 1, 13));
+    console.log(str1.substring(8, 13 + 1));
+
+
+    function compile(obj, tpl) {
+        let res = tpl;
+        let reg = /[{}]/g;
+        let index = []
+        let temp = reg.exec(tpl);
+        while (temp) {
+            index.push([temp.index, reg.exec(tpl).index])
+            temp = reg.exec(tpl);
+        }
+        for (let key in index) {
+            res = res.replace(tpl.substring(index[key][0], index[key][1] + 1), obj[tpl.substring(index[key][0] + 1, index[key][1])]);
+        }
+        return res;
+    }
+
+    console.log(compile(obj, str1));
+</script>

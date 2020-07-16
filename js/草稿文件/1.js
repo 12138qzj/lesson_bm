@@ -76,3 +76,17 @@ fn(2);
 
 // fn();
 // var fnname = "李四"
+
+for (var i = 0; i < 5; i++) {
+    // setTimeout(function() {
+    //     console.log(i);
+    // }, 1000);
+    console.log(i);
+}
+
+console.log("wai", i);
+var a = {
+    k: "134",
+    p: "445"
+}
+console.log({...a, p: "25678" });
