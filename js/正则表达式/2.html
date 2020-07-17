@@ -1,0 +1,51 @@
+<script>
+    // console.log(reg1.exec(str1));
+
+
+    let obj = {
+        name: '12138',
+        age: "19"
+    }
+    let str = 'my name {name} age {age}'
+
+    let i = 0;
+    let reg = / \{([0-9A-Za-z_]+\}) /g
+    let info = reg.exec(str)
+    let res = '';
+    while (info) {
+        console.log(info);
+        res += str.substring(i, info.index)
+        let key = info[1];
+        res += obj[key];
+        console.log(obj[key]);
+        i = reg.lastIndex;
+        info = reg.exec(str)
+    }
+
+    console.log(res);
+
+    let reg1 = /\{(\w+)\} /g
+
+    let newStr = str.replace(reg1, (...arg) => {
+        console.log(arg);
+        let key = arg[1];
+        return obj[key]
+    })
+    console.log(newStr)
+
+    let str1 = '2001-a6-c9'
+    let reg2 = / (\d{4})-(\d{2})-(\d{2}) /
+    console.log(str1.replace(reg2, (...arg) => {
+        return `${arg[2]}-${arg[3]}.${arg[1]} `
+    }));
+
+
+
+    let reg3 = / -([a-zA-Z]{1}) /g;
+    let str2 = 'web-kit-aa-bb';
+
+    console.log(str2.replace(reg3, (...arg) => {
+        console.log("arg", arg);
+        return arg[1].toUpperCase();
+    }));
+</script>
