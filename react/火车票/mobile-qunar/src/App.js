@@ -3,12 +3,22 @@ import {Header} from './components/header/Header';
 import Joureney from './components/journey/Journey'
 import { exchangeFromto } from './store/actions.js';
 
+import store from './store/Store';
+
+
+
 import { bindActionCreators} from 'redux';
 import './App.css';
 import { connect } from 'react-redux';
 import { useMemo,useCallback } from 'react';
 
 function App(props) {
+
+
+
+  store.subscribe(()=>{
+    console.log("object在外部订阅了");
+  })
 
   const {from,to,dispatch}=props;
 
@@ -25,6 +35,7 @@ function App(props) {
   const cbs=useMemo(()=>{
     
     //将远程仓库store 函数变为本地 赋予一个修改的功能
+    //赋予该组件调度store仓库的功能函数
     return bindActionCreators({
       exchangeFromto
     },dispatch);

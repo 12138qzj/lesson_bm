@@ -4,13 +4,7 @@ import thunk from 'redux-thunk'; //中间件 异步修改
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
-
-
-export default createStore(combineReducers(reducers), {
-    from: '北京',
-    to: '上海',
-
-}, composeEnhancers(
+export default createStore(combineReducers(reducers), composeEnhancers(
     //支持异步操作
     applyMiddleware(thunk)
 ))

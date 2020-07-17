@@ -18,7 +18,10 @@ export const exchangeFromto = () => {
     //getState 在store中 全局函数  不需要使用 store.getState()
     return (dispatch, getState) => {
         //直接去仓库（store）拿 不需要外部给仓库值(仓库的state)
-
+        // subscribe(() => {
+        //     console.log("getState--subscribe", getState);
+        // })
+        console.log("getState()-------", getState());
         const { from, to } = getState();
         dispatch(setFrom(to))
         dispatch(setTo(from))
