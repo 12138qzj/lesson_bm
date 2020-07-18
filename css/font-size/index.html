@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    
+    html {
+        font-size: 75px;
+    }
+    
+    .App {
+        /* font-size: 750px; */
+        /* width: 100px;
+        height: 20px;
+        background-color: black;
+        margin-left: 100px;
+        margin-top: 200px; */
+    }
+    
+    .header {
+        display: flex;
+        align-items: center;
+        padding: 15px 30px 28px 30px;
+    }
+    
+    .header h2 {
+        width: 137px;
+        height: 37px;
+        margin-right: 20px;
+    }
+    
+    .header input {
+        flex: 1;
+        outline: none;
+        border: none;
+        border: 1px solid red;
+        border-radius: 4px;
+        height: 56px;
+    }
+    
+    .header button {
+        margin-left: 16px;
+        width: 37px;
+        height: 41px;
+    }
+</style>
+
+<body>
+    <div class="App">
+        <div class="header">
+            <span>LOGO</span>
+
+            <!-- <h2>LOGO</h2> -->
+            <input type="text" name="" id="">
+            <button>登陆</button>
+        </div>
+    </div>
+
+    <script>
+        //选中html标签
+        (function() {
+
+
+            let meta = document.createElement('meta');
+
+            let ratio = 1 / window.devicePixelRatio;
+            console.log(window.devicePixelRatio);
+
+            console.log(ratio);
+            meta.content = `initial-scale=${ratio}, maximum-scale=${ratio}, minimum-scale=${ratio}, user-scalable=no viewport-fit=cover`;
+            meta.name = `viewport`;
+            document.querySelector('head').appendChild(meta);
+
+
+            let width = window.innerWidth;
+            let fs = width / 10;
+            document.documentElement.style.fontSize = `${fs}px`
+        })()
+    </script>
+</body>
+
+</html>

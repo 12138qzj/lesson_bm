@@ -1,3 +1,4 @@
+
 ## normal flow(正常流)
 1. 行内元素（inline-level-box）：水平从左往右一个接着一个布局，垂直方向默认会以baseLine 对齐
 2. 行内元素（inline-level-box）：垂直方向从上到下一个接着一个布局
@@ -32,7 +33,8 @@
 - 如果 position 属性为 static 、 relative 或 sticky，包含块可能由它的最近的祖先块级元素（比如说inline-block, block 或 list-item元素）
 - 如果 position 属性为 absolute ，包含块就是由它的最近的 position 的值不是 static （也就是值为fixed, absolute, relative 或 sticky）的祖先元素。
 - 如果 position 属性是 fixed，是 viewport,
-- 如果 position 属性是 absolute 或 fixed，包含块也可能是由满足以下条件的最近父级元素的内边距区的边缘组成的：
+- 如果 position 属性是 absolute 或 fixed，包含块也可能是由满足以下条件的最近
+父级元素的内边距区的边缘组成的：
   - transform / perspective 不是 none
   - will-change 是 transform， perspective
   - filter不是 none 或者 will-change 是 filter(only works on Firefox).

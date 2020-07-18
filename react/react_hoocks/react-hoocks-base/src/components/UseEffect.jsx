@@ -3,6 +3,7 @@ import React, { Component,useEffect, useState,useMemo, useCallback } from 'react
 function Demo(){
     //inputVal:变量 ,setVal：方法  修改inputVal的方法 setVal只能修改inputVal中的值
 
+
     //useState('') 初始化state变量的值
 
     let count=0
@@ -37,8 +38,11 @@ function Demo(){
 
  
 
-    //useMemo ： 缓存值/函数，当我们
-    const val=useMemo(()=>[1,count]);
+    //useMemo ： 缓存值/函数，检查依赖，只有依赖没有变化才会使用上次的值
+    const val=useMemo(()=>[1,2],[]);
+    let set=new Set(val);//无重复的数据集 
+    console.log("0set",set);
+
     console.log(val);
     const hadleChange = useCallback((event)=>{
         setVal(event.target.value);
