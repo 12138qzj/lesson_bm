@@ -1,19 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {HashRouter,BrowserRouter} from 'react-router-dom';
-import {renderRoutes} from 'react-router-config';
-import routes from './routes/index.js';
-import * as serviceWorker from './serviceWorker';
-
-import fastclick from 'fastclick';
 import './index.css';
 import App from './App';
-fastclick.attach(document.body)
-
+import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
-   <App/>
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
