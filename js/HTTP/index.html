@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <script src="http://localhost:9000/big.js"></script> -->
+</body>
+
+<script>
+    Promise.resolve(1).then(console.log); // ??
+    let arr = [1, 2, 3];
+    console.log(arr.map(
+        (item) => {
+            console.log("item", item);
+            return parseInt(item)
+        })); // ??
+    console.log(arr.map(parseInt));
+    console.log(parseInt('Hello', 1));
+</script>
+
+</html>
