@@ -67,3 +67,8 @@
       yarn add redux-thunk
     #### 使用方法
         import { } from redux-thunk
+
+
+#### 页面优化 （路由）
+ 路由懒加载 ：import React ,{lazy,Suspense} from 'react';
+const RecommendComponent=lazy(()=>import("../application/Recommend"))

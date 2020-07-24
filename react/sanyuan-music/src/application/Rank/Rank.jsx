@@ -6,8 +6,6 @@ function Rank(props){
     return(
         <>
             Rank
-            
-
         </>
     )
 }

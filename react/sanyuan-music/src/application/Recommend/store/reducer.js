@@ -1,5 +1,5 @@
 //常量定义
-import * as actionTypes_constants from './constants.js';
+import * as actionTypes from './constants.js';
 
 const defaultState = {
     recommendList: [],
@@ -11,12 +11,13 @@ const defaultState = {
 export default (state = defaultState, action) => {
     console.log("data", action);
     switch (action.type) {
-        case actionTypes_constants.CHANGE_BANNER:
+        case actionTypes.CHANGE_BANNER:
             return {...state, banners: action.data };
-        case actionTypes_constants.CHANGE_RECOMMEND_LIST:
+        case actionTypes.CHANGE_RECOMMEND_LIST:
+            console.log("actionaction", action);
             return {...state, recommendList: action.data };
-        case actionTypes_constants.CHANGE_ENTER_LOADING:
-            return {...state, recommendList: action.data };
+        case actionTypes.CHANGE_ENTER_LOADING:
+            return {...state, enterLoading: action.data };
         default:
             return state;
     }

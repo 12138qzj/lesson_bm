@@ -20,17 +20,19 @@ function Recomment(props){
     const {recommendList,banners,enterLoading}=props;
 
 
-    const { getRecommendListDataDispatch, getBannersDataDispatch ,dispatch} = props
+    const { getRecommendListDataDispatch, getBannersDataDispatch } = props
+    
+    console.log("ARRay",recommendList,"1234567",banners,enterLoading);
     useEffect(()=>{
         if(!recommendList.length){
             getRecommendListDataDispatch()
+            getBannersDataDispatch();
         }
     },[])
-    console.log(banners,enterLoading);
     return(
         <>
-            Recomment
-            {recommendList}
+            Recommentf
+            {recommendList.toString()}
 
         </>
     )
@@ -45,7 +47,6 @@ const mapStateToProps=(state)=>({
 })
 const mapDispatchToProps=(dispatch)=>{
     return{
-        dispatch,
         getRecommendListDataDispatch(){
             console.log("dispatch",dispatch);
             dispatch(actionTypes.getRecommendList())
@@ -57,4 +58,4 @@ const mapDispatchToProps=(dispatch)=>{
 
 }
 
-export default  connect(mapStateToProps,mapDispatchToProps)(memo(Recomment,[]))
+export default  connect(mapStateToProps,mapDispatchToProps)(memo(Recomment))

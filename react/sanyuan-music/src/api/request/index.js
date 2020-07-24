@@ -24,16 +24,17 @@ export const getRecommendListRequest = () => {
 
 export const getBannersRequest = () => {
 
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            resolve({
-                data: [{
-                    id: 1,
-                    title: 'aaaaaa'
-                }]
-            })
-        }, 1000)
-    })
+    // return new Promise((resolve, reject) => {
+    //     setTimeout(() => {
+    //         resolve({
+    //             data: [{
+    //                 id: 1,
+    //                 title: 'aaaaaa'
+    //             }]
+    //         })
+    //     }, 1000)
+    // })
+    return axiosInstance.get('/banner')
 }
 
 export const getBanners = () => {

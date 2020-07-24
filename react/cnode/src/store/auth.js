@@ -1,7 +1,7 @@
-import { observer, action } from 'mobx';
+import { observable, action } from 'mobx';
 
 class Auth {
-    @observer isLogin = false;
+    @observable isLogin = false;
 
     @action
     login() {

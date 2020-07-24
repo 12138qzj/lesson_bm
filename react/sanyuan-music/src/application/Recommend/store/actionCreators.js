@@ -1,11 +1,10 @@
-import * as actionTypes_constants from './constants.js';
+import * as actionTypes from './constants';
 
 import { getRecommendListRequest, getBannersRequest } from '../../../api/request/index.js';
 
 export const changeRecommendList = (data) => {
-    console.log(actionTypes_constants.CHANGE_RECOMMEND_LIST);
     return {
-        type: actionTypes_constants.CHANGE_RECOMMEND_LIST,
+        type: actionTypes.CHANGE_RECOMMEND_LIST,
         data: data,
     }
 
@@ -13,15 +12,15 @@ export const changeRecommendList = (data) => {
 
 export const changeEnterLoading = (data) => {
     return {
-        type: actionTypes_constants.CHANGE_ENTER_LOADING,
+        type: actionTypes.CHANGE_ENTER_LOADING,
         data: data,
     }
 
 }
 export const changeBanners = (data) => {
     return {
-        type: actionTypes_constants.CHANGE_BANNER,
-        data: data,
+        type: actionTypes.CHANGE_BANNER,
+        data,
     }
 
 }
@@ -30,21 +29,19 @@ export const getRecommendList = () => {
 
     return (dispatch) => {
 
-        try {
-            getRecommendListRequest().then(data => {
-                console.log("object,", data.data, changeRecommendList(data.data));
-                console.log("dispatch", dispatch);
-                const type = changeRecommendList(data.data)
-                console.log("data", type);
+        getRecommendListRequest().then(data => {
+            console.log("object,", data.data);
+            console.log("object,data", data);
 
-                dispatch(type);
-                // dispatch(changeEnterLoading(false)); //data--false/true
-            }).then((res) => {
-                console.log("object成功", res);
-            })
-        } catch (e) {
-            console.log("数据请求报错", e);
-        }
+            console.log("dispatch", dispatch);
+            const type = changeRecommendList(data.data)
+            console.log("data", type);
+
+            dispatch(changeRecommendList(data.data));
+            // dispatch(changeEnterLoading(false)); //data--false/true
+        }).catch(() => {
+            console.log("数据请求报错");
+        })
 
     }
 
@@ -58,8 +55,8 @@ export const getBanners = () => {
             getBannersRequest().then(data => {
 
                 console.log("getBannersRequest", data);
-                // const action = changeBanners(data.data.banners)
-                // dispatch(action);
+                const action = changeBanners(data.data.banners)
+                dispatch(action);
                 // dispatch(changeEnterLoading(false)); //data--false/true
             })
         } catch (e) {
