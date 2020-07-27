@@ -6,7 +6,7 @@ const defaulState = {
     listOffset: 0,
 }
 
-export default (state = defaultStatus, action) => {
+export default (state = defaulState, action) => {
 
     switch (action.type) {
         // case :

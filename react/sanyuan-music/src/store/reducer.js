@@ -1,5 +1,6 @@
 import { combineReducers } from 'redux';
 import { reducer as recommendReducer } from '../application/Recommend/store/index';
+import { reducer as singersReducer } from '../application/Singers/store/index';
 
 
 
@@ -9,5 +10,7 @@ import { reducer as recommendReducer } from '../application/Recommend/store/inde
 
 
 export default combineReducers({
-    recommend: recommendReducer
+    recommend: recommendReducer,
+
+    singers: singersReducer
 })

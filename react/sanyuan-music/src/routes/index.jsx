@@ -1,4 +1,4 @@
-import React ,{lazy,Suspense} from 'react';
+import React, { lazy, Suspense } from 'react';
 //
 import { Redirect } from 'react-router-dom';
 import BlankLayout from '../layouts/BlankLayout';
@@ -11,20 +11,18 @@ import Rank from '../application/Rank/Rank';
 
 
 import HomeLayout from '../layouts/HomeLayout';
-import Sign from '../application/Sign';
+// import Sign from '../application/Sign';
 // const RecommendComponent=lazy(()=>import("../application/Recommend/Recommend"))
 
 
 
 // 将组件
-const SuspenseComponent=Component =>props=>{
+const SuspenseComponent = Component => props => {
 
-    return (
-        <Suspense fallback={null}>
-            <Component {...props}>
-
-            </Component>
-
+    return ( 
+        <Suspense fallback = { null } >
+        <Component {...props } >
+        </Component>
         </Suspense>
     )
 }
@@ -42,7 +40,7 @@ export default [{
                 },
                 {
                     path: '/recommend',
-                    component:Recommend,
+                    component: Recommend,
                 },
                 {
                     path: '/singers',

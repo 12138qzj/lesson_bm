@@ -42,7 +42,7 @@ function App() {
 
   const [activeIndex,setActiveIndex]=useState(0)
 
-  const tabDetail =document.querySelector('.tab-detail')
+  // const tabDetail =document.querySelector('.tab-detail')
   const handleTabClick=(e)=>{
 
     console.log(e);
