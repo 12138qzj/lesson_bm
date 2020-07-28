@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+     :root {}
+    
+    .ration {
+        width: 100%;
+        height: 0;
+        outline: 1px solid red;
+        background-color: pink;
+        /*  padding-top 相对于宽来计算*/
+        padding-top: calc(100%*1/2);
+    }
+</style>
+
+<body>
+    <div class="ration">
+        AAA
+        <div></div>
+    </div>
+    <script>
+        //es6之前 valueOf级别大于toString 
+        let obj = {
+            a: 1,
+            valueOf() {
+                return 6;
+            },
+            toString() {
+                return 9;
+            },
+
+            // [Symbol.toPrimitive]: () => {
+            //     return 123;
+            // }
+        }
+        let res = obj + 9;
+        console.log(res)
+
+        //对象的toString
+        Object.prototype.toString();
+
+        //arr初始化赋值的时候  重写了toString
+        let arr = [1, 2];
+        arr.toString()
+    </script>
+
+</body>
+
+</html>

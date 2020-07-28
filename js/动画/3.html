@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #el {
+            background-color: orange;
+            width: 30px;
+            height: 30px;
+            animation: move 5s linear;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="el"></div>
+    <button id='pause' onclick="pause()">pause<button>
+    <button id='resume' onclick="resume()">resume<button>
+    <script>
+        // 手写一个动画
+        const el = document.getElementById('el');
+        let end = 400, duration = 5000, start = 0;
+        let startTime = Date.now(); 
+        function tick () {
+            let hasPassed = Date.now() - startTime;
+            let progress = hasPassed / duration;
+            if(progress >=1){
+                el.style.transform=`translate3d(${x}px, 0, 0)`
+            }
+            let x = progress * (end - start);
+            el.style.transform = `translate3d(${x}px, 0 , 0)`
+            rafId = requestAnimationFrame(tick)
+        }
+        let pauseTime = null;
+        var rafId = null;
+        rafId = requestAnimationFrame(tick)
+        //  确保这个回调在每一帧都被调用       
+        // 60HZ 1000/60 == 16.66ms 每一秒执行60次
+        // 暂停
+        function pause() {
+             pauseTime = Date.now()
+            cancelAnimationFrame(rafId)
+        }
+        // 启动
+        function resume() {
+            startTime+=Date.now() - pauseTime;
+            rafID = requestAnimationFrame(tick)
+        }
+    </script>
+</body>
+<html>

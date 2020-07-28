@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //generator
+
+
+        // 如同 async await
+        // 协(纤)程 ：意为进程/线程 更小的单位
+
+        function* foo() {
+            console.log("object")
+            let a = yield '33' //yield 不是返回1  如果需要返回值 则需要放到next(返回值)中
+            console.log("1", a)
+            let b = yield "two"
+            console.log("2", b)
+            let c = yield "three"
+            console.log("3", c)
+        }
+        let iterator = foo();
+
+        console.log(iterator)
+
+        // function autoRun(iterator) {
+
+        //     let {
+        //         value,
+        //         done
+        //     } = iterator.next();
+        //     if (done) return;
+        //     autoRun(iterator)
+        // }
+        // autoRun(iterator)
+        // console.log(iterator.next())
+        console.log("---", iterator.next())
+        console.log(iterator.next(2))
+        console.log(iterator.next(3))
+        console.log(iterator.next(4))
+
+
+        // iterator.next();
+        // iterator.next();
+        // iterator.next();
+        // iterator.next();
+        // iterator.next();
+        // iterator.next();
+    </script>
+</body>
+
+</html>

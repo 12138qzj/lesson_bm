@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    #my {
+        width: 100px;
+        height: 100px;
+        background-color: pink;
+    }
+</style>
+
+<body>
+
+    <div id="my"></div>
+
+    <script>
+        const my = document.querySelector('#my');
+
+
+        //自定义事件  没有延迟  不让浏览器帮我们触发 我们自己触发事件
+        const event = new CustomEvent('click')
+            // setTimeout(() => {
+
+        //     my.dispatchEvent(event);
+        // }, 3000)
+
+
+        //浏览器内部事件触发流程  ： 通过延迟 来控制事件的发生顺序。 
+        //touch
+
+
+
+
+        //touchstart没有延迟 则在移动端使用，
+        my.addEventListener('touchstart', () => {
+            my.dispatchEvent(event);
+        })
+
+        my.addEventListener('touchend', (e) => {
+            // my.dispatchEvent(event);
+            //阻止浏览器触发的点击事件
+            e.preventDefault();
+        });
+        my.addEventListener('click', function() {
+            console.log("clickfff");
+        })
+
+        //在这个my控件中 阻止浏览器触发事件  使用我们自己定义触发
+        my.dispatchEvent(event); //
+    </script>
+</body>
+
+</html>

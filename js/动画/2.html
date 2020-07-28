@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #el {
+        width: 30px;
+        height: 30px;
+        background-color: red;
+        /* animation: move 5s linear; */
+    }
+    /* @keyframes move {
+        to {
+            transform: translate3d(400px, 400px, 0);
+        }
+    } */
+</style>
+
+<body>
+
+    <div id="el"></div>
+    <button id="pause" onclick="pause()">pause</button>
+    <button id="start" onclick="resume()">resume</button>
+
+
+    <script>
+        const el = document.getElementById("el")
+        let end = 0.005,
+            duration = 100000000,
+            start = 0;
+        let startTime = Date.now();
+
+        let rafId = null;
+        let x = 0;
+
+        function tick(x) {
+            let hasPassed = Date.now() - startTime;
+            let progress = hasPassed / duration;
+
+            if (progress >= 1) {
+                el.style.transform = `translate3d(${end}px,0,0)`
+            }
+
+            el.style.transform = `translate3d(${x}px,0,0)`;
+            x = progress * (end - start);
+
+            rafId = requestAnimationFrame(tick.bind(x))
+        }
+        rafId = requestAnimationFrame(tick.bind(x))
+
+        function pause() {
+            cancelAnimationFrame(rafId)
+        }
+
+
+        function resume() {
+            rafId = requestAnimationFrame(tick.bind(x))
+        }
+        // setInterval(() => {
+        //     console.log("1")
+
+        // }, 1);
+        // function tick() {
+        //     console.log("1")
+        //     requestAnimationFrame(tick)
+        // }
+        // requestAnimationFrame(tick)
+    </script>
+</body>
+
+</html>

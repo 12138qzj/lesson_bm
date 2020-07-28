@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // function sleep(time) {
+        //     let pre = Date.now();
+        //     while (Date.now() - pre < time) {}
+        // }
+        // console.log("1")
+        // sleep(3000)
+        // console.log("2")
+
+
+        function sleep2(time) {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve(time);
+                }, time)
+
+            })
+        }
+        // (async() => {
+        //     await sleep(3000);
+        //     console.log("3")
+        // })()
+
+        function* foo() {
+
+
+            const a = yield sleep2(2000)
+            console.log(a, 1)
+            const b = yield sleep2(1000)
+            console.log(b, 2)
+
+        }
+
+        function autoRun(obj, pre) {
+            let {
+                value,
+                done
+            } = obj.next(pre);
+            if (done) return;
+            value.then((res) => {
+                autoRun(obj, res)
+            })
+        }
+        let iterator = foo();
+        autoRun(iterator, 10000000)
+    </script>
+
+</body>
+
+</html>
