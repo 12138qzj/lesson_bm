@@ -61,6 +61,7 @@ const Scroll = forwardRef((props, ref) => {
           bottom: bounceBottom
         }
       });
+      //将创建的scroll 存放在 state中
       setBScroll(scroll);
       return () => {
         setBScroll(null);

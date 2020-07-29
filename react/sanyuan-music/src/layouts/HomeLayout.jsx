@@ -15,7 +15,9 @@ const Home = (props) => {
             <span className="title">
                 云音月
             </span>
-            <span className="iconfont search">&#xe62b;</span>
+            <span className="iconfont search"
+                onClick={() => props.history.push("/search")}
+            > &#xe62b;</span>
         </Top>
 
         <Tab>

@@ -37,7 +37,7 @@ export const getRecommendList = () => {
             const type = changeRecommendList(data.data)
             console.log("data", type);
 
-            dispatch(changeRecommendList(data.data));
+            // dispatch(changeRecommendList(data.data));
             // dispatch(changeEnterLoading(false)); //data--false/true
         }).catch(() => {
             console.log("数据请求报错");
@@ -55,8 +55,8 @@ export const getBanners = () => {
             getBannersRequest().then(data => {
 
                 console.log("getBannersRequest", data);
-                const action = changeBanners(data.data.banners)
-                dispatch(action);
+                // const action = changeBanners(data.data.banners)
+                // dispatch(action);
                 // dispatch(changeEnterLoading(false)); //data--false/true
             })
         } catch (e) {

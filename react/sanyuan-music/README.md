@@ -16,4 +16,14 @@ router react-router-config renderRoutes(route.routes)
   2. 使用： export const Top =styled.div`
         display:flex
         `;
+- 搜索功能的流程
+
+接口文档：
+   搜索热门内容
+   -  的ip地址  http://47.98.159.95/m-api/search/hot 
+      参数 null
+      返回值： result.hot
+   - 
+
+
 

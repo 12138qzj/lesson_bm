@@ -2,7 +2,7 @@ import React, { lazy, Suspense } from 'react';
 //
 import { Redirect } from 'react-router-dom';
 import BlankLayout from '../layouts/BlankLayout';
-import Recommend from '../application/Recommend/Recommend';
+// import Recommend from '../application/Recommend/Recommend';
 import Singers from '../application/Singers/Singers';
 import Rank from '../application/Rank/Rank';
 
@@ -12,7 +12,11 @@ import Rank from '../application/Rank/Rank';
 
 import HomeLayout from '../layouts/HomeLayout';
 // import Sign from '../application/Sign';
-// const RecommendComponent=lazy(()=>import("../application/Recommend/Recommend"))
+const RecommendComponent=lazy(()=>import("../application/Recommend/Recommend"))
+const SingersComponent =lazy(()=>import("../application/Singers/Singers"))
+const RankComponent =lazy(()=>import("../application/Rank/Rank"))
+// const RankComponent =lazy(()=>import("../application/Rank/Rank"))
+const SearchComponent = lazy(() => import("./../application/Search/"));
 
 
 
@@ -39,23 +43,52 @@ export default [{
                     />
                 },
                 {
-                    path: '/recommend',
-                    component: Recommend,
-                },
+                    path: "/recommend",
+                    component: SuspenseComponent(RecommendComponent),
+                    // routes: [
+                    //   {
+                    //     path: "/recommend/:id",
+                    //     component: SuspenseComponent(AlbumComponent)
+                    //   }
+                    // ]
+                  },
                 {
-                    path: '/singers',
-                    component: Singers,
-                },
-                {
-                    path: '/rank',
-                    component: Rank,
-                },
+                    path: "/singers",
+                    component: SuspenseComponent(SingersComponent),
+                    key: "singers",
+                    // routes: [
+                    //   {
+                    //     path: "/singers/:id",
+                    //     component: SuspenseComponent(SingerComponent)
+                    //   }
+                    // ]
+                  },
+                  {
+                    path: "/rank/",
+                    component: SuspenseComponent(RankComponent),
+                    key: "rank",
+                    // routes: [
+                    //   {
+                    //     path: "/rank/:id",
+                    //     component: SuspenseComponent(AlbumComponent)
+                    //   }
+                    // ]
+                  },
+                //   {
+                //     path: "/album/:id",
+                //     exact: true,
+                //     key: "album",
+                //     component: SuspenseComponent(AlbumComponent)
+                //   },
+                  {
+                    path: "/search",
+                    exact: true,
+                    key: "search",
+                    component: SuspenseComponent(SearchComponent)
+                  }
+                ]
+              }
             ]
-        }
-
-    ]
-
-
 }]
 
 
