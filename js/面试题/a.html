@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+
+</style>
+
+<body>
+
+    <div class="wy"></div>
+    <script>
+        // let bool = true;
+        // // let count = 0;
+
+        // console.log(a);
+
+        // function a() {
+
+        //     let count
+        //     console.log(count % 2);
+        //     count++
+        //     // console.log(parseInt(bool))
+        // }
+        // a.prototype.count = 0
+
+        //闭包的使用
+        const a = (function() {
+            let c = 0;
+            return function() {
+                console.log(c++ % 2);
+            }
+        })()
+        a();
+    </script>
+
+</body>
+
+</html>

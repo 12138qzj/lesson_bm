@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var theThing = null;
+        var replaceThing = function() {
+            var originalThing = theThing;
+            var unused = function() {
+                if (originalThing) // 'originalThing'的引用
+                    console.log("嘿嘿嘿");
+            };
+            theThing = {
+                longStr: new Array(1).join('*'),
+                someMethod: function() {
+                    console.log("哈哈哈");
+                }
+            };
+        };
+        replaceThing()
+        theThing.someMethod()
+            // console.log(theThing.someMethod)
+        setInterval(replaceThing, 1000);
+    </script>
+</body>
+
+</html>

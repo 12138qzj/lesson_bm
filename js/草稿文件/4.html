@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Queue {
+            // return (content) => {
+            constructor() {
+                    this.st = [];
+                    this.time = 0;
+                    this.i = 0;
+                    // this.task()
+
+                }
+                // this.st=[];
+            task(time, func) {
+                this.time += time;
+                this.st.push(new Promise((resolve, reject) => {
+                    setTimeout(() => {
+                        func()
+                        resolve()
+                    }, this.time)
+                }))
+                return this;
+                // setTimeout(() => {
+                //     func();
+                //     resolve()
+                // }, this.time)
+                // return this;
+            }
+
+            start() {
+                this.st[i++].then(() => {
+                    this.st[i++].then(() => {
+                        this.st[i++]
+                    })
+                })
+            }
+
+
+
+            // }
+        }
+        //设计一个简单的任务队列, 要求分别在 1,3,4 秒后打印出 "1", "2", "3"
+        new Queue()
+            .task(1000, () => {
+                console.log(1)
+            }).task(2000, () => {
+                console.log(2)
+            }).task(1000, () => {
+                console.log(3)
+            }).start()
+    </script>
+
+</body>
+
+</html>

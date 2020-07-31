@@ -1,12 +1,61 @@
 <script>
     //严格模式
 
-    'use strict'
-    //则该作用域为严格模式
-    function foo() {
-        //使用'use strict' 严格模式为undefined
-        //否则为Window
-        console.log(this);
+    // 'use strict'
+    // //则该作用域为严格模式
+    // function foo() {
+    //     //使用'use strict' 严格模式为undefined
+    //     //否则为Window
+    //     console.log(this);
+    // }
+    // foo();
+
+    // 声明位置
+    var me = {
+        name: 'xiuyan',
+        hello: function() {
+            console.log(`你好，我是${this.name}`)
+        }
     }
-    foo();
+
+    var you = {
+        name: 'xiaoming',
+        hello: {
+            k: () => {
+                var targetFunc = me.hello
+                    // console.log("this", this.hello.targetFunc)
+                targetFunc()
+            }
+        }
+    }
+
+    var name = 'BigBear'
+
+    function hello() {
+        var targetFunc = me.hello
+        console.log("this", this.hello)
+        targetFunc()
+    }
+    // 调用位置
+    function a() {
+        // this.name = "111"
+        console.log(this.name)
+        you.hello.k()
+
+    }
+    a.call(me)
+    console.log(name)
+        // console.log("this", this, this.targetFunc)
+
+    // hello();
+
+
+
+    // 'use strict'
+
+    // function showThis() {
+    //     console.log(this)
+    // }
+
+    // showThis.call(this) // undefined
 </script>
