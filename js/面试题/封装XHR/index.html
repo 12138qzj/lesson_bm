@@ -1,0 +1,73 @@
+<script>
+    // import axios from 'axios';
+
+    // import { func } from "prop-types";
+
+    const ajax = ({
+        url,
+        method,
+        data,
+        timeout
+    }) => {
+
+        // oReq.addEventListener("load", reqListener);
+        return new Promise((resolve, reject) => {
+            let Promise;
+            const xhr = new XMLHttpRequest();
+            xhr.responseType = 'json'
+            xhr.open(method, url, true);
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4) {
+                    if ((xhr.status >= 200 && xhr.status < 300) || xhr.status === 304) {
+                        resolve(xhr.response);
+                    } else {
+                        reject("response error");
+                    }
+                }
+            }
+
+            //超时处理
+            xhr.ontimeout = function() {
+                    reject("timeout")
+                }
+                //数据 
+                //GET拼接到 URL后面
+                //POST 查看Content-type
+            xhr.send();
+            // Promise = xhr.onload(res => {
+            //     // resolve()
+            // })
+            // Promise.then(Response => {
+            //     resolve(Response)
+            // }).catch(error => {
+            //     console.log("失败", error);
+            // })
+        })
+
+        // if (method === "GET") {
+
+        // } else if
+    }
+
+    // unction ajax();
+
+    // 思考：Content-type 常见的类型有哪些，每个类型对数据的要求格式是怎么样的
+
+    // 1. 查看Content-type：application/json 数据需要符合json的结构 {a:1,b:2}
+    //         application/x-www-form-url-encoded a=1&b=2
+    //         text/plain：字符串（文本）数据
+    //         form-data  文件数据（图片-----数据存在大量的非ASCII字符）
+
+    ajax({
+            url: "http://neteasecloudmusicapi.zhaoboy.com/search?keywords=%E6%B5%B7%E9%98%94%E5%A4%A9%E7%A9%BA",
+            method: "GET",
+            data: "object",
+            timeout: () => {
+                console.log("超时")
+            }
+        })
+        .then((res) => {
+            console.log(res)
+        })
+        .catch()
+</script>

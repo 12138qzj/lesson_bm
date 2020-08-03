@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script src="https://cdn.bootcdn.net/ajax/libs/lodash.js/4.17.19/lodash.min.js">
+    </script>
+    <script>
+        // sum(1)(2)(3) === 6  // true
+
+        function sum(num1) {
+
+            return (num2) => {
+                return (num3) => {
+                    return num1 + num2 + num3
+                }
+            }
+        }
+        console.log(sum(1)(2)(3) === 6)
+
+        function sum1(a, b, c) {
+            return a + b + c;
+        }
+        let curriendSum = _.curry(sum1)
+
+        console.log(curriendSum(1, 2)(34, 8))
+
+        //手写柯里化{}
+
+        // function curry(func1) {
+        //     //  获取到func1 的参数个数
+        //     console.log(func1.length)
+        //     let leng = func1.length;
+        //     let res = 0;
+        //     return ((...arg) => {
+        //         // res += arguments.length;
+        //         let args = [];
+        //         // if ()
+        //         function help(...arg) {
+
+        //             if (args.length >= leng) {
+        //                 args = args.concat(arg);
+        //                 return func1(...args);
+        //             } else {
+        //                 return help;
+        //             }
+        //         }
+        //         return help;
+
+        //     })();
+
+        // }
+
+
+
+
+
+        function curry(fun) {
+            // 
+            const len = fun.length;
+            console.log(len);
+            // fun 普通的函数
+            // return 出去的就是 具有 柯里化（函数参数分批次）
+            // 无论你分几次传参数，接收到之后放在 args 里面
+            let args = [];
+            return function help(...arg) {
+                    // console.log("arg", arg, args)
+                    args = args.concat(...arg);
+                    if (args.length >= len) {
+                        //只拿去固定长度的参数
+                        res = fun(...args.slice(0, len))
+                            //重置 数组空间 方便下次调用使用
+                        args = [];
+                        return res;
+                    } else {
+                        return help;
+                    }
+                }
+                // return help;
+        }
+
+        let curriendSum1 = curry(sum1)
+            // console.log(curriendSum1(1, 2)(3))
+        console.log(curriendSum1(1, 3)(8))
+        console.log(curriendSum1(1, 2)(34))
+        console.log(curriendSum1(1)(2)(34, 9))
+
+        // console.log(curriendSum1(1, 2)(3))
+
+        // console.log(curry(sum1))
+    </script>
+
+
+
+</body>
+
+</html>

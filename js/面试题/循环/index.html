@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="warp">
+
+    </div>
+    <ul>
+        <li>总章节</li>
+        <li>
+            <ul>
+                <li>(1)章节一</li>
+                <li>
+                    <ul>
+                        <li>(1.1)第一节</li>
+                        <li>
+                            <ul>
+                                <li>(1.1.1)第一小节</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li>(1.1.2)第二小节</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <ul>
+                        <li>(1.2)第二节</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <ul>
+                <li>(2)章节二</li>
+                <li>
+                    <ul>
+                        <li>(2.1)第三节</li>
+                    </ul>
+                </li>
+                <li>
+                    <ul>
+                        <li>(2.2)第四节</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <script>
+        const chapterTree = {
+            name: '总章节',
+            children: [{
+                name: '章节一',
+                children: [{
+                    name: '第一节',
+                    children: [{
+                        name: '第一小节'
+                    }, {
+                        name: '第二小节'
+                    }]
+                }, {
+                    name: '第二节'
+                }]
+            }, {
+                name: '章节二',
+                children: [{
+                    name: '第三节'
+                }, {
+                    name: '第四节'
+                }]
+            }]
+        };
+
+
+        const warp = document.querySelector(".warp");
+
+        function serialize(tree) {
+            // TODO
+
+            let res = [];
+
+            function bl(tree) {
+                if (tree.name) {
+                    warp.appendChild(`
+                        <ul>
+                            <li>
+                                
+                            </li>
+                        </ul>`)
+                    res.push(tree.name)
+                }
+                // console.log(tree.children)
+                // let children = tree.children;
+                // for (let i = 0; i < children.size; i++) {
+                //     bl(children[i])
+                // }
+                if (tree.children) {
+                    for (let item of tree.children) {
+                        bl(item)
+                    }
+                }
+            }
+            bl(tree);
+            return res;
+
+        }
+        // 测试
+        const result = serialize(chapterTree);
+        console.log(result);
+    </script>
+</body>
+
+</html>
