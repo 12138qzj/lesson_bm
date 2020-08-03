@@ -86,6 +86,9 @@ function App() {
   function onScroll(e){
     const scrollTop=tabDetail.scrollTop;
     const index = ranges.findIndex(range=>scrollTop>=range[0]&&scrollTop<range[1])
+    console.log("Index",index,scrollTop);
+    // console.log("ref",ref.current.scrollTop,ref,e);
+
     setActiveIndex(index)
 
   }

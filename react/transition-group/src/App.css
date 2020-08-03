@@ -1,0 +1,32 @@
+/* .App {
+    text-align: center;
+} */
+
+.msg-enter {
+    opacity: 0;
+    transform: scale(0.5);
+}
+
+.msg-enter-active,
+.msg-enter-done {
+    opacity: 1;
+    transform: scale(1);
+    transition: all 2000ms;
+}
+
+.msg-exit {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.msg-exit-active .msg-exit-done {
+    opacity: 0;
+    transform: scale(0.5);
+    transition: all 2000ms;
+}
+
+.box {
+    height: 100px;
+    width: 100px;
+    background-color: red;
+}
