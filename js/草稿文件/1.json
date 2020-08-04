@@ -1,0 +1,2666 @@
+{
+    "code": 0,
+    "data": {
+        "info": [{
+                "categoryId": 10001257,
+                "data": [{
+                    "categoryId": 933595745234722816,
+                    "data": [{
+                            "categoryId": 0,
+                            "data": [],
+                            "icon": "https://images.daojia.com/dop/custom/ccd022a3ccdefee72bc10b42520ab686.png",
+                            "targetType": 0,
+                            "title": "空调清洗",
+                            "url": "https://jiazheng.daojia.com/common/qkd/complex/43/0/302"
+                        },
+                        {
+                            "categoryId": 0,
+                            "data": [],
+                            "icon": "https://images.daojia.com/dop/custom/bf9b04deecfe23791d5d05587aab76e0.png",
+                            "targetType": 0,
+                            "title": "中央空调清洗",
+                            "url": "https://jiazheng.daojia.com/common/qkd/complex/387/0/9096?=znsr=allcate_hot"
+                        },
+                        {
+                            "categoryId": 0,
+                            "data": [],
+                            "icon": "https://images.daojia.com/dop/custom/f706f13e33eaf2a04a2002f64d1a923c.png",
+                            "targetType": 0,
+                            "title": "洗油烟机",
+                            "url": "https://jiazheng.daojia.com/common/qkd/complex/45/0/314"
+                        },
+                        {
+                            "categoryId": 0,
+                            "data": [],
+                            "icon": "https://images.daojia.com/operations/jz/banner/%E5%B1%85%E5%AE%B6%E6%B6%88%E6%AF%92%E7%83%AD%E9%97%A8%E6%9C%8D%E5%8A%A1%E5%9B%BE%E6%A0%87.png",
+                            "targetType": 0,
+                            "title": "除菌保洁",
+                            "url": "https://jiazheng.daojia.com/common/qkd/complex/365/0/9093?znsr=allcate"
+                        },
+                        {
+                            "categoryId": 0,
+                            "data": [],
+                            "icon": "https://images.daojia.com/dop/custom/6e09aaa12982a47d5ae1b4f25c63b7fb.png",
+                            "targetType": 0,
+                            "title": "母乳指导",
+                            "url": "https://jiazheng.daojia.com/common/qkd/complex/379/0/9094?znsr=allcate"
+                        },
+                        {
+                            "categoryId": 4002,
+                            "data": [],
+                            "icon": "https://images.daojia.com/dop/custom/5642d353932d4472ea7d91280d66309a.png",
+                            "targetType": 0,
+                            "title": "搬家",
+                            "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=4002&znsr=remen_banjia0716"
+                        },
+                        {
+                            "categoryId": 16001,
+                            "data": [],
+                            "icon": "https://images.daojia.com/dop/custom/4dc1c52d84a437f62c4044ceee2d37ea.png",
+                            "targetType": 0,
+                            "title": "擦玻璃",
+                            "url": "https://jiazheng.daojia.com/common/qkd/complex/41/0/301?viewType=0"
+                        },
+                        {
+                            "categoryId": 5006001,
+                            "data": [],
+                            "icon": "https://images.daojia.com/dop/custom/aab2c1ed7be30a74193e27154432799a.png",
+                            "targetType": 0,
+                            "title": "iphone维修",
+                            "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=5006001"
+                        },
+                        {
+                            "categoryId": 22001006,
+                            "data": [],
+                            "icon": "https://images.daojia.com/dop/custom/af7d16e1a8973129b9e9bf313702f0dd.png",
+                            "targetType": 0,
+                            "title": "修洗衣机",
+                            "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=19001003&znsr=quanbufenlei_xyjwx201903"
+                        },
+                        {
+                            "categoryId": 14006,
+                            "data": [],
+                            "icon": "https://images.daojia.com/dop/custom/b0840f81e1e5061a262edf2e2141428c.png",
+                            "targetType": 0,
+                            "title": "顺丰",
+                            "url": "https://jz-docking.daojia.com/experss/sfexperss"
+                        },
+                        {
+                            "categoryId": 0,
+                            "data": [],
+                            "icon": "https://images.daojia.com/dop/custom/8c51e264d7c54c8f7e5bf81abd8f6c36.png",
+                            "targetType": 0,
+                            "title": "同城货运",
+                            "url": "https://huoyun.daojia.com/user-web-app/index.html?suyun_channel=2089&hmsr=rukou_58TCRM_baoguanglei_58TCAPPrenmen"
+                        },
+                        {
+                            "categoryId": 1007,
+                            "data": [],
+                            "icon": "https://images.daojia.com/dop/custom/9852a8fbee19f2dbaf40ffafaffefd6c.png",
+                            "targetType": 0,
+                            "title": "企业服务",
+                            "url": "http://m.58qf.com/bj?funid=login&preview=preview&serviceType=1002223&lng=&phone=&from=android&location=&dopChannel=1&lat=&cityid=1&location=true"
+                        }
+                    ],
+                    "targetType": 0,
+                    "title": "热门",
+                    "url": ""
+                }],
+                "icon": "https://images.daojia.com/dop/custom/5a952150c8468abbf392808776f03077.png",
+                "imgUrl": "https://images.daojia.com/dop/custom/9ae5199ea57920870ee5fd1a215ab9d6.png",
+                "targetType": 0,
+                "title": "热门",
+                "url": ""
+            },
+            {
+                "categoryId": 10001256,
+                "data": [{
+                        "categoryId": 1095612028657475584,
+                        "data": [{
+                                "categoryId": 1001,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/3d1fa4cac2b9ca14b0cecde02828da6a.png",
+                                "targetType": 0,
+                                "title": "日常保洁",
+                                "url": "https://jiazheng.daojia.com/clean/h5/cleanIndex?hmsr=58dj_app&znsr=allcage"
+                            },
+                            {
+                                "categoryId": 1003,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/de83b856b829d9aa5a239b20e43d024e.png",
+                                "targetType": 0,
+                                "title": "周期保洁",
+                                "url": "https://jiazheng.daojia.com/clean/h5/cleanIndex?hmsr=58dj_app&znsr=allcage"
+                            },
+                            {
+                                "categoryId": 1002,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/90c8e912677c6137f1147804967486ff.png",
+                                "targetType": 0,
+                                "title": "深度保洁",
+                                "url": "https://jiazheng.daojia.com/clean/h5/cleanIndex?hmsr=58dj_app&znsr=allcage"
+                            },
+                            {
+                                "categoryId": 1005,
+                                "data": [],
+                                "icon": "https://images.daojia.com/operations/jz/banner/%E5%B1%85%E5%AE%B6%E6%B6%88%E6%AF%92%E7%83%AD%E9%97%A8%E6%9C%8D%E5%8A%A1%E5%9B%BE%E6%A0%87.png",
+                                "targetType": 0,
+                                "title": "居家消毒",
+                                "url": "https://jiazheng.daojia.com/common/qkd/complex/365/0/9093?znsr=allcate"
+                            }
+                        ],
+                        "targetType": 0,
+                        "title": "日常保洁",
+                        "url": ""
+                    },
+                    {
+                        "categoryId": 1095613013861605376,
+                        "data": [{
+                                "categoryId": 22001003,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/ccd022a3ccdefee72bc10b42520ab686.png",
+                                "targetType": 0,
+                                "title": "空调",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=22001003"
+                            },
+                            {
+                                "categoryId": 0,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/ccd022a3ccdefee72bc10b42520ab686.png",
+                                "targetType": 0,
+                                "title": "空调",
+                                "url": "https://jiazheng.daojia.com/clean/kongtiaoqx?usingwkwebview=true"
+                            },
+                            {
+                                "categoryId": 22001001,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/b110c532cba52a762482325083fe961e.png",
+                                "targetType": 0,
+                                "title": "油烟机",
+                                "url": "http://s.daojia.com/1ngO-v"
+                            },
+                            {
+                                "categoryId": 0,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/b110c532cba52a762482325083fe961e.png",
+                                "targetType": 0,
+                                "title": "油烟机",
+                                "url": "https://jiazheng.daojia.com/clean/youyanjiqx?usingwkwebview=true"
+                            },
+                            {
+                                "categoryId": 22001006,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/f9e45f1a2159e749cab6ec04ccd8ed80.png",
+                                "targetType": 0,
+                                "title": "洗衣机",
+                                "url": "http://s.daojia.com/1ngRMF"
+                            },
+                            {
+                                "categoryId": 0,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/f9e45f1a2159e749cab6ec04ccd8ed80.png",
+                                "targetType": 0,
+                                "title": "洗衣机",
+                                "url": "https://jiazheng.daojia.com/clean/xiyijiqx?usingwkwebview=true"
+                            },
+                            {
+                                "categoryId": 22001007,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/b77824241a68f43c71bc0aadc39c2d80.png",
+                                "targetType": 0,
+                                "title": "热水器",
+                                "url": "http://s.daojia.com/1ngTl1"
+                            },
+                            {
+                                "categoryId": 22001004,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/d8adca1857e0467c954ccd22cf0f262c.png",
+                                "targetType": 0,
+                                "title": "冰箱",
+                                "url": "http://s.daojia.com/1ngMEa"
+                            },
+                            {
+                                "categoryId": 0,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/d8adca1857e0467c954ccd22cf0f262c.png",
+                                "targetType": 0,
+                                "title": "冰箱",
+                                "url": "https://jiazheng.daojia.com/clean/bingxiangqx?usingwkwebview=true"
+                            },
+                            {
+                                "categoryId": 22001009,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/e8c7b508b4e37a1157621a28a882f381.png",
+                                "targetType": 0,
+                                "title": "饮水机",
+                                "url": "http://s.daojia.com/1ngTB9"
+                            },
+                            {
+                                "categoryId": 22001005,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/4855a54d00f89ed7279efd06b473b391.png",
+                                "targetType": 0,
+                                "title": "微波炉",
+                                "url": "http://s.daojia.com/1ngThd"
+                            }
+                        ],
+                        "targetType": 0,
+                        "title": "家电清洗",
+                        "url": ""
+                    },
+                    {
+                        "categoryId": 1095613447577804800,
+                        "data": [{
+                                "categoryId": 22002001,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/f1881f203e2a252bdaa6eacb0ad5741b.png",
+                                "targetType": 0,
+                                "title": "擦玻璃",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=22002001"
+                            },
+                            {
+                                "categoryId": 0,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/f1881f203e2a252bdaa6eacb0ad5741b.png",
+                                "targetType": 0,
+                                "title": "擦玻璃",
+                                "url": "https://jiazheng.daojia.com/clean/caboli?usingwkwebview=true"
+                            },
+                            {
+                                "categoryId": 22002002,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/06ef0abbf4cfff0fbdc7a9d7ad523822.png",
+                                "targetType": 0,
+                                "title": "洗纱窗",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=22002002"
+                            },
+                            {
+                                "categoryId": 22002003,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/31f75c49795332e7beffb173e4fdffd6.png",
+                                "targetType": 0,
+                                "title": "洗窗帘",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=22002003"
+                            },
+                            {
+                                "categoryId": 22002004,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/866a05871dfff57c8c8d9e2308a57e0f.png",
+                                "targetType": 0,
+                                "title": "灯具清洗",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=22002004"
+                            },
+                            {
+                                "categoryId": 22002005,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/4f709e076eae2bc79fb4e5ffe397dcb5.png",
+                                "targetType": 0,
+                                "title": "床垫清洗",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=22002005"
+                            },
+                            {
+                                "categoryId": 22002006,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/04a4e82e5929ba9310d7ab5230b49c61.png",
+                                "targetType": 0,
+                                "title": "地毯清洗",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=22002006"
+                            }
+                        ],
+                        "targetType": 0,
+                        "title": "家居清洁",
+                        "url": ""
+                    },
+                    {
+                        "categoryId": 1095613864952995840,
+                        "data": [{
+                                "categoryId": 22003001,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/167b0e39e9ec3a6de2d03ea1b6f644d5.png",
+                                "targetType": 0,
+                                "title": "家具保养",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=22003001"
+                            },
+                            {
+                                "categoryId": 22003002,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/4cbb75cf03cb2a8efba41646d4507edb.png",
+                                "targetType": 0,
+                                "title": "沙发保养",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=22003002"
+                            },
+                            {
+                                "categoryId": 22003003,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/9e466a0e5ac4f918e2abb37e5ab68934.png",
+                                "targetType": 0,
+                                "title": "墙面保养",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=22003003"
+                            },
+                            {
+                                "categoryId": 22003004,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/f711159be67438fb56d87fc0feee7f46.png",
+                                "targetType": 0,
+                                "title": "地板打蜡",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=22003004"
+                            },
+                            {
+                                "categoryId": 22003005,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/55c72f6aa377c7136e1c38d6feda68fa.png",
+                                "targetType": 0,
+                                "title": "瓷砖美缝",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=22003005"
+                            },
+                            {
+                                "categoryId": 22003006,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/529af7aefa8f6341badf935a0d5dc377.png",
+                                "targetType": 0,
+                                "title": "地暖清洗",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=22003006"
+                            }
+                        ],
+                        "targetType": 0,
+                        "title": "家居保养",
+                        "url": ""
+                    },
+                    {
+                        "categoryId": 1095614179123142656,
+                        "data": [{
+                                "categoryId": 22004001,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/4dbc60b04052c42fc8f21b7872424d08.png",
+                                "targetType": 0,
+                                "title": "房屋消毒",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=22004001"
+                            },
+                            {
+                                "categoryId": 22004002,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/10e8f44b9802f2a9a0af8bd878d4fcf9.png",
+                                "targetType": 0,
+                                "title": "除甲醛",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=22004002"
+                            },
+                            {
+                                "categoryId": 22004003,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/48e342e7805df284db0048b46bd8bd5f.png",
+                                "targetType": 0,
+                                "title": "除异味",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=22004003"
+                            },
+                            {
+                                "categoryId": 22004004,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/b7169a3cd8a6075251e0c508fc7f8954.png",
+                                "targetType": 0,
+                                "title": "甲醛检测",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=22004004"
+                            }
+                        ],
+                        "targetType": 0,
+                        "title": "空气治理",
+                        "url": ""
+                    },
+                    {
+                        "categoryId": 1095614352134119424,
+                        "data": [{
+                                "categoryId": 22005001,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/97eac4faa09954d311b02499b5f4c6a3.png",
+                                "targetType": 0,
+                                "title": "除虫灭鼠",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=22005001"
+                            },
+                            {
+                                "categoryId": 22005002,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/1b8e76c1f6de125a0a5957e13c474d56.png",
+                                "targetType": 0,
+                                "title": "除螨虫",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=22005002"
+                            }
+                        ],
+                        "targetType": 0,
+                        "title": "除虫除螨",
+                        "url": ""
+                    }
+                ],
+                "icon": " ",
+                "imgUrl": "https://static.daojia.com/assets/project/dj-weapp/images/headImg/baojie.png",
+                "targetType": 0,
+                "title": "保洁清洗",
+                "url": ""
+            },
+            {
+                "categoryId": 10001216,
+                "data": [{
+                    "categoryId": 1095616171425931264,
+                    "data": [{
+                            "categoryId": 2,
+                            "data": [],
+                            "icon": "https://images.daojia.com/dop/custom/40e170c3d40b66dc3eb2fd8774ae04ba.png",
+                            "targetType": 0,
+                            "title": "保姆",
+                            "url": "https://jiazheng.daojia.com/user/h5/filter/index/serviceintroduce?usingwkwebview=true&hmsr=dj-58dj_djapp_qbfw_bmys"
+                        },
+                        {
+                            "categoryId": 2,
+                            "data": [],
+                            "icon": "https://images.daojia.com/dop/custom/88f0ede36f781eb21040c0566b0621fd.png",
+                            "targetType": 0,
+                            "title": "月嫂",
+                            "url": "https://m.daojia.com/adapturl/?busitype=yuesao&systemid=2&domain=1&__partner=djapp&hmsr=dj-58dj_djapp_qbfw_bmys"
+                        },
+                        {
+                            "categoryId": 2,
+                            "data": [],
+                            "icon": "https://images.daojia.com/dop/custom/0d2fab0fded8b89323e36cb37abb48c5.png",
+                            "targetType": 0,
+                            "title": "育儿嫂",
+                            "url": "https://m.daojia.com/adapturl/?busitype=yuersao&systemid=2&domain=1&__partner=djapp&hmsr=dj-58dj_djapp_qbfw_bmys"
+                        }
+                    ],
+                    "targetType": 0,
+                    "title": "保姆月嫂",
+                    "url": ""
+                }],
+                "icon": "  ",
+                "imgUrl": "https://static.daojia.com/assets/project/dj-weapp/images/headImg/bmys.png",
+                "targetType": 0,
+                "title": "保姆月嫂",
+                "url": ""
+            },
+            {
+                "categoryId": 1001275,
+                "data": [{
+                    "categoryId": 935411720099733504,
+                    "data": [{
+                            "categoryId": 4001,
+                            "data": [],
+                            "icon": "https://images.daojia.com/dop/custom/bf23cd8b952c886ec7ffe270f1448037.png",
+                            "targetType": 0,
+                            "title": "普通搬家",
+                            "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=4002"
+                        },
+                        {
+                            "categoryId": 4002006,
+                            "data": [],
+                            "icon": "https://images.daojia.com/dop/custom/7eeb44daf9db09965d200066d20270a6.png",
+                            "targetType": 0,
+                            "title": "日式搬家",
+                            "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=4002006"
+                        },
+                        {
+                            "categoryId": 4002008,
+                            "data": [],
+                            "icon": "https://images.daojia.com/dop/custom/301469582a304f258c95e38afc18a098.png",
+                            "targetType": 0,
+                            "title": "跨省搬家",
+                            "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=4002008"
+                        },
+                        {
+                            "categoryId": 4002007,
+                            "data": [],
+                            "icon": "https://images.daojia.com/dop/custom/d084a2f14a327d3b7ad569b509abad6a.png",
+                            "targetType": 0,
+                            "title": "企业搬家",
+                            "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=4002007"
+                        }
+                    ],
+                    "targetType": 0,
+                    "title": "搬家",
+                    "url": ""
+                }],
+                "icon": "  ",
+                "imgUrl": "https://static.daojia.com/assets/project/dj-weapp/images/headImg/hybj.png",
+                "targetType": 0,
+                "title": "搬家",
+                "url": ""
+            },
+            {
+                "categoryId": 1001265,
+                "data": [{
+                        "categoryId": 935350648303001600,
+                        "data": [{
+                                "categoryId": 18002002,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/eef40bfca087fca5e8dbe38a96a422fc.png",
+                                "targetType": 0,
+                                "title": "马桶疏通",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=18002002"
+                            },
+                            {
+                                "categoryId": 18002005,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/bf2a3da852574f9c86091d1ae45f0b93.png",
+                                "targetType": 0,
+                                "title": "地漏疏通",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=18002005"
+                            },
+                            {
+                                "categoryId": 18002004,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/4176084e8fa9381271b502bd2284eb41.png",
+                                "targetType": 0,
+                                "title": "洗菜盆疏通",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=18002004"
+                            },
+                            {
+                                "categoryId": 18002003,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/6febc67a2fb5f46dc9a6aac332753357.png",
+                                "targetType": 0,
+                                "title": "洗手盆疏通",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=18002003"
+                            },
+                            {
+                                "categoryId": 18002001,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/1b5dee2bbe1503ae542c607067544be1.png",
+                                "targetType": 0,
+                                "title": "浴缸疏通",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=18002001"
+                            },
+                            {
+                                "categoryId": 18002008,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/e46adf1cf6d2bb4504be3024ba3fdc7b.png",
+                                "targetType": 0,
+                                "title": "蹲坑疏通",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=18002008"
+                            },
+                            {
+                                "categoryId": 18002009,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/d4d12bdbb6cd3120ef9f42100fcad643.png",
+                                "targetType": 0,
+                                "title": "小便池疏通",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=18002009"
+                            }
+                        ],
+                        "targetType": 0,
+                        "title": "管道疏通",
+                        "url": ""
+                    },
+                    {
+                        "categoryId": 935350435660177408,
+                        "data": [{
+                                "categoryId": 0,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/189ab6dd26561ab1168bc6108d8ef6cc.png",
+                                "targetType": 0,
+                                "title": "门窗锁",
+                                "url": "https://m-dop.daojia.com/user/order/rob/index?instantType=1&serviceId=5788&hmsr=&znsr=#/order"
+                            },
+                            {
+                                "categoryId": 18001002,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/a979ef37a4b70542ee4a3b7212984bc8.png",
+                                "targetType": 0,
+                                "title": "智能锁",
+                                "url": "https://m-dop.daojia.com/user/order/rob/index?instantType=1&serviceId=6041&hmsr=&znsr=#/order"
+                            },
+                            {
+                                "categoryId": 18001003,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/ca1262c5655e16f2f5aecf9a414adf2b.png",
+                                "targetType": 0,
+                                "title": "汽车锁",
+                                "url": "https://m-dop.daojia.com/user/order/rob/index?instantType=1&serviceId=5790&hmsr=&znsr=#/order"
+                            },
+                            {
+                                "categoryId": 18001004,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/70f226829e60c1a9cb44b0a8d1a2dd45.png",
+                                "targetType": 0,
+                                "title": "保险柜锁",
+                                "url": "https://m-dop.daojia.com/user/order/rob/index?instantType=1&serviceId=5791&hmsr=&znsr=#/order"
+                            },
+                            {
+                                "categoryId": 18001005,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/34bf0d66dfb7517478dad4491988611a.png",
+                                "targetType": 0,
+                                "title": "地锁",
+                                "url": "https://m-dop.daojia.com/user/order/rob/index?instantType=1&serviceId=5792&hmsr=&znsr=#/order"
+                            }
+                        ],
+                        "targetType": 0,
+                        "title": "开锁换锁",
+                        "url": ""
+                    },
+                    {
+                        "categoryId": 935350794797457408,
+                        "data": [{
+                                "categoryId": 18003001,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/fa7d2fbe08d725c20227a9a99ad749b0.png",
+                                "targetType": 0,
+                                "title": "龙头维修",
+                                "url": "https://m-dop.daojia.com/user/order/rob/index?instantType=7&serviceId=527&znsr=app_allcage&indexChange=3"
+                            },
+                            {
+                                "categoryId": 18003002,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/157e5de6a75b3a62b73bc827ff7da818.png",
+                                "targetType": 0,
+                                "title": "水管维修",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=18003002"
+                            },
+                            {
+                                "categoryId": 18003003,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/c877b2b22c9b0e0c8e8eacb8a537dab5.png",
+                                "targetType": 0,
+                                "title": "阀门维修",
+                                "url": "https://m-dop.daojia.com/user/order/rob/index?instantType=7&serviceId=5800&znsr=app_allcage&indexChange=3"
+                            },
+                            {
+                                "categoryId": 18003006,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/44b5dbc7326a6ab853635bf98c81e50a.png",
+                                "targetType": 0,
+                                "title": "水路改造",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=18003006"
+                            }
+                        ],
+                        "targetType": 0,
+                        "title": "水路维修",
+                        "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=18003"
+                    },
+                    {
+                        "categoryId": 935350914829918208,
+                        "data": [{
+                                "categoryId": 18004002,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/9da476c604310b5beec6886952255cff.png",
+                                "targetType": 0,
+                                "title": "开关维修",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=18004002"
+                            },
+                            {
+                                "categoryId": 18004003,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/91d559d4f2ad35bc89588190d969bcef.png",
+                                "targetType": 0,
+                                "title": "插座维修",
+                                "url": "https://m-dop.daojia.com/user/order/rob/index?instantType=6&serviceId=5804&znsr=app_allcage&indexChange=3"
+                            },
+                            {
+                                "categoryId": 0,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/543f775635249d6fca289723d7ce1492.png",
+                                "targetType": 0,
+                                "title": "灯具维修",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=180060010"
+                            },
+                            {
+                                "categoryId": 18004009,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/5a2f6e560644e4294aa3ed89ed099f07.png",
+                                "targetType": 0,
+                                "title": "电路改造",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=18004009"
+                            }
+                        ],
+                        "targetType": 0,
+                        "title": "电路维修",
+                        "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=18004"
+                    },
+                    {
+                        "categoryId": 935351552519446528,
+                        "data": [{
+                                "categoryId": 18007007,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/5155853720578a7e039bde7242937fd0.png",
+                                "targetType": 0,
+                                "title": "马桶维修",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=18007007"
+                            },
+                            {
+                                "categoryId": 0,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/345a82f9691da074160e9e1a01fdd77d.png",
+                                "targetType": 0,
+                                "title": "地漏维修",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=18003007"
+                            },
+                            {
+                                "categoryId": 18007004,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/9db4eee7da5f1d46b050f91e0b74f88f.png",
+                                "targetType": 0,
+                                "title": "洗手盆维修",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=18007004"
+                            },
+                            {
+                                "categoryId": 0,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/fd1f23e1330f1ab4ff76213912185e6d.png",
+                                "targetType": 0,
+                                "title": "淋浴花洒维修",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=18003008"
+                            },
+                            {
+                                "categoryId": 0,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/fb5f00af2185651af5c2743ff00d93db.png",
+                                "targetType": 0,
+                                "title": "浴霸维修",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=18004008"
+                            },
+                            {
+                                "categoryId": 18007005,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/86c530059dd880a729f0c588c98dad23.png",
+                                "targetType": 0,
+                                "title": "浴缸维修",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=18007005"
+                            },
+                            {
+                                "categoryId": 0,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/1faaf31f637b138805bd4f20cd7f4783.png",
+                                "targetType": 0,
+                                "title": "换气扇维修",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=18004007"
+                            },
+                            {
+                                "categoryId": 18007010,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/67476f7ba082422e3e346a14f3a39d85.png",
+                                "targetType": 0,
+                                "title": "淋浴房维修",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=18007010"
+                            },
+                            {
+                                "categoryId": 18007002,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/845b16d1237928704ec094933fcb4551.png",
+                                "targetType": 0,
+                                "title": "其他厨卫维修",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=18007002"
+                            }
+                        ],
+                        "targetType": 0,
+                        "title": "厨卫洁具",
+                        "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=18007"
+                    },
+                    {
+                        "categoryId": 935351737110765568,
+                        "data": [{
+                                "categoryId": 0,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/2b3c5d1afaf547b3eb5efbff895a1a29.png",
+                                "targetType": 0,
+                                "title": "门及配件",
+                                "url": "https://m-dop.daojia.com/user/order/rob/index?instantType=4&znsr=app_dalei&indexChange=1"
+                            },
+                            {
+                                "categoryId": 0,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/4e79286e6ca595cc1bd557b15c122ed5.png",
+                                "targetType": 0,
+                                "title": "窗及配件",
+                                "url": "https://m-dop.daojia.com/user/order/rob/index?instantType=4&znsr=app_dalei&indexChange=2"
+                            },
+                            {
+                                "categoryId": 0,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/0449f9471165a74f5a9a12568fa071e5.png",
+                                "targetType": 0,
+                                "title": "柜及配件",
+                                "url": "https://m-dop.daojia.com/user/order/rob/index?instantType=4&znsr=app_dalei&indexChange=3"
+                            },
+                            {
+                                "categoryId": 0,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/793d318ae215101d19883a807e559d89.png",
+                                "targetType": 0,
+                                "title": "窗帘杆维修",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=18006007"
+                            },
+                            {
+                                "categoryId": 0,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/9e49c56d6a8af826d4f2d693f8dc8e44.png",
+                                "targetType": 0,
+                                "title": "晾衣架维修",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=18006006"
+                            },
+                            {
+                                "categoryId": 18006009,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/6c087d759dd179b93e53abc362071d13.png",
+                                "targetType": 0,
+                                "title": "地暖清洗维修",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=18006009"
+                            },
+                            {
+                                "categoryId": 0,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/b683d47adc6b4edc8ee6e37c22e0fccd.png",
+                                "targetType": 0,
+                                "title": "玻璃换装",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=18008012"
+                            },
+                            {
+                                "categoryId": 0,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/e80395b64f6a70274a1d3942753f7996.png",
+                                "targetType": 0,
+                                "title": "纱窗换新",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=18008003"
+                            },
+                            {
+                                "categoryId": 0,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/be749c412273da698929c0bc94d9cabe.png",
+                                "targetType": 0,
+                                "title": "五金配件维修",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=18006004"
+                            }
+                        ],
+                        "targetType": 0,
+                        "title": "门窗家具",
+                        "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=18008"
+                    },
+                    {
+                        "categoryId": 935351915297251328,
+                        "data": [{
+                                "categoryId": 18009001,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/0897a2af09c2cf3fc99f26eed328f5ed.png",
+                                "targetType": 0,
+                                "title": "墙面刷新",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=18009001"
+                            },
+                            {
+                                "categoryId": 18009006,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/f2f0e278dcd6e12e8795ac2f01c80fce.png",
+                                "targetType": 0,
+                                "title": "壁纸软包",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=18009006"
+                            },
+                            {
+                                "categoryId": 18009008,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/c823d00b446bf3934750262375e0bf55.png",
+                                "targetType": 0,
+                                "title": "打孔",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=18009008"
+                            },
+                            {
+                                "categoryId": 18009002,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/03fb6bd5f2791d4ae3679285d22f3789.png",
+                                "targetType": 0,
+                                "title": "地板维修",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=18009002"
+                            },
+                            {
+                                "categoryId": 18009005,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/43133ef02f7a52b4d3a7af0399568039.png",
+                                "targetType": 0,
+                                "title": "瓷砖维修",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=18009005"
+                            }
+                        ],
+                        "targetType": 0,
+                        "title": "墙面地面",
+                        "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=18009"
+                    },
+                    {
+                        "categoryId": 935351029695258624,
+                        "data": [{
+                                "categoryId": 0,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/505fc7bdfea6bcd00c0b6b2c63c5efc9.png",
+                                "targetType": 0,
+                                "title": "厨卫防水",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=18107&productSpecItemVoList=%5b%22%7b%5c%22key%5c%22%3a2768%2c%5c%22value%5c%22%3a2769%7d%22%5d#/"
+                            },
+                            {
+                                "categoryId": 0,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/3466c50fab3814f155dc13c4fd72a9b5.png",
+                                "targetType": 0,
+                                "title": "阳台防水",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=18107&productSpecItemVoList=%5b%22%7b%5c%22key%5c%22%3a2768%2c%5c%22value%5c%22%3a2770%7d%22%5d#/"
+                            },
+                            {
+                                "categoryId": 0,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/613116bf8d248091d76f29b12143596d.png",
+                                "targetType": 0,
+                                "title": "外墙防水",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=18107&productSpecItemVoList=%5b%22%7b%5c%22key%5c%22%3a2768%2c%5c%22value%5c%22%3a2771%7d%22%5d#/"
+                            },
+                            {
+                                "categoryId": 0,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/fb4485adf5a746912f2312720e8f3dfa.png",
+                                "targetType": 0,
+                                "title": "房屋漏水",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=18107&productSpecItemVoList=%5b%22%7b%5c%22key%5c%22%3a2768%2c%5c%22value%5c%22%3a2772%7d%22%5d#/"
+                            }
+                        ],
+                        "targetType": 0,
+                        "title": "防水治漏",
+                        "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=18005"
+                    },
+                    {
+                        "categoryId": 935352053231132672,
+                        "data": [{
+                                "categoryId": 18010001,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/aedcc05d3b879978fb40c665be495acf.png",
+                                "targetType": 0,
+                                "title": "除虫灭鼠",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=18010001"
+                            },
+                            {
+                                "categoryId": 18010002,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/aa15320b1f6e200875be30b344786bc5.png",
+                                "targetType": 0,
+                                "title": "除甲醛",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=22004002"
+                            },
+                            {
+                                "categoryId": 18010004,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/a66504002ddbd06587b0b407b82a9af4.png",
+                                "targetType": 0,
+                                "title": "除异味",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=18010004"
+                            }
+                        ],
+                        "targetType": 0,
+                        "title": "环保除虫",
+                        "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=18010"
+                    },
+                    {
+                        "categoryId": 935352210110685184,
+                        "data": [{
+                                "categoryId": 18011002,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/3f10f0dec9698c1e2d3dbe8b6ba8da2c.png",
+                                "targetType": 0,
+                                "title": "家具拆除",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=18011002"
+                            },
+                            {
+                                "categoryId": 18011004,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/f1ef8f7ac285f352b6c3fff86cf70180.png",
+                                "targetType": 0,
+                                "title": "家电拆除",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=18011004"
+                            },
+                            {
+                                "categoryId": 18011005,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/b461bed98603d0432fda29c51e427081.png",
+                                "targetType": 0,
+                                "title": "装修拆除",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=18011005"
+                            },
+                            {
+                                "categoryId": 18011006,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/32c53e9a5b843d688dda141019545d86.png",
+                                "targetType": 0,
+                                "title": "垃圾清运",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=18011006"
+                            }
+                        ],
+                        "targetType": 0,
+                        "title": "拆旧清运",
+                        "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=18011"
+                    }
+                ],
+                "icon": "https://images.daojia.com/dop/custom/da57fa2bf90178446c273bee032ae49f.png",
+                "imgUrl": "https://images.daojia.com/dop/custom/e4633a332e8b9c7170f5f3bd61fe2287.png",
+                "targetType": 0,
+                "title": "房屋维修",
+                "url": ""
+            },
+            {
+                "categoryId": 10001262,
+                "data": [{
+                        "categoryId": 934992723130589184,
+                        "data": [{
+                                "categoryId": 19001001,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/f3796804028db4efc5e7128e4d0788e2.png",
+                                "targetType": 0,
+                                "title": "空调维修",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=19001001"
+                            },
+                            {
+                                "categoryId": 0,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/f3796804028db4efc5e7128e4d0788e2.png",
+                                "targetType": 0,
+                                "title": "空调加氟",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=19001012"
+                            },
+                            {
+                                "categoryId": 19001002,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/883e3812c41ea1aca79be3e6945b08e4.png",
+                                "targetType": 0,
+                                "title": "冰箱维修",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=19001002"
+                            },
+                            {
+                                "categoryId": 19001003,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/4307a0245645b557193935f63956269e.png",
+                                "targetType": 0,
+                                "title": "洗衣机维修",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=19001003"
+                            },
+                            {
+                                "categoryId": 19001005,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/27b7923a11285e7cf619aa86697fa94e.png",
+                                "targetType": 0,
+                                "title": "电视维修",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=19001005"
+                            },
+                            {
+                                "categoryId": 19001011,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/69ebc3cff595674e3cb9d1c6e6f49aad.png",
+                                "targetType": 0,
+                                "title": "燃气热水器",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=19001011"
+                            },
+                            {
+                                "categoryId": 19001004,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/a0f949b0ee99ecee7737ede49e7d75a8.png",
+                                "targetType": 0,
+                                "title": "电热水器维修",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=19001004"
+                            }
+                        ],
+                        "targetType": 0,
+                        "title": "大家电维修",
+                        "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=19"
+                    },
+                    {
+                        "categoryId": 935049558449594368,
+                        "data": [{
+                                "categoryId": 19004014,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/9a2c0276994accb50a0f9dd51812781d.png",
+                                "targetType": 0,
+                                "title": "油烟机维修",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=19004014"
+                            },
+                            {
+                                "categoryId": 19004002,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/2ba76ee9bc9ebb5631ff9945a363c7c7.png",
+                                "targetType": 0,
+                                "title": "微波炉维修",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=19004002"
+                            },
+                            {
+                                "categoryId": 19004015,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/34b7da7ae233b481e1a27cf65d97f582.png",
+                                "targetType": 0,
+                                "title": "燃气灶维修",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=19004015"
+                            },
+                            {
+                                "categoryId": 19003002,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/a463c14dbe25d72321e02ef5be057f8c.png",
+                                "targetType": 0,
+                                "title": "净水器维修",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=19003002"
+                            },
+                            {
+                                "categoryId": 19004004,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/4c238ce2e798f0b4b8c4a4aa0b7d0430.png",
+                                "targetType": 0,
+                                "title": "电饭煲维修",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=19004004"
+                            },
+                            {
+                                "categoryId": 19007,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/af4e26089eecfca19fd5a97f5f82e12b.png",
+                                "targetType": 0,
+                                "title": "其他厨卫家电",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=19007"
+                            }
+                        ],
+                        "targetType": 0,
+                        "title": "厨卫家电维修",
+                        "url": ""
+                    },
+                    {
+                        "categoryId": 935050292742201344,
+                        "data": [{
+                                "categoryId": 19003006,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/e869764a8ef582b2c989b7842d2d803a.png",
+                                "targetType": 0,
+                                "title": "饮水机维修",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=19003006"
+                            },
+                            {
+                                "categoryId": 19003001,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/1ed2811330818216a6695262a056004b.png",
+                                "targetType": 0,
+                                "title": "净化器维修",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=19003001"
+                            },
+                            {
+                                "categoryId": 19003007,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/b314aa4a158556dfa9a4cb71d81d6c8c.png",
+                                "targetType": 0,
+                                "title": "取暖电器维修",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=19003007"
+                            },
+                            {
+                                "categoryId": 19008,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/67af2338de5c13bc83350cce83ba61c0.png",
+                                "targetType": 0,
+                                "title": "其他生活电器",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=19008"
+                            }
+                        ],
+                        "targetType": 0,
+                        "title": "生活家电维修",
+                        "url": ""
+                    },
+                    {
+                        "categoryId": 935051587326713856,
+                        "data": [{
+                                "categoryId": 22001003,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/0712d5264427d564e67037abece724fa.png",
+                                "targetType": 0,
+                                "title": "空调清洗",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=22001003"
+                            },
+                            {
+                                "categoryId": 22001004,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/f80aea001ce84f4920d576cca93e9af6.png",
+                                "targetType": 0,
+                                "title": "冰箱清洗",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=22001004"
+                            },
+                            {
+                                "categoryId": 22001006,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/1f27d3504a683b97199e2e3566f7fd01.png",
+                                "targetType": 0,
+                                "title": "洗衣机清洗",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=22001006"
+                            },
+                            {
+                                "categoryId": 22001008,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/20b0fd3ba009f6f99abd39278f1d64e4.png",
+                                "targetType": 0,
+                                "title": "热水器清洗",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=22001008"
+                            },
+                            {
+                                "categoryId": 19002009,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/386373ad11d9df58a09179d0f323e502.png",
+                                "targetType": 0,
+                                "title": "燃气灶清洗",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=22001002"
+                            },
+                            {
+                                "categoryId": 22001009,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/3c7df6ce99dd1ee50fc19f82434d1bc6.png",
+                                "targetType": 0,
+                                "title": "饮水机清洗",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=22001009"
+                            },
+                            {
+                                "categoryId": 22001005,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/f6c0bc778758931691ef9fd3ea2baa7e.png",
+                                "targetType": 0,
+                                "title": "微波炉清洗",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=22001005"
+                            },
+                            {
+                                "categoryId": 19009,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/7942281215c3b86708eb0f64f2057ae7.png",
+                                "targetType": 0,
+                                "title": "其他家电清洗",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=19009"
+                            }
+                        ],
+                        "targetType": 0,
+                        "title": "家电清洗",
+                        "url": ""
+                    },
+                    {
+                        "categoryId": 935052079993987072,
+                        "data": [{
+                                "categoryId": 18011004,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/febff8b1d12fdbdfb31129d1117dc712.png",
+                                "targetType": 0,
+                                "title": "家电拆除",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=18011004"
+                            },
+                            {
+                                "categoryId": 14001007,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/27a34909eb9d5b953ecf14a6be237660.png",
+                                "targetType": 0,
+                                "title": "家电回收",
+                                "url": "https://yxypshop.yxianypin.com/recycle/index/home-index?from=singlemessage&isappinstalled=0"
+                            }
+                        ],
+                        "targetType": 0,
+                        "title": "更多家电服务",
+                        "url": ""
+                    }
+                ],
+                "icon": "https://images.daojia.com/dop/custom/ee12cd82031c1fe67c35f60464d5ee06.png",
+                "imgUrl": "https://images.daojia.com/dop/custom/ec67e08bfc666daf11af96d210d8820d.png",
+                "targetType": 0,
+                "title": "家电维修",
+                "url": ""
+            },
+            {
+                "categoryId": 10001265,
+                "data": [{
+                        "categoryId": 935351292036390912,
+                        "data": [{
+                                "categoryId": 5005003,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/5972b88818b2b6abcc144000590bc296.png",
+                                "targetType": 0,
+                                "title": "电脑维修",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=5005003"
+                            },
+                            {
+                                "categoryId": 5005009,
+                                "data": [],
+                                "icon": "",
+                                "targetType": 0,
+                                "title": "重装系统",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=5005003"
+                            },
+                            {
+                                "categoryId": 5005005,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/c2c54d70faa7f1c14856b01c4f0226e3.png",
+                                "targetType": 0,
+                                "title": "平板电脑",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=5005005"
+                            }
+                        ],
+                        "targetType": 0,
+                        "title": "电脑维修",
+                        "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=5005"
+                    },
+                    {
+                        "categoryId": 935350708898111488,
+                        "data": [{
+                                "categoryId": 5006001,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/aab2c1ed7be30a74193e27154432799a.png",
+                                "targetType": 0,
+                                "title": "iPhone维修",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=5006001"
+                            },
+                            {
+                                "categoryId": 5006005,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/091f2859c0322ffcb59b23d367681189.png",
+                                "targetType": 0,
+                                "title": "华为维修",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=5006005"
+                            },
+                            {
+                                "categoryId": 5006004,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/3a1183549d5e3ff7486e9f34e2d7fca1.png",
+                                "targetType": 0,
+                                "title": "小米维修",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=5006004"
+                            },
+                            {
+                                "categoryId": 5006002,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/c1d382860b5f6fc14af77832adf13b7c.png",
+                                "targetType": 0,
+                                "title": "三星维修",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=5006002"
+                            },
+                            {
+                                "categoryId": 5006008,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/3c10c232f1a1b70f3b0d8e38c0567184.png",
+                                "targetType": 0,
+                                "title": "OPPO维修",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=5006008"
+                            },
+                            {
+                                "categoryId": 5006003,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/7faea595642dae64f8edb422e517464a.png",
+                                "targetType": 0,
+                                "title": "魅族维修",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=5006003"
+                            },
+                            {
+                                "categoryId": 5006006,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/74a11de2b8b52bbc8b3df2716f671cf8.png",
+                                "targetType": 0,
+                                "title": "vivo维修",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=5006006"
+                            },
+                            {
+                                "categoryId": 5006013,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/37dadf582fc5d8d50f0da6be8ae78ec3.png",
+                                "targetType": 0,
+                                "title": "其他手机维修",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=5006013"
+                            }
+                        ],
+                        "targetType": 0,
+                        "title": "手机维修",
+                        "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=5006"
+                    },
+                    {
+                        "categoryId": 935352466827386880,
+                        "data": [{
+                                "categoryId": 5005004,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/6b4f35d91761345ed70cdaa2f187d803.png",
+                                "targetType": 0,
+                                "title": "网络修复",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=5005004"
+                            },
+                            {
+                                "categoryId": 17010001,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/3f6790ebd0117e9a54760a19f2aca3f4.png",
+                                "targetType": 0,
+                                "title": "打印机维修",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=5009001"
+                            },
+                            {
+                                "categoryId": 5012003,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/54ae8cfb8241f13ea22515b04281bcec.png",
+                                "targetType": 0,
+                                "title": "其他数码维修",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=5012002"
+                            }
+                        ],
+                        "targetType": 0,
+                        "title": "办公维修",
+                        "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=5012"
+                    }
+                ],
+                "icon": "    ",
+                "imgUrl": "https://images.daojia.com/dop/custom/955139325f17a76b635437be08e7ee60.jpg",
+                "targetType": 0,
+                "title": "数码维修",
+                "url": "https://m-dop.daojia.com/user/product/serviceDetail?productId=2246176"
+            },
+            {
+                "categoryId": 1001266,
+                "data": [{
+                        "categoryId": 1078887069809778688,
+                        "data": [{
+                                "categoryId": 17012004,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/5e1f2c690c51d65372773af09f948b14.png",
+                                "targetType": 0,
+                                "title": "水管安装",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?"
+                            },
+                            {
+                                "categoryId": 17012001,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/9bdbe6eef6a4cfd6d512be70cef452af.png",
+                                "targetType": 0,
+                                "title": "龙头安装",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=17012001"
+                            },
+                            {
+                                "categoryId": 17012003,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/aa17d56c16239ae57d33eadbeeb16b93.png",
+                                "targetType": 0,
+                                "title": "阀门安装",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=17012003"
+                            },
+                            {
+                                "categoryId": 17011003,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/addbcd23fef34c9b95e6c63095ce77f8.png",
+                                "targetType": 0,
+                                "title": "开关安装",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=17011003"
+                            },
+                            {
+                                "categoryId": 17011004,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/b1238f8783aab2fc2b4b4af562bb78f1.png",
+                                "targetType": 0,
+                                "title": "插座安装",
+                                "url": "https://m-dop.daojia.com/user/order/rob/index?instantType=6&znsr=app_dalei&indexChange=5&serviceId=6065"
+                            }
+                        ],
+                        "targetType": 0,
+                        "title": "水电安装",
+                        "url": ""
+                    },
+                    {
+                        "categoryId": 935353755686674432,
+                        "data": [{
+                                "categoryId": 17001002,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/4b24392d41d1b12375d845f4cc8a9e9f.png",
+                                "targetType": 0,
+                                "title": "空调安装移机",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=17001002"
+                            },
+                            {
+                                "categoryId": 17001001,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/0fe81e2dc4ca5ea1c2bf84b5f2fa5416.png",
+                                "targetType": 0,
+                                "title": "电视安装",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=17001001"
+                            },
+                            {
+                                "categoryId": 17001004,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/dbf3cb8665d62331956009b369618bac.png",
+                                "targetType": 0,
+                                "title": "热水器安装",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=17001004"
+                            },
+                            {
+                                "categoryId": 17001005,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/b342b311e4b952035e84f2ce7daf7dc5.png",
+                                "targetType": 0,
+                                "title": "油烟机安装",
+                                "url": "https://m-dop.daojia.com/user/order/rob/index?instantType=5&indexChange=3&znsr=app_quanbu_shangmenanzhuang&serviceId=5735"
+                            },
+                            {
+                                "categoryId": 17001006,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/ba46662a5681a9fcaa456c0e7f02b530.png",
+                                "targetType": 0,
+                                "title": "燃气灶安装",
+                                "url": "https://m-dop.daojia.com/user/order/rob/index?instantType=5&indexChange=3&znsr=app_quanbu_shangmenanzhuang&serviceId=5736"
+                            },
+                            {
+                                "categoryId": 17001003,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/385cc134f6563b4b689adf7206833eec.png",
+                                "targetType": 0,
+                                "title": "洗衣机安装",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=17001003"
+                            },
+                            {
+                                "categoryId": 17001013,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/228322db157718d5c71766319c4b627c.png",
+                                "targetType": 0,
+                                "title": "更多家电安装",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=17001013"
+                            }
+                        ],
+                        "targetType": 0,
+                        "title": "家电安装",
+                        "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=17001"
+                    },
+                    {
+                        "categoryId": 935354155705835520,
+                        "data": [{
+                                "categoryId": 17002008,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/eb9340425f5a87019aee32cd85b5b011.png",
+                                "targetType": 0,
+                                "title": "马桶安装",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=17002008"
+                            },
+                            {
+                                "categoryId": 17002012,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/2a82dac472370f241b649a010ab69160.png",
+                                "targetType": 0,
+                                "title": "地漏安装",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=17002012"
+                            },
+                            {
+                                "categoryId": 17002005,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/6a0c09f6eee315651f771e118f3cd686.png",
+                                "targetType": 0,
+                                "title": "洗手盆安装",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=17002005"
+                            },
+                            {
+                                "categoryId": 0,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/05720e4cbd3856b1a5bd01064c951bfb.png",
+                                "targetType": 0,
+                                "title": "淋浴花洒安装",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=17012002"
+                            },
+                            {
+                                "categoryId": 17011002,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/61a46ec40883c47d4995140bfd9dc943.png",
+                                "targetType": 0,
+                                "title": "浴霸安装",
+                                "url": "https://m-dop.daojia.com/user/order/rob/index?instantType=24&selectServiceId=5747&hmsr=&znsr=#/order"
+                            },
+                            {
+                                "categoryId": 17002006,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/3b904f51dfd51c1895522dbbdb038135.png",
+                                "targetType": 0,
+                                "title": "浴缸安装",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=17002006"
+                            },
+                            {
+                                "categoryId": 17002007,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/10c91392df1e703343c0eeff53f60f14.png",
+                                "targetType": 0,
+                                "title": "浴室柜安装",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=17002007"
+                            },
+                            {
+                                "categoryId": 17002011,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/180cd1bb219f767106d6a0095f9fe45c.png",
+                                "targetType": 0,
+                                "title": "淋浴房安装",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=17002011"
+                            },
+                            {
+                                "categoryId": 17002014,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/b39b93404d5ec332a31fda42dfa8e416.png",
+                                "targetType": 0,
+                                "title": "橱柜安装",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=17002014"
+                            },
+                            {
+                                "categoryId": 0,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/25fb8e56b088a50685c1e3747f19c96d.png",
+                                "targetType": 0,
+                                "title": "换气扇安装",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=17011001"
+                            },
+                            {
+                                "categoryId": 17002004,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/7e7b1e587fbe269b97eb0142c74481eb.png",
+                                "targetType": 0,
+                                "title": "洗菜池安装",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=17002004"
+                            }
+                        ],
+                        "targetType": 0,
+                        "title": "厨卫安装",
+                        "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=17002"
+                    },
+                    {
+                        "categoryId": 935354245803679744,
+                        "data": [{
+                                "categoryId": 17003002,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/05656c2fd854e3a65f2bc79555db990a.png",
+                                "targetType": 0,
+                                "title": "吊灯安装",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=17003002"
+                            },
+                            {
+                                "categoryId": 17003001,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/3b49be6c45d86da5710cf42d0cfa9c02.png",
+                                "targetType": 0,
+                                "title": "吸顶灯安装",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=17003001"
+                            },
+                            {
+                                "categoryId": 17003003,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/cbd01e2e6aaa599e327b3605403b3beb.png",
+                                "targetType": 0,
+                                "title": "筒灯/射灯安装",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=17003006"
+                            },
+                            {
+                                "categoryId": 17003004,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/e82a98b0509f82f16ed4429145e8512b.png",
+                                "targetType": 0,
+                                "title": "壁灯安装",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=17003006"
+                            },
+                            {
+                                "categoryId": 17003005,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/41650670657d751e60150171e59823af.png",
+                                "targetType": 0,
+                                "title": "镜前灯安装",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=17003006"
+                            },
+                            {
+                                "categoryId": 17003006,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/c4940efab02b0af3907c849baf6c360f.png",
+                                "targetType": 0,
+                                "title": "其他灯具安装",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=17003006"
+                            }
+                        ],
+                        "targetType": 0,
+                        "title": "灯具安装",
+                        "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=17003"
+                    },
+                    {
+                        "categoryId": 935355278768480256,
+                        "data": [{
+                                "categoryId": 17009003,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/fc50105cc5413a81831f0bc82aff1b99.png",
+                                "targetType": 0,
+                                "title": "窗帘杆安装",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=17009003"
+                            },
+                            {
+                                "categoryId": 17009002,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/b3f4cad13f6e52734671f4482f9192d7.png",
+                                "targetType": 0,
+                                "title": "晾衣架安装",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=17009002"
+                            },
+                            {
+                                "categoryId": 17009004,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/81c5caf69d85091872dd2b82787b7098.png",
+                                "targetType": 0,
+                                "title": "地热暖气安装",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=17009004"
+                            },
+                            {
+                                "categoryId": 0,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/cfb7df6a827ec7fb56b3844ecb9631bf.png",
+                                "targetType": 0,
+                                "title": "五金挂件安装",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=17005005"
+                            }
+                        ],
+                        "targetType": 0,
+                        "title": "窗帘五金",
+                        "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=17009"
+                    },
+                    {
+                        "categoryId": 935354467296485376,
+                        "data": [{
+                                "categoryId": 17005003,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/05eef107d29168b668e68445bb129918.png",
+                                "targetType": 0,
+                                "title": "门安装",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=17005003"
+                            },
+                            {
+                                "categoryId": 17005001,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/c13a9f72009cbd892be607060c33b3c0.png",
+                                "targetType": 0,
+                                "title": "窗户安装",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=17005001"
+                            },
+                            {
+                                "categoryId": 17005002,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/bac939d23bfab48795f0f971784391fd.png",
+                                "targetType": 0,
+                                "title": "纱窗安装",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=17005002"
+                            },
+                            {
+                                "categoryId": 17004003,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/a147672d893231bd9fd9b27cab01a366.png",
+                                "targetType": 0,
+                                "title": "柜类安装",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=17004003"
+                            },
+                            {
+                                "categoryId": 17004004,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/ae5620d4a4ea317879b0c6891297954c.png",
+                                "targetType": 0,
+                                "title": "桌椅凳安装",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=17004004"
+                            },
+                            {
+                                "categoryId": 17004006,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/92e7f31fd96c78598ac4c96c7ec73730.png",
+                                "targetType": 0,
+                                "title": "穿衣镜安装",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=17004006"
+                            },
+                            {
+                                "categoryId": 17004001,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/49cf0653c00a9251bb519a6f4868bac0.png",
+                                "targetType": 0,
+                                "title": "床体安装",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=17004001"
+                            },
+                            {
+                                "categoryId": 17004002,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/e8e0bacb024e29a476ebc9ccefd10860.png",
+                                "targetType": 0,
+                                "title": "沙发安装",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=17004002"
+                            },
+                            {
+                                "categoryId": 17004007,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/e49412a0a1ea1ac609db11d3f1126771.png",
+                                "targetType": 0,
+                                "title": "其他家具安装",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=17004007"
+                            }
+                        ],
+                        "targetType": 0,
+                        "title": "门窗家具安装",
+                        "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=17004"
+                    },
+                    {
+                        "categoryId": 935355067664834560,
+                        "data": [{
+                                "categoryId": 17007001,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/4ac34d184ff4cdf91c024ceb333af4ef.png",
+                                "targetType": 0,
+                                "title": "装饰字画",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=17007001"
+                            },
+                            {
+                                "categoryId": 17007002,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/b5402c430c3cee8907b663418bd3e659.png",
+                                "targetType": 0,
+                                "title": "相框照片",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=17007002"
+                            },
+                            {
+                                "categoryId": 17007004,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/6fa6ecbb852fe1a5bc87da18c39924cf.png",
+                                "targetType": 0,
+                                "title": "节庆饰品",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=17007004"
+                            }
+                        ],
+                        "targetType": 0,
+                        "title": "饰品安装",
+                        "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=17007"
+                    },
+                    {
+                        "categoryId": 935355171058753536,
+                        "data": [{
+                                "categoryId": 17008001,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/53f5ec64156b89c6469040ca69a7b61f.png",
+                                "targetType": 0,
+                                "title": "贴壁纸",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=17008001"
+                            },
+                            {
+                                "categoryId": 17008003,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/7502319bd0f4502f6c1328db565c486d.png",
+                                "targetType": 0,
+                                "title": "地板安装",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=17008003"
+                            },
+                            {
+                                "categoryId": 17008002,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/3ca190463e2e7bc3f0519b05dca5e09d.png",
+                                "targetType": 0,
+                                "title": "瓷砖安装",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=17008002"
+                            },
+                            {
+                                "categoryId": 17008006,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/4fdc0c4a0914067548e96cd8bce655b1.png",
+                                "targetType": 0,
+                                "title": "踢脚线安装",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=17008006"
+                            }
+                        ],
+                        "targetType": 0,
+                        "title": "墙地面安装",
+                        "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=17008"
+                    },
+                    {
+                        "categoryId": 935355403452424192,
+                        "data": [{
+                                "categoryId": 17010006,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/1d14e7ca2f78bf335c5a0ade5828fd1b.png",
+                                "targetType": 0,
+                                "title": "网络安装",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=17010006"
+                            },
+                            {
+                                "categoryId": 17010001,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/cac4d8fb3c50aebfe7f336a1734af02d.png",
+                                "targetType": 0,
+                                "title": "打印设备安装",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=17010001"
+                            },
+                            {
+                                "categoryId": 17010002,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/7ff8af17e7ef4562eebcefd9e02a9f9e.png",
+                                "targetType": 0,
+                                "title": "投影设备安装",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=17010002"
+                            },
+                            {
+                                "categoryId": 17010003,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/248330a5cff321c2b57280b3425e112f.png",
+                                "targetType": 0,
+                                "title": "办公桌椅安装",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=17010003"
+                            },
+                            {
+                                "categoryId": 17010004,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/e5e6f61069299932e04655d642fa5bc2.png",
+                                "targetType": 0,
+                                "title": "监控设备安装",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=17010004"
+                            },
+                            {
+                                "categoryId": 17010007,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/b596eab86a59e555f6d41398a1655715.png",
+                                "targetType": 0,
+                                "title": "门禁系统安装",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=17010007"
+                            }
+                        ],
+                        "targetType": 0,
+                        "title": "办公安装",
+                        "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=17010"
+                    }
+                ],
+                "icon": "https://images.daojia.com/dop/custom/da06b2f41035d3f563873fdeb8b299cb.png",
+                "imgUrl": "https://images.daojia.com/dop/custom/8c563d4d0a42a4317ba381fa536cfda8.jpg",
+                "targetType": 0,
+                "title": "上门安装",
+                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=17005002&znsr=allcate"
+            },
+            {
+                "categoryId": 1001268,
+                "data": [{
+                        "categoryId": 1260866274239455232,
+                        "data": [{
+                                "categoryId": 5006006,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/915d6306508295c21ec3dd35d8f59f4d.png",
+                                "targetType": 0,
+                                "title": "包月鲜花",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?uid=0D2B3CA2F0D3FAB583038765CC1119E3E13DC1924BD1ED2A4A4380BA1F322DC6&phone=13720007606&cityid=1&cityname=%E5%8C%97%E4%BA%AC&lng=&lat=&hmsr=wxwallet&channel=&comm_pf=&znsr=jgq_shoujishuma&linkid=102_1_nav_7&cate_id=16002"
+                            },
+                            {
+                                "categoryId": 5006006,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/915d6306508295c21ec3dd35d8f59f4d.png",
+                                "targetType": 0,
+                                "title": "单品包月",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?uid=0D2B3CA2F0D3FAB583038765CC1119E3E13DC1924BD1ED2A4A4380BA1F322DC6&phone=13720007606&cityid=1&cityname=%E5%8C%97%E4%BA%AC&lng=&lat=&hmsr=wxwallet&channel=&comm_pf=&znsr=jgq_shoujishuma&linkid=102_1_nav_7&cate_id=16002"
+                            },
+                            {
+                                "categoryId": 5006006,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/915d6306508295c21ec3dd35d8f59f4d.png",
+                                "targetType": 0,
+                                "title": "混合包月",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?uid=0D2B3CA2F0D3FAB583038765CC1119E3E13DC1924BD1ED2A4A4380BA1F322DC6&phone=13720007606&cityid=1&cityname=%E5%8C%97%E4%BA%AC&lng=&lat=&hmsr=wxwallet&channel=&comm_pf=&znsr=jgq_shoujishuma&linkid=102_1_nav_7&cate_id=16002"
+                            }
+                        ],
+                        "targetType": 0,
+                        "title": "包月鲜花",
+                        "url": ""
+                    },
+                    {
+                        "categoryId": 935355965732429824,
+                        "data": [{
+                                "categoryId": 16020001,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/563fafa2fdb31086330aed0ec9c2eb80.png",
+                                "targetType": 0,
+                                "title": "精品玫瑰",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=16020001"
+                            },
+                            {
+                                "categoryId": 16020002,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/3788acaf9532f8ca32a222e90e69f671.png",
+                                "targetType": 0,
+                                "title": "精品百合",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=16020002"
+                            },
+                            {
+                                "categoryId": 16020003,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/6f4fc932af713be51f13da6b31ac50de.png",
+                                "targetType": 0,
+                                "title": "精品康乃馨",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=16020003"
+                            }
+                        ],
+                        "targetType": 0,
+                        "title": "精品鲜花",
+                        "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=16020"
+                    },
+                    {
+                        "categoryId": 935356687584862208,
+                        "data": [{
+                                "categoryId": 16013001,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/53142bc884d465cd2f8a1b8ec24bd3c4.png",
+                                "targetType": 0,
+                                "title": "玫瑰花",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=16013001"
+                            },
+                            {
+                                "categoryId": 16013005,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/1ab94f2a5d89cab4905b8cc20f22badf.png",
+                                "targetType": 0,
+                                "title": "百合花",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=16013005"
+                            },
+                            {
+                                "categoryId": 16013007,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/56529ac59300f9354d1a649c580c8531.png",
+                                "targetType": 0,
+                                "title": "康乃馨",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?uid=0D2B3CA2F0D3FAB583038765CC1119E3E13DC1924BD1ED2A4A4380BA1F322DC6&phone=13720007606&cityid=1&cityname=%E5%8C%97%E4%BA%AC&lng=&lat=&hmsr=baidu_sem_56132985194_25444832097_1_clg1_1_M1123&channel=&comm_pf=&znsr=none&linkid=&cate_id=16013007"
+                            },
+                            {
+                                "categoryId": 16013011,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/ca44fccdf0ce7a58e0155439cbfa184d.png",
+                                "targetType": 0,
+                                "title": "向日葵",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=16013011"
+                            },
+                            {
+                                "categoryId": 16013010,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/084a64f0c5a59c17888c844ecab66df3.png",
+                                "targetType": 0,
+                                "title": "混合花束",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=16013010"
+                            },
+                            {
+                                "categoryId": 16013009,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/5a99c3e14b9d498171b115a9281c6bc3.png",
+                                "targetType": 0,
+                                "title": "其他鲜花",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=16013009"
+                            }
+                        ],
+                        "targetType": 0,
+                        "title": "礼品鲜花",
+                        "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=16013"
+                    },
+                    {
+                        "categoryId": 935357296660586496,
+                        "data": [{
+                                "categoryId": 16016001,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/c1bb7bae9718696263e1df706f02ff4d.png",
+                                "targetType": 0,
+                                "title": "办公室绿植",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=16016001"
+                            },
+                            {
+                                "categoryId": 16016003,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/77bd6baa462f1d0254ae723cd640e3b5.png",
+                                "targetType": 0,
+                                "title": "多肉植物",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=16016003"
+                            },
+                            {
+                                "categoryId": 16016002,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/2525e85813edc35575f05ecc6671f85b.png",
+                                "targetType": 0,
+                                "title": "微景观",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=16016002"
+                            }
+                        ],
+                        "targetType": 0,
+                        "title": "清新绿植",
+                        "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=16016"
+                    },
+                    {
+                        "categoryId": 935358035319595008,
+                        "data": [{
+                                "categoryId": 16015001,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/d98276c58fbcb80a9e912b4eec761190.png",
+                                "targetType": 0,
+                                "title": "商务花篮",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=16015001"
+                            },
+                            {
+                                "categoryId": 16015002,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/c9eef0a67134836a6a35ab8762782636.png",
+                                "targetType": 0,
+                                "title": "探望花篮",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=16015002"
+                            }
+                        ],
+                        "targetType": 0,
+                        "title": "鲜花花篮",
+                        "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=16015"
+                    },
+                    {
+                        "categoryId": 1260864430633263104,
+                        "data": [{
+                                "categoryId": 16016004,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/915d6306508295c21ec3dd35d8f59f4d.png",
+                                "targetType": 0,
+                                "title": "单枝花材",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=16016004"
+                            },
+                            {
+                                "categoryId": 16016004,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/915d6306508295c21ec3dd35d8f59f4d.png",
+                                "targetType": 0,
+                                "title": "花材花艺",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?uid=0D2B3CA2F0D3FAB583038765CC1119E3E13DC1924BD1ED2A4A4380BA1F322DC6&phone=13720007606&cityid=1&cityname=%E5%8C%97%E4%BA%AC&lng=&lat=&hmsr=wxwallet&channel=&comm_pf=&znsr=jgq_shoujishuma&linkid=102_1_nav_7&cate_id=16006"
+                            },
+                            {
+                                "categoryId": 16016004,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/915d6306508295c21ec3dd35d8f59f4d.png",
+                                "targetType": 0,
+                                "title": "永生花",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?uid=0D2B3CA2F0D3FAB583038765CC1119E3E13DC1924BD1ED2A4A4380BA1F322DC6&phone=13720007606&cityid=1&cityname=%E5%8C%97%E4%BA%AC&lng=&lat=&hmsr=wxwallet&channel=&comm_pf=&znsr=jgq_shoujishuma&linkid=102_1_nav_7&cate_id=16010"
+                            }
+                        ],
+                        "targetType": 0,
+                        "title": "花材花艺",
+                        "url": "https://discovery-dop.daojia.com/common/platformIndex?uid=0D2B3CA2F0D3FAB583038765CC1119E3E13DC1924BD1ED2A4A4380BA1F322DC6&phone=13720007606&cityid=1&cityname=%E5%8C%97%E4%BA%AC&lng=&lat=&hmsr=wxwallet&channel=&comm_pf=&znsr=jgq_shoujishuma&linkid=102_1_nav_7&cate_id=16006"
+                    },
+                    {
+                        "categoryId": 935357777550254080,
+                        "data": [{
+                            "categoryId": 11011001,
+                            "data": [],
+                            "icon": "https://images.daojia.com/dop/custom/8db28758376c73d072b4a9ab022d8c33.png",
+                            "targetType": 0,
+                            "title": "生日蛋糕",
+                            "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=11011001"
+                        }],
+                        "targetType": 0,
+                        "title": "烘焙蛋糕",
+                        "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=11011"
+                    },
+                    {
+                        "categoryId": 935360222812708864,
+                        "data": [{
+                                "categoryId": 11013002,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/3f2a4cf1fc13ba93b38ac3033ee0c583.png",
+                                "targetType": 0,
+                                "title": "家常小厨",
+                                "url": "https://jiazheng.daojia.com/common/qkd/complex/75/6/6088#/"
+                            },
+                            {
+                                "categoryId": 11013003,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/a5dc6663db6d0b961931f768845497ba.png",
+                                "targetType": 0,
+                                "title": "特色私厨",
+                                "url": "https://jiazheng.daojia.com/common/qkd/complex/75/6/6088#/"
+                            }
+                        ],
+                        "targetType": 0,
+                        "title": "厨师上门",
+                        "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=11013"
+                    }
+                ],
+                "icon": "https://images.daojia.com/dop/custom/dc87f2280ad65e51fceb4033b3b43805.png",
+                "imgUrl": "https://images.daojia.com/dop/custom/c116de8f85f2c9f22c4e1e88eb66eb38.png",
+                "targetType": 0,
+                "title": "鲜花美食",
+                "url": ""
+            },
+            {
+                "categoryId": 1001269,
+                "data": [{
+                    "categoryId": 935357339530567680,
+                    "data": [{
+                            "categoryId": 9001001,
+                            "data": [],
+                            "icon": "https://images.daojia.com/dop/custom/5637608214cb45d717ce43f505e25106.png",
+                            "targetType": 0,
+                            "title": "手部美甲",
+                            "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=9001001"
+                        },
+                        {
+                            "categoryId": 9001002,
+                            "data": [],
+                            "icon": "https://images.daojia.com/dop/custom/57742218aa93a17516fb3bbf60cb5f30.png",
+                            "targetType": 0,
+                            "title": "足部美甲",
+                            "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=9001002"
+                        },
+                        {
+                            "categoryId": 9002,
+                            "data": [],
+                            "icon": "https://images.daojia.com/dop/custom/93a433fb756bace1457f3df17dd0842e.png",
+                            "targetType": 0,
+                            "title": "美睫",
+                            "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=9002"
+                        },
+                        {
+                            "categoryId": 9003,
+                            "data": [],
+                            "icon": "https://images.daojia.com/dop/custom/397f70f36b83cfd8386b1dd0cb1f9f63.png",
+                            "targetType": 0,
+                            "title": "手足护理",
+                            "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=9003"
+                        },
+                        {
+                            "categoryId": 9004,
+                            "data": [],
+                            "icon": "https://images.daojia.com/dop/custom/5f13b523541bea432770d2729b36f5de.png",
+                            "targetType": 0,
+                            "title": "化妆",
+                            "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=9004"
+                        },
+                        {
+                            "categoryId": 9007,
+                            "data": [],
+                            "icon": "https://images.daojia.com/dop/custom/654a798799ae9798b07d34a420a951ed.png",
+                            "targetType": 0,
+                            "title": "美发",
+                            "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=9007"
+                        },
+                        {
+                            "categoryId": 9008,
+                            "data": [],
+                            "icon": "https://images.daojia.com/dop/custom/9dd230007e668a92367ba2b24fadee7e.png",
+                            "targetType": 0,
+                            "title": "脱毛",
+                            "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=9008"
+                        }
+                    ],
+                    "targetType": 0,
+                    "title": "丽人",
+                    "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=9"
+                }],
+                "icon": "https://images.daojia.com/dop/custom/db17cca7de89082819fe0174b4f54786.png",
+                "imgUrl": "https://images.daojia.com/dop/custom/c1b2ee2611cd859cc77897906cee8e18.png",
+                "targetType": 0,
+                "title": "丽人",
+                "url": "daojia://allcategory/jumpPage"
+            },
+            {
+                "categoryId": 1001273,
+                "data": [{
+                        "categoryId": 1212641239724597248,
+                        "data": [{
+                                "categoryId": 0,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/dcec24b97cf0a3a1407f0d13f84cb62a.png",
+                                "targetType": 0,
+                                "title": "皮鞋",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=10010001"
+                            },
+                            {
+                                "categoryId": 0,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/49e81b868e4a1a7dfd71b9ffefb1bbe4.png",
+                                "targetType": 0,
+                                "title": "靴子",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=10010002"
+                            },
+                            {
+                                "categoryId": 0,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/f9b1543bf42ca87489065d99bd0056b9.png",
+                                "targetType": 0,
+                                "title": "更多鞋类",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=10010003"
+                            }
+                        ],
+                        "targetType": 0,
+                        "title": "洗鞋",
+                        "url": ""
+                    },
+                    {
+                        "categoryId": 1212699889491124224,
+                        "data": [{
+                                "categoryId": 0,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/3a53dcb99f3d3920ffa625704767862c.png",
+                                "targetType": 0,
+                                "title": "上衣",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=10009001"
+                            },
+                            {
+                                "categoryId": 0,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/5638212523f6bc5324acbfe03541c9c0.png",
+                                "targetType": 0,
+                                "title": "羽绒服",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=10009001"
+                            },
+                            {
+                                "categoryId": 0,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/2fae9597f0866728ab6534fd7d165ea6.png",
+                                "targetType": 0,
+                                "title": "大衣外套",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=10009002"
+                            },
+                            {
+                                "categoryId": 0,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/e88f8ffbb0ead9c0a2498e5214886575.png",
+                                "targetType": 0,
+                                "title": "裤装",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=10009004"
+                            },
+                            {
+                                "categoryId": 0,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/2b56600902a78f857bc2f490b8c19369.png",
+                                "targetType": 0,
+                                "title": "裙装",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=10009003"
+                            },
+                            {
+                                "categoryId": 0,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/d6487b19d47604b3685bf544f8aba855.png",
+                                "targetType": 0,
+                                "title": "更多服饰",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=10009005"
+                            }
+                        ],
+                        "targetType": 0,
+                        "title": "洗衣",
+                        "url": ""
+                    },
+                    {
+                        "categoryId": 1212700792604467200,
+                        "data": [{
+                                "categoryId": 0,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/257d000cfa082406a0718e91c3561449.png",
+                                "targetType": 0,
+                                "title": "窗帘",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=10012001"
+                            },
+                            {
+                                "categoryId": 0,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/521fe52344afcb06923f188c8627603d.png",
+                                "targetType": 0,
+                                "title": "沙发",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=10012002"
+                            },
+                            {
+                                "categoryId": 0,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/f5ed8f43a0e76e1713b790dc7d2953d8.png",
+                                "targetType": 0,
+                                "title": "地毯",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=10012003"
+                            },
+                            {
+                                "categoryId": 0,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/08e43b07448485016b4b2a598ccdcda9.png",
+                                "targetType": 0,
+                                "title": "箱包",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=10012004"
+                            },
+                            {
+                                "categoryId": 0,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/f3900098e3897dabad4994edef36791e.png",
+                                "targetType": 0,
+                                "title": "床上用品",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=10012005"
+                            },
+                            {
+                                "categoryId": 0,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/47a66338bbbd9bd2ba871843de97786a.png",
+                                "targetType": 0,
+                                "title": "更多家纺",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=100120061"
+                            }
+                        ],
+                        "targetType": 0,
+                        "title": "洗家纺",
+                        "url": ""
+                    },
+                    {
+                        "categoryId": 1212701506512625664,
+                        "data": [{
+                                "categoryId": 0,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/1e21c97b0fd9413e9523848be93ba82c.png",
+                                "targetType": 0,
+                                "title": "箱包",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=10013001"
+                            },
+                            {
+                                "categoryId": 0,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/c47ae9e4496667362a5fa90c67cf4b98.png",
+                                "targetType": 0,
+                                "title": "鞋靴",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=10013002"
+                            },
+                            {
+                                "categoryId": 0,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/7559e1f077ed948ab82c6f56d78bf07c.png",
+                                "targetType": 0,
+                                "title": "皮质服饰",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=10013003"
+                            },
+                            {
+                                "categoryId": 0,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/d39a6805f22b6923876e28f37c0c99e3.png",
+                                "targetType": 0,
+                                "title": "婚纱礼服",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=10013004"
+                            },
+                            {
+                                "categoryId": 0,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/1c6a22f24dcf361fa4b4bf4809cb054e.png",
+                                "targetType": 0,
+                                "title": "裤装裙装",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=10013006"
+                            },
+                            {
+                                "categoryId": 0,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/5cca3bdfce2456bea1269b2f1a4fb49a.png",
+                                "targetType": 0,
+                                "title": "更多",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=10013007"
+                            }
+                        ],
+                        "targetType": 0,
+                        "title": "奢侈品洗护",
+                        "url": ""
+                    }
+                ],
+                "icon": "https://images.daojia.com/dop/custom/842626a38822aef61552c3588e96c04f.png",
+                "imgUrl": "https://images.daojia.com/dop/custom/3cbabe588d628d1bde5d377d66dd02e9.png",
+                "targetType": 0,
+                "title": "家庭洗护",
+                "url": ""
+            },
+            {
+                "categoryId": 1001267,
+                "data": [{
+                        "categoryId": 935349044208082944,
+                        "data": [{
+                                "categoryId": 14003005,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/336d7a5ca2ae8af66d3690248d51bb2f.png",
+                                "targetType": 0,
+                                "title": "搬重物",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=14003005"
+                            },
+                            {
+                                "categoryId": 14003001,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/99760481e200b72531ebd351ba988b2f.png",
+                                "targetType": 0,
+                                "title": "全城送/取",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=14003001"
+                            }
+                        ],
+                        "targetType": 0,
+                        "title": "代办跑腿",
+                        "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=14003"
+                    },
+                    {
+                        "categoryId": 935355084987310080,
+                        "data": [{
+                                "categoryId": 14001001,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/705edda1b181bc1fa06354037b155835.png",
+                                "targetType": 0,
+                                "title": "手机回收",
+                                "url": "https://yxypshop.yxianypin.com/recycle/index/home-index?from=singlemessage&isappinstalled=0"
+                            },
+                            {
+                                "categoryId": 14001002,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/e512970c9a07a2f59204ae114579b3eb.png",
+                                "targetType": 0,
+                                "title": "笔记本回收",
+                                "url": "https://yxypshop.yxianypin.com/recycle/index/home-index?from=singlemessage&isappinstalled=0"
+                            },
+                            {
+                                "categoryId": 14001003,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/0426f388d1b090e16532b785dae018a7.png",
+                                "targetType": 0,
+                                "title": "平板数码",
+                                "url": "https://yxypshop.yxianypin.com/recycle/index/home-index?from=singlemessage&isappinstalled=0"
+                            },
+                            {
+                                "categoryId": 14001005,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/24fcb39ac1295c1593112e73f58484fa.png",
+                                "targetType": 0,
+                                "title": "相机镜头",
+                                "url": "https://yxypshop.yxianypin.com/recycle/index/home-index?from=singlemessage&isappinstalled=0"
+                            },
+                            {
+                                "categoryId": 14001007,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/eff92ea12df7ff02cbf21eff0b04ae4a.png",
+                                "targetType": 0,
+                                "title": "家电回收",
+                                "url": "https://yxypshop.yxianypin.com/recycle/index/home-index?from=singlemessage&isappinstalled=0"
+                            },
+                            {
+                                "categoryId": 14001008,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/97529ce12bc025d5cad9994ec7c65769.png",
+                                "targetType": 0,
+                                "title": "乐器回收",
+                                "url": "https://yxypshop.yxianypin.com/recycle/index/home-index?from=singlemessage&isappinstalled=0"
+                            }
+                        ],
+                        "targetType": 0,
+                        "title": "上门回收",
+                        "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=14001"
+                    },
+                    {
+                        "categoryId": 935391093548654592,
+                        "data": [{
+                                "categoryId": 14006001,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/08bace13802cd8fd148dfd6d375e7e15.png",
+                                "targetType": 0,
+                                "title": "桶装水",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=14006001"
+                            },
+                            {
+                                "categoryId": 14006004,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/020c1f3507392d1299a1640f7f20e9fb.png",
+                                "targetType": 0,
+                                "title": "箱装水",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=14006004"
+                            }
+                        ],
+                        "targetType": 0,
+                        "title": "生活配送",
+                        "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=14006"
+                    },
+                    {
+                        "categoryId": 935407054750097408,
+                        "data": [{
+                                "categoryId": 14005001,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/f10ebb719089639fbbe422d29b54f425.png",
+                                "targetType": 0,
+                                "title": "证件照",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=14005001"
+                            },
+                            {
+                                "categoryId": 14005002,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/435f68cc3f04a9a47866a4aa11c6799a.png",
+                                "targetType": 0,
+                                "title": "艺术写真",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=14005002"
+                            },
+                            {
+                                "categoryId": 14005005,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/1d4bd93696a0159443ce08de7ea2073a.png",
+                                "targetType": 0,
+                                "title": "宠物摄影",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=14005005"
+                            },
+                            {
+                                "categoryId": 14005006,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/84c54ec002835f043a38a34563640b46.png",
+                                "targetType": 0,
+                                "title": "相片冲印",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=14005006"
+                            },
+                            {
+                                "categoryId": 14005007,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/5dc00ac9df286e483202e15b5a05bbb9.png",
+                                "targetType": 0,
+                                "title": "其他",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=14005007"
+                            }
+                        ],
+                        "targetType": 0,
+                        "title": "摄影",
+                        "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=14005"
+                    },
+                    {
+                        "categoryId": 935411576310603776,
+                        "data": [{
+                                "categoryId": 14011,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/778b53d16d9051f0d7b282d1573cb1a1.png",
+                                "targetType": 0,
+                                "title": "设计美图",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=14011"
+                            },
+                            {
+                                "categoryId": 14015,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/7092c3838a22cc947a69a7b9bdc47abb.png",
+                                "targetType": 0,
+                                "title": "图文快印",
+                                "url": "https://discovery-dop.daojia.com/common/platformIndex?cate_id=14015"
+                            },
+                            {
+                                "categoryId": 14017,
+                                "data": [],
+                                "icon": "https://images.daojia.com/dop/custom/8ebee8f81c1c1897ca6296210c51ccfc.png",
+                                "targetType": 0,
+                                "title": "票务演出",
+                                "url": "https://m.228.cn/unionAction?unionId=64299155"
+                            }
+                        ],
+                        "targetType": 0,
+                        "title": "其他",
+                        "url": ""
+                    }
+                ],
+                "icon": "https://images.daojia.com/dop/custom/57965b3e1179c14eb329a72b5a491a92.png",
+                "imgUrl": "https://images.daojia.com/dop/custom/f23cbd19d8b8c1d1d9db82642da8de5b.png",
+                "targetType": 0,
+                "title": "便民服务",
+                "url": "daojia://allcategory/jumpPage"
+            }
+        ],
+        "md5": "77f2e3f858789452bc28b65df5c67acc"
+    },
+    "md5": "",
+    "randomcode": "1596249214727"
+}

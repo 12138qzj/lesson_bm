@@ -62,6 +62,11 @@
 
 
         function curry(fun) {
+            if (typeof fun !== 'function') {
+                // 类型判断 
+                return "该参数不是函数"
+                    // };
+            }
             // 
             const len = fun.length;
             console.log(len);

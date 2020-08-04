@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>红绿灯</title>
+</head>
+
+<body>
+    <style>
+        div {
+            background-color: grey;
+            display: inline-block;
+            margin: 30px;
+            width: 100px;
+            height: 100px;
+            border-radius: 50px;
+            ;
+        }
+        
+        .green.light {
+            background-color: green;
+        }
+        
+        .yellow.light {
+            background-color: yellow;
+        }
+        
+        .red.light {
+            background-color: red;
+        }
+    </style>
+
+
+    <div class="red"></div>
+    <div class="yellow"></div>
+    <div class="green"></div>
+
+
+    <!-- <button id="next" onclick="go();">开始</button> -->
+
+    <script>
+        const red1 = document.querySelector(".red")
+        const yellow1 = document.querySelector(".yellow")
+        const green1 = document.querySelector(".green")
+
+        function green() {
+            console.log(green1)
+            clear()
+            green1.className = "green light"
+
+        }
+
+
+        function red() {
+            // red
+            clear()
+
+            red1.classList.add("light")
+
+
+        }
+
+        function yellow() {
+            // yellow
+            clear()
+            yellow1.className = "yellow light"
+        }
+
+        function clear() {
+            var lights = document.getElementsByTagName("div");
+            for (var i = 0; i < 3; i++)
+                lights[i].classList.remove("light")
+        }
+
+        // setInterval(() => {
+
+        // }, interval);
+
+        /*循环*/
+        function once(time) {
+            setTimeout(() => {
+                red()
+            }, time)
+            setTimeout(() => {
+                yellow()
+            }, time + 1000)
+            setTimeout(() => {
+                green()
+            }, time + 3000)
+        }
+
+        for (let i = 1; i <= 5; i++) {
+            once(i * 1000 + 6000 * (i - 1))
+        }
+
+        /*async / awiat*/
+
+        // function once(time) {
+        //     return new Promise((resolve, reject) => {
+        //         setTimeout(() => {
+        //             red()
+        //         }, 1000)
+        //         setTimeout(() => {
+        //             yellow()
+        //         }, 2000)
+        //         setTimeout(() => {
+        //             green()
+
+        //         }, 4000)
+        //         setTimeout(() => {
+        //             resolve();
+        //         }, 6000)
+        //     })
+
+        // }
+        // async function aw() {
+        //     for (let i = 0; i < 5; i++) {
+        //         await once();
+        //     }
+        // }
+        // aw();
+        // once(1000);
+
+
+        // function once() {
+        //     setTimeout(() => {
+        //         red()
+        //     }, 0)
+        //     setTimeout(() => {
+        //         yellow()
+        //     }, 1000)
+        //     setTimeout(() => {
+        //         green()
+        //     }, 3000)
+        // }
+        // function repeat(func, times, wait) {
+        //     return () => {
+        //         function sleep(time) {
+        //             return new Promise((resolve, reject) => {
+        //                 setTimeout(() => {
+        //                     resolve()
+        //                 }, time)
+        //             })
+        //         }
+
+        //         function* foo() {
+        //             for (let i = 0; i < times; i++) {
+        //                 yield sleep(wait)
+        //                 func()
+        //             }
+        //         }
+        //         let iterator = foo();
+
+        //         function autorun(obj) {
+        //             let {
+        //                 value,
+        //                 done
+        //             } = obj.next();
+        //             if (done) return
+        //             value.then(() => {
+        //                 autorun(obj)
+        //             })
+        //         }
+        //         autorun(iterator)
+        //     }
+
+
+        // }
+        // const repeatFunc = repeat(once, 5, 6000)
+        // repeatFunc();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // function trim(str) {
+        //     // todo
+        // }
+        // '    1   ' => .
+        // '1'
+
+        function trim(str) {
+            // todo
+            // let L = 0,
+            //     R = str.length - 1;
+            // while (str[L] === " ") {
+            //     L++;
+            // }
+            // while (str[R] === " ") {
+            //     R--;
+            // }
+            // console.log(L, R)
+            // return str.substring(L, R + 1)
+
+            // return str.replace(/(^\s+)|(\s+$)/g, "")
+
+            // return str.replace(/^(\s)+(.+)(\s)+$/, '$2')
+            return str.match(/\S+(\s+?\S+)*/)[0]
+        }
+        console.log(trim("   1  258 "))
+    </script>
+</body>
+
+</html>
