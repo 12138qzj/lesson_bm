@@ -28,4 +28,15 @@ yarn add @babel/cli @babel/core @babel/polufill @babel/preset-env
  yarn add react react-dom @types/react @types/react-dom
 
  @types/react @types/react-dom：ts类型  文件
-   
+
+
+
+
+ .tsx react组件->webpack.config.js->awesome-typescript-loader->tsconfig.json->typescript  ->babel(polyfill+env+plugin 装饰器模式)->
+
+ react DOM->webpack-dev-server html-webpack-plugin footer script bundle.js
+
+
+ 
+2. 使用react-scripts 
+    约定 去充当webpack 配置 

@@ -8,7 +8,7 @@ module.exports = {
     resolve: {
         extensions: [".js", ".ts", ".tsx"]
     },
-    //@bable/polyfill 使用这个将es6代码降级为es5代码 让代码***兼容性***更好
+    //@bable/polyfill 垫片 使用这个将es6代码降级为es5代码 让代码***兼容性***更好
 
     //
     entry: ["@babel/polyfill", "./app.tsx"],
@@ -34,10 +34,10 @@ module.exports = {
             test: /\.(ts|tsx)$/,
             //去除这个文件夹下的所有文件
             exclude: /node_modules/,
-            //使用这个包来加载 转换
+            //使用这个包来加载 转换到tsconfig.js 根据配置 转换为jsx 
             loader: "awesome-typescript-loader",
 
-            //编译选择  去找.babelrc 文件
+            //编译选择  去找.  文件
             options: {
                 //使用预处理 和插件
                 useBabel: true,
