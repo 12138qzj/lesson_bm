@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arr = [1, 2, 3];
+
+        let arr2 = [4, 5, 36];
+
+
+        Array.prototype.myForeach = function(func) {
+
+            if (typeof func != "function") return console.error("参数不是为函数")
+            for (let i = 0; i < this.length; i++) {
+                func(this[i], i, this)
+            }
+        }
+        arr.myForeach((item, index, arr) => {
+            console.log("值为", item, index, arr)
+        })
+        arr2.myForeach(123)
+
+
+
+        window.name = 'ByteDance';
+
+        function A() {
+            //new的过程
+            // 生成一个空对象 
+            //将这个空对象 的__proto__指向A.prototype
+            console.log(this); //456
+            this.name = 123;
+            console.log(this.name); //456
+
+        }
+        A.prototype.getA = function() {
+            console.log(this); // window
+            return this.name + 1;
+        }
+        A.prototype.name = 456;
+        let a = new A();
+        let funcA = a.getA;
+        console.log(funcA()); // ByteDance1
+
+
+        //new的过程
+        function newFunc(constructor) {
+            let obj = {};
+            obj.__proto__ = constructor.prototype;
+            constructor.apply(obj);
+            return obj;
+        }
+    </script>
+</body>
+
+</html>

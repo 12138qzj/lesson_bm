@@ -1,6 +1,7 @@
-let a = [
-    [1]
-];
-a[1] = []
-a[1][0] = 12;
-console.log(a);
+// for (let i = 0; i < 5; i++) {
+//     setTimeout(function() {
+//         console.log(i);
+//     }, 1000);
+// }
+
+// console.log(i);

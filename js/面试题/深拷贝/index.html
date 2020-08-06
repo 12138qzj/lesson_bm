@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let a = {
+            a: 1
+        }
+        let b = {
+            b: 2,
+            a: {
+                a: 1
+            }
+        }
+
+        let obj = {
+            b: 2,
+            a: {
+                a: 1
+            }
+        }
+        obj.t = obj;
+        //浅拷贝
+        console.log(Object.assign({}, a, b));
+
+        let map = new Map();
+
+        function deepClone(obj) {
+            let t = {}
+                //使用Map结构  存入缓存  
+            if (map.get(obj)) return map.get(obj);
+            map.set(obj, t);
+            Object.keys(obj).forEach(element => {
+
+                if (typeof obj[element] === "object") {
+                    t[element] = deepClone(obj[element])
+                } else {
+                    t[element] = obj[element]
+                }
+            });
+
+
+            return t;
+        }
+        console.log(deepClone(obj))
+    </script>
+</body>
+
+</html>
