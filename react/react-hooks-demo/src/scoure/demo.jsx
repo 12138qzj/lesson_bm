@@ -152,29 +152,14 @@ import React, { memo,useState,useEffect,useRef,useReducer } from "react";
  * 
  */
 
- const userInfoReducer=(state,action)=>{
-   switch(action.type){
-     case "setusername":
-       return {
-         ...state,
-         name:action.paylaod,
-       }
-      case "setlastname":
-        return{
-          ...state,
-          lastname:action.paylaod,
-        }
-      default:
-        return state;
-   }
- }
 
 export const MyComponent=()=>{
 
-  const [state, dispatch] = useReducer(userInfoReducer,/*初始化的state*/ {
-    name:"John",
-    lastname:"Doe"
-  });
+//   const [state, dispatch] = useReducer(userInfoReducer,/*初始化的state*/ {
+//     name:"John",
+//     lastname:"Doe"
+//   });
+const [state,setState]=useState()
 
   return(
     <>

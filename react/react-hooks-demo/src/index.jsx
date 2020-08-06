@@ -1,7 +1,9 @@
 import React ,{useRef,useState} from "react";
 import ReactDOM from "react-dom";
-import { FaceComponent } from "./demo";
-import { MyComponent } from "./demo2";
+// import { FaceComponent,MyComponent } from "./demo";
+
+import MyComponent from './scoure/demo'
+// import { MyComponent } from "./demo2";
 
 import "./styles.css";
 
