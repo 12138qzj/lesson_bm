@@ -4,8 +4,8 @@ import { inject, observer} from 'mobx-react';
 
 const { TabPane } = Tabs;
 
-//想要那个store数据就注入谁
-//Privat数据是全局的
+// 想要那个store数据就注入谁
+// Privat数据是全局的
 // 想要哪个页面的数据 注入谁
 @inject('articleStore')
 @observer

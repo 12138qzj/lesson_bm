@@ -12,6 +12,43 @@ rfc 函数式组件 快捷
         根据依赖是state 在状态执行的时候改变依赖，执行 <====> 与
     - useCallback
 
+    - useContext 
+
+        复杂的state的父传子 传值优化
+        当需要超过两层组件传值的时候 使用这个来优化  他没有reducer这么复杂，忽略，且比useState使用更简洁。
+        创建 
+        1. 创建一个：export const ThemeContext = React.createContext( 参数/*存入的值*/);
+        ```jsx
+        <ThemeContext.Provider value={themes.dark}>
+            <Toolbar />
+        </ThemeContext.Provider>
+        ``` 
+        使用原始的获取值方法 太复杂
+            导入 ThemeContext
+            <ThemeContext.Comsumer >
+                {
+                    user=>{
+
+                    }
+                }
+            </ThemeContext.Comsumer>
+        2. 在Toolbar中使用 const Theme=useContext(ThemeContext) 就能获取这个值
+    - useReducer
+        三个参数 1. reducer 函数 2. 初始值 3. 初始值计算函数
+
+        - redux 是企业级的数据状态安全流程及架构
+            - state 可读的
+            - state 写操作 disptch action->reducer ->旧新状态的操作
+            
+        只是共享 reducer 函数 具体数据不能共享  ，只是useState的替代方案
+
+
+    - useCallback
+
+    
+
+      
+
 4. 分析react项目是如何运行的
     jsx
     root根
