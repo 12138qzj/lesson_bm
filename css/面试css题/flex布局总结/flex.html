@@ -1,0 +1,68 @@
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    
+    .flex {
+        display: flex;
+        height: 100vh;
+        flex-wrap: wrap;
+        /*   多根轴生效属性   默认平分  */
+        align-content: center;
+        /* align-items: center; */
+        /*  space-around:平分剩下的空间 两盒子之间间隔是 盒子与边框的距离2倍
+            pace-evenly:平分剩下的空间 两盒子之间间隔相等 
+        */
+        justify-content: space-evenly;
+    }
+    
+    .item1 {
+        width: 120px;
+        height: 60px;
+        background-color: aqua;
+    }
+    
+    .item2 {
+        width: 140px;
+        height: 160px;
+        background-color: red;
+        padding-top: 30px;
+    }
+    
+    .item3 {
+        width: 140px;
+        height: 20px;
+        background-color: green;
+        /* align-self 对单个盒子设置位置 (交叉轴) */
+        align-self: center;
+        /**
+            圣杯布局 双飞翼布局
+            left 固定 main自适应 right固定
+            结构：
+            
+        */
+    }
+</style>
+<div class="flex">
+    <div class="item1">
+        English1
+    </div>
+    <div class="item1">
+        English2
+    </div>
+    <div class="item3">
+        English3
+    </div>
+    <div class="item1">
+        English4
+    </div>
+    <div class="item1">
+        English5
+    </div>
+    <div class="item2">
+        English6
+        <br /> English7
+        <br />
+    </div>
+</div>

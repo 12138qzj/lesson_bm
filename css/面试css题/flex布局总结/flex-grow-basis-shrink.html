@@ -1,0 +1,49 @@
+<style>
+    .flex1 {
+        display: flex;
+        /* sum 260 */
+        width: 600px;
+        outline: 1px solid blue;
+    }
+    
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    
+    .item1 {
+        width: 120px;
+        height: 60px;
+        background-color: aqua;
+    }
+    
+    .item2 {
+        width: 140px;
+        height: 160px;
+        background-color: red;
+        padding-top: 30px;
+    }
+    
+    .item11 {
+        flex-grow: 1;
+        flex-shrink: 0.6;
+        /* CSS flex-shrink 属性指定了 flex 元素的收缩规则。
+        flex 元素仅在默认宽度之和大于容器的时候才会发生收缩，
+        其收缩的大小是依据 flex-shrink 的值。 */
+        flex-basis: 200px;
+        /*缩写*/
+        /* flex: 1 1 200px; */
+    }
+    
+    .item22 {}
+</style>
+<div class="flex1">
+    <div class="item1 item11">
+        English1
+    </div>
+    <div class="item2 item22">
+        English2
+        <br /> English2
+        <br />
+    </div>
+</div>

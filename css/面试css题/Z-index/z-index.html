@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    
+    .box {
+        height: 200px;
+        width: 200px;
+        text-align: center;
+        border: 2px solid black;
+        background-color: #ea5;
+        vertical-align: top;
+    }
+    
+    .one {
+        margin-left: 0;
+        z-index: 2;
+        /* 层叠上下文 使z-index生效的条件  属性罗列 */
+        /* position: relative; */
+        /* position: fixed; */
+        /* position: sticky; */
+        /* position: absolute; */
+        /* top: 20px; */
+        /* 出现layers 的层叠效果 属性罗列*/
+        backface-visibility: hidden;
+        /* transform: translate3d(0, 0, 0); */
+    }
+    
+    .two {
+        margin-top: 30px;
+        z-index: 13;
+        /* position: fixed; */
+        /* margin-top: -60px; */
+    }
+</style>
+
+<body>
+    <div class="box one">
+        one
+    </div>
+    <div class="box two">
+        two
+    </div>
+
+</body>
+
+</html>

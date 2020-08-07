@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    .box {
+        width: 40px;
+        height: 40px;
+        outline: 1px solid red;
+    }
+    
+    .box1 {
+        /* 将盒子提升一个层layers */
+        /* transform: translate3d(0, 0, 0); */
+        /* 预先改变的属性 做好准备 */
+        will-change: transfrom;
+    }
+</style>
+
+<body>
+    <div class="box box1">1</div>
+    <div class="box box2"> 2 </div>
+    <script>
+        const box1 = document.querySelector('.box1');
+        setTimeout(() => {
+            box1.style.transform = 'translate3d(60px,0,0)'
+        }, 3000);
+    </script>
+</body>
+
+</html>
