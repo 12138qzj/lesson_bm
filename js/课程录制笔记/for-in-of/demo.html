@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        for (let i = 0; i < 2; i++) {
+
+        }
+
+        let obj = {
+            a: 123,
+            b: "刘德华"
+        }
+        for (keys in obj) {
+            console.log(obj[keys]);
+        }
+
+        function Person() {
+            this.name = "kaola";
+            this.age = 24;
+            this.func1 = function() {
+
+            }
+        }
+        //实例化这个类
+        var bei = new Person();
+        //使用for-in遍历这个对象
+        for (keys in bei) {
+            console.log(bei[keys])
+        }
+
+        console.log(obj.hasOwnProperty("a"))
+
+
+        // let 
+
+        let arr = [1, 2, 3]
+        console.log(arr)
+        for (value of arr) {
+            console.log(value)
+        }
+    </script>
+
+</body>
+
+</html>

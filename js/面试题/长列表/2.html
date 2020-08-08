@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    .wrap {
+        height: 100000px;
+        /* overflow: auto; */
+        position: relative;
+    }
+    
+    .scroll {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        z-index: -1;
+    }
+    
+    .item {
+        height: 100px;
+        border-bottom: 1px solid #000000;
+        box-sizing: border-box;
+        width: 100%;
+    }
+</style>
+
+<body>
+    <!-- 10000条数据的列表容器 -->
+    <div class="wrap">
+        <!-- 滚动高度 -->
+        55
+        <div style="height: 1000000px; background-color: pink;" class="scroll"> </div>
+        <!-- 内容 -->
+        <div class="content"></div>
+    </div>
+    <script>
+        let total = 10000;
+        let scrollInfo = {
+            itmeSize: 100
+        }
+
+        console.log("start, end")
+
+
+        let d = [];
+        for (let i = 0; i < 1000; i++) {
+            d.push({
+                id: i,
+                value: i
+            });
+        }
+
+
+        const wrap = document.querySelector('.wrap')
+        console.log(wrap)
+        wrap.addEventListener('scroll', handScroll)
+
+        //获取屏幕高度
+        let heigth = window.innerHeight;
+
+        //获取多少个
+        let visiabelcount = Math.ceil(heigth / 100);
+
+        // let end = start + visiabelcount;
+        function handScroll() {
+            console.log("start, end...")
+
+            let scrollTop = wrap.scrollTo
+
+            let start = Math.floor(scrollTo / 100);
+            let end = start + visiabelcount;
+            console.log(start, end)
+        }
+        handScroll()
+    </script>
+
+</body>
+
+</html>
