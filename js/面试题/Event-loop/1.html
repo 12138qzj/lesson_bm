@@ -1,0 +1,71 @@
+<!-- <script>
+    setTimeout(() => {
+        console.log(1)
+    })
+
+    new Promise((resolve, reject) => {
+        console.log(2)
+        reject(3)
+    }).catch(console.log);
+    console.log(4)
+
+    new Promise((resolve, reject) => {
+            console.log(5)
+            resolve(6)
+        }).then(r => {
+            console.log(r)
+            new Promise((resolve, reject) => {
+                    console.log(12)
+                    resolve(13)
+                }).then(r => {
+                    //11111 在同一层
+                    console.log(r)
+                    return Promise.resolve(14)
+                }).then(r => {
+                    console.log(r)
+                    return Promise.resolve(15)
+                }).then(r => {
+                    console.log(r)
+                        // return 15
+                })
+                // setTimeout(() => {
+                //     console.log(9)
+                // })
+            return 99
+        })
+        .then(r => {
+            //11111  在同一层
+            console.log(r)
+        });
+    console.log(10)
+</script> -->
+
+<script>
+    // 'script start' async1 start, async1 end ,promise1, script end , async2,promise2，setTimeout
+
+    // script start，async1 start，async2，promise1，script end，async1 end，111111，promise2，setTimeout
+    async function async1() {
+        console.log('async1 start');
+        await async2();
+        console.log('async1 end');
+        console.log('111111');
+
+    }
+
+    function async2() {
+        console.log('async2');
+    }
+    console.log('script start');
+    setTimeout(function() {
+        console.log('setTimeout');
+    }, 0);
+    async1();
+    new Promise(function(resolve) {
+            console.log('promise1');
+            resolve();
+        })
+        .then(function() {
+            console.log('promise2');
+        });
+    console.log('script end');
+</script>
