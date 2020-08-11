@@ -50,12 +50,15 @@
 
 
         //new的过程
-        function newFunc(constructor) {
-            let obj = {};
-            obj.__proto__ = constructor.prototype;
-            constructor.apply(obj);
+        function newFunc() {
+            let obj = new Object();
+            Constructor = [].shift.call(arguments)
+            obj.__proto__ = Constructor.prototype;
+            Constructor.apply(obj);
             return obj;
         }
+        let a1 = newFunc(A);
+        console.log(a1)
     </script>
 </body>
 
