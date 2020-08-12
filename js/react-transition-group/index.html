@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .alert-enter {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    
+    .alert-enter-active {
+        opacity: 1;
+        /* transform：scale(1) */
+        transform: translateX(0);
+        transition: opacity 300ms, transform 300ms;
+    }
+    
+    .alert-exit {
+        opacity: 1;
+    }
+    
+    .alert-exit-active {
+        opacity: 0;
+        transform: scale(0.9);
+        transition: opacity 300ms, transform 300ms;
+    }
+    
+    .box {
+        height: 100px;
+        width: 100px;
+        background-color: red;
+    }
+</style>
+
+<body>
+    <div class="box"></div>
+</body>
+<script>
+    const box = document.querySelector('.box')
+    box.classList.add('alert-enter')
+
+    box.clientHeight; //使页面强制重排
+
+    //为了给最准确的浏览器信息( 因为获取到了盒子的属性，则可能会出现样式改变)
+    // 但是又达不到 重新渲染的时间(16.66ms) 则可以使用重排来达到样式渲染
+    //  会进行样式重排
+    setTimeout(() => {
+        box.classList.add('alert-enter-active')
+    }, 1000)
+</script>
+
+</html>

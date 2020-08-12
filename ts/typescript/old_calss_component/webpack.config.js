@@ -15,6 +15,7 @@ module.exports = {
         vendor: [
             'react',
             'react-dom',
+            'react-router-dom',
         ],
         vendorStyles: [
             '../node_modules/bootstrap/dist/css/bootstrap.css',

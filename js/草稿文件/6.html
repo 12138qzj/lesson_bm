@@ -1,0 +1,96 @@
+<script>
+    // var foo = function() {
+
+    //     console.log('foo1');
+
+    // }
+
+    // foo(); // foo1
+
+    // var foo = function() {
+
+    //     console.log('foo2');
+
+    // }
+
+    // foo(); // foo2
+
+    var scope = "global scope";
+
+    function checkscope() {
+        var scope = "local scope";
+
+        function f() {
+            return scope;
+        }
+        return f();
+    }
+    // checkscope();
+    // var scope = "global scope";
+
+    // function checkscope() {
+    //     var scope = "local scope";
+
+    //     function f() {
+    //         return scope;
+    //     }
+    //     return f;
+    // }
+    console.log(checkscope());
+
+
+    // 闭包是
+
+    // 在 V8 中， 一旦不同的作用域位于同一个父级作用域下， 
+    // 那么它们会共享这个父级作用域。
+    // var theThing = null;
+    // var replaceThing = function() {
+    //     var originalThing = theThing;
+    //     var unused = function() {
+    //         if (originalThing) // 'originalThing'的引用
+    //             console.log("嘿嘿嘿");
+    //     };
+    //     theThing = {
+    //         longStr: new Array(1000000).join('*'),
+    //         someMethod: function() {
+    //             console.log("哈哈哈");
+    //         }
+    //     };
+    //     // debugger;
+    // };
+    // setInterval(replaceThing, 20);
+    // 数组拍平
+    let a = [1, 2, [3, [4, [5]]]]
+        // [1,2,3,4,5]
+
+    a.push(a)
+    a.push(6)
+
+    let map = new Map();
+
+
+    function flat(a) {
+        // todo
+        let res = [];
+        if (map.get(a)) return map.get(a);
+        map.set(a, res)
+        for (let i = 0; i < a.length; i++) {
+            if (Object.prototype.toString.call(a[i]) === "[object Array]") {
+                // if (a[i] === a) {
+                console.log("object")
+                    // res.push(res)
+                    // break;
+
+                // } else
+                res.push(...flat(a[i]))
+            } else {
+                res.push(a[i])
+            }
+        }
+        return res;
+
+    }
+    console.log("res", flat(a))
+
+    console.log(Object.prototype.toString.call(a))
+</script>
