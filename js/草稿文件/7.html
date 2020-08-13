@@ -1,25 +1,48 @@
 <script>
-    for (var i = 0; i < 5; i++) {
-        var a = 123;
-        setTimeout(() => {
-            console.log(i, a)
-        }, 1000)
-    }
-    // console.log(i)
-
-    // function foo() {
-    //     let a = 1;
-    //     function bar() {
-    //         if (a) {}
-    //         debugger
-    //     }
-    //     bar()
+    // for (var i = 0; i < 5; i++) {
+    //     var a = 123;
+    //     setTimeout(() => {
+    //         console.log(i, a)
+    //     }, 1000)
     // }
-    // foo()
-    setTimeout(() => {
-        console.log(0)
-    }, 1000)
-    setTimeout(() => {
-        console.log(1)
-    }, 1000)
+    // // console.log(i)
+
+    // // function foo() {
+    // //     let a = 1;
+    // //     function bar() {
+    // //         if (a) {}
+    // //         debugger
+    // //     }
+    // //     bar()
+    // // }
+    // // foo()
+    // setTimeout(() => {
+    //     console.log(0)
+    // }, 1000)
+    // setTimeout(() => {
+    //     console.log(1)
+    // }, 1000)
+    // 浅克隆函数
+    function shallowClone(o) {
+        const obj = {};
+        for (let i in o) {
+            obj[i] = o[i];
+        }
+        return obj;
+    }
+    // 被克隆对象
+    const oldObj = {
+        a: 1,
+        b: ['e', 'f', 'g'],
+        c: {
+            h: {
+                i: 2
+            }
+        }
+    };
+
+    oldObj.a = 999
+    const newObj = shallowClone(oldObj);
+    console.log(newObj, oldObj); // { i: 2 } { i: 2 }
+    console.log(oldObj.c.h === newObj.c.h); // true
 </script>

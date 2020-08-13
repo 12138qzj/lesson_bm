@@ -28,7 +28,6 @@
         obj.t = obj;
         //浅拷贝
         console.log(Object.assign({}, a, b));
-
         let map = new Map();
 
         function deepClone(obj) {
@@ -37,15 +36,12 @@
             if (map.get(obj)) return map.get(obj);
             map.set(obj, t);
             Object.keys(obj).forEach(element => {
-
                 if (typeof obj[element] === "object") {
                     t[element] = deepClone(obj[element])
                 } else {
                     t[element] = obj[element]
                 }
             });
-
-
             return t;
         }
         console.log(deepClone(obj))

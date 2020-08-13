@@ -1,0 +1,64 @@
+<script>
+    // const myEmitter = new MyEmitter();
+    // let m = 0;
+    // myEmitter.once('event', () => {
+    //     console.log(++m);
+    // });
+    // myEmitter.emit('event');
+    // // 打印: 1
+    // myEmitter.emit('event');
+
+    // const EventEmitter = require('events');
+
+    // class MyEmitter extends EventEmitter {}
+    function my() {
+        this.emit = (name) => {
+            if (!this.listeners[name]) {
+                console.log("没有人");
+                return;
+            }
+            this.listeners[name].filter(itme => {
+                itme();
+            })
+            this.listeners[name] = this.listeners[name].filter(listen => !listen.once)
+        }
+
+        this.on = (name, fn) => {
+
+            if (Object.prototype.toString.call(fn) != "[object Function]") return;
+
+            // let keys = Object.keys(this.listeners);
+            // if (!keys.includes(name)) {
+            //     this.listeners[name] = [];
+            // }
+
+            if (!this.listeners[name]) {
+                this.listeners[name] = [];
+            }
+            this.listeners[name].push(fn)
+
+        }
+        this.once = (name, fn) => {
+            fn.once = true;
+            this.on(name, fn)
+        }
+        this.off = (name, fn) => {
+            let listens = this.listeners[name] || [];
+            this.listeners[name] = listens.filter(listen => listen !== fn)
+        }
+    }
+
+    my.prototype.listeners = {}
+    var mydy = new my()
+    let price1 = () => {
+        console.log("price1");
+
+    }
+    let price2 = () => {
+        console.log("price2");
+    }
+    console.log(mydy);
+    mydy.on("price", price1)
+    mydy.once("price", price2)
+    mydy.emit("price")
+</script>
