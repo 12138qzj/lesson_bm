@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // const person = {
+        //     isHuman: false,
+        //     printIntroduction: function() {
+        //         console.log(`My name is ${this.name}. Am I human? ${this.isHuman}`);
+        //     }
+        // };
+
+        // const me = Object.create(person);
+
+        // console.log(person)
+
+
+        // console.log(me)
+        //     // me.name = 'Matthew'; // "name" is a property set on "me", but not on "person"
+        //     // me.isHuman = true; // inherited properties can be overwritten
+
+        // me.printIntroduction();
+
+        function testType(type) {
+            console.log("object--", typeof type)
+
+            if (typeof type != 'object') {
+
+                console.log("----------", typeof type)
+
+                return typeof type;
+            }
+            if (type === null) return null;
+            let str = Object.prototype.toString.call(type);
+            console.log(str)
+            return str.slice(8, str.length - 1);
+        }
+        let a = 1;
+        console.log(testType([]));
+        let b = []
+        console.log(b instanceof Object)
+        console.log(typeof testType)
+    </script>
+</body>
+
+</html>
