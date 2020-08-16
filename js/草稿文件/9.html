@@ -28,25 +28,36 @@
 
         // me.printIntroduction();
 
-        function testType(type) {
-            console.log("object--", typeof type)
+        // function testType(type) {
+        //     console.log("object--", typeof type)
 
-            if (typeof type != 'object') {
+        //     if (typeof type != 'object') {
 
-                console.log("----------", typeof type)
+        //         console.log("----------", typeof type)
 
-                return typeof type;
-            }
-            if (type === null) return null;
-            let str = Object.prototype.toString.call(type);
-            console.log(str)
-            return str.slice(8, str.length - 1);
-        }
-        let a = 1;
-        console.log(testType([]));
-        let b = []
-        console.log(b instanceof Object)
-        console.log(typeof testType)
+        //         return typeof type;
+        //     }
+        //     if (type === null) return null;
+        //     let str = Object.prototype.toString.call(type);
+        //     console.log(str)
+        //     return str.slice(8, str.length - 1);
+        // }
+        // let a = 1;
+        // console.log(testType([]));
+        // let b = []
+        // console.log(b instanceof Object)
+        // console.log(typeof testType)
+        // let a = Number.MAX_SAFE_INTEGER;
+        // // min_safe_integer
+        // let c = BigInt(a)
+        // c = c + c
+        // let b = a;
+        // console.log(typeof a, typeof c, c)
+        // a = new Date()
+        // console.log(a, b, c)
+        let a = 9;
+        let a = 8;
+        console.log(a)
     </script>
 </body>
 
