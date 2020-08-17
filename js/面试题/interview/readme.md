@@ -33,8 +33,38 @@
             抄写手写代码+理解冴羽文章
             - Primise实现
             - 实现防抖函数（debounce）
+                function debounce(func,wait){
+                    let time=null;
+                    return function(){
+                        if(time){
+                            clearTimer(time);
+                        }
+                        time =setTimeout(()=>{func()}),wait)
+                    }
+                }
+                dom.addEventListener('keyup',debounce(console.log.bind(this,"123"),2000))
             - 实现节流函数（throttle）
+                1. 使用定时器节流 不会立马执行
+                function throttle(func,wait){
+                    let timer=null;
+                    if(timer) return;
+                    return function(){
+                        setTimeout(func(),wait)
+                    }
+                }
+                2. 使用时间差节流 一进来就会执行 立马执行
+                function throttle(func,wait){
+                    let date=0;
+                    return function(){
+                        let nowDate=new Date();
+                        if(date+wait<nowDate){
+                            func()
+                            date=nowDate;
+                        }
+                    }
+                }
                 - 防抖和节流的实现原理，和使用场景？
+                    
             - 实现Event(event emitter)
             - 实现instanceOf
                 1. 封装个可以检测所有数据类型的函数(手动实现)
