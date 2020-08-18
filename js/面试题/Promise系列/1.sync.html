@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function MyPromise(fn) {
+            this.value = undefined;
+            //保存实例的this ,防止this丢失
+            let self = this;
+
+            function resolve(value) {
+                // 不管方法被书写在哪个位置，它的 this 只会跟着它的调用方走
+                self.ResolveValue = value;
+
+            }
+
+            function reject(value) {
+
+            }
+            fn(resolve, reject);
+
+        }
+        MyPromise.prototype.then = function(onFulfilled, onRejected) {
+            //实现 then 的回调
+            onFulfilled(this.ResolveValue)
+
+        }
+
+        new MyPromise((resolve, reject) => {
+                resolve(1)
+            }).then((res) => {
+                console.log(res)
+            }, () => {})
+            // new MyPromise((resolve, reject) => {
+
+        // })
+    </script>
+
+</body>
+
+</html>

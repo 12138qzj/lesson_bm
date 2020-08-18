@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //三个状态的定义 pending,fulfilled,rejected
+        const PENDING = Symbol("PENDING")
+        const FULFILLED = Symbol("FULFILLED")
+        const REJECTED = Symbol("REJECTED")
+
+        function MyPromise(fn) {
+            this.value = undefined;
+            //设置初始 状态
+            this.state = PENDING;
+            //改为数组 便于then的链式调用
+            this.onCallBackFulfilled = []
+                //保存实例的this ,防止this丢失
+            let self = this;
+
+            function resolve(value) {
+                // 不管方法被书写在哪个位置，它的 this 只会跟着它的调用方走
+                self.ResolveValue = value;
+                self.state = FULFILLED;
+                //当前这个this中只有一个函数 这个函数就是
+                // (value) => {
+                //             let x = onFulfilled(value);
+                //             if (x instanceof MyPromise) {
+                //                 x.then(resolve, reject)
+                //             }
+                //             // resolve(x);
+                //         })
+                self.onCallBackFulfilled[0](value)
+                    //执行完此函数 则会执行返回 onFulfilled(value) 回调函数
+                    //回调函数函数中又返回结果  拿到结果之后 判断是否为Promise
+
+                //是则执行这个函数 的.then方法
+                // fn => {
+                //     fn(value)
+                // })
+            }
+
+            function reject(value) {}
+            fn(resolve, reject);
+        }
+        MyPromise.prototype.then = function(onFulfilled, onRejected) {
+            //实现 then 的回调
+            console.log("this.state", this.state)
+                //根据状态来判断是否值resolve函数
+            if (this.state === FULFILLED) onFulfilled(this.ResolveValue);
+            else if (this.state === PENDING) {
+                //收集所有的then回调 
+                return new MyPromise((resolve, reject) => {
+                        //第二层中 的this 加入了 任务
+                        console.log("object", this)
+                        this.onCallBackFulfilled.push((value) => {
+                            let x = onFulfilled(value);
+                            if (x instanceof MyPromise) {
+                                x.then(resolve, reject)
+                            }
+                            // resolve(x);
+                        })
+                    })
+                    // this.onCallBackFulfilled.push(onFulfilled);
+            } else {}
+            // return this;
+        }
+        new MyPromise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve(111)
+                }, 2000)
+            })
+            .then((res) => {
+                console.log(res)
+                return new MyPromise((resolve, reject) => {
+                    setTimeout(() => {
+                        resolve(888)
+                    }, 2000)
+                })
+            }, () => {})
+            .then((res) => {
+                console.log(res)
+                return new MyPromise((resolve, reject) => {
+                    setTimeout(() => {
+                        resolve(999)
+                    }, 2000)
+                })
+            }, () => {})
+            .then(res => {
+                console.log("object", res)
+            })
+            // new MyPromise((resolve, reject) => {
+
+        // })
+    </script>
+
+</body>
+
+</html>
