@@ -7,10 +7,8 @@
     1. react react-dom 加载js 花时间
     2. mvvm 能力组件化
     3. JSX 编译 -> < js
--   eact 组件化编程 
-- rea
-
-    ct 基本 认识
+-   react 组件化编程 
+- react 基本 认识
 
  ## 启动
     端口启动："start": "set PORT=9000 HOST=192.168.1.109 && react-scripts start",
@@ -72,3 +70,14 @@
 #### 页面优化 （路由）
  路由懒加载 ：import React ,{lazy,Suspense} from 'react';
 const RecommendComponent=lazy(()=>import("../application/Recommend"))
+
+### react Router 路由讲解
+#### History
+    - replaceState()
+    - pushState()
+    //这个API监听路由前进，后退的
+    - window.addEventListener('popstate',()=>{
+        console.log("路由发生了改变")
+    })
+- React-router 
+    Link借助了 pushState 让url 变化 页面无刷新
