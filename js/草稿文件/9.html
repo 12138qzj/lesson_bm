@@ -55,9 +55,20 @@
         // console.log(typeof a, typeof c, c)
         // a = new Date()
         // console.log(a, b, c)
-        let a = 9;
-        let a = 8;
+        // let a = 9;
+        let a = [8];
         console.log(a)
+
+        function myinstanceof(left, right) {
+            left = left.__proto__;
+            right = right.prototype;
+            while (true) {
+                if (left === right) return true;
+                if (left === null) return false;
+                left = left.__proto__;
+            }
+        }
+        console.log(myinstanceof(a, Number))
     </script>
 </body>
 

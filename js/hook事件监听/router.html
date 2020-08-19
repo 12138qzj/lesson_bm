@@ -1,0 +1,21 @@
+<script>
+    //hash 路由 hashchange
+
+    window.addEventListener('popstate', () => {
+        console.log("new url", window.location.pathname)
+    })
+
+    window.addEventListener('popstate', () => {
+            console.log("new url---", window.location.pathname)
+        })
+        //监听 popstate 不能监听的两种 pushState和replaceState
+    let names = ['pushState', 'replaceState'];
+
+    for (let name of names) {
+        let original = window.history[name];
+        window.history[name] = function(...args) {
+            console.log("new url", args[2])
+            return original.apply(window.history, args);
+        }
+    }
+</script>

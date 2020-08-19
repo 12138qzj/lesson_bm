@@ -30,13 +30,63 @@
         // a.prototype.count = 0
 
         //闭包的使用
-        const a = (function() {
-            let c = 0;
-            return function() {
-                console.log(c++ % 2);
+        // const a = (function() {
+        //     let c = 0;
+        //     return function() {
+        //         console.log(c++ % 2);
+        //     }
+        // })()
+        // a();
+
+        // 题目
+        // 填充 inherit 完成输出。
+
+        // function inherit(Constructor, cur) {
+        //     // console.log(constructor.prototype, cur)
+        //     cur.__proto__ = Constructor.prototype;
+        //     return function(name) {
+        //         Constructor.call(cur, name)
+        //         return cur
+        //     };
+        // }
+
+
+
+        function inherit(ParentConstructor, prototyprobj) {
+            // console.log(constructor.prototype, cur)
+
+
+            function Cat(name) {
+                ParentConstructor.call(this, name)
             }
-        })()
-        a();
+            //继承有say方法的对象
+            Cat.prototype = prototyprobj;
+            //继承 Animal函数的 原型对象
+            console.log("cat", Cat.prototype)
+            Cat.prototype.__proto__ = Object.create(ParentConstructor.prototype)
+                // Cat.prototype.__proto__ = ParentConstructor.prototype
+                // Object.setPrototypeOf(Cat.prototype, ParentConstructor.prototype)
+            return Cat;
+        }
+
+
+        let animalNum = 0;
+
+        function Animal(name) {
+            animalNum++;
+            this.name = name;
+        }
+        Animal.prototype.getName = function() {
+            return this.name;
+        };
+        const Cat = inherit(Animal, {
+            say: function() {
+                console.log(`NO${animalNum}:${this.getName()}`);
+            }
+        });
+        const cat1 = new Cat('小花');
+        console.log(cat1)
+        cat1.say(); // NO1:小花
     </script>
 
 </body>

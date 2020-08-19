@@ -56,7 +56,7 @@
             else if (this.state === PENDING) {
                 //收集所有的then回调 
                 return new MyPromise((resolve, reject) => {
-                        //第二层中 的this 加入了 任务
+                        //第一层中 的this  使用了箭头函数 定义的时候就将this确定下来了  加入了 任务
                         console.log("object", this)
                         this.onCallBackFulfilled.push((value) => {
                             let x = onFulfilled(value);

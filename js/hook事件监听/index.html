@@ -1,0 +1,47 @@
+<script>
+    console.log(window)
+
+
+
+    const _XMLHttpRequest = window.XMLHttpRequest;
+    window.XMLHttpRequest = function XMLHttpRequest() {
+        //继承 XMLHttpRequest上的属性 和原型对象的方法
+        const _xhr = new _XMLHttpRequest();
+
+        //监听状态改变
+        _xhr.addEventListener("readystatechange", () => {
+            if (_xhr.readyState === 4) {
+                console.log(_xhr, "请求成功了");
+            }
+        })
+
+        return _xhr;
+    }
+
+    const _fetch = window.fetch;
+    console.log(typeof _fetch)
+    window.fetch = function(url, options) {
+        //继承 XMLHttpRequest上的属性 和原型对象的方法
+        const _fecPromise = _fetch(url, options);
+        return _fecPromise.then((res) => {
+            console.log(res.url, "成功了")
+            return res;
+        }).catch((err) => {
+            console.log(err, "出错了")
+        });
+
+        // return new Promise(resolve, reject) => )
+    }
+    console.log(window.fetch)
+        // const xhr = new XMLHttpRequest();
+
+    // xhr.open();
+    // xhr.onreadystatechange = (state) => {
+
+    // }
+    // xhr.send()
+    fetch("http://neteasecloudmusicapi.zhaoboy.com/search?keywords=%E6%B5%B7%E9%98%94%E5%A4%A9%E7%A9%BA", {})
+        .then(res => {
+            console.log(res, "前端")
+        })
+</script>
