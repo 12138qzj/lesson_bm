@@ -1,0 +1,50 @@
+<script>
+    var data = {
+            name: 'xiaoming'
+        }
+        // Object.keys(data).forEach(function(key) {
+        //     Object.defineProperty(data, key, {
+        //         get: function() {
+        //             console.log('get');
+        //         },
+        //         set: function() {
+        //             console.log('Monitoring of data changes');
+        //         }
+        //     })
+        // });
+        // data.name = '345'
+    var res = Object.defineProperty({}, "name", {
+        _val: null,
+        get: function() {
+            console.log("要获取数据")
+            return this._val;
+        },
+        set: function(x) {
+            console.log("要修改数据")
+            this._val = x;
+        }
+    })
+    console.log(data.name) //The console will print out "get"
+    data.name = 'xiaohong' //The console will print out "Listen to data changes"
+    console.log(data.name);
+
+
+    var Bao = {
+        name: "LV",
+        price: 9999,
+    };
+
+    console.log(Bao)
+
+    var proxyBao = new Proxy(Bao, {
+        get: function(target, key) {
+            console.log(target['price'], "--------")
+            if (target['price'] > 5000) {
+                return Reflect.get(target, key);
+            } else {
+                return 'In line with customer psychological expectations, buy, buy, buy';
+            }
+        }
+    });
+    console.log(proxyBao.price)
+</script>
