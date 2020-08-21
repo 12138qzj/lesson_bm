@@ -1,0 +1,65 @@
+<script>
+    console.log(1 == '1') //ture
+    console.log(true == 'true') //false
+    console.log(NaN == 'NaN') //fasle
+    console.log(NaN == NaN) //true  --fasle
+    console.log(-0 == 0) //ture
+    console.log(0 == '') //false
+    console.log([1] == true) //false
+    console.log(null == undefined) //false
+    console.log({
+            "name": "Arwa"
+        } == {
+            "name": "Arwa"
+        }) //false
+
+    let a1 = {
+        "name": "Arwa"
+    }
+    let b1 = a1
+    console.log(a1 == b1) //false
+
+    console.log(1 === '1') //false
+    console.log(true === 'true') //false
+    console.log(true === true) //ture
+    console.log(NaN === NaN) //ture
+    console.log(null === null) //ture
+    console.log('Ara' === 'ara') //false
+    console.log(-0 === 0)
+    console.log(null === undefined) //false
+    console.log({
+        "name": "Arwa"
+    } == {
+        "name": "Arwa"
+    })
+
+    Object.is('Comparison Operators', 'Comparison Operators')
+    Object.is('Comparison Operators', 'comparison Operators')
+
+    Object.is(null, null)
+    Object.is(null, 'null')
+
+    let a = {
+        "name": "Arwa"
+    }
+    let b = a
+    Object.is(a, b)
+
+    Object.is(0, ' ');
+    Object.is({
+        "name": "Arwa"
+    }, {
+        "name": "Arwa"
+    })
+    Object.is(window, window)
+    Object.is(0, 0)
+    Object.is(0, -0)
+    Object.is(NaN, NaN)
+    Object.is(NaN, 0 / 0)
+    Object.is(null, undefined)
+    Object.is([1], true)
+
+    // Array.prototype.indexOf() 使用了哪个运算符
+
+    // SameValueZero
+</script>

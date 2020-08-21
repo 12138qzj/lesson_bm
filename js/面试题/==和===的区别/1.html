@@ -1,0 +1,16 @@
+<script>
+    let obj = {
+        toString() {
+            return 'str'
+        },
+        valueOf() {
+            return 0;
+        },
+        [Symbol.toPrimitive]: () => {
+            return "hh"
+        }
+    }
+
+    console.log(String(obj)) //str
+    console.log(Number(obj)) //0
+</script>
