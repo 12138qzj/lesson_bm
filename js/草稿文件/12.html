@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #Ele {
+        color: red;
+    }
+    
+    .bgRed {
+        Color: blue;
+        text-align: Center;
+    }
+    
+    span {
+        width: 100px;
+        height: 100px;
+        background-color: pink;
+        margin: 20px;
+        padding-top: 10vh;
+    }
+</style>
+
+<body>
+
+    <DIV id="ele" class="bgRed">7852</DIV>
+
+    <p>88899</p>
+    <p>88899</p>
+    <p>88899</p>
+    <p>88899</p>
+
+    <span>123</span>
+    <p>88899</p>dsfghjkl;;lkjhgfdsaASDFGHJKLOLKJHGFD
+    <p>88899</p>
+
+    <script>
+        console.log(document.querySelector("#ele"))
+
+        function a() {
+            console.log("---", arguments)
+        }
+
+        a(1, 2, 3, 4)
+
+        function throttle(fn, wait) {
+            let timeout = null;
+            return function() {
+                if (!timeout) return;
+                timeout = setTimeout(() => {
+                    fn()
+                }, wait)
+            }
+        }
+
+        let res = throttle()
+    </script>
+
+</body>
+
+</html>

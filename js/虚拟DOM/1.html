@@ -1,0 +1,65 @@
+<!-- <div>
+    <ul></ul>
+    <div>
+        <span></span>
+        <span></span>
+    </div>
+</div> -->
+
+<div id="root"></div>
+<script>
+    //虚拟DOM  
+    /*** 
+     * 由babel 加载jsx 创建出来的React.createElement()-->然后映射出来虚拟DOM
+     * 
+     * 1 .优势：DOM在html中才有  跨平台
+     * 2. 操作真实的DOM 是非常耗时间的 而去操作虚拟DOM js执行较快的 保证性能下限
+     * 
+     * 在react中 每次修改dom结点的时候 会先对虚拟DOM做修改 然后再将虚拟DOM渲染到页面上去
+     * */
+    let Vnode = {
+        type: 'div',
+        props: {
+            children: [{
+                type: 'ul',
+                props: {
+                    className: 'wrap',
+                    children: [{
+                        type: 'li',
+                        props: {
+                            children: ['1']
+                        }
+                    }, {
+                        type: 'li',
+                        props: {
+                            children: ['2']
+                        }
+                    }, ]
+                }
+            }]
+        }
+    }
+
+    function render(vnode, container) {
+        const {
+            type,
+            props
+        } = vnode;
+        if (!props) {
+            container.textContent = vnode;
+            return
+        }
+        let element = document.createElement(type)
+
+        if (props.children) {
+            props.children.forEach(child => {
+                render(child, element)
+            });
+
+        }
+        container.appendChild(element)
+        return container;
+    }
+    console.log(render(Vnode, document.getElementById('root')))
+        // document.getElementById('root').appendChild
+</script>

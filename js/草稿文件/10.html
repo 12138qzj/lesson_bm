@@ -22,5 +22,24 @@
 
 
 </body>
+<script>
+    var data = 1
+    var obj = {
+        data: 5,
+        a: {
+            data: 2,
+            func1() {
+                console.log(this.data)
+            },
+            func2: () => {
+                console.log(this.data)
+            }
+        }
+    }
+    var func3 = obj.a.func1
+    obj.a.func1() //2
+    obj.a.func2() //1
+    func3() //1
+</script>
 
 </html>

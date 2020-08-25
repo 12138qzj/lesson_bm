@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // function
+        1、 尽可能细的从发起网页请求， 到浏览器渲染完成， 中间都有做了什么事？
+        发起请求
+        1. 通过三次握手， 连接到服务器，
+        2. 发送请求数据
+        3. 服务器端接收到请求， 开始找处理资源
+        4. 将资源返回到客户端 在http1 .1 之后， 这里形成持久化连接 1.1 之前就形成四次挥手断开连接
+        5. 拿到资源先解析html, 生成DOM数
+        6. 在解析 css, 生成cssDOM树，
+        7. 然后将两个树集合形成render 树
+        8. 浏览器将计算元素的相对位置产生的盒模型
+        9. 然后在将树渲染到页面上
+
+        2、 请用javascript尽可能多的方法实现这样的数组转换[1, [2, [3]], 4, [5]] => [1, 2, 3, 4, 5]？
+
+        function dept(arr) {
+            let res = [];
+            for (let i = 0; i < arr.length; i++) {
+                if (typeof arr[i] == "object") {
+                    res.push(...dept(arr[i]));
+                } else {
+                    res.push(arr[i])
+                }
+            }
+            return res
+        }
+        console.log(dept(arr));
+
+        3、 请给出这段代码的执行结果
+
+        setTimeout(() => {
+            console.log(1)
+        }, 1000)
+
+        new Promise((resolve, reject) => {
+            console.log(2)
+            setTimeout(() => {
+                resolve(3)
+            }, 0)
+            console.log(4)
+        }).then(data => {
+            console.log(data)
+        })
+
+        console.log(5)
+        结果： 2, 4, 5, 3, 1
+        解释：
+        一开始运行这个段代码， 遇见setTimeout则会将这个任务存为宏任务队列中， 继续执行下面代码输出2，
+        遇见第二个setTimeout 再次加入宏任务队列中输出 4 然后继续输出 5
+        查看微任务队列， 为空则去取出宏任务中的一个， 然后执行
+        setTimeout(() => {
+            resolve(3)
+        }, 0)
+        遇到.then函数， 将这个任务加入微任务队列中, 再将微任务当中所有任务取出， 依次执行，
+        则输出3， 当微任务队列中没有任务了， 则执行下一个宏任务， 输出1
+
+
+        4、 在非严格模式下， 请给出这段代码的执行结果
+
+        var data = 1
+        var obj = {
+            data: 2,
+            func1() {
+                console.log(this.data)
+            },
+            func2: () => {
+                console.log(this.data)
+            }
+        }
+        var func3 = obj.func1
+        obj.func1() //2
+        obj.func2() //1
+        func3() //1
+        2
+        1
+        1
+
+        5、 css包含哪些选择器？ css的权重？
+        id选择器(0100), > 类选择器， 属性选择器， 伪类选择器，(0010) > 元素选择器， 伪元素选择器(0001) > 通配符、 子选择器、 相邻选择器(0000) 等的。 如 * 、 > 、+, 权值为0000。
+        权重不存在继承
+        6、 未知宽高的div水平和垂直都居中（ 3 种）
+
+        对父级盒子设置属性：
+        display: flex;
+        justify - content: center;
+        align - items: center;
+
+        设置该盒子属性
+        1.
+        margin: 50 % , 0, 0, 50 % ;
+        transform: translate(-50 % ，-50 % );
+        2.
+        position: absolute;
+        top: 50 % ;
+        left: 50 % ;
+        transform: translate(-50 % ，-50 % );
+
+
+        7、 如何排查一个从未遇到过的问题？（ 可以举例， 写自己的思路）
+        假设浏览器端报错， 则先看一下报错原因， 然后在去百度， 掘金， 博客等搜索查找原因
+        查看相关评论， 然后根据相应的资料来尝试 一下操作 在操作之前 将我们的代码备份一份。
+        要是解决成功将 这个错误记录一下， 下次在遇到就有对策了
+    </script>
+</body>
+
+</html>
