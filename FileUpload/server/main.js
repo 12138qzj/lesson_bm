@@ -10,8 +10,6 @@ server.on("request", async(req, res) => {
     // res.setHeader("Access-Control-Allow-Header", "*");
 
     console.log("正在监听3000端口:" + res);
-
-
     if (req.url == '/') {
         const multipart = new multiparty.Form(); //将form表单里面的数据取出来 
         //const form = new formidable.IncomingForm();

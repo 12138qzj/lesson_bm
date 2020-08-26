@@ -56,19 +56,29 @@
         // a = new Date()
         // console.log(a, b, c)
         // let a = 9;
-        let a = [8];
-        console.log(a)
+        // let a = [8];
+        // console.log(a)
 
-        function myinstanceof(left, right) {
-            left = left.__proto__;
-            right = right.prototype;
-            while (true) {
-                if (left === right) return true;
-                if (left === null) return false;
-                left = left.__proto__;
+        // function myinstanceof(left, right) {
+        //     left = left.__proto__;
+        //     right = right.prototype;
+        //     while (true) {
+        //         if (left === right) return true;
+        //         if (left === null) return false;
+        //         left = left.__proto__;
+        //     }
+        // }
+        // console.log(myinstanceof(a, Number))
+        function createTask(ms) {
+            return () => {
+                console.log('start', ms);
+                return new Promise(r => setTimeout(() => {
+                    console.log('end', ms);
+                    r(ms);
+                }, ms));
             }
         }
-        console.log(myinstanceof(a, Number))
+        const tasks = Array(5).fill(null).map((_, i) => createTask(i * 1000));
     </script>
 </body>
 

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        //做题 前言  使用
+
+        function createTask(t) {
+            return () => new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve(t)
+                }, t);
+            })
+        }
+
+        function limitRunTask(tasks, limit) {
+
+            return new Promise((resolve, reject) => {
+
+                let index = 0; //当前执行任务的索引
+                let finish = 0;
+                let lives = 0;
+                let result = [];
+
+                //判断任务是否执行完 执行完了则 返回结果 
+                function trigger() {
+                    if (finish >= tasks.length) {
+                        resolve(result)
+                        return;
+                    }
+                    //每次判断 在执行的数量是否超过 设置的数量  没有超过则继续添加
+                    //超过则不加
+                    while (lives < limit && index < tasks.length) {
+                        lives++;
+                        const promise = tasks[index]();
+                        let curindex = index;
+                        promise.then(res => {
+                            result[curindex] = res;
+                            lives--;
+                            finish++;
+                            //当有任务执行完了 就重新调用 添加任务函数
+                            trigger();
+                        })
+                        index++;
+                    }
+                }
+                trigger()
+            });
+        }
+
+        limitRunTask([createTask(1000), createTask(1000), createTask(1000)], 2).then(r => console.log(r))
+        console.log("object")
+    </script>
+</body>
+
+</html>

@@ -23,23 +23,42 @@
 
 </body>
 <script>
-    var data = 1
-    var obj = {
-        data: 5,
-        a: {
-            data: 2,
-            func1() {
-                console.log(this.data)
-            },
-            func2: () => {
-                console.log(this.data)
-            }
+    // class user {
+    //     constructor() {
+    //         // that = this;
+    //         this.name
+    //         this.email
+    //     }
+
+    //     setname(name) {
+    //         this.name = name;
+    //     }
+    //     setemail(email) {
+    //         this.email = email;
+    //     }
+
+    //     getemail() {
+    //         return this.email;
+    //     }
+    //     getname() {
+    //         return this.name;
+    //     }
+    // }
+    // let a = new user();
+    // console.log(a.getname())
+    // 写出这段代码的输出结果：
+
+    function createTask(ms) {
+        return () => {
+            console.log('start', ms);
+            return new Promise(r => setTimeout(() => {
+                console.log('end', ms);
+                r(ms);
+            }, ms));
         }
     }
-    var func3 = obj.a.func1
-    obj.a.func1() //2
-    obj.a.func2() //1
-    func3() //1
+    const tasks = Array(5).fill(null).map((_, i) => createTask(i * 1000));
+    Promise.all(tasks.map(task => task())).then(console.log);
 </script>
 
 </html>
