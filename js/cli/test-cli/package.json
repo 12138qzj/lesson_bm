@@ -1,0 +1,6 @@
+{
+  "name": "test cli",
+  "dependencies": {
+    "lodash": "^4.17.15"
+  }
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //强行使用for--of来循环对象的解决办法
+
+        //在对象中加入可迭代对象---实现可迭代协议
+
+        var obj = {
+            a: 1,
+            b: 2,
+            [Symbol.iterator]: () => {
+                let i = 0;
+                return {
+                    next: () => {
+                        i++
+                        return ({
+                            value: 1,
+                            done: i > 2 ? true : false
+                        })
+                    }
+                }
+            }
+        }
+        for (let item of obj) {
+            console.log(item)
+        }
+    </script>
+
+</body>
+
+</html>
