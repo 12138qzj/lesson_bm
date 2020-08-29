@@ -9,41 +9,60 @@
 
 <body>
     <script>
-        function funA() {
-            let a = 1;
-            let funB = function() {
-                console.log(a);
-            }
-            return funB;
-        }
-
-        let funC = funA();
-        // debugger;
-        // funC();
-        // debugger;
-        var me = {
-            name: 'xiuyan',
-            hello: function() {
-                console.log(`你好，我是${name}`)
-            }
-        }
-
-        var name = 'BigBear'
-        var hello = me.hello
-
-        // 调用位置
-        me.hello() // 你好，我是xiuyan
-        hello() // 你好， 我是BigBear
-
-
-        // function fn() {
-        //     console.log(fnname);
+        // function funA() {
+        //     let a = 1;
+        //     let funB = function() {
+        //         console.log(a);
+        //     }
+        //     return funB;
         // }
-        // fn();
-        // var fnname = "李四"
 
-        var a = 1;
-        // console.log(a instanceof );
+        // let funC = funA();
+        // // debugger;
+        // // funC();
+        // // debugger;
+        // var me = {
+        //     name: 'xiuyan',
+        //     hello: function() {
+        //         console.log(`你好，我是${name}`)
+        //     }
+        // }
+
+        // var name = 'BigBear'
+        // var hello = me.hello
+
+        // // 调用位置
+        // me.hello() // 你好，我是xiuyan
+        // hello() // 你好， 我是BigBear
+
+
+        // // function fn() {
+        // //     console.log(fnname);
+        // // }
+        // // fn();
+        // // var fnname = "李四"
+
+        // var a = 1;
+        // // console.log(a instanceof );
+
+        // var arrayLike = {
+        //         0: 'name',
+        //         1: 'age',
+        //         2: 'sex',
+        //         length: 3
+        //     }
+        //     // 1. slice
+        // console.log(Array.prototype.slice.call(arrayLike));
+        function Parent() {
+            this.names = ['kevin', 'daisy'];
+        }
+
+        function Child() {
+            Parent.call(this);
+            console.log(this)
+        }
+        var func1 = new Child()
+        console.log(func1)
     </script>
 </body>
 

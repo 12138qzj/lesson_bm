@@ -1,10 +1,4 @@
-##  js 基本数据类型
 
-1. undefined , null ,number , string ,boolean
-
-## js 引用类型
-
-  Object,Array,Function,
 
 ## js深拷贝方法
 
@@ -60,10 +54,17 @@ let res=JSON.parse(temp)
 
 #### 类数组=======》真数组
 
+##### 类数组
+
+为什么叫做类数组对象呢？那让我们从读写、获取长度、遍历三个方面看看这两个对象
+
+
+
 这在 DOM 中甚为常见，如各种元素检索 API 返回的都是**类数组**，如 `document.getElementsByTagName`，`document.querySelectorAll` 等等。除了 DOM API 中，常见的 `function` 中的 `arguments` 也是类数组
 
 1. `Array.from` 还有更简单的
-2. 运算符 `...` 扩展运算符，不过它只能作用于 `iterable` 对象
+2. **let newarrayLike=Array.prototype.slice.call(arrayLike);**将数据切割下来到数组中去，改变this的指向
+3. 运算符 `...` 扩展运算符，不过它只能作用于 `iterable` 对象
 
 
 
@@ -106,6 +107,16 @@ let res=JSON.parse(temp)
 - 类
 - Async/await
 
+#### 闭包
+
+1. **小"黄"书**(你不知道的JavaScript): 当函数**可以记住并访问所在的词法作用域时**,就产生了闭包,即使函数是在当前词法作用域之外执行.
+2.  **红宝书**(JavaScript高级程序设计): 闭包是指**有权访问另一个 函数作用域中的变量的函数**
+
+非常抽象的一个概念,我自己的一个理解是:
+ 当一个变量(就像上面的name)既不是该函数内部的局部变量,也不是该函数的参数,
+
+相对于作用域来说,就是一个自由变量(引用了外部变量),这样就会形成一个闭包.
+
 
 #### 箭头函数（Arrow functions）和普通函数(this) 
 
@@ -134,32 +145,35 @@ let res=JSON.parse(temp)
 
 #### let const 
 
-   - deww
+1. **var const let 的区别**	
 
-     1. var const let 的区别	
+   - var是函数作用域，let是块级作用域   for来判别比如
 
-        - var是函数作用域，let是块级作用域   for来判别比如
+     ​	比如在for循环中，使用var定义初始变量，则在for的外层也可以使用这个变量
 
-          ​	比如在for循环中，使用var定义初始变量，则在for的外层也可以使用这个变量
+     ​	使用let定义初始变量，则只能在for产生的块级作用域中使用这个变量。
 
-          ​	使用let定义初始变量，则只能在for产生的块级作用域中使用这个变量。
+   - var可以在定义之前访问这个变量，这个值是underfined,let，const不可以，这个变量在暂存死区中
 
-        - var可以在定义之前访问这个变量，这个值是underfined,let，const不可以，这个变量在暂存死区中
+     const赋值必须初始化
 
-          const赋值必须初始化
+   - var可以被重新定义，let不可以（强行定义则报错：变量已经被定义）
 
-        - var可以被重新定义，let不可以（强行定义则报错：变量已经被定义）
+   - const 声明的变量如果是基础类型，不能被修改。如果是引用类型，则可以修改引用类型的属性
 
-        - const 声明的变量如果是基础类型，不能被修改。如果是引用类型，则可以修改引用类型的属性
+   - **let**声明的变量只在其声明的块或子块中可用，这一点，与**var**相似。
 
-     2. var、let 和 const 区别的实现原理是什么
+     **二者之间最主要**的区别在于**var**声明的变量的作用域是整个封闭函数。
 
-        - 
+2. var、let 和 const 区别的实现原理是什么
 
-     
+   解答：https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/133
 
-​          解答：https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/133
-​     
+##### 暂存死区
+
+与通过  `var` 声明的有初始化值 `undefined` 的变量不同，
+
+通过 `let` 声明的变量直到它们的**定义被执行时才初始化**。在变量初始化前访问该变量会导致 `ReferenceError`。该变量处在一个**自块顶部到初始化**处理的“暂存死区”中。 
 
 #### async await
 
@@ -167,6 +181,40 @@ let res=JSON.parse(temp)
 
 1. **回调函数**时期（使用事件监听）产生了**回调地狱**，**可读性和可维护性被破坏**
 2. Promise时期
+3. Generator
+
+```js
+function runGenerator(gen) {
+    var it = gen(), ret;
+
+    // 创造一个立即执行的递归函数
+    (function iterate(val){
+        ret = it.next(val);
+
+        if (!ret.done) {
+            // 如果能拿到一个 promise 实例
+            if ("then" in ret.value) {
+                // 就在它的 then 方法里递归调用 iterate
+                ret.value.then( iterate );
+            }
+        }
+    })();
+}
+
+function* httpGenerator() {
+  let res1 = yield httpPromise(url1)
+  console.log(res);
+  let res2 = yield httpPromise(url2)
+  console.log(res);
+  let res3 = yield httpPromise(url3)
+  console.log(res);
+  let res4 = yield httpPromise(url4)
+  console.log(res);
+}
+runGenerator(httpGenerator)
+```
+
+
 
 #### proxy
 
@@ -537,6 +585,29 @@ limitRunTask([createTask(1000), createTask(1000), createTask(1000)], 2).then(r =
 
 1. 函数节流和函数防抖的原理，怎么实现？
 
+   ```js
+   const debounce=(func,delay)=>{
+       let timer;
+       return function(...args){
+           if(timer){
+               clearTimeout(timer);
+           };
+   
+           var that=this;
+            timer=setTimeout(()=>{
+                func(args);
+                //改变this的指向
+                //箭头函数定义时候就已经将this赋值好了
+                func.apply(this,args);
+                clearTimeout(timer);
+            },delay)
+       }    
+   }
+   //如果要在 func函数中使用this,则需要改变this的指向
+   ```
+
+   
+
 2. 手写防抖和节流，区别在什么地方
 
 3. 防抖和节流 
@@ -550,6 +621,47 @@ limitRunTask([createTask(1000), createTask(1000), createTask(1000)], 2).then(r =
 - 实现节流函数（throttle）
 - 防抖和节流的实现原理，和使用场景？
 - 实现Event(event emitter)
+
+#### 实现节流函数（throttle）
+
+```js
+//使用时间戳判断
+function throttle(func,wait){
+    var olddate=0;
+    var context;
+    
+    return function (){
+        context=this;
+        args=arguments;
+        let date=new Date()
+        if(date>(olddate+wait)){
+            func.apply(context,args);
+            olddate=date;
+        }
+	}
+}
+
+//使用定时器实现
+
+function throttle(func, wait){
+    var timer;
+    var context;
+    return function (){
+        context=this;
+        if(!timer){
+           timer= setTimeout(()=>{
+               func.apply(context,arguments);
+               timer=null;
+            },wait)
+        }
+    }
+    
+}
+
+//有头无尾  无头有尾
+
+结合版本
+```
 
 #### 实现instanceOf（类型判断）
 
@@ -614,7 +726,34 @@ function testType(type){
 
 #### 实现一个call/apply/bind
 
-​       1. 手写call、apply、bind
+          1. 手写call、apply、bind
+
+手写call
+
+```js
+Function.prototype.myOwnCall = function(someOtherThis) {
+    someOtherThis = someOtherThis || global;
+    var uniqueID = "00" + Math.random();
+    while (someOtherThis.hasOwnProperty(uniqueID)) {
+      uniqueID = "00" + Math.random();
+    }
+    someOtherThis[uniqueID] = this;
+    const args = [];
+    
+    // arguments are saved in strings, using args
+    for (var i = 1, len = arguments.length; i < len; i++) {
+      args.push("arguments[" + i + "]");
+    }
+
+    // strings are reparsed into statements in the eval method
+    // Here args automatically calls the Array.toString() method.
+    var result = eval("someOtherThis[uniqueID](" + args + ")");
+    delete someOtherThis[uniqueID];
+    return result;
+  };
+```
+
+
 
 ​        **解答 **
 
@@ -1119,12 +1258,6 @@ module.exports = config
 // dist 最终上线的一个 文件夹
 ```
 
-
-
-
-
-
-
 #### 浏览器工作原理
 
 - sessionStorage/localStorage
@@ -1158,17 +1291,50 @@ module.exports = config
 
 ​      1. v8引擎是如何提高性能的。
 
-
-
-
-
-**# 滴滴二面**
+# 滴滴二面
 
   \- 算法
 
 ​    快速排序
 
-  \- 项目介绍
+## 项目介绍
+
+公共组件的封装**（better-scroll）**
+
+封装公共组件，需要做类型判断和参数赋默认值，需要使用**import PropTypes from "prop-types"**
+
+**赋参数默认值：**Scroll.defaultProps={}
+
+**参数类型约束：**Scroll.propTypes={
+
+ PropTypes.bool
+
+PropTypes.func
+
+}
+
+**防抖函数的封装**
+
+```js
+const debounce = (func, delay) => {
+    let timer;
+    return function (...args) {
+      if(timer) {
+        clearTimeout(timer);
+      }
+      timer = setTimeout(() => {
+        func.apply(this, args);
+        clearTimeout(timer);
+      }, delay);
+    };
+  };
+
+  export { debounce }
+```
+
+
+
+
 
 ​    \1. 优化项目的手段有哪些？
 
@@ -1182,9 +1348,7 @@ module.exports = config
 
 ​      (5) 事件委托
 
-
-
-**# 滴滴三面**
+# 滴滴三面
 
   \- 如何来学习前端的
 
