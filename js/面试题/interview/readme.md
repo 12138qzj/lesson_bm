@@ -66,6 +66,30 @@ let res=JSON.parse(temp)
 2. **let newarrayLike=Array.prototype.slice.call(arrayLike);**将数据切割下来到数组中去，改变this的指向
 3. 运算符 `...` 扩展运算符，不过它只能作用于 `iterable` 对象
 
+### CSS面试
+
+**flex：**
+
+ flex :flex-grow、flex-shrink、flex-basis
+
+##### flex-grow
+
+属性在MDN上的定义是：
+
+> 定义弹性盒子项（flex-item）的**拉伸因子**，默认值0”
+
+##### flex-shrink
+
+属性在MDN上的定义是：
+
+> 指定了 flex 元素的**收缩规则**，默认值是 1
+
+##### flex-basis
+
+> MDN定义：指定了 flex 元素在主轴方向上的初始大小
+
+#### float系列
+
 
 
 ### js 基础能力
@@ -107,10 +131,72 @@ let res=JSON.parse(temp)
 - 类
 - Async/await
 
+#### 所有继承的分析
+
+1. **原型链继承**
+
+   ```js
+   Child.prototype = new Parent()
+   //缺点：只能使用被继承的属性，不能修改，因为是引用继承
+   
+   Child.prototype = Object.create(new Parent())
+   //解决：Object.create(),这样可以复制一个原型链，不影响原本的父链。
+   ```
+
+2. **构造函数继承**
+
+   ```js
+   function Parent () {
+       this.names = ['kevin', 'daisy'];
+   }
+   function Child () {
+       Parent.call(this);
+   }
+   
+   var child1 = new Child();
+   //缺点：每次被new 方法都在构造函数中定义，每次创建实例都会创建一遍方法。
+   
+   ```
+
+   **构造函数继承优点：**
+
+   1. 避免了引用类型的属性被所有实例共享
+   2. 可以在 Child 中向 Parent 传参
+
+3. **组合继承（原型继承和构造函数继承）**
+
+   **继承 this**，就是继承父亲的**属性**
+
+   **继承构造函数**，就是继承父亲的**方法**
+
+   
+
+   ```js
+   function Parent (name) {
+       this.name = name;
+       this.colors = ['red', 'blue', 'green'];
+   }
+   
+   Parent.prototype.getName = function () {
+       console.log(this.name)
+   }
+   
+   function Child (name, age) {
+       //先继承this
+       Parent.call(this, name);   
+       this.age = age;
+   }
+   
+   Child.prototype = new Parent();
+   //再继承方法
+   Child.prototype.constructor = Child;
+   //Cat.prototype = Object.create(Animal.prototype);
+   ```
+
 #### 闭包
 
 1. **小"黄"书**(你不知道的JavaScript): 当函数**可以记住并访问所在的词法作用域时**,就产生了闭包,即使函数是在当前词法作用域之外执行.
-2.  **红宝书**(JavaScript高级程序设计): 闭包是指**有权访问另一个 函数作用域中的变量的函数**
+2. **红宝书**(JavaScript高级程序设计): 闭包是指**有权访问另一个 函数作用域中的变量的函数**
 
 非常抽象的一个概念,我自己的一个理解是:
  当一个变量(就像上面的name)既不是该函数内部的局部变量,也不是该函数的参数,
@@ -726,7 +812,7 @@ function testType(type){
 
 #### 实现一个call/apply/bind
 
-          1. 手写call、apply、bind
+       1. 手写call、apply、bind
 
 手写call
 
@@ -783,13 +869,11 @@ Function.prototype.myOwnCall = function(someOtherThis) {
 
 ​        解答：Object.create(a)方法创建一个新对象，是这个对象的__proto__指向a对象的实例
 
-##### Object.setPrototypeOf()
+#### Object.setPrototypeOf()
 
 ```Object.setPrototypeOf(Cat.prototype, ParentConstructor.prototype)```
 
 1. 将Cat.prototype对象的__proto__指向 ParentConstructor.prototype
-
-
 
 使用现有的对象来提供新创建的对象的__proto__。
 
@@ -850,6 +934,18 @@ Function.prototype.myOwnCall = function(someOtherThis) {
   ### 源码分析题
 
 - React/Vue/Koa 源码实现
+
+#### XHR
+
+**XMLHttpRequest.readyState** 属性返回一个 XMLHttpRequest 代理当前所处的状态。一个 XHR 代理总是处于下列状态中的一个：
+
+| 值   | 状态               | 描述                                                |
+| ---- | ------------------ | --------------------------------------------------- |
+| `0`  | `UNSENT`           | 代理被创建，但尚未调用 open() 方法。                |
+| `1`  | `OPENED`           | `open()` 方法已经被调用。                           |
+| `2`  | `HEADERS_RECEIVED` | `send()` 方法已经被调用，并且头部和状态已经可获得。 |
+| `3`  | `LOADING`          | 下载中； `responseText` 属性已经包含部分数据。      |
+| `4`  | `DONE`             | 下载操作已完成。                                    |
 
 ### 计算机网络
 
@@ -1050,9 +1146,7 @@ https://juejin.im/post/6844904190582456333
 
 ​     2. 浏览器会给这个**请求带 reffer字段** 表明这个请求来源
 
-​      服务器端可以检测这个字段 来**判断身份**
-
-​     
+​      服务器端可以检测这个字段 来**判断身份**     
 
 8. sameSite:
 
@@ -1074,29 +1168,19 @@ ctx.request.headers.cookie
 
 
 
-
-
   ### 工作流机制
 
 #### webpack优化和打包
 
 entry：入口目录文件，可以**多入口文件打包**
 
-
-
 module：规则模板，需要编译的规则 ，在这个位置设置
 
 plugins：使用哪些插件，或者第三方库来完成编译，这个这个位置设置
 
-
-
 optimization：这个是将整个打包的入口文件 ，切割成chunk（分离）
 
-
-
 devServer：热更新文件
-
-
 
 ```js
 //将你react中的节点自动插入到 index.html文件中去
@@ -1117,16 +1201,10 @@ const HappyPack = require('happypack');
 //使用Dll 来对 一些不常用的 依赖进行独立打包
 // Dll是webpack内置的功能
 const webpack = require('webpack');
-
 //对图片的压缩打包
-
-
 //1. 分离基础库 （react /react-dom）：：可以缓存时间比较久的
-
 //2. 分离 业务代码，代码文件经常被改的的
-
 //优化打包速度
-
 //提升打包速度的包 ： 对于复杂项目---使用happyPack这个包
 
 
