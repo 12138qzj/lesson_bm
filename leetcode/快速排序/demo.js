@@ -1,12 +1,12 @@
 /***
  * 
  * */
-function partition(nums, left, rigth) {
-    let provit = num[left];
-    while (left < rigth) {
+// function partition(nums, left, rigth) {
+//     let provit = num[left];
+//     while (left < rigth) {
 
-    }
-}
+//     }
+// }
 
 function partition(nums, left, right) {
     if (left >= right) return;

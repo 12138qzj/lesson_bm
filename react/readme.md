@@ -24,10 +24,10 @@
     1. componentWillMount:在组件渲染之前运行
     2. componentDidMount: 在组件渲染之后执行
     3. shouldComponentUpdate:返回true 和false ,true代表（组件变量）允许改变，false代表不允许改变。
-    3. componentWillUpdate:组件数据在改变之前执行(数据包括：state,props)
-    4. componentDidUpdate:组件数据修改完成执行(数据包括：state,props),
-    5. componentWillReveceProps:props数据发生改变执行
-    6. componentWillUnMount:组件卸载的时候执行。
+    4. componentWillUpdate:组件数据在改变之前执行(数据包括：state,props)
+    5. componentDidUpdate:组件数据修改完成执行(数据包括：state,props),
+    6. componentWillReveceProps:props数据发生改变执行
+    7. componentWillUnMount:组件卸载的时候执行。
 
 ### react-16中加入的生命周期
 
@@ -38,6 +38,39 @@
     getDerivedStateFromProps: 会在调用 render 方法之前调用，并且在初始挂载及后续更新时都会被调用。它应返回一个对象来更新 state，如果返回 null 则不更新任何内容。
 
     getSnapshotBeforeUpdate(prevProps, prevState)： 在最近一次渲染输出（提交到 DOM 节点）之前调用。它使得组件能在发生更改之前从 DOM 中捕获一些信息（例如，滚动位置）。此生命周期的任何返回值将作为参数传递给 componentDidUpdate()。
+
+#### fiber调和引擎
+    fiber reconciler（协调器）
+
+    requestIdleCallback(walk)
+
+    比线程还小的任务 --纤程或者叫协程
+    fiber 就是比线程更为细微的流程控制机制
+    就是 使用异步 es6的 ** generate：yield **特性  
+
+   - 能够把中断的任务切片处理
+   - 能够调整优先级，重置并复用任务 
+
+   ### DOM diff 介绍
+    - 之前的DOM diff 是递归的过程：我们遍历所有的结点，如果js 执行时间很长的 
+
+        而且js计算和页面渲染，绘制，互斥的。
+    浏览器一次的事件循环（event-loop）/frame 一帧
+
+    js的任务必须要执行完成  不执行完成 则不是一次完整的渲染 不可以被打断js的执行，不会渲染页面
+
+    #### react 16 中的阶段
+
+     - render 阶段：算出哪些需要 更新
+     - Commit 阶段：之前render阶段 已经花费了时间，为了让用户尽快的看到页面，所以会一起喝成
+     **使用这几个生命周期**
+        getSnapshotBeforeUpdate；
+        componentDidMount；
+        componentDidUpdate；
+        componentWillUnmount。
+
+     fiber 是一个数据结构
+     这个数据结构支持我们写出 可中止暂停重启启动的代码
 ####  ####生命周期的三个阶段    
             1. 初始化渲染阶段
                 render componentDidMount

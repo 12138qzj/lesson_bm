@@ -10,7 +10,7 @@ const qs = (arr) => {
             right.push(arr[i]); //大于基数的在右边
         }
     }
-    return [qs(left), provit, qs(right)]; //递归使数组扩展，直到数组剩下一个
+    return [...qs(left), provit, ...qs(right)]; //递归使数组扩展，直到数组剩下一个
 }
 const arr = [0, 1, -1, 3, 99, -4, 6];
 // 1，原地交换

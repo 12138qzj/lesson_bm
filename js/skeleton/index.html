@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .foodentry {
+        overflow: hidden;
+        height: 4.72rem;
+        height: 47.2vw;
+        /* background-color: #fff; */
+        text-align: center
+    }
+    
+    .foodentry a {
+        position: relative;
+        float: left;
+        margin-top: .293333rem;
+        margin-top: 2.933333vw;
+        width: 20%
+    }
+    
+    .foodentry img {
+        width: 1.066667rem;
+        width: 10.666667vw;
+        height: 1.066667rem;
+        height: 10.666667vw;
+        vertical-align: top
+    }
+    
+    .foodentry .title {
+        display: block;
+        margin-top: .133333rem;
+        margin-top: 1.333333vw;
+        color: #666;
+        font-size: .32rem
+    }
+    
+    .foodentry .service {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        white-space: nowrap;
+        background-color: rgba(0, 0, 0, .6);
+        color: #fff;
+        font-size: .24rem;
+        line-height: .533333rem;
+        line-height: 5.333333vw;
+        border-radius: 0 0 .8rem .8rem;
+        border-radius: 0 0 8vw 8vw
+    }
+    
+    .foodentry .container {
+        position: relative;
+        display: inline-block;
+        width: 1.2rem;
+        width: 12vw;
+        height: 1.2rem;
+        height: 12vw
+    }
+    
+    .foodentry .container img {
+        width: 100%;
+        height: 100%
+    }
+    
+    .foodentry .mint-swipe-indicator {
+        margin: 0 .066667rem;
+        margin: 0 .666667vw;
+        width: .24rem;
+        width: 2.4vw;
+        height: .04rem;
+        height: .4vw;
+        border-radius: 0
+    }
+    
+    .foodentry .mint-swipe-indicator.is-active {
+        width: .24rem;
+        width: 2.4vw;
+        background-color: #00a6ff
+    }
+    
+    .item1 {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .item1 div {
+        width: 12vw;
+        height: 12vw;
+        background-color: pink;
+    }
+</style>
+
+<body>
+
+    <div class="mint-swipe foodentry">
+        <div class="mint-swipe-items-wrap">
+            <div class="mint-swipe-item is-active">
+                <a href="javascript:" role="button">
+                    <div ubt-visit-key="1" ubt-data-title="美食" class="container"><img src="https://cube.elemecdn.com/7/d8/a867c870b22bc74c87c348b75528djpeg.jpeg?x-oss-process=image/format,webp/resize,w_90,h_90,m_fixed">
+                        <!---->
+                    </div><span class="title">美食</span></a>
+                <a href="javascript:" role="button">
+                    <div ubt-visit-key="2" ubt-data-title="大牌惠吃" class="container"><img src="https://cube.elemecdn.com/a/7b/b02bd836411c016935d258b300cfejpeg.jpeg?x-oss-process=image/format,webp/resize,w_90,h_90,m_fixed">
+                        <!---->
+                    </div><span class="title">大牌惠吃</span></a>
+                <a href="javascript:" role="button">
+                    <div ubt-visit-key="7" ubt-data-title="跑腿代购" class="container"><img src="https://cube.elemecdn.com/e/58/bceb19258e3264e64fb856722c3c1jpeg.jpeg?x-oss-process=image/format,webp/resize,w_90,h_90,m_fixed">
+                        <!---->
+                    </div><span class="title">跑腿代购</span></a>
+                <a href="javascript:" role="button">
+                    <div ubt-visit-key="8" ubt-data-title="汉堡披萨" class="container"><img src="https://cube.elemecdn.com/b/7f/432619fb21a40b05cd25d11eca02djpeg.jpeg?x-oss-process=image/format,webp/resize,w_90,h_90,m_fixed">
+                        <!---->
+                    </div><span class="title">汉堡披萨</span></a>
+                <a href="javascript:" role="button">
+                    <div ubt-visit-key="10" ubt-data-title="甜品饮品" class="container"><img src="https://cube.elemecdn.com/2/35/696aa5cf9820adada9b11a3d14bf5jpeg.jpeg?x-oss-process=image/format,webp/resize,w_90,h_90,m_fixed">
+                        <!---->
+                    </div><span class="title">甜品饮品</span></a>
+                <a href="javascript:" role="button">
+                    <div ubt-visit-key="13" ubt-data-title="速食简餐" class="container"><img src="https://cube.elemecdn.com/0/1a/314b6da88ab6c7ae9828f91652d40jpeg.jpeg?x-oss-process=image/format,webp/resize,w_90,h_90,m_fixed">
+                        <!---->
+                    </div><span class="title">速食简餐</span></a>
+                <a href="javascript:" role="button">
+                    <div ubt-visit-key="14" ubt-data-title="地方小吃" class="container"><img src="https://cube.elemecdn.com/7/d6/6f2631288a44ec177204e05cbcb93jpeg.jpeg?x-oss-process=image/format,webp/resize,w_90,h_90,m_fixed">
+                        <!---->
+                    </div><span class="title">地方小吃</span></a>
+                <a href="javascript:" role="button">
+                    <div ubt-visit-key="18" ubt-data-title="米粉面馆" class="container"><img src="https://cube.elemecdn.com/e/89/185f7259ebda19e16123884a60ef2jpeg.jpeg?x-oss-process=image/format,webp/resize,w_90,h_90,m_fixed">
+                        <!---->
+                    </div><span class="title">米粉面馆</span></a>
+                <a href="javascript:" role="button">
+                    <div ubt-visit-key="20" ubt-data-title="包子粥店" class="container"><img src="https://cube.elemecdn.com/5/1a/dc885d2ce022d2ee60495acafb795jpeg.jpeg?x-oss-process=image/format,webp/resize,w_90,h_90,m_fixed">
+                        <!---->
+                    </div><span class="title">包子粥店</span></a>
+                <a href="javascript:" role="button">
+                    <div ubt-visit-key="23" ubt-data-title="炸鸡炸串" class="container"><img src="https://cube.elemecdn.com/a/78/0fb469b2da210827ec16896e00420jpeg.jpeg?x-oss-process=image/format,webp/resize,w_90,h_90,m_fixed">
+                        <!---->
+                    </div><span class="title">炸鸡炸串</span></a>
+            </div>
+        </div>
+        <div class="mint-swipe-indicators" style="display: none;">
+            <div class="mint-swipe-indicator is-active"></div>
+        </div>
+    </div>
+    <div class="bone">
+        <div class="item1">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</body>
+<script src="./skeleton.js"></script>
+
+</html>

@@ -4,10 +4,10 @@
     'is-circle':circle
 }]"
 @click="handleClick">
-    Button
-    000{{type}}---{{tit}}
+    {{type}}---{{tit}}
 
 
+<i :class="icon" v-if="icon"></i>
     <slot></slot>
 </button>
 </template>

@@ -10,7 +10,42 @@ rfc 函数式组件 快捷
         生命周期的替代
         - 在return 完执行 <====> 与componentDidMount生命周期一样
         根据依赖是state 在状态执行的时候改变依赖，执行 <====> 与
-    - useCallback
+    - useRef
+        useRef返回一个对象
+        useRef 返回一个可变的 ref 对象，其 .current 属性被初始化为传入的参数（initialValue）。
+        返回的 ref 对象在组件的整个生命周期内保持不变
+
+        解决函数作用域问题，使得定时器不能拿到实时的值
+        ```jsx
+        export const MyComponent=()=>{
+
+        const [message,setMessage]=useState("initial message");
+        const [seconds,setSeconds]=useState(0);
+        const secondsRef=useRef();
+
+        useEffect(() => {
+            setTimeout(()=>{
+            console.log(seconds);
+            setSeconds(1);
+            secondsRef.current=1;
+
+            // console.log(seconds);
+            // setMessage(`total seconds : ${seconds}`)
+
+            },1000)
+            setTimeout(()=>{
+            setMessage(`total seconds : ${secondsRef.current}`)
+            },2000)
+        }, [])
+        
+        return(
+            <div>
+            <h3>{message}</h3>
+            <h4>{seconds}</h4>
+            </div>
+        )
+        }
+        ```
 
     - useContext 
 
@@ -48,9 +83,6 @@ rfc 函数式组件 快捷
 
         是因为父组件改变了值 会发生重新渲染 导致父组件的js函数也会重新渲染一次，导致子组件也重新渲染。
 
-
-
-
         优化场景：
         1. 当我们将一个函数作为参数，传递给子组件的时候，使用useCallback对函数进行处理
 
@@ -62,8 +94,6 @@ rfc 函数式组件 快捷
 
         优化：对返回值做优化 返回值可以是（对象，数组，函数）
         场景：当我们使用一个常量，传递给子组件的时候，当父组件state值改变整个函数是会发生重新执行的，然后子组件也会重新渲染。**优化：**将这个常量使用useMemo返回。 
-
-    
 
 4. 分析react项目是如何运行的
     jsx
@@ -78,9 +108,10 @@ rfc 函数式组件 快捷
 
 5. 你做项目的时候碰到了什么问题吗？
     - 使用文档 API
-    - 问题1： 使用useRef 去解决闭包问题
+    - 问题1： 
+            使用useRef 去解决闭包问题
             当使用定时器去获取useState 中的值当在初始化和执行定时器这段时间改变state值 则不会改变定时器中的值 
-        解决方法： 将这个值存在 secondsRef.current中 ;
+        解决方法： 将这个值存在 secondsRef.current中;
     - 问题2： 接口数据还没有加载完成，用户提前退出，报错
 
         解决方法：使用ref来判断组件是否存在 （卸载）
