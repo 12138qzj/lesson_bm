@@ -1,0 +1,32 @@
+{
+  "name": "react-ssr",
+  "version": "1.0.0",
+  "description": "React/vue 经过webpack打包 变成html/css/js 静态资源",
+  "main": "index.js",
+  "scripts": {
+    "dev:start": "nodemon --watch build --exec node ./build/bundle.js",
+    "dev:build:server": "webpack --config ./webpack.server.js --watch",
+    "dev:build:client": "webpack --config ./webpack.client.js --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-router-config": "^5.1.1",
+    "react-router-dom": "^5.2.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.11.5",
+    "@babel/core": "^7.11.5",
+    "@babel/preset-env": "^7.11.5",
+    "@babel/preset-react": "^7.10.4",
+    "babel-loader": "^8.1.0",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-merge": "^5.1.3",
+    "webpack-node-externals": "^2.5.2"
+  }
+}
