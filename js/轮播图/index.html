@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -61,7 +61,7 @@
                 next.style.transform = `translateX(${100-100*nextPosition-100}%)`
                 position = nextPosition
 
-            }, 16)
+            }, 1000)
 
 
         }
@@ -93,8 +93,6 @@
 
             //终点位置
 
-
-
             function move() {
 
             }
@@ -116,6 +114,129 @@
         })
 
         document.addEventListener('dragstart', (e) => e.preventDefault())
+    </script>
+</body>
+
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 750px;
+            height: 370px;
+            outline: 1px solid blue;
+            white-space: nowrap;
+            font-size: 0;
+            overflow: hidden;
+        }
+        /* 第一层的元素 */
+        
+        .container>img {
+            width: 750px;
+            height: 370px;
+            display: inline-block;
+            transition: ease 1s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img src="https://yanxuan.nosdn.127.net/e1d32c538a9fcf420411592746098ad2.jpg?type=webp&amp;imageView&amp;quality=75&amp;thumbnail=750x0" alt="">
+        <img src="https://yanxuan.nosdn.127.net/7e01b30c2c440e118cf09e14c7a69266.jpg?type=webp&imageView&quality=75&thumbnail=750x0" alt="">
+        <img src="https://yanxuan.nosdn.127.net/94408b4d014ce6774e8f768bdf9b6f60.jpg?type=webp&amp;imageView&amp;quality=75&amp;thumbnail=750x0" alt="">
+        <img src="https://yanxuan.nosdn.127.net/e14d684c9dc43de2af5215c3d49b6870.jpg?type=webp&amp;imageView&amp;quality=75&amp;thumbnail=750x0" , alt="">
+    </div>
+    <script>
+        // -750 * i
+        // 到最后一张 切到第一张, 但是第一张图片从右边出来。（无限轮播）
+        // (i ++ % 4)
+        // -750 * 3  => 0
+        const container = document.querySelector('.container');
+        let children = container.querySelectorAll('img');
+        let position = 0;
+        // 0  1
+        let nextPic = () => {
+            let nextPosition = (position + 1) % children.length;
+            let current = children[position];
+            let next = children[nextPosition];
+
+            // 初始位置 刚好能够把 
+            // position 0 -0
+            // position 1 -100
+            // position 2 -200
+            // position 3 -300
+            current.style.transition = 'none';
+            next.style.transition = 'none';
+            current.style.transform = `translateX(${-100 * position}%)`;
+            // 在 前一张基础上面 + 100%
+            // -100 * position      
+            // - 100 * nextPosition + 100
+            next.style.transform = `translateX(${100 - 100 * nextPosition}%)`;
+            // nextPosition 1 0
+            // nextPosition 2 -100%   nextPosition 为2 position(1)
+
+
+            setTimeout(() => {
+                // 动画完：图片终止位置 在原来的基础上面 往左 -100%
+                current.style.transition = '';
+                next.style.transition = '';
+                current.style.transform = `translateX(${-100 -100 * position}%)`;
+                // -100%
+                next.style.transform = `translateX(${100 - 100 * nextPosition - 100}%)`;
+                // -100%
+                position = nextPosition;
+            }, 16);
+        }
+        setInterval(() => {
+            nextPic()
+        }, 2000);
+
+        container.addEventListener('mousedown', function(event) {
+            let startX = event.clientX,
+                startY = event.clientY;
+            let lastPosition = (position - 1 + children.length) % children.length;
+            let nextPosition = (position + 1) % children.length;
+            // 初始位置
+            let current = children[position];
+            let next = children[nextPosition];
+            let last = children[lastPosition];
+            current.style.transition = 'none';
+            next.style.transition = 'none';
+            last.style.transition = 'none';
+
+            current.style.transform = `tranlateX(${-750 * position}px)`;
+            next.style.transform = `tranlateX(${-750 * nextPosition + 750}px)`;
+            last.style.transform = `tranlateX(${-750 * lastPosition -750 }px)`;
+
+            function move(event) {
+                // 移动时候位置
+            }
+
+            function up(event) {
+                // 终点位置
+                let offset = 0;
+                if (event.clientX - startX > 250) {
+                    // 右
+                    offset = 1;
+                } else if (event.clientX - startX < -250) {
+                    // 左
+                    offset = -1;
+                }
+                // console.log(offset);
+                document.removeEventListener('mousemove', move);
+                document.removeEventListener('mouseup', up);
+            }
+            document.addEventListener('mousemove', move);
+            document.addEventListener('mouseup', up);
+        })
+
+        document.addEventListener('dragstart', (e) => e.preventDefault());
     </script>
 </body>
 

@@ -19,10 +19,9 @@ var findKthLargest = function(nums, k) {
         let l = left;
         let priv = nums[left];
         while (left < right) {
-
-            while (left < right && priv <= nums[right]) right--;
+            while (left < right && priv < nums[right]) right--;
             nums[left] = nums[right];
-            while (left < right && priv >= nums[left]) left++;
+            while (left < right && priv > nums[left]) left++;
             nums[right] = nums[left];
 
         }

@@ -39,25 +39,71 @@
     <p>88899</p>
 
     <script>
-        console.log(document.querySelector("#ele"))
+        // console.log(document.querySelector("#ele"))
 
-        function a() {
-            console.log("---", arguments)
-        }
+        // function a() {
+        //     console.log("---", arguments)
+        // }
 
-        a(1, 2, 3, 4)
+        // a(1, 2, 3, 4)
 
-        function throttle(fn, wait) {
-            let timeout = null;
-            return function() {
-                if (!timeout) return;
-                timeout = setTimeout(() => {
-                    fn()
-                }, wait)
+        // function throttle(fn, wait) {
+        //     let timeout = null;
+        //     return function() {
+        //         if (!timeout) return;
+        //         timeout = setTimeout(() => {
+        //             fn()
+        //         }, wait)
+        //     }
+        // }
+
+        // let res = throttle()
+        // var a = new Promise();
+        // console.log(a)
+
+        function aaa() {
+            var a = 9;
+            console.log(this, this.bb)
+
+            function func() {
+                debugger;
+                console.log(a)
             }
+            func()
         }
 
-        let res = throttle()
+        aaa();
+        // let b = {
+        //     bb: 88
+        // }
+
+        // Function.prototype.myApply = function(context) {
+        //     if (typeof this !== 'function') {
+        //         throw new TypeError('Error');
+        //     }
+        //     context = context || window;
+        //     context.fn = this;
+        //     console.log(context, this, "----")
+        //     let result;
+        //     if (arguments[1]) {
+        //         result = context.fn(...arguments[1]);
+        //     } else {
+        //         result = context.fn();
+        //     }
+        //     delete context.fn;
+        //     return result;
+        // }
+        // console.log(aaa.myApply(b));
+        // let p1 = new Promise((resolve, reject) => {
+        //     resolve(1);
+        //     let p2 = Promise.resolve(1).then(console.log)
+        //     console.log(6);
+        // })
+        // p1.then(res => {
+        //     console.log(res)
+        // }).then(res => {
+        //     console.log(res)
+        // })
     </script>
 
 </body>

@@ -14,12 +14,35 @@
         position: absolute;
         position: sticky;
     }
+    /* .parent {
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        line-height: 100px;
+        background-color: #fff;
+    } */
+    
+    .parent {
+        height: 100px;
+        /* position: relative;*/
+        background-color: #fff;
+        display: flex;
+    }
+    
+    .child {
+        margin: auto;
+    }
 </style>
 
 <body style="margin:0;padding:0;background: yellow;">
-    <div id="box" style="top:10px;margin:20px 10px;background: pink; height: 100px;width: 100px;">
-    </div>
+    <!-- <div id="box" style="top:10px;margin:20px 10px;background: pink; height: 100px;width: 100px;">
+    </div> -->
 
+    <div class="parent">
+        <span class="child">aa</span>
+    </div>
 
 </body>
 <script>
@@ -48,17 +71,61 @@
     // console.log(a.getname())
     // 写出这段代码的输出结果：
 
-    function createTask(ms) {
-        return () => {
-            console.log('start', ms);
-            return new Promise(r => setTimeout(() => {
-                console.log('end', ms);
-                r(ms);
-            }, ms));
-        }
+    // function createTask(ms) {
+    //     return () => {
+    //         console.log('start', ms);
+    //         return new Promise(r => setTimeout(() => {
+    //             console.log('end', ms);
+    //             r(ms);
+    //         }, ms));
+    //     }
+    // }
+    // const tasks = Array(5).fill(null).map((_, i) => createTask(i * 1000));
+    // Promise.all(tasks.map(task => task())).then(console.log);
+    // var k = 2;
+    // for (var i = 0; i < 10; i++) {
+    //     (function(i) {
+    //         setTimeout(() => {
+    //             console.log(i)
+    //         }, 1000)
+    //     })(i)
+
+    // }
+    // console.log(window.k)
+
+    // var b = {
+    //     a: 10
+    // };
+    // (function b(b) {
+    //     window.b = 20;
+    //     console.log(b);
+    // })(b);
+
+    // var a = {
+    //     i: 1,
+    //     toString() {
+    //         console.log(this)
+
+    //         return a.i++
+    //     },
+    //     valueOf() {
+    //         console.log(2)
+    //     }
+    // }
+
+    // if (a == "1") {
+    //     console.log(1);
+    // }
+    // console.log(a);
+
+    Number.prototype.add = function(n) {
+        console.log(this)
+        return this + n
     }
-    const tasks = Array(5).fill(null).map((_, i) => createTask(i * 1000));
-    Promise.all(tasks.map(task => task())).then(console.log);
+    Number.prototype.minus = function(n) {
+        return this - n
+    }
+    console.log((5).add(3).minus(2)) //6
 </script>
 
 </html>

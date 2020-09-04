@@ -23,7 +23,9 @@
 
     1. componentWillMount:在组件渲染之前运行
     2. componentDidMount: 在组件渲染之后执行
-    3. shouldComponentUpdate:返回true 和false ,true代表（组件变量）允许改变，false代表不允许改变。
+    3. shouldComponentUpdate:
+    一般是 判定该组件的 props 和 state 是否有变化
+    来返回true 和false ,true代表（组件变量）允许改变，false代表不允许改变。对diff算法的优化
     4. componentWillUpdate:组件数据在改变之前执行(数据包括：state,props)
     5. componentDidUpdate:组件数据修改完成执行(数据包括：state,props),
     6. componentWillReveceProps:props数据发生改变执行
