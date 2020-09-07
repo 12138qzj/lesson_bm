@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
     <script>
         // 1 callback
         // 2 后端 callbackName(数据)
@@ -25,7 +25,12 @@
 =》 因为 script 标签的原因，浏览器会把这一段字符串当做 JS 执行
 =》当做 js 我们 前端预先定义好的 回调就会执行，拿到数据
 -->
-    <script src="http://localhost:9090/api?callback=fff"></script>
+    <script src="http://localhost:9090/api?callback=fff">
+        function fff(posts) {
+            console.log(posts);
+            // 渲染
+        }
+    </script>
     <!-- <script>
   onResponse(["js","php"])
 </script> -->

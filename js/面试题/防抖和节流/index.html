@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function debounce(fn, wait) {
+            let timer;
+
+
+            return function() {
+                let that = this;
+                if (timer) {
+                    clearTimeout(timer);
+                }
+                timer = setTimeout(() => {
+                    fn.apply(that, ...arguments)
+                }, wait);
+            }
+        }
+
+        function throttle1(fun, wait) {
+            let olddate = 0;
+            return function() {
+                let that = this;
+                let newdate = new Date();
+                if (newdate > olddate + wait) {
+                    fun.call(that, ...arguments);
+                    olddate = newdate;
+                }
+            }
+        }
+
+        function throttle(fun, wait) {
+            let timer;
+            let olddate = 0;
+            return function(...arg) {
+                let that = this;
+                if (!timer) {
+                    timer = setTimeout(() => {
+                        fun.apply(that, arg)
+                    }, wait)
+                }
+
+            }
+        }
+        // call apply
+        function myapply(context) {
+            context.fn = this;
+            let res;
+            if (arguments[1]) {
+                res = context.fn(...arguments[1])
+            } else {
+                res = context.fn()
+            }
+            delete context.fn;
+            return res;
+        }
+
+        function mybind() {
+            let that = this;
+            // let res;
+            let arr = [...arguments]
+            let that = arr.shift()
+
+            function res() {
+
+                return context.fn.apply(that, arr)
+            }
+
+            return res;
+        }
+    </script>
+</body>
+
+</html>

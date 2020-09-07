@@ -10,7 +10,7 @@
 ### 简单请求
 
 ### 非简单请求
-    - OP
+    - options
 
 ### JSONP 
     不同的xhr feach ,不受跨域限制

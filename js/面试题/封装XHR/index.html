@@ -71,3 +71,34 @@
         })
         .catch()
 </script>
+<script>
+    const axios = ({
+        url,
+        method,
+        Headers,
+        timeout
+    }) => {
+        return new Promise((resolve, reject) => {
+            let XHR = new XMLHttprequest();
+
+            XHR.open(method, url);
+            Object.keys().forEach(Header => {
+                XHR.setRequestHeader(Header, Headers[Header])
+            })
+
+            XHR.onreadystatechange = () => {
+                if (XHR.readyState === 4) {
+                    if (XHR.status >= 200 && XHR.status <= 300) {
+                        resolve(XHR.response);
+                    } else {
+                        reject();
+                    }
+                }
+            }
+            XHR.timeout = timeout;
+            XHR.send();
+        })
+
+
+    }
+</script>

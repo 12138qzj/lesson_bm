@@ -46,6 +46,27 @@
         }
         console.log(deepClone(obj))
     </script>
+    <script>
+        let map = new Map();
+
+        let bool = false;
+
+        function deepcopy(obj, a) {
+            let t = {};
+            if (map.has(obj)) return map.get(obj);
+            map.set(obj, t);
+            Object.keys(obj).forEach(element => {
+                    if (a === element) bool = true;
+                    if (Object.prototype.toString.call(obj[element]) === '[Object object]') {
+                        t[element] = deepcopy(element);
+                    } else {
+                        t[element] = obj[element]
+                    }
+                })
+                // return t;
+            return bool
+        }
+    </script>
 </body>
 
 </html>

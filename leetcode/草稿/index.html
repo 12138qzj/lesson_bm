@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arr = [1, 1, 4, 5, 6, 3, 7, 8, 8, 9, 9, 12]
+
+        function max3(arr) {
+            let res = [];
+            for (let i = 0; i < arr.length; i++) {
+                if (!res.includes(arr[i])) {
+                    res.push(arr[i])
+                }
+            }
+            res.sort((a, b) => b - a);
+            console.log(res, true)
+            if (res[2])
+                return res[2]
+
+            return res[0]
+        }
+        console.log(max3(arr))
+    </script>
+</body>
+
+</html>

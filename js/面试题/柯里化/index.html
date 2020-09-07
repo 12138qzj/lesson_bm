@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function clh(fn) {
+            let arrAll = [];
+
+            return function next() {
+                arrAll = arrAll.concat([...arguments]);
+
+                console.log(arrAll)
+                if (arrAll.length >= 3) {
+                    return fn(...arrAll.slice(0, 3));
+                } else {
+                    return next;
+                }
+            }
+        }
+
+        function sum() {
+            return [...arguments].reduce((pre, cur, index) => {
+                console.log(index)
+                if (index < 3) {
+                    return cur + pre;
+                } else {
+                    return pre;
+                }
+            }, 0)
+        }
+        let func = clh(sum);
+
+        console.log(func(1)(2, 6))
+    </script>
+</body>
+
+</html>

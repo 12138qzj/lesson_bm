@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let obj = {}
+
+        function defineReactive(obj, key, val) {
+            Object.defineProperty(obj, key, {
+                enumerable: true,
+                configurable: true,
+                get: function() {
+                    // if (Dep.target) {
+                    //     //收集依赖 等同于  dep.addSub(Dep.target)
+                    //     dep.depend()
+                    // }
+                    console.log("get")
+                    return val;
+                },
+                set: function(newVal) {
+                    if (newVal === val || (newVal !== newVal && val !== val)) {
+                        return;
+                    }
+                    val = newVal;
+                    console.log("sset")
+
+                    //发布改变
+                    // dep.notify();
+                }
+            });
+        }
+        defineReactive(obj, 'html', 'how are you');
+        let a = obj.html
+            // obj.html = 'I am fine thank you'
+
+        class Dep {
+            constructor() {
+                this.subs = [];
+            }
+            addSub(sub) {
+                this.subs.push(sub)
+            }
+            reomoveSub(sub) {
+                reomove(this.subs, sub)
+            }
+            depend() {
+                if (Dep.target) {
+
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

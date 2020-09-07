@@ -32,18 +32,15 @@ let nums = [-1, -1, 7, 9, 8, -1, 5];
 
 var sortArray = function(nums) {
     function quick_sort(left, right) {
-
         if (left >= right) return;
         let l = left;
         let r = right;
         let priv = nums[left];
         while (left < right) {
-
             while (left < right && priv <= nums[right]) right--;
             nums[left] = nums[right];
             while (left < right && priv >= nums[left]) left++;
             nums[right] = nums[left];
-
         }
         nums[left] = priv;
         quick_sort(l, left - 1);
