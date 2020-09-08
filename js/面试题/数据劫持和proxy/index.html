@@ -47,4 +47,22 @@
         }
     });
     console.log(proxyBao.price)
+
+    let validator = {
+        set: function(obj, prop, value) {
+            if (prop === "age") {
+                if (!Number.isInteger(value)) {
+                    throw new Error('The age is not an integeer')
+                }
+                if (value > 200) {
+                    throw new RangeError("the age seems invalid")
+                }
+            }
+            obj[prop] = value;
+            return true;
+        }
+    }
+    let person = new Proxy({}, validator)
+    person.age = 100;
+    person.age = 300;
 </script>

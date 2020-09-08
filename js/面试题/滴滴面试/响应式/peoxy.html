@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // let target = {}; //对象，数据劫持 代理
+        // let p = new Proxy(target, {})
+        let validator = {
+            set: function(obj, prop, value) {
+                console.log(obj, prop, value)
+                if (prop === "age") {
+                    if (!Number.isInteger(value)) {
+                        throw new Error('The age is not an integeer')
+                    }
+                    if (value > 200) {
+                        throw new RangeError("the age seems invalid")
+                    }
+                }
+                obj[prop] = value;
+                return true;
+            }
+        }
+        let person = new Proxy({}, validator)
+        person.age = 100;
+        person.age = 150;
+
+        // person.age = 300;
+    </script>
+</body>
+
+</html>

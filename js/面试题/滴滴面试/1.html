@@ -1,0 +1,28 @@
+<script>
+    let obj = {
+        a: '1',
+        b: {
+            c: 2
+        },
+        d: [1, 2, 3]
+    }
+
+    //数据在更新的时候 通知一下模板
+
+    var res = Object.defineProperty(obj, "a", {
+        // writable: true,
+        enumerable: true,
+        get: function() {
+
+            return this.a;
+        },
+
+        set: function(newValue) {
+
+            console.log("改变了");
+            this.a = newValue
+        }
+    })
+    obj.a = "7";
+    console.log(obj.a)
+</script>
