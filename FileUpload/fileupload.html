@@ -46,7 +46,8 @@
             });
         }
         document
-            .getElementById('file').addEventListener("change", event => {
+            .getElementById('file')
+            .addEventListener("change", event => {
                 const file = event.target.files[0];
                 const file_name = file.name.split(".")[0]; //获取文件的名字
                 FlieChunkList.push(event.target.files[0]);

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <li>大一</li>
+        <li>大二</li>
+        <li>大三</li>
+        <li>大四</li>
+    </div>
+    <button id="btn">清除计时器</button>
+    <div id="time"></div>
+    <button id="btn">定时器</button>
+    </br>
+
+
+    <script>
+        document.write("可用高度: " + screen.availHeight + `<br/>`);
+        document.write("可用宽度: " + screen.availWidth + `<br/>`);
+        document.write("高度: " + screen.height + `<br/>`);
+        document.write("宽度: " + screen.width + `<br/>`);
+
+        var div = document.getElementsByTagName("div")
+        console.log(div[0].children)
+        console.log(document)
+
+        var i = 0;
+        var time = document.getElementById("time")
+        var tiemr = setInterval(() => {
+            time.innerHTML = (i++) + "";
+        }, 1000)
+
+        var btn = document.getElementById("btn");
+        btn.addEventListener("click", () => {
+            console.log("object")
+            clearInterval(tiemr)
+        });
+
+        let timeout = setTimeout(() => {
+            alert("定时器到了")
+        }, 2000)
+
+        // function clear() {
+
+
+        // }
+    </script>
+</body>
+
+</html>
