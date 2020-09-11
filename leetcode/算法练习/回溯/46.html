@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var permute = function(nums) {
+            let res = [];
+            backtrack(nums);
+
+            function backtrack(nums, path = []) {
+                if (nums.length === path.length) {
+                    console.log(path);
+                    res.push(path.slice(0))
+                    return;
+                }
+                for (let n of nums) {
+                    if (path.includes(n)) continue;
+                    path.push(n);
+                    backtrack(nums, path)
+                    path.pop()
+                }
+            }
+            return res;
+        }
+        console.log(permute([1, 2, 3]))
+    </script>
+
+</body>
+
+</html>

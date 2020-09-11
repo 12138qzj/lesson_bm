@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var combine = function(n, k) {
+            let res = [];
+            let nums = new Array(n).fill(null).map((_, i) => i + 1)
+            back([])
+
+            function back(path) {
+                if (path.length === k) {
+                    res.push(path.slice(0))
+                    console.log(path)
+                    return;
+                }
+                for (let i = 0; i < n; i++) {
+                    if (path[path.length - 1] >= nums[i]) continue;
+                    path.push(nums[i])
+                    back(path);
+                    path.pop();
+
+                }
+
+            }
+            return res;
+
+        }
+        combine(4, 2)
+    </script>
+</body>
+
+</html>
