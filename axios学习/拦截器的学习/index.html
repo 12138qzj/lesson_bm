@@ -1,0 +1,30 @@
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+<script>
+    const instance = axios.create();
+    // instance.interceptors.
+    // 添加请求拦截器
+    instance.interceptors.request.use(function(config) {
+        // 在发送请求之前做些什么
+        console.log("res  request")
+
+        return config;
+    }, function(error) {
+        // 对请求错误做些什么
+        return Promise.reject(error);
+    });
+
+    // 添加响应拦截器
+    instance.interceptors.response.use(function(response) {
+        // 对响应数据做点什么
+        console.log("res2 response")
+        return response;
+    }, function(error) {
+        // 对响应错误做点什么
+        return Promise.reject(error);
+    });
+    instance.get('http://neteasecloudmusicapi.zhaoboy.com/search?keywords=%E6%B5%B7%E9%98%94%E5%A4%A9%E7%A9%BA')
+        .then(res => {
+            console.log("结果", res)
+        });
+</script>
