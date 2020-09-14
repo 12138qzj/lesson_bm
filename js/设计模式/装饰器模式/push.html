@@ -1,0 +1,56 @@
+<script>
+    //装饰器 @ mobx中使用这个
+
+    var _class;
+
+    function _applyDecoratedDescriptor(target, property, decorators, descriptor, context) {
+        var desc = {};
+        Object.keys(descriptor).forEach(function(key) {
+            desc[key] = descriptor[key];
+        });
+        desc.enumerable = !!desc.enumerable;
+        desc.configurable = !!desc.configurable;
+        if ('value' in desc || desc.initializer) {
+            desc.writable = true;
+        }
+        desc = decorators.slice().reverse().reduce(function(desc, decorator) {
+            return decorator(target, property, desc) || desc;
+        }, desc);
+        if (context && desc.initializer !== void 0) {
+            desc.value = desc.initializer ? desc.initializer.call(context) : void 0;
+            desc.initializer = undefined;
+        }
+        if (desc.initializer === void 0) {
+            Object.defineProperty(target, property, desc);
+            desc = null;
+        }
+        return desc;
+    }
+
+    function log(target, name, decsriptor) {
+        // target
+        // 拿到 装饰器中的目标值
+        console.log(target.toString(), name, decsriptor, decsriptor.value);
+        let originAdd = decsriptor.value;
+
+        decsriptor.value = function(...arg) {
+            console.log("你调用了这个数据"); // Object.defineProperty();
+
+            let res = originAdd.apply(this, arg);
+            return res;
+        };
+
+        return decsriptor;
+    }
+
+    let Math = (_class = class Math {
+        add(a, b) {
+            // const sum = 'add'
+            const sum = 'add';
+            return sum + a + b;
+        }
+
+    }, (_applyDecoratedDescriptor(_class.prototype, "add", [log], Object.getOwnPropertyDescriptor(_class.prototype, "add"), _class.prototype)), _class);
+    let m = new Math();
+    console.log("----", m.add(1, 2));
+</script>

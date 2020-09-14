@@ -1,0 +1,7 @@
+{
+    //使用插件来处理 转译不能够识别的 代码
+    "plugins": [[
+        "@babel/plugin-proposal-decorators",
+        {"legacy":true}
+    ]]
+}
