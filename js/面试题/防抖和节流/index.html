@@ -12,7 +12,6 @@
         function debounce(fn, wait) {
             let timer;
 
-
             return function() {
                 let that = this;
                 if (timer) {
@@ -46,7 +45,6 @@
                         fun.apply(that, arg)
                     }, wait)
                 }
-
             }
         }
         // call apply
@@ -69,7 +67,6 @@
             let that = arr.shift()
 
             function res() {
-
                 return context.fn.apply(that, arr)
             }
 

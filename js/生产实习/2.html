@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button class="col-md-4 " id="contextlist1">
+        点赞最高十条数据
+    </button>
+    <script>
+        const div = document.getElementById('contextlist1')
+        console.log(div)
+        div.addEventListener("click", (e) => {
+            sel(e)
+        });
+
+        function sel(e) {
+            console.log("---", e, $);
+            $.post("${pageContext.request.contextPath}/content/list", {
+                num: -1
+            }, function(responseData) {
+                console.log(responseData);
+                if (responseData.status == 0) {
+                    // 此时证明是成功的
+                    let datas = responseData.data; // 此时是数组
+                    for (let i = 0; i < datas.length; i++) {
+                        let xxx = datas[i];
+                        // 创建一个div ，向 div 中填充内容
+                        let e = $("<div style=\"margin-bottom: 10px;box-shadow: 0px 1px 3px #2d2c2c ;\" onclick='discuss(" + xxx.id + ")'>\n" +
+                            "                <div >\n" +
+                            "                    <div style=\"text-align: left ; padding-left: 10px; padding-top: 10px\">" + xxx.user.username + "</div>\n" +
+                            "                    <div style=\"text-align: center\">" + xxx.content + "</div>\n" +
+                            "                </div>\n" +
+                            "                <div style=\"text-align: right ; padding-bottom: 10px ; padding-right: 10px;\">\n" +
+                            "                   " + xxx.publishTime + " <i class='fa fa-thumbs-up'></i>&nbsp;" + xxx.likeCount + "\n" +
+                            "                </div>\n" +
+                            "            </div>");
+
+                        // 追加一个元素
+                        $("#contentList1").append(e);
+                    }
+                }
+            }, "JSON");
+        }
+    </script>
+</body>
+
+</html>
