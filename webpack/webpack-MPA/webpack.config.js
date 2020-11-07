@@ -68,8 +68,11 @@ module.exports = {
             chunks: ["order"]
         }),
         new HtmlWebpackPlugin({
+            // 从这个文件中进入 ，将这个入口的文件打包出来
             template: './src/pages/promation/index.html',
+            // 打包出来的文件名字
             filename: 'promation.html',
+            // 需要那个入口的内容
             chunks: ["promation"]
 
         })

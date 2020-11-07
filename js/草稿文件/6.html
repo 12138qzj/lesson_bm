@@ -69,6 +69,12 @@
     let map = new Map();
 
 
+    let arr2 = [
+        ['a', 'b'],
+        [0, ['a']],
+        [false], null
+    ];
+
     function flat(a) {
         // todo
         let res = [];
@@ -77,20 +83,23 @@
         for (let i = 0; i < a.length; i++) {
             if (Object.prototype.toString.call(a[i]) === "[object Array]") {
                 // if (a[i] === a) {
-                console.log("object")
-                    // res.push(res)
-                    // break;
+                // res.push(res)
+                // break;
 
                 // } else
                 res.push(...flat(a[i]))
             } else {
-                res.push(a[i])
+                console.log("object", a[i])
+                    // 去除 null  和 undefined
+                if (String(a[i]) !== 'null' &&
+                    String(a[i]) !== 'undefined')
+                    res.push(a[i])
             }
         }
         return res;
 
     }
-    console.log("res", flat(a))
+    console.log("res", flat(arr2))
 
     console.log(Object.prototype.toString.call(a))
 </script>
