@@ -6,11 +6,24 @@
         valueOf() {
             return 0;
         },
-        [Symbol.toPrimitive]: () => {
-            return "hh"
-        }
+        // [Symbol.toPrimitive]: () => {
+        //     return "hh"
+        // }
+    }
+    let obj2 = {
+        toString() {
+            return 'str'
+        },
+        valueOf() {
+            return 0;
+        },
+        // [Symbol.toPrimitive]: () => {
+        //     return "hh"
+        // }
     }
 
     console.log(String(obj)) //str
     console.log(Number(obj)) //0
+    console.log(obj == '0') //0
+    console.log([])
 </script>

@@ -25,3 +25,17 @@ var maxDepth = function(root) {
     return max;
 
 };
+
+function sd(node) {
+
+    let res = []
+
+    function deep(node) {
+        if (!node) return
+        res.push(node.value);
+        deep(node.left)
+        deep(node.right)
+    }
+    deep(node)
+    return res;
+}

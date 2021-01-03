@@ -1,7 +1,8 @@
 import React from 'react';
 class Mix extends React.Component {
   state = {
-    visiable: false
+    visiable: false,
+    count: 1,
   }
   handleToogle = (e) => {
     console.log(1)
@@ -30,13 +31,15 @@ class Mix extends React.Component {
 
 
     document.body.addEventListener('click', () => {
-    console.log("document")
+      console.log("document")
 
       this.setState({
-        visiable: false
+        count: 2
       })
     })
   }
+
+ 
   render() {
     return (
       <div>

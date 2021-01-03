@@ -57,3 +57,26 @@ function kp(nums) {
     return nums
 }
 console.log(kp(num))
+
+
+// function fspx(nums) {
+
+//     function sort(left, right) {
+//         if (left > right)
+//             return
+//         let r = right
+//         let l = left
+//         let temp = nums[left]
+//         while (left < right) {
+//             while (temp <= nums[right] && left < right) right++;
+//             nums[left] = nums[right];
+//             while (temp > nums[right] && right < left) left++
+//                 nums[right] = nums[left]
+//         }
+//         nums[l] = temp;
+//         sort(0, left);
+//         sort(left + 1, r)
+//     }
+//     sort(0, nums.length - 1)
+//     return nums;
+// }

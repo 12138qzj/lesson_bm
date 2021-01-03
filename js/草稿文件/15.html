@@ -19,6 +19,13 @@
         }
         a(b);
         console.log(b)
+
+        function muApply(func) {
+            func.fn = this
+            let res = func.fn();
+            delete func.fn;
+            return res;
+        }
     </script>
 
 </body>
