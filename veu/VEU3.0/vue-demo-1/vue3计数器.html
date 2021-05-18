@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app"></div>
+    <!-- template标签以及里面的内容不会被浏览器渲染 -->
+    <template id='dom'>
+        <h2 class="message">{{message}}</h2>
+        <h2 class="counter">{{counter}}</h2>
+        <button @click='increment' class="increment">+1</button>
+        <button @click='decrement' class="decrement">-1</button> 
+    </template>
+</body>
+<script src="https://unpkg.com/vue@next"></script>
+
+<script>
+    const app = Vue.createApp({
+        // 使用'#dom' 框架会执行document.querySelector("#app") 拿到对应结点
+        template: '#dom',
+        data: function() {
+            return {
+                message: "Hello world!",
+                counter: 100,
+            }
+        },
+        methods: {
+            increment() {
+                console.log('点击了+1');
+                this.counter++;
+            },
+            decrement() {
+                console.log('点击了-1')
+                this.counter--;
+
+            }
+        }
+    })
+    app.mount('#app');
+</script>
+</html>
