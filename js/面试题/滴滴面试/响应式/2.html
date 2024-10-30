@@ -10,6 +10,7 @@
 <body>
 
     <script>
+        // 被观察者
         class Subject {
             constructor() {
                 this.state = 0;
@@ -32,28 +33,29 @@
                 console.log("this.observers", this.observers)
             }
         }
+        // 观察者
         class Observer {
             constructor(name, subject) {
                 this.name = name;
                 this.subject = subject;
                 this.subject.attach(this);
-                console.log(this)
-                debugger;
+                console.log('111', name,this)
+                // debugger;
             }
             update() {
                 console.log(`${this.name} update,
              state: ${this.subject.getState()}`)
             }
         }
-        // 订阅发布者模式
+        // 订阅发布者模式  观察者模式
         let s = new Subject();
         let o1 = new Observer('1', s)
         let o2 = new Observer('2', s)
         let o3 = new Observer('3', s)
 
         s.setState(1)
-        s.setState(2)
-        s.setState(3)
+        // s.setState(2)
+        // s.setState(3)
         o1.update()
     </script>
 </body>

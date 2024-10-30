@@ -2,6 +2,7 @@
  * @param {string} s
  * @return {number}
  * 2020-9-20
+ * https://leetcode.cn/problems/longest-substring-without-repeating-characters/
  */
 var lengthOfLongestSubstring = function(s) {
     let maxleng = -Infinity;
@@ -19,4 +20,24 @@ var lengthOfLongestSubstring = function(s) {
         R++;
     }
     return maxleng === -Infinity ? 0 : maxleng;
+};
+
+/**
+ * @param {string} s
+ * @return {number}
+ */
+var lengthOfLongestSubstring = function(s) {
+    let maxleng = 0
+    let index = 0
+    let map = []
+    while(index < s.length){
+        if(map.includes(s[index])){
+            map.shift()
+        } else {
+            map.push(s[index])
+            index++
+        }
+        maxleng = Math.max(maxleng, map.length)
+    }
+    return maxleng
 };

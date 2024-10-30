@@ -1450,3 +1450,6 @@ const debounce = (func, delay) => {
 
 你对Promise有什么了解，你能实现一下它吗
 
+
+
+

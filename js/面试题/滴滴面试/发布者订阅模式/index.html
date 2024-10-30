@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     class sub {
+        constructor() {
+            this.lisnters={}
+        }
+        on(name, fun){
+            if( typeof fun ==="function"){
+                this.lisnters[name] = fun
+            } else {
+                console.log("不能是非韩式");
+            }
+        }
+        once(name,fun){
+            fun.once = 1
+            this.on(name, fun)
+        }
+        off(name){
+            if(this.lisnters[name]){
+                delete this.lisnters[name]
+            }
+            // this.lisnters[name]((item) => {
+            //     if(item.name === name){
+            //         return false
+            //     } else {
+            //         return true
+            //     }
+            // })
+        }
+        emit(name){
+            if(this.lisnters[name]){
+                this.lisnters[name]()
+            }
+            
+            this.lisnters.forEach((itme) => {
+                if(itme.toFun.once === 0){
+
+                }else if(itme.toFun.once > 0){
+                    itme.toFun()
+                    itme.toFun.once--
+                } else {
+                    itme.toFun()
+                }
+            })
+        }
+     }
+     const aa = new sub()
+     aa.on('price1', () => {
+        console.log('涨价了')
+     })
+     aa.on('price2', () => {
+        console.log('降了价了')
+     })
+
+     aa.once('price3', () => {
+        console.log('3333降了价了')
+     })
+
+     aa.emit()
+     aa.emit()
+
+
+    </script>
+</body>
+</html>

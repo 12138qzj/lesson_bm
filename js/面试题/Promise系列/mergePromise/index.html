@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 实现mergePromise函数，把传进去的数组按顺序先后执行，并且把返回的数据先后放到数组data中。
+
+
+        async function mergePromise (tasks) {
+            let data = []
+      
+            for (const task of tasks) {
+                let a =  await task()
+                data.push(a)
+            }
+
+            return Promise.resolve(data)
+            
+        }
+
+        // 高级用法
+function mergePromise2(funcArray) {
+  const data = [];
+
+  return funcArray.reduce((promise, func) => {
+    return promise.then(func).then(result => {
+      data.push(result);
+      return data;
+    });
+  }, Promise.resolve());
+}
+
+
+        // 示例异步函数
+const asyncTask1 = () => new Promise(resolve => setTimeout(() => resolve('Task 1'), 1000));
+const asyncTask2 = () => new Promise(resolve => setTimeout(() => resolve('Task 2'), 2000));
+const asyncTask3 = () => new Promise(resolve => setTimeout(() => resolve('Task 3'), 500));
+
+// 调用 mergePromise 并输出结果
+mergePromise([asyncTask1, asyncTask2, asyncTask3]).then(result => {
+  console.log(result); // ["Task 1", "Task 2", "Task 3"]
+});
+    </script>
+</html>

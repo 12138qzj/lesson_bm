@@ -33,3 +33,20 @@ var reverseList = function(head) {
     return pre;
 
 };
+
+/**
+ * @param {ListNode} head
+ * @return {ListNode}
+ */
+var reverseList = function(head) {
+    let cur = head
+    let pre = null
+    let temp = null
+    while(cur){
+        temp = cur
+        cur = cur.next
+        temp.next = pre
+        pre =  temp
+    } 
+    return pre
+};

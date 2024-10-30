@@ -2,11 +2,27 @@
     //
     function Animal() {
         this.name = "11"
+        this.aaa ='11111111'
 
         function say() { //这个函数不能被继承，没有挂载在对象上
             console.log("shuohua");
         }
     }
+
+    function dog () {
+        this.name = '99'
+        this.bbb = '996666'
+
+        function ww() {
+            console.log("ww");
+        }
+    }
+
+    dog.prototype = Object.assign(dog.prototype, new Animal())
+
+    let dag1 = new dog()
+
+    console.log(dag1, dag1.say)
     let cat = new Animal();
     console.log(cat);
     //对象字面量 {}
@@ -31,4 +47,19 @@
     //instanceof 原理：//判断 左边对象 它在原型链上面 有没有出现过Constructor.prototype这个对象
     //查找
     console.log();
+
+
+    function Parent () {
+    this.names = ['kevin', 'daisy'];
+}
+Parent.prototype.aaa =1232
+function Child () {
+    Parent.call(this);
+}
+
+Child.prototype = Object.create(new Parent())
+
+Child.prototype.cc= 144444
+var child1 = new Child();
+console.log(child1, child1.aaa)
 </script>

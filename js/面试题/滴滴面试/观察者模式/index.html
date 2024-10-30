@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 被观察者
+        class subject {
+            constructor() {
+                this.state = 0
+                this.observers = []
+            }
+            getState() {
+                return this.state
+            }
+            setState(val) {
+                this.state = val
+                this.tongzhiObserver()
+            }
+
+            // 添加观察者
+            attach(observer) {
+                this.observers.push(observer)
+            }
+            tongzhiObserver() {
+                this.observers.forEach((observer) => {
+                    observer.updata()
+                })
+            }
+        }
+
+        class Observer{
+            constructor(name, subject) {
+                this.subject = subject;
+                this.name = name
+                subject.attach(this)
+            }
+
+            updata() {
+                console.log(`当前观察者：${this.name}，观察的值：${this.subject.getState()}`);
+                // 给被观察者调用
+            }
+        }
+        const s = new subject()
+        const o1 = new Observer('观察者1', s)
+        const o2 = new Observer('观察者2', s)
+        
+        s.setState(122)
+
+    </script>
+</body>
+</html>

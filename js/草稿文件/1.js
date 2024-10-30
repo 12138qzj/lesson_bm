@@ -78,10 +78,9 @@ fn(2);
 // var fnname = "李四"
 
 for (var i = 0; i < 5; i++) {
-    // setTimeout(function() {
-    //     console.log(i);
-    // }, 1000);
-    console.log(i);
+    setTimeout(function() {
+        console.log(i);
+    }, 1000);
 }
 
 console.log("wai", i);

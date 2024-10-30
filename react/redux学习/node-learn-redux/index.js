@@ -68,7 +68,6 @@ console.log(store);
 console.log('now', store.getState());
 
 // action - reducer
-
 // mapDispatchToProps
 //dispatch每个都会执行一遍
 store.dispatch(loginAction);
